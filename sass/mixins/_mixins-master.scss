@@ -42,3 +42,21 @@
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
+
+//slide menu animation
+@-webkit-keyframes slide {
+  0%   { left: -90vw; }
+  100% { left: 0; }
+}
+@-moz-keyframes slide {
+  0%   { left: -90vw; }
+  100% { left: 0; }
+}
+@-o-keyframes slide {
+  0%   { left: -90vw; }
+  100% { left: 0; }
+}
+@keyframes slide {
+  0%   { left: -90vw; }
+  100% { left: 0; }
+}

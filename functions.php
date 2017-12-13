@@ -65,10 +65,10 @@ if (!function_exists('flexieduca_setup')) :
         ));
 
         // Set up the WordPress core custom background feature.
-        add_theme_support('custom-background', apply_filters('flexieduca_custom_background_args', array(
-            'default-color' => 'ffffff',
-            'default-image' => '',
-        )));
+//        add_theme_support('custom-background', apply_filters('flexieduca_custom_background_args', array(
+//            'default-color' => 'ffffff',
+//            'default-image' => '',
+//        )));
 
         // Add theme support for selective refresh for widgets.
         add_theme_support('customize-selective-refresh-widgets');
@@ -78,12 +78,12 @@ if (!function_exists('flexieduca_setup')) :
          *
          * @link https://codex.wordpress.org/Theme_Logo
          */
-        add_theme_support('custom-logo', array(
-            'height' => 390,
-            'width' => 67,
-            'flex-width' => true,
-            'flex-height' => true,
-        ));
+//        add_theme_support('custom-logo', array(
+//            'height' => 390,
+//            'width' => 67,
+//            'flex-width' => true,
+//            'flex-height' => true,
+//        ));
         
         /*Editor styles*/
         add_editor_style( array( 'inc/editor-styles.css', flexieduca_fonts_url() ) );
@@ -208,7 +208,7 @@ function flexieduca_widgets_init() {
     register_sidebar(array(
         'name' => esc_html__('Page Sidebar', 'flexieduca'),
         'id' => 'sidebar-2',
-        'description' => esc_html__('Add page sidebar widgets here.', 'humescores'),
+        'description' => esc_html__('Add page sidebar widgets here.', 'flexieduca'),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget' => '</section>',
         'before_title' => '<h2 class="widget-title">',
@@ -217,7 +217,7 @@ function flexieduca_widgets_init() {
     register_sidebar(array(
         'name' => esc_html__('Front Page Sidebar', 'flexieduca'),
         'id' => 'sidebar-3',
-        'description' => esc_html__('Add footer widgets here.', 'flexieduca'),
+        'description' => esc_html__('Add front widgets here.', 'flexieduca'),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget' => '</section>',
         'before_title' => '<h2 class="widget-title">',
@@ -240,6 +240,8 @@ function flexieduca_scripts() {
     wp_enqueue_style('flexieduca-fontawesome', 'http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 
     wp_enqueue_script('flexieduca-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20161215', true);
+    
+    wp_enqueue_script('flexieduca-actions', get_template_directory_uri() . '/js/actions.js', array('jquery'), '20171215', true);
         
     //wp_enqueue_script('flexieduca-photoviewer', get_template_directory_uri() . '/js/photo-viewer.js', array('jquery'), '20161215', true);
     

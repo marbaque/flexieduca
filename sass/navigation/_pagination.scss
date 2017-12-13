@@ -1,0 +1,69 @@
+.ebook-nav {
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background: white;
+    font-size: .8em;
+    border-top: 1px solid #ddd;
+    z-index: 999;
+
+    nav, 
+    .navigation,
+    .nav-links {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+}
+.nav-links {
+    display: flex;
+    align-items: stretch;
+
+    span.meta-nav {
+        display: block;
+        font-size: .8em;
+    }
+
+    .nav-previous, .nav-next {
+        width: 50%;
+        margin-top: -1px;
+        padding: .25em 0.5em;
+        text-overflow: ellipsis;
+
+        /* Required for text-overflow to do anything */
+        white-space: nowrap;
+        overflow: hidden;        
+        border: 1px solid #ddd;
+
+    }
+
+    .nav-previous {
+        margin-right: auto;
+    }
+    .nav-next {
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: $break__medium) {
+    .ebook-nav {
+        height: 80px;
+        font-size: .9em;
+
+        .nav-links {
+
+            span.meta-nav {
+                display: block;
+                font-size: .8em;
+            }
+
+            .nav-previous, .nav-next {
+                width: 30%;
+                padding: .5em 1em;
+            }
+        }
+    }
+}

@@ -41,7 +41,7 @@
     			'menu_id'        => 'front-menu',
     		) );
     
-    	    get_sidebar('sidebar-3');
+    	    dynamic_sidebar( 'sidebar-3' );
     	    ?>
     		
     	</div>
