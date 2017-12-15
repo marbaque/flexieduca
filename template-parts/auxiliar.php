@@ -12,7 +12,7 @@ $obj = get_field('objetivos');
         <?php if ($audioURL): ?>
             <li>
                 <button class="accordion-control"><i class="fa fa-headphones" aria-hidden="true"></i> Audio</button>
-                <div class="accordion-panel">
+                <div class="accordion-panel audio">
                     <audio controls>
                         <source src="<?php echo $audioURL; ?>" type="audio/mpeg">
                         Your browser does not support the audio element.
@@ -25,7 +25,7 @@ $obj = get_field('objetivos');
         <?php if ($obj): ?>
             <li>
                 <button class="accordion-control"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Objetivos</button>
-                <div class="accordion-panel">
+                <div class="accordion-panel objetivos">
                     <?php echo $obj; ?>
                 </div>
             </li>
@@ -33,8 +33,8 @@ $obj = get_field('objetivos');
         
         <?php if ($resumen): ?>
             <li>
-                <button class="accordion-control"><i class="fa fa-telegram" aria-hidden="true"></i> Resumen</button>
-                <div id="resumen" class="accordion-panel">
+                <button class="accordion-control"><i class="fa fa-pencil" aria-hidden="true"></i> Resumen</button>
+                <div id="resumen" class="accordion-panel resumen">
                     <?php echo $resumen; ?>
                 </div>
             </li>

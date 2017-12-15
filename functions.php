@@ -43,8 +43,9 @@ if (!function_exists('flexieduca_setup')) :
          */
         add_theme_support('post-thumbnails');
         add_image_size('flexieduca-full-bleed', 2000, 1200, true);
-        //add_image_size('flexieduca-index-img', 780, 240, true);
         add_image_size('flexieduca-index-img', 600, 380, true);
+        add_image_size('flexieduca-gallery-img', 600, 300, true);
+        add_image_size('flexieduca-thumb', 80, 80, true);
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus(array(
@@ -243,7 +244,10 @@ function flexieduca_scripts() {
     
     wp_enqueue_script('flexieduca-actions', get_template_directory_uri() . '/js/actions.js', array('jquery'), '20171215', true);
         
-    //wp_enqueue_script('flexieduca-photoviewer', get_template_directory_uri() . '/js/photo-viewer.js', array('jquery'), '20161215', true);
+    if ( is_singular('caso') ) {
+	    wp_enqueue_script('flexieduca-photoviewer', get_template_directory_uri() . '/js/photo-viewer.js', array('jquery'), '20161215', true);
+    }
+    
     
     wp_localize_script('flexieduca-navigation', 'flexieducaScreenReaderText', array(
         'expand' => __('Expand child menu', 'flexieduca'),

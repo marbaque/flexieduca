@@ -3418,7 +3418,7 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #F4F2F2;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -3615,6 +3615,8 @@ a:hover, a:active {
 	max-width: 320px;
 	height: 100vh;
 	padding: 1em 0;
+	border-right: 1px solid #ccc;
+	box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.32);
 }
 
 .main-navigation ul {
@@ -4238,7 +4240,17 @@ li.arlequin-search, .widget_search {
 ## Global
 --------------------------------------------------------------*/
 body {
-	background-color: #eee;
+	background-color: #F4F2F2;
+}
+
+.site {
+	width: 100%;
+	max-width: 1500px;
+	margin: 0 auto;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	position: relative;
+	background: white;
 }
 
 .site-content {
@@ -4252,7 +4264,7 @@ body {
 
 @media screen and (min-width: 900px) {
 	.site-content .content-area {
-		padding: 2em 0;
+		padding: 2em 1em;
 	}
 }
 
@@ -4372,7 +4384,7 @@ body {
 	display: none;
 }
 
-.home.has-front-sidebar .side-content .menu {
+.home .side-content .menu {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -4385,7 +4397,7 @@ body {
 	margin: 0;
 }
 
-.home.has-front-sidebar .side-content .menu li {
+.home .side-content .menu li {
 	width: 48%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -4399,7 +4411,7 @@ body {
 	line-height: 1.4;
 }
 
-.home.has-front-sidebar .side-content .menu li a {
+.home .side-content .menu li a {
 	width: 100%;
 	height: 100%;
 	padding: 30px .5em 2em;
@@ -4415,12 +4427,12 @@ body {
 	word-break: normal;
 }
 
-.home.has-front-sidebar .side-content .menu li.modulo1 a {
+.home .side-content .menu li.modulo1 a {
 	border: 5px solid #937931;
 	background-color: white;
 }
 
-.home.has-front-sidebar .side-content .menu li.modulo1 a:before {
+.home .side-content .menu li.modulo1 a:before {
 	content: "1";
 	font-family: "Fredoka One";
 	text-align: center;
@@ -4437,12 +4449,12 @@ body {
 	right: 20px;
 }
 
-.home.has-front-sidebar .side-content .menu li.modulo2 a {
+.home .side-content .menu li.modulo2 a {
 	border: 5px solid #6E7F45;
 	background-color: white;
 }
 
-.home.has-front-sidebar .side-content .menu li.modulo2 a:before {
+.home .side-content .menu li.modulo2 a:before {
 	content: "2";
 	font-family: "Fredoka One";
 	text-align: center;
@@ -4459,12 +4471,12 @@ body {
 	right: 20px;
 }
 
-.home.has-front-sidebar .side-content .menu li.modulo3 a {
+.home .side-content .menu li.modulo3 a {
 	border: 5px solid #3D3870;
 	background-color: white;
 }
 
-.home.has-front-sidebar .side-content .menu li.modulo3 a:before {
+.home .side-content .menu li.modulo3 a:before {
 	content: "3";
 	font-family: "Fredoka One";
 	text-align: center;
@@ -4481,12 +4493,12 @@ body {
 	right: 20px;
 }
 
-.home.has-front-sidebar .side-content .menu li.modulo4 a {
+.home .side-content .menu li.modulo4 a {
 	border: 5px solid #843942;
 	background-color: white;
 }
 
-.home.has-front-sidebar .side-content .menu li.modulo4 a:before {
+.home .side-content .menu li.modulo4 a:before {
 	content: "4";
 	font-family: "Fredoka One";
 	text-align: center;
@@ -4510,7 +4522,6 @@ body {
 	width: 100%;
 	padding: 2em 1em;
 	font-size: 70%;
-	color: #ccc;
 	text-align: center;
 }
 
@@ -4549,7 +4560,7 @@ body {
 
 @media screen and (min-width: 900px) {
 	.single-multimedia .site-content {
-		max-width: 900px;
+		max-width: 780px;
 	}
 }
 
@@ -4576,18 +4587,7 @@ ul.accordion {
 	padding: 0;
 }
 
-@media screen and (min-width: 600px) {
-	ul.accordion {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-wrap: wrap;
-		    flex-wrap: wrap;
-	}
-}
-
 ul.accordion li {
-	width: 50%;
 	padding: 0;
 	list-style-type: none;
 	margin: 0 !important;
@@ -4602,11 +4602,36 @@ ul.accordion button {
 
 .accordion-panel {
 	display: none;
-	padding: .5em 1em;
+	padding: 1em 2em 1.2em;
+	background: #F1EEE5;
+	border-radius: 5px;
+	border: 3px solid #41423F;
+	color: #41423F;
+	height: auto;
+	min-height: 1px;
+	overflow-x: hidden;
+}
+
+.accordion-panel p:first-child {
+	margin-top: 0;
 }
 
 .accordion-panel p:last-child {
 	margin-bottom: 0;
+}
+
+.accordion-panel.resumen {
+	background-image: url("./img/resumen.png");
+	background-image: none, url("./img/resumen.svg");
+	background-repeat: no-repeat;
+	background-position: 1em center;
+	background-size: 80px;
+	padding-left: 110px;
+}
+
+.accordion-panel audio {
+	margin: 0 auto;
+	text-align: center;
 }
 
 .mmtools {
@@ -4656,6 +4681,245 @@ ul.accordion button {
 
 .mmtools a {
 	text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+## Multimedia pages
+--------------------------------------------------------------*/
+.single-caso {
+	/********** gallery **********/
+	/********** THUMBNAILS **********/
+}
+
+.single-caso .back {
+	font-size: 80%;
+}
+
+.single-caso .entry-title {
+	margin: .25em 0;
+}
+
+.single-caso .case-content .case__wrap {
+	margin: 0;
+}
+
+@media screen and (min-width: 900px) {
+	.single-caso .case-content .case__wrap {
+		margin: 0;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		padding: 1em 0;
+		border-top: 3px solid #41423F;
+		border-bottom: 3px solid #41423F;
+	}
+}
+
+.single-caso .case-content .case__wrap .gallery {
+	width: auto;
+	padding: .25em;
+}
+
+@media screen and (min-width: 900px) {
+	.single-caso .case-content .case__wrap .gallery {
+		width: 49%;
+	}
+}
+
+.single-caso .case-content .case__wrap .case-desc {
+	width: 100%;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+	.single-caso .case-content .case__wrap .case-desc {
+		width: 49%;
+		height: 100%;
+	}
+}
+
+.single-caso .case-content .case__wrap .case-trends {
+	height: 40px;
+	padding: 10px 1em;
+}
+
+.single-caso .case-content .comments-area {
+	max-width: 60%;
+}
+
+.single-caso #photo-viewer {
+	position: relative;
+	height: 300px;
+	overflow: hidden;
+	background: white;
+	border: 2px solid #41423F;
+	border-radius: 2px;
+}
+
+.single-caso #photo-viewer img {
+	height: 100%;
+	width: auto;
+}
+
+.single-caso #photo-viewer.is-loading:after {
+	content: url("img/load.gif");
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.single-caso #photo-viewer img {
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	top: 50%;
+	left: 50%;
+}
+
+.single-caso #thumbnails {
+	margin: 10px .5em;
+	padding-bottom: .25em;
+	height: 80px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	border-bottom: 1px solid #41423F;
+}
+
+.single-caso #thumbnails a {
+	height: 100%;
+	width: auto;
+	margin: 2px;
+	border: 2px solid #41423F;
+	border-radius: 2px;
+}
+
+.single-caso #thumbnails a img {
+	height: 100%;
+	width: auto;
+}
+
+.single-caso a.active {
+	opacity: 0.3;
+}
+
+/*--------------------------------------------------------------
+## Casos pages
+--------------------------------------------------------------*/
+.casos-index .content-area {
+	padding: 1em;
+}
+
+@media screen and (min-width: 600px) {
+	.casos-index .content-area {
+		padding: 1em 2em;
+	}
+}
+
+.casos-index .site-main {
+	max-width: 780px;
+	margin: 0 auto;
+}
+
+.casos-index .case-gallery {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-ms-flex-line-pack: start;
+	    align-content: flex-start;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.casos-index .case-gallery:before {
+	content: "Explore los casos:";
+	display: block;
+	width: 100%;
+	font-family: "Fredoka One";
+	margin: 1em 0;
+}
+
+.casos-index .case-gallery .case-item {
+	width: 100%;
+	background: #F1EEE5;
+	border: 3px solid #41423F;
+	margin: 5px 0;
+	padding: .5em .5em 1.5em;
+	border-radius: 5px;
+	position: relative;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.28);
+}
+
+@media screen and (min-width: 600px) {
+	.casos-index .case-gallery .case-item {
+		width: 18%;
+		min-width: 270px;
+	}
+}
+
+.casos-index .case-gallery .case-item h2 {
+	font-size: 120%;
+	margin-bottom: .25em;
+}
+
+.casos-index .case-gallery .case-item .excerpt {
+	font-size: .8em;
+	margin: .25em 0;
+}
+
+.casos-index .case-gallery .case-item .continue-reading a {
+	font-size: .8em;
+	display: inline-block;
+	margin-left: auto;
+	background: tomato;
+	padding: .25em;
+	position: absolute;
+	bottom: 5px;
+	right: -10px;
+	border: 2px solid #41423F;
+	color: solid #41423F;
+}
+
+@media screen and (min-width: 1400px) {
+	.casos-index .site-content {
+		width: 100%;
+		max-width: 1400px;
+	}
+	.casos-index .case-index__wrap {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		width: 100%;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+	.casos-index .case-index__wrap .site-main {
+		width: 48%;
+		margin: 0;
+	}
+	.casos-index .case-index__wrap .case-gallery {
+		width: 48%;
+	}
+	.casos-index .case-index__wrap .case-gallery .case-item {
+		width: 48%;
+	}
 }
 
 /*--------------------------------------------------------------

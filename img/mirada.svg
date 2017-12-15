@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="82px" viewBox="0 0 82 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>mirada</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="5" y="5" width="77" height="77" rx="4"></rect>
+        <path d="M4,0 L73,0 C75.209139,-4.05812251e-16 77,1.790861 77,4 L77,63.5459536 C77,64.5173699 76.6464963,65.4555909 76.0054758,66.1854829 L67.7025536,75.6395293 C66.9430993,76.5042749 65.8479712,77 64.6970777,77 L4,77 C1.790861,77 2.705415e-16,75.209139 0,73 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-2"></path>
+        <path d="M0.0859613667,11.5 C5.13102304,4.53033779 13.3081003,0 22.5375441,0 C31.7669878,0 39.9440651,4.53033779 44.9891268,11.5 C39.9440651,18.4696622 31.7669878,23 22.5375441,23 C13.3081003,23 5.13102304,18.4696622 0.0859613667,11.5 Z" id="path-3"></path>
+    </defs>
+    <g id="iconos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-81.000000, -326.000000)">
+        <g id="mirada" transform="translate(81.000000, 326.000000)">
+            <g id="Rectangle-8">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#41423F" stroke-width="2" x="6" y="6" width="75" height="75" rx="4"></rect>
+            </g>
+            <g id="Rectangle-8-Copy">
+                <use fill="#FBD351" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <path stroke="#41423F" stroke-width="2" d="M4,1 C2.34314575,1 1,2.34314575 1,4 L1,73 C1,74.6568542 2.34314575,76 4,76 L64.6970777,76 C65.5602478,76 66.3815939,75.6282062 66.9511846,74.979647 L75.2541069,65.5256006 C75.7348722,64.9781816 76,64.2745158 76,63.5459536 L76,4 C76,2.34314575 74.6568542,1 73,1 L4,1 Z"></path>
+            </g>
+            <path d="M65.9717372,76.2162987 L65.9717372,68.3203617 C65.9717372,66.7722504 67.1497237,65.4783703 68.6910439,65.3335221 L75.9618345,64.650237 L65.9717372,76.2162987 Z" id="Path-6" stroke="#41423F" stroke-width="2" fill="#F8E71C" stroke-linecap="round" stroke-linejoin="round"></path>
+            <g id="ojo" transform="translate(8.000000, 15.000000)">
+                <g id="eye" transform="translate(7.000000, 14.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="Combined-Shape" stroke="#41423F" stroke-width="3" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" xlink:href="#path-3"></use>
+                    <ellipse id="Oval-21" stroke="#41423F" stroke-width="3" fill="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-4)" cx="26.0625" cy="7.35245902" rx="10.6875" ry="10.7459016"></ellipse>
+                </g>
+                <path d="M30.310919,8.94532436 L30.310919,0.300105565 M43.1223343,11.3672516 L46.5002904,3.40928574 M54.077444,18.4729655 L60.1905369,12.3598727 M6.65515503,18.7403664 L0.542062198,12.6272736 M17.4561832,11.5418353 L14.2176273,3.52612806" id="Line-2" stroke="#41423F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

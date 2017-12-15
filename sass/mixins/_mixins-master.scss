@@ -60,3 +60,12 @@
   0%   { left: -90vw; }
   100% { left: 0; }
 }
+
+//svg background with compatible png
+$public_path: "./";
+
+@mixin vector-bg-with-fallback($name) {
+  background-image: url('#{$public_path}img/#{$name}.png');
+  background-image: none, url('#{$public_path}img/#{$name}.svg');
+  background-repeat: no-repeat;
+}

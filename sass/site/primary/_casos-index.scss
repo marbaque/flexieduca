@@ -1,0 +1,101 @@
+.casos-index {
+	.content-area {
+		padding: 1em;
+		@media screen and (min-width: $break__small) {
+			padding: 1em 2em;
+		}
+	}
+	.site-main {
+		max-width: $max__column-size;
+		margin: 0 auto;
+
+	}
+	.case-gallery {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		align-content: flex-start;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		&:before {
+			content: "Explore los casos:";
+			display: block;
+			width: 100%;
+			font-family: $font__headings;
+			margin: 1em 0;
+		}
+		
+		.case-item {
+			width: 100%;
+			background: $color__sombreado;
+			border: 3px solid $color__borde-recuadro;
+			margin: 5px 0;
+			padding: .5em .5em 1.5em;
+			@include borde(5px);
+			position: relative;
+			box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.28);
+			
+			@media screen and (min-width: $break__small) {
+				width: 18%;
+				min-width: 270px;
+				//margin: 5px;
+			}
+			
+			h2 {
+				font-size: 120%;
+				margin-bottom: .25em;
+				
+			}
+			
+			.excerpt {
+				font-size: .8em;
+				margin: .25em 0;
+				
+			}
+			
+			.continue-reading {
+				a {
+					font-size: .8em;
+					display: inline-block;
+					margin-left: auto;
+					background: $color__interactive;
+					padding: .25em;
+					position: absolute;
+					bottom: 5px;
+					right: -10px;
+					border: 2px solid $color__borde-recuadro;
+					color: solid $color__borde-recuadro;
+				}
+			}
+		}
+	}
+	
+	@media screen and(min-width: $break__hd) {
+		
+		.site-content {
+			width: 100%;
+			max-width: $break__hd;
+			
+		}
+		.case-index__wrap {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			
+			.site-main {
+				width: 48%;
+				margin: 0;	
+			}			
+			.case-gallery {
+				width: 48%;
+				
+				.case-item {
+					width: 48%;
+				}
+			}
+		}
+		
+	}
+	
+	
+}

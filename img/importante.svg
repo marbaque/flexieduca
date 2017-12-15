@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="95px" height="95px" viewBox="0 0 95 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>importante</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M41.6331303,50.778866 C41.884504,53.0412299 43.3927466,54.4656812 45.487528,54.4656812 C47.5823094,54.4656812 49.090552,53.0412299 49.3419258,50.778866 L52.9449497,19.273354 C53.1963235,16.8434076 51.8556634,15 49.5932995,15 L41.3817565,15 C39.1193926,15 37.7787325,16.8434076 38.0301063,19.273354 L41.6331303,50.778866 Z M38.1976888,67.1181608 L38.1976888,67.2857433 C38.1976888,71.3077236 41.2979652,74.408 45.487528,74.408 C49.6770908,74.408 52.7773672,71.3077236 52.7773672,67.2857433 L52.7773672,67.1181608 C52.7773672,63.0961805 49.6770908,59.9959041 45.487528,59.9959041 C41.2979652,59.9959041 38.1976888,63.0961805 38.1976888,67.1181608 Z" id="path-1"></path>
+    </defs>
+    <g id="iconos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-426.000000, -126.000000)">
+        <g id="importante" transform="translate(428.000000, 128.000000)">
+            <circle id="Oval-2" stroke="#41423F" stroke-width="3" fill="#DDBE59" stroke-linecap="round" stroke-linejoin="round" cx="45.5" cy="45.5" r="45.5"></circle>
+            <g id="!">
+                <use fill="#F0EBB6" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

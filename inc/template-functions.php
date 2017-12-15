@@ -17,6 +17,10 @@ function flexieduca_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 	
+	if ( is_page('casos-estrategias-comercio-movil') ) {
+		$classes[] = 'casos-index';
+	}
+	
 	// Adds a class telling us if the sidebar is in use.
     if (!is_singular('multimedia') && is_active_sidebar('sidebar-1')) {
         $classes[] = 'has-sidebar';
@@ -36,7 +40,7 @@ function flexieduca_body_classes( $classes ) {
     } else if (!is_active_sidebar('sidebar-3') && is_front_page()) {
         $classes[] = 'has-no-front-sidebar';
     }
-
+    
 	return $classes;
 }
 add_filter( 'body_class', 'flexieduca_body_classes' );
