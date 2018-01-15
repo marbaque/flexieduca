@@ -1,0 +1,239 @@
+/*
+* Theme: Flexieduca
+* Editor styles for TinyMCE
+*/
+
+html {
+    padding: 0 2em;
+}
+
+body {
+    max-width: 1080px;
+    margin: 0 auto;
+    color: black;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+    color: #404040;
+    font-family: "Rubik", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 600px) {
+    body,
+    button,
+    input,
+    select,
+    optgroup,
+    textarea {
+        font-size: 20px;
+        font-size: 1.25rem;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-family: "Fredoka One";
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+dfn, cite, em, i {
+    font-style: italic;
+}
+
+blockquote {
+    margin: 0 1.5em;
+}
+
+address {
+    margin: 0 0 1.5em;
+}
+
+pre {
+    background: #eee;
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-size: 18.75px;
+    font-size: 1.17188rem;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em;
+}
+
+code, kbd, tt, var {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-size: 18.75px;
+    font-size: 1.17188rem;
+}
+
+abbr, acronym {
+    border-bottom: 1px dotted #666;
+    cursor: help;
+}
+
+mark, ins {
+    background: #fff9c0;
+    text-decoration: none;
+}
+
+big {
+    font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    box-sizing: inherit;
+}
+
+body {
+    background: #F4F2F2;
+    /* Fallback for when there is no custom background color defined. */
+}
+
+hr {
+    background-color: #ccc;
+    border: 0;
+    height: 1px;
+    margin-bottom: 1.5em;
+}
+
+ul, ol {
+    margin: 0 0 1.5em 1em;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li > ul,
+li > ol {
+    margin-bottom: 0;
+    margin-left: 1.5em;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 1.5em 1.5em;
+}
+
+img {
+    height: auto;
+    /* Make sure images are scaled correctly. */
+    max-width: 100%;
+    /* Adhere to container width. */
+}
+
+figure {
+    margin: 1em 0;
+    /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+    margin: 0 0 1.5em;
+    width: 100%;
+}
+
+audio {
+    z-index: -1;
+}
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover, a:focus, a:active {
+    color: midnightblue;
+    border-bottom: 3px solid midnightblue;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover, a:active {
+    outline: 0;
+}
+
+
+
+.formato-actividad,
+.formato-importante,
+.formato-mirada,
+.formato-ejercicio,
+.formato-idea {
+    padding: 1em 2em 1.2em;
+    background: #F1EEE5;
+    border-radius: 5px;
+    border: 3px solid #41423F;
+    color: #41423F;
+    height: auto;
+    background-position: 1em center;
+    background-size: 80px;
+    padding-left: 120px;
+}
+
+.formato-actividad {
+    background-image: url("../img/actividad_virtual.png");
+    background-image: none, url("../img/actividad_virtual.svg");
+    background-repeat: no-repeat;
+}
+
+.formato-mirada {
+    background-image: url("../img/mirada.png");
+    background-image: none, url("../img/mirada.svg");
+    background-repeat: no-repeat;
+}
+
+.formato-importante {
+    background-image: url("../img/importante.png");
+    background-image: none, url("../img/importante.svg");
+    background-repeat: no-repeat;
+}
+
+.formato-ejercicio {
+    background-image: url("../img/ejercicio.png");
+    background-image: none, url("../img/ejercicio.svg");
+    background-repeat: no-repeat;
+}
+
+.formato-idea {
+    background-image: url("../img/idea.png");
+    background-image: none, url("../img/idea.svg");
+    background-repeat: no-repeat;
+}

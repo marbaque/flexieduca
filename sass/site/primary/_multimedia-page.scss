@@ -125,4 +125,47 @@ ul.accordion {
     }
 }
 
+//Formatos personalizados para recuadros en el contenido multimedia
+.formato-actividad,
+.formato-importante,
+.formato-mirada,
+.formato-ejercicio,
+.formato-idea {
+    padding: 1em 2em 1.2em 100px;
+    margin: 1em 0 2em;
+    color: $color__borde-recuadro;
+    height: auto;
+    background-position: 1em 2em;
+    background-size: 60px;
+    font-size: .9em;
+    @media screen and (min-width: $break__medium) {
+        padding-left: 140px;
+        margin: 1em 0 2em -140px;
+        font-size: 1em;
+        background-size: 80px;
+    }
+    &:before,
+    &:after{
+        height: 3px;
+        width: 100%;
+        background: $color__borde-recuadro;
+        display: block;
+        content: "";
+    }
+}
+.formato-actividad{
+    @include vector-bg-with-fallback(actividad_virtual);  
+}
+.formato-mirada{
+    @include vector-bg-with-fallback(mirada);
+}
+.formato-importante{
+    @include vector-bg-with-fallback(importante);
+}
+.formato-ejercicio{
+    @include vector-bg-with-fallback(ejercicio);
+}
+.formato-idea{
+    @include vector-bg-with-fallback(idea);
+}
 
