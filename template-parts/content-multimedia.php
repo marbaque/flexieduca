@@ -65,10 +65,8 @@
                     <?php flexieduca_entry_footer(); ?>
                 </footer><!-- .entry-footer -->
 
-                <?php if (!is_active_sidebar('sidebar-1')) : ?>
             </div><!----.post_content__body--->
         </div><!----.post_content__wrap--->
-        <?php endif; ?>
         
         <?php
         

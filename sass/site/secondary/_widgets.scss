@@ -70,7 +70,7 @@
     display: none;
 }
 .widget_search{
-    @extend li.arlequin-search;
+    @extend li.flexieduca-search;
     width: 100%;
     //background: $color__interactive;
     padding: 1em;
@@ -276,7 +276,7 @@
 ** Estilos para la search bar
 ------------------------------------------*/
 
-li.arlequin-search{
+li.flexieduca-search{
     padding: 0;
     width: 100%;
     flex: 0 1 auto;

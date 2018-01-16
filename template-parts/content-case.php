@@ -7,7 +7,7 @@
  * @package flexieduca
  */
 ?>
-<a href="/mercadeo/casos-estrategias-comercio-movil/" title="Volver a casos" class="back"><i class="fa fa-th" aria-hidden="true"></i> Volver a Galería de casos</a>
+<a href="/mercadeo/casos-estrategias-comercio-movil/" title="Volver a casos" class="back"><i class="fa fa-th" aria-hidden="true"></i> Volver a Galer&iacute;a de casos</a>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">

@@ -7,6 +7,10 @@
  *
  * @package flexieduca
  */
+ 
+ /**
+ * Post navigation (previous / next post) for single posts.
+ */
 if (!function_exists('flexieduca_posted_on')) :
 
     /**
@@ -160,9 +164,7 @@ function flexieduca_category_transient_flusher() {
 add_action('edit_category', 'flexieduca_category_transient_flusher');
 add_action('save_post', 'flexieduca_category_transient_flusher');
 
-/**
- * Post navigation (previous / next post) for single posts.
- */
+
 function flexieduca_post_navigation() {
     the_post_navigation(array(
         'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'flexieduca') . '</span> ' .
@@ -178,7 +180,7 @@ function flexieduca_post_navigation() {
  * * Customize ellipsis at the end of the excerpts
  */
 function flexieduca_excerpts_more( $more ) {
-    return "…";
+    return "&hellip;";
 }
 add_filter( 'excerpt_more', flexieduca_excerpts_more );
 

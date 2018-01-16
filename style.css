@@ -4137,7 +4137,7 @@ a:hover, a:active {
 /*------------------------------------------
 ** Estilos para la search bar
 ------------------------------------------*/
-li.arlequin-search, .widget_search {
+li.flexieduca-search, .widget_search {
 	padding: 0;
 	width: 100%;
 	-webkit-box-flex: 0;
@@ -4835,16 +4835,13 @@ ul.accordion button {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: start;
-	    -ms-flex-align: start;
-	        align-items: flex-start;
+	-webkit-box-align: stretch;
+	    -ms-flex-align: stretch;
+	        align-items: stretch;
 	-ms-flex-line-pack: start;
 	    align-content: flex-start;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
 }
 
 .casos-index .case-gallery:before {
@@ -4859,7 +4856,7 @@ ul.accordion button {
 	width: 100%;
 	background: #F1EEE5;
 	border: 3px solid #41423F;
-	margin: 5px 0;
+	margin: 5px 5px 10px;
 	padding: .5em .5em 1.5em;
 	border-radius: 5px;
 	position: relative;
@@ -4879,7 +4876,8 @@ ul.accordion button {
 }
 
 .casos-index .case-gallery .case-item .excerpt {
-	font-size: .8em;
+	font-size: .7em;
+	line-height: 1.3;
 	margin: .25em 0;
 }
 
@@ -4888,12 +4886,17 @@ ul.accordion button {
 	display: inline-block;
 	margin-left: auto;
 	background: tomato;
-	padding: .25em;
+	padding: .25em 1em;
 	position: absolute;
 	bottom: 5px;
 	right: -10px;
-	border: 2px solid #41423F;
 	color: solid #41423F;
+	-webkit-clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
+	clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
+}
+
+.casos-index .case-gallery .case-item .continue-reading a:hover {
+	border-bottom: 3px solid rgba(68, 66, 65, 0.49);
 }
 
 @media screen and (min-width: 1400px) {
