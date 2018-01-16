@@ -1,13 +1,23 @@
 .wp-caption {
-	margin-bottom: 1.5em;
+	margin-bottom: 2.5em;
 	max-width: 100%;
-
+	
 	img[class*="wp-image-"] {
 		@include center-block;
+		padding: 2em;
+		border: 2px solid $color__borde-recuadro;
+		@include borde(4px);
+		box-shadow: 2px 3px 4px 0 rgba(0,0,0,0.32);
 	}
 
 	.wp-caption-text {
 		margin: 0.8075em 0;
+		font-size: .7em;
+		color: #666;
+	}
+	
+	@media screen and (min-width: $break__small) {
+		
 	}
 }
 

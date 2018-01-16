@@ -25,6 +25,13 @@
         padding: 1em 0;
         border-right: 1px solid #ccc;
         box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.32);
+        
+        // stick menu to the top
+		&.sticky {
+		    top: 0;
+		    position: fixed;
+		    z-index: 999;
+		}
     }	
 
     ul {
@@ -99,12 +106,7 @@
     }
 }
 
-// stick menu to the top
-.sticky {
-    top: 0;
-    position: fixed;
-    z-index: 999;
-}
+
 
 /* Small menu. */
 .menu-toggle,

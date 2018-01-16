@@ -4,12 +4,12 @@ Theme Name: Flexieduca
 Theme URI: http://underscores.me/
 Author: Multimedia UNED
 Author URI: http://multimedia.uned.ac.cr
-Description: Tema educativo
+Description: Theme for educational content
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: flexieduca
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: translation-ready, responsive
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -3619,6 +3619,12 @@ a:hover, a:active {
 	box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.32);
 }
 
+.main-navigation ul.menu.sticky {
+	top: 0;
+	position: fixed;
+	z-index: 999;
+}
+
 .main-navigation ul {
 	display: none;
 	list-style: disc;
@@ -3654,12 +3660,6 @@ a:hover, a:active {
 .main-navigation a:hover {
 	border: none;
 	color: tomato;
-}
-
-.sticky {
-	top: 0;
-	position: fixed;
-	z-index: 999;
 }
 
 /* Small menu. */
@@ -4198,9 +4198,9 @@ li.flexieduca-search, .widget_search {
 	border: 0 none;
 	box-shadow: 0 0 2px white inset;
 	border-radius: 0;
-	outline-color: yellow;
+	outline-color: #DDBE59;
 	font-style: normal;
-	background: yellow;
+	background: #DDBE59;
 	color: #fff;
 }
 
@@ -4221,7 +4221,7 @@ li.flexieduca-search, .widget_search {
 }
 
 .search-form .search-field:-ms-input-placeholder {
-	color: yellow;
+	color: #DDBE59;
 	outline: 0;
 	border: 0 none;
 	font-weight: normal;
@@ -4683,8 +4683,72 @@ ul.accordion button {
 	text-decoration: none;
 }
 
+.formato-actividad,
+.formato-importante,
+.formato-mirada,
+.formato-ejercicio,
+.formato-idea {
+	padding: 1em 2em 1.2em 100px;
+	margin: 1em -1em 2em;
+	color: #41423F;
+	height: auto;
+	background-position: 1.25em 1.75em;
+	background-size: 60px;
+	background-color: #F1EEE5;
+	font-size: .9em;
+	border-top: 2px solid #41423F;
+	border-bottom: 2px solid #41423F;
+}
+
+@media screen and (min-width: 900px) {
+	.formato-actividad,
+	.formato-importante,
+	.formato-mirada,
+	.formato-ejercicio,
+	.formato-idea {
+		padding-left: 140px;
+		margin: 2em -2em;
+		font-size: 1em;
+		background-size: 80px;
+		border: 3px solid #41423F;
+		background-color: #F1EEE5;
+		box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.32);
+		border-radius: 4px;
+	}
+}
+
+.formato-actividad {
+	background-image: url("./img/actividad_virtual.png");
+	background-image: none, url("./img/actividad_virtual.svg");
+	background-repeat: no-repeat;
+}
+
+.formato-mirada {
+	background-image: url("./img/mirada.png");
+	background-image: none, url("./img/mirada.svg");
+	background-repeat: no-repeat;
+}
+
+.formato-importante {
+	background-image: url("./img/importante.png");
+	background-image: none, url("./img/importante.svg");
+	background-repeat: no-repeat;
+}
+
+.formato-ejercicio {
+	background-image: url("./img/ejercicio.png");
+	background-image: none, url("./img/ejercicio.svg");
+	background-repeat: no-repeat;
+}
+
+.formato-idea {
+	background-image: url("./img/idea.png");
+	background-image: none, url("./img/idea.svg");
+	background-repeat: no-repeat;
+}
+
 /*--------------------------------------------------------------
-## Multimedia pages
+## Casos pages
 --------------------------------------------------------------*/
 .single-caso {
 	/********** gallery **********/
@@ -4979,7 +5043,7 @@ object {
 ## Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin-bottom: 1.5em;
+	margin-bottom: 2.5em;
 	max-width: 100%;
 }
 
@@ -4987,10 +5051,16 @@ object {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 2em;
+	border: 2px solid #41423F;
+	border-radius: 4px;
+	box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.32);
 }
 
 .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
+	font-size: .7em;
+	color: #666;
 }
 
 .wp-caption-text {

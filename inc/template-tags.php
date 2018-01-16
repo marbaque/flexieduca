@@ -166,14 +166,14 @@ add_action('save_post', 'flexieduca_category_transient_flusher');
 
 
 function flexieduca_post_navigation() {
-    the_post_navigation(array(
-        'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'flexieduca') . '</span> ' .
-        '<span class="screen-reader-text">' . __('Next post:', 'flexieduca') . '</span> ' .
-        '<span class="post-title">%title</span>',
-        'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'flexieduca') . '</span> ' .
-        '<span class="screen-reader-text">' . __('Previous post:', 'flexieduca') . '</span> ' .
-        '<span class="post-title">%title</span>',
-    ));
+	the_post_navigation( array(
+		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'flexieduca' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Next post:', 'flexieduca' ) . '</span> ' .
+			'<span class="post-title">%title</span>',
+		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'flexieduca' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Previous post:', 'flexieduca' ) . '</span> ' .
+			'<span class="post-title">%title</span>',
+	) );
 }
 
 /*
@@ -182,7 +182,7 @@ function flexieduca_post_navigation() {
 function flexieduca_excerpts_more( $more ) {
     return "&hellip;";
 }
-add_filter( 'excerpt_more', flexieduca_excerpts_more );
+add_filter( 'excerpt_more', 'flexieduca_excerpts_more' );
 
 /*
  * Filter excerpt length to 100 words
@@ -190,4 +190,4 @@ add_filter( 'excerpt_more', flexieduca_excerpts_more );
 function flexieduca_excerpt_length( $length ) {
     return 30;
 }
-add_filter( 'excerpt_length', flexieduca_excerpt_length );
+add_filter( 'excerpt_length', 'flexieduca_excerpt_length' );
