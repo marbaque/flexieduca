@@ -112,6 +112,12 @@ function my_mce_before_init_insert_formats( $init_array ) {
             'block' => 'div',  
             'classes' => 'formato-idea',
             'wrapper' => true,
+        ),
+        array(  
+            'title' => 'Pie de tabla',  
+            'block' => 'div',  
+            'classes' => 'table-source',
+            'wrapper' => true,
         )
     );  
     // Insert the array, JSON ENCODED, into 'style_formats'

@@ -3418,7 +3418,7 @@ html {
 }
 
 body {
-	background: #F4F2F2;
+	background: #F6F6F6;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -3468,8 +3468,44 @@ figure {
 }
 
 table {
+	border-collapse: collapse;
 	margin: 0 0 1.5em;
 	width: 100%;
+	border-radius: 1em;
+	font-size: .9em;
+}
+
+thread th {
+	border-bottom: 2px solid #bbb;
+	padding-bottom: .5em;
+}
+
+td,
+th {
+	vertical-align: top;
+}
+
+th {
+	padding: .4em;
+	text-align: left;
+}
+
+tr:not(:last-child) {
+	border-bottom: 1px solid #eee;
+}
+
+td {
+	padding: .5em 1em;
+}
+
+td:hover {
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.table-source {
+	font-size: .75em;
+	color: gray;
+	margin-bottom: 4em;
 }
 
 audio {
@@ -3569,6 +3605,7 @@ textarea {
 a {
 	color: #404040;
 	text-decoration: none;
+	border-bottom: 3px solid #DDBE59;
 }
 
 a:visited {
@@ -3577,7 +3614,7 @@ a:visited {
 
 a:hover, a:focus, a:active {
 	color: midnightblue;
-	border-bottom: 3px solid midnightblue;
+	border-bottom: 3px solid #D96C70;
 }
 
 a:focus {
@@ -3659,10 +3696,10 @@ a:hover, a:active {
 	display: block;
 	text-decoration: none;
 	padding: .25em .75em .3em;
+	border: none;
 }
 
 .main-navigation a:hover {
-	border: none;
 	color: #D96C70;
 }
 
@@ -3676,7 +3713,7 @@ a:hover, a:active {
 ## Paginación
 --------------------------------------------------------------*/
 .ebook-nav {
-	height: 60px;
+	height: auto;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -3691,7 +3728,7 @@ a:hover, a:active {
 .ebook-nav nav,
 .ebook-nav .navigation,
 .ebook-nav .nav-links {
-	margin: 0;
+	margin: 0 !important;
 	padding: 0;
 	height: 100%;
 }
@@ -3707,18 +3744,19 @@ a:hover, a:active {
 
 .ebook-nav .nav-links span.meta-nav {
 	display: block;
-	font-size: .8em;
+	font-size: .7em;
 }
 
 .ebook-nav .nav-links .nav-previous, .ebook-nav .nav-links .nav-next {
 	width: 50%;
 	margin-top: -1px;
-	padding: .25em 0.5em;
 	text-overflow: ellipsis;
+	padding: 0;
 	/* Required for text-overflow to do anything */
 	white-space: nowrap;
 	overflow: hidden;
 	border: 1px solid #ddd;
+	border-radius: 0;
 }
 
 .ebook-nav .nav-links .nav-previous {
@@ -3729,9 +3767,21 @@ a:hover, a:active {
 	margin-left: auto;
 }
 
+.ebook-nav a {
+	border: none;
+	display: block;
+	padding: .5em 0.75em;
+	height: 100%;
+}
+
+.ebook-nav a:hover {
+	background: #D96C70;
+	color: white;
+}
+
 @media screen and (min-width: 900px) {
 	.ebook-nav {
-		height: 80px;
+		height: auto;
 		font-size: .9em;
 	}
 	.ebook-nav .nav-links span.meta-nav {
@@ -3740,7 +3790,7 @@ a:hover, a:active {
 	}
 	.ebook-nav .nav-links .nav-previous, .ebook-nav .nav-links .nav-next {
 		width: 30%;
-		padding: .5em 1em;
+		padding: 0;
 	}
 }
 
@@ -4398,6 +4448,10 @@ li.flexieduca-search, .widget_search {
 	line-height: 1;
 }
 
+.site-header .site-branding .site-title a {
+	border: none;
+}
+
 .site-header .user-info-area {
 	width: 60px;
 	max-width: 120px;
@@ -4938,25 +4992,34 @@ ul.accordion button {
 
 .mmtools .label {
 	color: #999;
-	font-size: 70%;
+	font-size: .6em;
 }
 
 .mmtools .zeno_font_resizer_container {
 	display: inline-block;
-	background: #ddd;
-	padding: .25em;
 	position: relative;
 	margin: 0;
 }
 
-.mmtools .zeno_font_resizer_container p {
+.mmtools .zeno_font_resizer_container .zeno_font_resizer {
 	margin: 0;
 	line-height: 1;
 }
 
+.mmtools .zeno_font_resizer_container .zeno_font_resizer span {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: baseline;
+	    -ms-flex-align: baseline;
+	        align-items: baseline;
+}
+
 .mmtools .zeno_font_resizer_container a {
-	padding: .25em;
+	margin: 0 .25em;
 	color: #777;
+	border: none;
+	font-weight: 700;
 }
 
 .mmtools .zeno_font_resizer_container a:hover {
@@ -5314,12 +5377,6 @@ ul.accordion button {
 	margin-bottom: 2em;
 	font-size: 1.5em;
 	font-weight: 900;
-}
-
-.comments-title:before {
-	content: "\f109";
-	padding-right: 5px;
-	color: black;
 }
 
 .comment-list {

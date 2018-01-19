@@ -1,4 +1,50 @@
 table {
+	border-collapse: collapse;
 	margin: 0 0 1.5em;
 	width: 100%;
+	@include borde(1em);
+	font-size: .9em;
+	
+}
+
+thread th {
+	border-bottom: 2px solid #bbb;
+	padding-bottom: .5em;
+}
+
+td,
+th {
+	vertical-align: top;
+}
+
+th {
+	padding: .4em;
+	text-align: left;
+}
+
+tr:not(:last-child) {
+	border-bottom: 1px solid #eee;
+}
+
+td {
+	padding: .5em 1em;
+	&:hover {
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
+	}
+}
+
+th:first-child,
+td:first-child {
+	//padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+	//padding-right: 0;
+}
+
+.table-source {
+	font-size: .75em;
+	color: gray;
+	margin-bottom: 4em;
 }

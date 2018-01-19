@@ -1,5 +1,5 @@
 .ebook-nav {
-    height: 60px;
+    height: auto;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -9,11 +9,11 @@
     font-size: .8em;
     border-top: 1px solid #ddd;
     z-index: 999;
-
+	
     nav, 
     .navigation,
     .nav-links {
-        margin: 0;
+        margin: 0!important;
         padding: 0;
         height: 100%;
     }
@@ -23,19 +23,19 @@
 	
 	    span.meta-nav {
 	        display: block;
-	        font-size: .8em;
+	        font-size: .7em;
 	    }
 	
 	    .nav-previous, .nav-next {
 	        width: 50%;
 	        margin-top: -1px;
-	        padding: .25em 0.5em;
 	        text-overflow: ellipsis;
-	
+			padding: 0;
 	        /* Required for text-overflow to do anything */
 	        white-space: nowrap;
 	        overflow: hidden;        
 	        border: 1px solid #ddd;
+	        @include borde(0);
 	
 	    }
 	
@@ -46,12 +46,23 @@
 	        margin-left: auto;
 	    }
 	}
+	
+	a {
+		border: none;
+		display: block;
+		padding: .5em 0.75em;
+		height: 100%;
+		&:hover {
+			background: $color__interactive;
+			color: white;
+		}
+	}
 
 }
 
 @media screen and (min-width: $break__medium) {
     .ebook-nav {
-        height: 80px;
+        height: auto;
         font-size: .9em;
 
         .nav-links {
@@ -63,7 +74,7 @@
 
             .nav-previous, .nav-next {
                 width: 30%;
-                padding: .5em 1em;
+                padding: 0;
             }
         }
     }

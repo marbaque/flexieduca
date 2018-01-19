@@ -97,8 +97,10 @@
         display: block;
         text-decoration: none;
         padding: .25em .75em .3em;
+        border: none;
+        
         &:hover {
-            border: none;
+            //border: none;
             color: $color__interactive;
         }
     }
