@@ -176,6 +176,43 @@ function flexieduca_post_navigation() {
 	) );
 }
 
+
+// filter to show caption, if available, on thumbnail, wrapped with '.wp-caption thumb-caption' div;
+// show just the thumbnail otherwise
+ 
+add_filter( 'post_thumbnail_html', 'custom_add_post_thumbnail_caption',10,5 );
+ 
+function custom_add_post_thumbnail_caption($html, $post_id, $post_thumbnail_id, $size, $attr) {
+ 
+if( $html == '' ) { 
+  
+    return $html;
+  
+} else {
+  
+    $out = '';
+  
+    $thumbnail_image = get_posts(array('p' => $post_thumbnail_id, 'post_type' => 'attachment'));
+  
+    if ($thumbnail_image && isset($thumbnail_image[0])) {
+  
+        $image = wp_get_attachment_image_src($post_thumbnail_id, $size);
+ 
+        if($thumbnail_image[0]->post_excerpt) 
+            $out .= '<div class="wp-caption thumb-caption">';
+  
+        $out .= $html;
+  
+        if($thumbnail_image[0]->post_excerpt) 
+            $out .= '<p class="wp-caption-text thumb-caption-text">'.$thumbnail_image[0]->post_excerpt.'</p></div>';
+   
+    }
+ 
+    return $out;
+   
+}
+}
+
 /*
  * * Customize ellipsis at the end of the excerpts
  */

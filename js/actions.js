@@ -31,11 +31,11 @@ var isAdded = false;
 
 window.addEventListener('scroll', function() {
     if (window.pageYOffset >= menuPosition.bottom && !isAdded) {
-        menu.classList.add('sticky');
+        menu.classList.add('fixed');
         menu.parentNode.insertBefore(placeholder, menu);
         isAdded = true;
     } else if (window.pageYOffset < menuPosition.bottom && isAdded) {
-        menu.classList.remove('sticky');
+        menu.classList.remove('fixed');
         menu.parentNode.removeChild(placeholder);
         isAdded = false;
     }

@@ -4,6 +4,7 @@
     width: 100%;
     position: relative;
     font-size: .8em;
+    z-index: 99;
 
     button {
         display: block;
@@ -12,6 +13,9 @@
         margin: 0;
         background: none;
         border: none;
+        font-size: .77em;
+        text-rendering: geometricPrecision;
+        text-align: center;
     }
 
     ul.menu {
@@ -27,7 +31,7 @@
         box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.32);
         
         // stick menu to the top
-		&.sticky {
+		&.fixed {
 		    top: 0;
 		    position: fixed;
 		    z-index: 999;
@@ -123,23 +127,3 @@
     }
 }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-    .site-main & {
-        margin: 0 0 1.5em;
-        overflow: hidden;
-    }
-
-    .nav-previous {
-        float: left;
-        width: 50%;
-    }
-
-    .nav-next {
-        float: right;
-        text-align: right;
-        width: 50%;
-    }
-}

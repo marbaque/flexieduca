@@ -36,13 +36,22 @@
 						
 			@media screen and (min-width: $break__small) {
 				width: 18%;
-				min-width: 270px;
+				min-width: 265px;
 				//margin: 5px;
+			}
+			
+			figure {
+				margin: -.5em -.5em 0;
+				border: 0;
+				
+				a, a:hover {
+					border: none;
+				}
 			}
 			
 			h2 {
 				font-size: 120%;
-				margin-bottom: .25em;
+				margin: 0.25em 0;
 				
 			}
 			

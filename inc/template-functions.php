@@ -15,6 +15,7 @@ function flexieduca_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
+		$classes[] = 'archive-view';
 	}
 	
 	if ( is_page('casos-estrategias-comercio-movil') ) {
@@ -29,7 +30,7 @@ function flexieduca_body_classes( $classes ) {
     }
 
     // Adds a class telling us if the sidebar is in use.
-    if (is_active_sidebar('sidebar-2')) {
+    if (is_page() && is_active_sidebar('sidebar-2')) {
         $classes[] = 'has-page-sidebar';
     } else {
         $classes[] = 'has-no-page-sidebar';

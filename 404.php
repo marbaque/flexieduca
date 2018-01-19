@@ -18,11 +18,12 @@ get_header(); ?>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'flexieduca' ); ?></p>
+					<?php get_search_form(); ?>
+					
+					<p class="bubble"><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'flexieduca' ); ?></p>
+					<img aria-hidden="true" src="<?php echo get_stylesheet_directory_uri(); ?>/img/rana404.svg" class="rana404" />
 
 					<?php
-						get_search_form();
-
 						the_widget( 'WP_Widget_Recent_Posts' );
 					?>
 

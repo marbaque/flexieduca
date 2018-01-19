@@ -43,8 +43,25 @@
 				}
 			}
 			.case-trends {
-				height: 40px;
-				padding: 10px 1em;
+				display: block;
+				padding: .5em 1em;
+				margin: 1em 0;
+				background: $color__sombreado;
+			}
+			
+			.enlace {
+				margin: 1em 0;
+				
+				a {
+					display: block;
+					padding: .5em 1em;
+					background: $color__sombreado;
+					
+					&:hover {
+						border: 0;
+						opacity: .8;
+					}
+				}
 			}
 		}
 		.comments-area {

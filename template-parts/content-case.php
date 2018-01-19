@@ -31,6 +31,8 @@
 	        $sizeThumb = 'flexieduca-thumb';
 	        $sizeLg = 'flexieduca-gallery-img';
 	        
+	        $url = get_field('enlace');
+	        
 	        ?>
 	        <!--only image 1 is required-->
 	        <?php if ( !empty($img1) ): ?>
@@ -66,6 +68,13 @@
 	                </div>
 	                <div class="case-trends">
 			            <?php the_terms($post->ID, 'tendencia', 'Tendencia: ', ', ', ' '); ?>
+			        </div>
+			        
+			        <div class="enlace">
+				        <?php if ( !empty($url) ): ?>
+	                        <a href="<?php echo wp_get_attachment_url($url) ?>" title="Enlace a <?php the_title(); ?>">
+		                        <?php echo __( 'More info', 'flexieduca' ); ?> <i class="fa fa-external-link" aria-hidden="true"></i></a>
+	                    <?php endif; ?>
 			        </div>
 	            </div><!-- .case-gallery --> 
 	            

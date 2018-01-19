@@ -40,7 +40,11 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_pagination( array(
+				'prev_text' => __( 'Newer', 'flexieduca' ),
+				'next_text' => __( 'Older', 'flexieduca' ),
+				'before_page_number' => '<span class="screen-reader-text">' . __( 'Page', 'flexieduca' ) . '</span>',
+			) );
 
 		else :
 

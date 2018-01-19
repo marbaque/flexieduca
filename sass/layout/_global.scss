@@ -1,24 +1,19 @@
-body {
-    background-color: $color__background-body;
-}
 .site {
 	width: 100%;
-	max-width: 1500px;
+	max-width: 1280px;
 	margin: 0 auto;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
 	position: relative;
 	background: white;
+	@media screen and (min-width: $break__medium) {
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}
 }
 .site-content {
     max-width: $max__size;
     margin: 0 auto;
-    .content-area {
-        padding: 1em;
-        @media screen and (min-width: $break__medium) {
-            padding: 2em 1em;
-        }
-    }
+    padding: 1em;
 }
 
 /****************************
@@ -31,6 +26,8 @@ body {
     height: 50px;
     border-bottom: 1px solid #ccc;
     z-index: 998;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.26);
+    
 
     .main-navigation {
         width: 60px;
@@ -277,6 +274,213 @@ body {
         }
 
 }
+
+/**************************************
+**	Archive view
+**************************************/
+.archive-view {
+	.site {
+		background-color: $color__sombreado;
+		
+		@media screen and (min-width: $break__medium) {
+			.site-content {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				
+				.page-header {
+					flex: 1 0 100%;
+					width: 100%;
+				}
+				
+				.content-area {
+					width: $size__ratio-large;	
+				}
+				.widget-area {
+					width: $size__ratio-small;
+				}
+			}
+		}
+	}
+	
+	.post,
+	.multimedia,
+	.page,
+	.caso {
+		background: white;
+		position: relative;
+	}
+	.post__content {
+		padding: 1em 1.5em;
+	}
+	.entry-title {
+		margin: .25em 0;
+	}
+	.excerpt {
+		font-size: .9em;
+	}
+	.continue-reading {
+		a {
+			font-size: .8em;
+			display: inline-block;
+			margin-left: auto;
+			background: $color__interactive;
+			padding: .25em 1em;
+			position: absolute;
+			bottom: 5px;
+			right: -10px;
+			//border: 2px solid $color__borde-recuadro;
+			color: solid $color__borde-recuadro;
+			-webkit-clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
+			clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
+			&:hover {
+				border-bottom: 3px solid rgba(68, 66, 65, 0.49);
+			}
+		}
+	}
+	.entry-meta {
+		font-size: .7em;
+		
+		.byline, .posted-on, .comments-link {
+			display: inline;
+			margin: 0 0 .5em;
+	
+		}
+		
+		
+	}
+	.entry-meta>span:not(:last-child) {
+		&:after{
+			content: "|";
+			margin: 0 .25em;
+		}
+	}
+	
+}
+
+.search-no-results,
+.error404 {
+	.site {
+		background: white!important;
+	}
+}
+
+/***********************************
+**	Single posts
+************************************/
+.single:not(.single-multimedia) {
+	
+	&.has-sidebar {
+		.site-content {
+			.entry-meta {
+				font-size: .7em;
+				
+				.byline, .posted-on, .comments-link {
+					display: inline;
+					margin: 0 0 .5em;
+			
+				}
+				
+				
+			}
+			.entry-meta>span:not(:last-child) {
+				&:after{
+					content: "|";
+					margin: 0 .25em;
+				}
+			}
+				
+			@media screen and (min-width: $break__medium) {
+				.post__wrap {
+					display: flex;
+					justify-content: space-between;	
+					
+								
+					
+					.entry-content {
+						width: $size__ratio-large;
+						
+					}
+					.widget-area {
+						width: $size__ratio-small;
+					}
+				}
+			}
+		}
+	}
+	
+	&.no-sidebar {
+		.site {
+			.site-content {
+				max-width: $max__size;
+			}
+			.entry-meta {				
+				margin-top: 2em;
+				background: $color__sombreado;
+				padding: 1em;
+				font-size: .8em;
+				
+				.byline, .posted-on, .comments-link {
+					display: block;
+					margin: 0 0 .5em;
+				}
+			}
+				
+			@media screen and (min-width: $break__medium) {
+				.post__wrap {
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-start;
+					flex-wrap: nowrap;
+					height: auto;			
+					
+					.entry-content {
+						width: 80%;
+						padding: 0 2em;	
+					}
+					.entry-meta{
+						width: 20%;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+/****************************
+** Search
+*****************************/
+
+.rana404{
+	margin: 40px auto 0;
+	width: 50%;
+	min-width: 300px;
+	display: block;
+}
+.bubble{
+	background: $color__sombreado;
+	@include borde(80px);
+	width: 60%;
+	padding: 1em 2em;
+	float: right;
+	position: relative;	
+}
+.bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 48px solid transparent;
+	border-top-color: $color__sombreado;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -24px;
+	margin-bottom: -48px;
+}
+
 
 
 /****************************

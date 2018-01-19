@@ -18,7 +18,7 @@
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php
+			<p class="bubble"><?php
 				printf(
 					wp_kses(
 						/* translators: 1: link to WP admin new post page. */
@@ -35,16 +35,16 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'flexieduca' ); ?></p>
-			<?php
-				get_search_form();
+			
+			<?php get_search_form(); ?>			
+			<p class="bubble"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'flexieduca' ); ?></p>
+			<?php else : ?>
+			
+			<?php get_search_form(); ?>
+			<p class="bubble"><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'flexieduca' ); ?></p>
+			<?php endif; ?>
+		
+		<img aria-hidden="true" src="<?php echo get_stylesheet_directory_uri(); ?>/img/rana404.svg" class="rana404" />
 
-		else : ?>
-
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'flexieduca' ); ?></p>
-			<?php
-				get_search_form();
-
-		endif; ?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

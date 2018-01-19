@@ -17,35 +17,36 @@
         padding: 0;
         height: 100%;
     }
-}
-.nav-links {
-    display: flex;
-    align-items: stretch;
+    .nav-links {
+	    display: flex;
+	    align-items: stretch;
+	
+	    span.meta-nav {
+	        display: block;
+	        font-size: .8em;
+	    }
+	
+	    .nav-previous, .nav-next {
+	        width: 50%;
+	        margin-top: -1px;
+	        padding: .25em 0.5em;
+	        text-overflow: ellipsis;
+	
+	        /* Required for text-overflow to do anything */
+	        white-space: nowrap;
+	        overflow: hidden;        
+	        border: 1px solid #ddd;
+	
+	    }
+	
+	    .nav-previous {
+	        margin-right: auto;
+	    }
+	    .nav-next {
+	        margin-left: auto;
+	    }
+	}
 
-    span.meta-nav {
-        display: block;
-        font-size: .8em;
-    }
-
-    .nav-previous, .nav-next {
-        width: 50%;
-        margin-top: -1px;
-        padding: .25em 0.5em;
-        text-overflow: ellipsis;
-
-        /* Required for text-overflow to do anything */
-        white-space: nowrap;
-        overflow: hidden;        
-        border: 1px solid #ddd;
-
-    }
-
-    .nav-previous {
-        margin-right: auto;
-    }
-    .nav-next {
-        margin-left: auto;
-    }
 }
 
 @media screen and (min-width: $break__medium) {
@@ -66,4 +67,88 @@
             }
         }
     }
+}
+
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	display: block;
+	width: 100%;
+    
+    .site-main & {
+        margin: 0 0 1.5em;
+        overflow: hidden;
+    }
+    
+    .nav-links {
+	    display: flex;
+	    align-items: stretch;
+	    justify-content: space-between;
+    }
+    
+    .nav-previous,
+    .nav-next {
+	    background: white;
+	    border: 1px solid $color__borde-recuadro;
+	    padding: .5em 1em;
+	    @include borde(4px);
+	    .meta-nav {
+		    display: block;
+		    font-size: .7em;
+	    }
+	    width: 45%;
+    }
+
+    .nav-previous {
+        float: left;
+        
+    }
+
+    .nav-next {
+        float: right;
+        text-align: right;
+    }
+}
+
+//pagination for the index pages
+.pagination {
+	
+	font-family: $font__main;
+	
+	.nav-links {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	
+	a,
+	span {
+		padding: .5em 1em;
+		background: white;
+	}
+	
+	a {
+		text-decoration: none;
+		
+		&:focus,
+		&:hover {
+			color: white;
+			background: $color__interactive;
+			border: 0;
+		}
+	}
+	
+	.current {
+		font-weight: 600;
+		color: $color__interactive;
+	}
+	
+	.prev .icon {
+		margin-right: 1em;
+	}
+	
+	.next .icon {
+		margin-left: 1em;
+	}
 }
