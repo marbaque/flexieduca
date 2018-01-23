@@ -20,3 +20,8 @@ a {
         outline: 0;
     }
 }
+
+.content-area a {
+    word-break: break-all;
+    word-wrap: break-word;
+}

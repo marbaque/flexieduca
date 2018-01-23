@@ -24,7 +24,7 @@ $obj = get_field('objetivos');
 
         <?php if ($obj): ?>
             <li>
-                <button class="accordion-control"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Objetivos</button>
+                <button class="accordion-control"><i class="fa fa-eye" aria-hidden="true"></i> Objetivos</button>
                 <div class="accordion-panel objetivos">
                     <?php echo $obj; ?>
                 </div>
@@ -33,7 +33,7 @@ $obj = get_field('objetivos');
         
         <?php if ($resumen): ?>
             <li>
-                <button class="accordion-control"><i class="fa fa-pencil" aria-hidden="true"></i> Resumen</button>
+                <button class="accordion-control"><i class="fa fa-eye" aria-hidden="true"></i> Resumen</button>
                 <div id="resumen" class="accordion-panel resumen">
                     <?php echo $resumen; ?>
                 </div>

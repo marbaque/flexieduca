@@ -7,8 +7,44 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 1em 0 2em;
+	position: relative;
+	padding: .5em 1em 1em;
+	background-color: $color__text-screen;
+	color: $color__background-ins;
+	@include borde(1em);
+	
+	&:before, &:after {
+		font-family: 'FontAwesome';
+		line-height: 1;
+	    position: absolute;	
+		color: $color__background-pre;
+		font-size: 50px;
+		opacity: .2;
+	}
+	&:before{
+	    content: "\f10d";
+	    margin-right: 13px;
+	    left: 8px;
+	    top: 4px;
+	    
+	}
+	&:after {
+	    content: "\f10e";
+	    margin-left: 13px;
+	    right: 4px;
+	    bottom: 4px;
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+	
+	@media screen and (min-width:$break__small) {
+		margin: 1em 1em 2em;
+	}
 }
+
+
 
 address {
 	margin: 0 0 1.5em;
