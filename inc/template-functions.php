@@ -13,7 +13,7 @@
  */
 function flexieduca_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
+	if ( ! is_singular() && ! is_tax( 'tendencia' ) ) {
 		$classes[] = 'hfeed';
 		$classes[] = 'archive-view';
 	}

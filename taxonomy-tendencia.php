@@ -4,11 +4,22 @@
 */
 get_header();
 ?>
+<?php
+	// get the current taxonomy term
+	$term = get_queried_object();
+	$queried_object = get_queried_object(); 
+	$taxonomy = $queried_object->taxonomy;
+	$term_id = $queried_object->term_id;  
+	
+	$GLOBALS['wp_embed']->post_ID = $taxonomy . '_' . $term_id;
 
+	// vars
+	$trend = get_field('trend-desc', $term);
+	?>
 	
 <div id="primary" class="content-area">
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
     
     <div class="case-index__wrap">
@@ -17,7 +28,7 @@ get_header();
 	        <?php
 	        while (have_posts()) : the_post();
 	
-				the_content();
+				echo $trend;
 	
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'flexieduca' ),
@@ -27,6 +38,7 @@ get_header();
 	        endwhile; // End of the loop.
 	        ?>
 	    </main><!-- #main -->
+		
 		<section class="case-gallery">
 		    
 		    <h2 class="gallery-title">
@@ -61,3 +73,4 @@ get_header();
 
 <?php
 get_footer();
+

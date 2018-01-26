@@ -1,12 +1,36 @@
+.back {
+	font-size: 80%;
+	position: relative;
+	line-height: 1;
+	&:before {
+		font-family: 'FontAwesome';
+		content: "\f060";
+		margin-right: .25em;
+		position: absolute;
+		left: -1.2em;
+		top: .2em;
+	}
+}
+
 .single-caso {
 	.content-area {
 		
 	}
 	.back {
 		font-size: 80%;
+		position: relative;
+		line-height: 1;
+		&:before {
+			font-family: 'FontAwesome';
+			content: "\f060";
+			margin-right: .25em;
+			position: absolute;
+			left: -1.2em;
+			top: .2em;
+		}
 	}
 	.entry-title {
-		margin: .25em 0;
+		margin: 1em 0 .25em;
 	}
 	.case-content {
 		
@@ -19,8 +43,8 @@
 				justify-content: space-between;
 				align-items: flex-start;
 				padding: 1em 0;
-				border-top: 3px solid $color__borde-recuadro;
-				border-bottom: 3px solid $color__borde-recuadro;
+				border-top: 3px solid $color__interactive;
+				border-bottom: 3px solid $color__interactive;
 			}
 			
 			
@@ -47,8 +71,9 @@
 				padding: .5em 1em;
 				margin: 1em 0;
 				background: $color__sombreado;
+				border: none;
 			}
-			
+			//more info
 			.enlace {
 				margin: 1em 0;
 				
@@ -56,9 +81,14 @@
 					display: block;
 					padding: .5em 1em;
 					background: $color__sombreado;
-					
+					border: none;
+					&:after {
+						font-family: 'FontAwesome';
+						content: "\f14c";
+						margin-left: .25em;
+					}
 					&:hover {
-						border: 0;
+						border: none;
 						opacity: .8;
 					}
 				}
@@ -78,12 +108,13 @@
 		position: relative;
 		height: 300px;
 		overflow: hidden;
+		margin: 1em 0;
 		background: white;
+		@include borde(5px);
 		border: 2px solid $color__borde-recuadro;
-		@include borde(2px);
 		img {
-			height: 100%;
-			width: auto;
+			height: auto;
+			width: 100%;
 		}
 	}
 	
@@ -105,12 +136,13 @@
 	
 	/********** THUMBNAILS **********/
 	#thumbnails {
-		margin: 10px .5em;
-		padding-bottom: .25em;
+		margin: 0 0 2em;
+		padding: .25em .5em;
 		height: 80px;
 		display: flex;
 		align-items: center;
-		border-bottom: 1px solid $color__borde-recuadro;
+		background-color: $color__skin;
+		//border-bottom: 1px solid $color__borde-recuadro;
 		a {
 			height: 100%;
 			width: auto;

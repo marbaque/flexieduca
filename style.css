@@ -598,15 +598,16 @@ textarea {
 a {
 	color: #404040;
 	text-decoration: none;
-	border-bottom: 3px solid #DDBE59;
+	border-bottom: 3px solid currentcolor;
+	transition: .2s all;
 }
 
 a:visited {
-	color: purple;
+	color: currentcolor;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #D96C70;
 	border-bottom: 3px solid #D96C70;
 }
 
@@ -616,11 +617,6 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
-}
-
-.content-area a {
-	word-break: break-all;
-	word-wrap: break-word;
 }
 
 /*--------------------------------------------------------------
@@ -902,6 +898,7 @@ a:hover, a:active {
 
 .pagination a {
 	text-decoration: none;
+	border: none;
 }
 
 .pagination a:focus, .pagination a:hover {
@@ -1402,7 +1399,6 @@ li.flexieduca-search, .widget_search {
 --------------------------------------------------------------*/
 .site {
 	width: 100%;
-	max-width: 1280px;
 	margin: 0 auto;
 	position: relative;
 	background: white;
@@ -1719,7 +1715,11 @@ li.flexieduca-search, .widget_search {
 }
 
 .archive-view .entry-title {
-	margin: .25em 0;
+	margin: .5em 0;
+}
+
+.archive-view .entry-title a {
+	border: none;
 }
 
 .archive-view .excerpt {
@@ -1733,19 +1733,26 @@ li.flexieduca-search, .widget_search {
 	background: #D96C70;
 	padding: .25em 1em;
 	position: absolute;
-	bottom: 5px;
-	right: -10px;
-	color: solid #41423F;
-	-webkit-clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
-	clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
+	bottom: 7px;
+	right: -7px;
+	border: 2px solid #41423F;
+	color: #75282B;
+	transition: .5s background-color;
 }
 
 .archive-view .continue-reading a:hover {
-	border-bottom: 3px solid rgba(68, 66, 65, 0.49);
+	background-color: #E38689;
 }
 
 .archive-view .entry-meta {
 	font-size: .7em;
+	color: #999;
+	font-weight: 300;
+}
+
+.archive-view .entry-meta a {
+	color: #999;
+	border: none;
 }
 
 .archive-view .entry-meta .byline, .archive-view .entry-meta .posted-on, .archive-view .entry-meta .comments-link {
@@ -1955,6 +1962,12 @@ ul.accordion > li {
 	border-radius: 5px;
 }
 
+ul.accordion > li button:before {
+	font-family: 'FontAwesome';
+	content: "\f0d7";
+	margin-right: .3em;
+}
+
 ul.accordion button {
 	width: 100%;
 	background: none;
@@ -2010,6 +2023,7 @@ ul.accordion button:focus {
 
 .accordion-panel.audio audio {
 	width: 80%;
+	margin: 0 auto;
 }
 
 .mmtools {
@@ -2085,6 +2099,21 @@ ul.accordion button:focus {
 	font-size: .9em;
 	border-top: 2px solid #41423F;
 	border-bottom: 2px solid #41423F;
+	/*
+    a {
+	    word-break: break-all;
+	    word-wrap: break-word;
+	    background-color: $color__skin;
+	    border: none;
+	    padding: 0 .25em;
+	    
+	    &:hover {
+		    background-color: $color__interactive;
+		    border: none;
+		    color: black;
+	    }
+	}
+*/
 }
 
 @media screen and (min-width: 900px) {
@@ -2137,6 +2166,21 @@ ul.accordion button:focus {
 /*--------------------------------------------------------------
 ## Casos pages
 --------------------------------------------------------------*/
+.back {
+	font-size: 80%;
+	position: relative;
+	line-height: 1;
+}
+
+.back:before {
+	font-family: 'FontAwesome';
+	content: "\f060";
+	margin-right: .25em;
+	position: absolute;
+	left: -1.2em;
+	top: .2em;
+}
+
 .single-caso {
 	/********** gallery **********/
 	/********** THUMBNAILS **********/
@@ -2144,10 +2188,21 @@ ul.accordion button:focus {
 
 .single-caso .back {
 	font-size: 80%;
+	position: relative;
+	line-height: 1;
+}
+
+.single-caso .back:before {
+	font-family: 'FontAwesome';
+	content: "\f060";
+	margin-right: .25em;
+	position: absolute;
+	left: -1.2em;
+	top: .2em;
 }
 
 .single-caso .entry-title {
-	margin: .25em 0;
+	margin: 1em 0 .25em;
 }
 
 .single-caso .case-content .case__wrap {
@@ -2167,8 +2222,8 @@ ul.accordion button:focus {
 		    -ms-flex-align: start;
 		        align-items: flex-start;
 		padding: 1em 0;
-		border-top: 3px solid #41423F;
-		border-bottom: 3px solid #41423F;
+		border-top: 3px solid #D96C70;
+		border-bottom: 3px solid #D96C70;
 	}
 }
 
@@ -2200,6 +2255,7 @@ ul.accordion button:focus {
 	padding: .5em 1em;
 	margin: 1em 0;
 	background: #F1EEE5;
+	border: none;
 }
 
 .single-caso .case-content .case__wrap .enlace {
@@ -2210,10 +2266,17 @@ ul.accordion button:focus {
 	display: block;
 	padding: .5em 1em;
 	background: #F1EEE5;
+	border: none;
+}
+
+.single-caso .case-content .case__wrap .enlace a:after {
+	font-family: 'FontAwesome';
+	content: "\f14c";
+	margin-left: .25em;
 }
 
 .single-caso .case-content .case__wrap .enlace a:hover {
-	border: 0;
+	border: none;
 	opacity: .8;
 }
 
@@ -2225,14 +2288,15 @@ ul.accordion button:focus {
 	position: relative;
 	height: 300px;
 	overflow: hidden;
+	margin: 1em 0;
 	background: white;
+	border-radius: 5px;
 	border: 2px solid #41423F;
-	border-radius: 2px;
 }
 
 .single-caso #photo-viewer img {
-	height: 100%;
-	width: auto;
+	height: auto;
+	width: 100%;
 }
 
 .single-caso #photo-viewer.is-loading:after {
@@ -2251,8 +2315,8 @@ ul.accordion button:focus {
 }
 
 .single-caso #thumbnails {
-	margin: 10px .5em;
-	padding-bottom: .25em;
+	margin: 0 0 2em;
+	padding: .25em .5em;
 	height: 80px;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2260,7 +2324,7 @@ ul.accordion button:focus {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	border-bottom: 1px solid #41423F;
+	background-color: #DDBE59;
 }
 
 .single-caso #thumbnails a {
@@ -2283,22 +2347,26 @@ ul.accordion button:focus {
 /*--------------------------------------------------------------
 ## Casos pages
 --------------------------------------------------------------*/
-.casos-index .content-area {
+.casos-index .content-area,
+.tax-tendencia .content-area {
 	padding: 1em;
 }
 
 @media screen and (min-width: 600px) {
-	.casos-index .content-area {
+	.casos-index .content-area,
+	.tax-tendencia .content-area {
 		padding: 1em 2em;
 	}
 }
 
-.casos-index .site-main {
+.casos-index .site-main,
+.tax-tendencia .site-main {
 	max-width: 780px;
 	margin: 0 auto;
 }
 
-.casos-index .case-gallery {
+.casos-index .case-gallery,
+.tax-tendencia .case-gallery {
 	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2312,76 +2380,96 @@ ul.accordion button:focus {
 	    flex-wrap: wrap;
 }
 
-.casos-index .case-gallery:before {
-	content: "Explore los casos:";
+.casos-index .case-gallery .gallery-title,
+.tax-tendencia .case-gallery .gallery-title {
 	display: block;
 	width: 100%;
 	font-family: "Fredoka One";
 	margin: 1em 0;
 }
 
-.casos-index .case-gallery .case-item {
+.casos-index .case-gallery .case-item,
+.tax-tendencia .case-gallery .case-item {
 	width: 100%;
 	background: #F1EEE5;
-	border: 3px solid #41423F;
+	background-size: cover;
+	border: 2px solid #41423F;
+	border-radius: 4px;
 	margin: 5px 5px 10px;
-	padding: .5em .5em 1.5em;
-	border-radius: 5px;
+	padding: 0;
 	position: relative;
 	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.28);
 }
 
 @media screen and (min-width: 600px) {
-	.casos-index .case-gallery .case-item {
+	.casos-index .case-gallery .case-item,
+	.tax-tendencia .case-gallery .case-item {
 		width: 18%;
-		min-width: 265px;
+		min-width: 260px;
 	}
 }
 
-.casos-index .case-gallery .case-item figure {
-	margin: -.5em -.5em 0;
-	border: 0;
-}
-
-.casos-index .case-gallery .case-item figure a, .casos-index .case-gallery .case-item figure a:hover {
+.casos-index .case-gallery .case-item a, .casos-index .case-gallery .case-item a:hover,
+.tax-tendencia .case-gallery .case-item a,
+.tax-tendencia .case-gallery .case-item a:hover {
 	border: none;
 }
 
-.casos-index .case-gallery .case-item h2 {
-	font-size: 120%;
-	margin: 0.25em 0;
+.casos-index .case-gallery .case-item .item-text,
+.tax-tendencia .case-gallery .case-item .item-text {
+	padding: .5em .75em 1.5em;
 }
 
-.casos-index .case-gallery .case-item .excerpt {
+.casos-index .case-gallery .case-item .item-media,
+.tax-tendencia .case-gallery .case-item .item-media {
+	max-height: 150px;
+	width: 100%;
+	margin: auto 0;
+	overflow: hidden;
+}
+
+.casos-index .case-gallery .case-item h2,
+.tax-tendencia .case-gallery .case-item h2 {
+	font-size: 120%;
+	margin: 0.25em 0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.casos-index .case-gallery .case-item .excerpt,
+.tax-tendencia .case-gallery .case-item .excerpt {
 	font-size: .7em;
 	line-height: 1.3;
 	margin: .25em 0;
 }
 
-.casos-index .case-gallery .case-item .continue-reading a {
+.casos-index .case-gallery .case-item .continue-reading a,
+.tax-tendencia .case-gallery .case-item .continue-reading a {
 	font-size: .8em;
 	display: inline-block;
 	margin-left: auto;
 	background: #D96C70;
 	padding: .25em 1em;
 	position: absolute;
-	bottom: 5px;
-	right: -10px;
-	color: solid #41423F;
-	-webkit-clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
-	clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
+	bottom: 7px;
+	right: -7px;
+	border: 2px solid #41423F;
+	color: #75282B;
+	transition: .5s background-color;
 }
 
-.casos-index .case-gallery .case-item .continue-reading a:hover {
-	border-bottom: 3px solid rgba(68, 66, 65, 0.49);
+.casos-index .case-gallery .case-item .continue-reading a:hover,
+.tax-tendencia .case-gallery .case-item .continue-reading a:hover {
+	background-color: #E38689;
 }
 
 @media screen and (min-width: 1400px) {
-	.casos-index .site-content {
+	.site-content {
 		width: 100%;
 		max-width: 1400px;
 	}
-	.casos-index .case-index__wrap {
+	.case-index__wrap {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -2390,14 +2478,14 @@ ul.accordion button:focus {
 		    -ms-flex-pack: justify;
 		        justify-content: space-between;
 	}
-	.casos-index .case-index__wrap .site-main {
+	.case-index__wrap .site-main {
 		width: 48%;
 		margin: 0;
 	}
-	.casos-index .case-index__wrap .case-gallery {
+	.case-index__wrap .case-gallery {
 		width: 48%;
 	}
-	.casos-index .case-index__wrap .case-gallery .case-item {
+	.case-index__wrap .case-gallery .case-item {
 		width: 48%;
 	}
 }

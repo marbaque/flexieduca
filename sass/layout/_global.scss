@@ -1,6 +1,6 @@
 .site {
 	width: 100%;
-	max-width: 1280px;
+	//max-width: 1280px;
 	margin: 0 auto;
 	position: relative;
 	background: white;
@@ -318,7 +318,10 @@
 		padding: 1em 1.5em;
 	}
 	.entry-title {
-		margin: .25em 0;
+		margin: .5em 0;
+		a {
+			border: none;
+		}
 	}
 	.excerpt {
 		font-size: .9em;
@@ -331,19 +334,24 @@
 			background: $color__interactive;
 			padding: .25em 1em;
 			position: absolute;
-			bottom: 5px;
-			right: -10px;
-			//border: 2px solid $color__borde-recuadro;
-			color: solid $color__borde-recuadro;
-			-webkit-clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
-			clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
+			bottom: 7px;
+			right: -7px;
+			border: 2px solid $color__borde-recuadro;
+			color: #75282B;
+			transition: .5s background-color;
 			&:hover {
-				border-bottom: 3px solid rgba(68, 66, 65, 0.49);
+				background-color: #E38689;
 			}
 		}
 	}
 	.entry-meta {
 		font-size: .7em;
+		color: #999;
+		font-weight: 300;
+		a {
+			color: #999;
+			border: none;
+		}
 		
 		.byline, .posted-on, .comments-link {
 			display: inline;

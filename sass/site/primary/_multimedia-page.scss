@@ -40,6 +40,12 @@ ul.accordion {
         margin: .5em 0;
 	    background: $color__sombreado;
 	    @include borde(5px);
+	    
+	    button:before {
+			font-family: 'FontAwesome';
+			content: "\f0d7";
+			margin-right: .3em;
+		}
     }
 
     button {
@@ -88,6 +94,7 @@ ul.accordion {
 		text-align: center;
 		audio {
 			width: 80%;
+			margin: 0 auto;
 		}
 	}
     
@@ -169,6 +176,21 @@ ul.accordion {
 		box-shadow: 2px 3px 4px 0 rgba(0,0,0,0.32);
 		@include borde(4px);
     }
+/*
+    a {
+	    word-break: break-all;
+	    word-wrap: break-word;
+	    background-color: $color__skin;
+	    border: none;
+	    padding: 0 .25em;
+	    
+	    &:hover {
+		    background-color: $color__interactive;
+		    border: none;
+		    color: black;
+	    }
+	}
+*/
 }
 .formato-actividad{
     @include vector-bg-with-fallback(actividad_virtual);  

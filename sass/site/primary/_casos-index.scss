@@ -1,115 +1,124 @@
 .casos-index {
-	.content-area {
-		padding: 1em;
-		@media screen and (min-width: $break__small) {
-			padding: 1em 2em;
+	&.tax-tendencia {}
+		.content-area {
+			padding: 1em;
+			@media screen and (min-width: $break__small) {
+				padding: 1em 2em;
+			}
 		}
-	}
-	.site-main {
-		max-width: $max__column-size;
-		margin: 0 auto;
-
-	}
-	.case-gallery {
-		width: 100%;
-		display: flex;
-		align-items: stretch;
-		align-content: flex-start;
-		flex-wrap: wrap;
-		&:before {
-			content: "Explore los casos:";
-			display: block;
-			width: 100%;
-			font-family: $font__headings;
-			margin: 1em 0;
+		.site-main {
+			max-width: $max__column-size;
+			margin: 0 auto;
+	
 		}
 		
-		.case-item {
+		.case-gallery {
 			width: 100%;
-			background: $color__sombreado;
-			border: 3px solid $color__borde-recuadro;
-			margin: 5px 5px 10px;
-			padding: .5em .5em 1.5em;
-			@include borde(5px);
-			position: relative;
-			box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.28);
-						
-			@media screen and (min-width: $break__small) {
-				width: 18%;
-				min-width: 265px;
-				//margin: 5px;
+			display: flex;
+			align-items: stretch;
+			align-content: flex-start;
+			flex-wrap: wrap;
+			
+			.gallery-title {
+				display: block;
+				width: 100%;
+				font-family: $font__headings;
+				margin: 1em 0;
 			}
 			
-			figure {
-				margin: -.5em -.5em 0;
-				border: 0;
-				
+			.case-item {
+				width: 100%;
+				background: $color__sombreado;
+				background-size: cover;
+				border: 2px solid $color__borde-recuadro;
+				@include borde(4px);
+				margin: 5px 5px 10px;
+				padding: 0;
+				position: relative;
+				box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.28);
+							
+				@media screen and (min-width: $break__small) {
+					width: 18%;
+					min-width: 260px;
+				}
 				a, a:hover {
 					border: none;
 				}
-			}
-			
-			h2 {
-				font-size: 120%;
-				margin: 0.25em 0;
+				.item-text {
+					//position: relative;
+					padding: .5em .75em 1.5em;
+				}
+				.item-media {
+					max-height: 150px;
+					width: 100%;
+					margin: auto 0;
+					overflow: hidden;
+				}
+				img {
+					
+				}
 				
-			}
-			
-			.excerpt {
-				font-size: .7em;
-				line-height: 1.3;
-				margin: .25em 0;
+				h2 {
+					font-size: 120%;
+					margin: 0.25em 0;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;				
+				}
 				
-			}
-			
-			.continue-reading {
-				a {
-					font-size: .8em;
-					display: inline-block;
-					margin-left: auto;
-					background: $color__interactive;
-					padding: .25em 1em;
-					position: absolute;
-					bottom: 5px;
-					right: -10px;
-					//border: 2px solid $color__borde-recuadro;
-					color: solid $color__borde-recuadro;
-					-webkit-clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
-					clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
-					&:hover {
-						border-bottom: 3px solid rgba(68, 66, 65, 0.49);
+				.excerpt {
+					font-size: .7em;
+					line-height: 1.3;
+					margin: .25em 0;
+				}
+				
+				.continue-reading {
+					a {
+						font-size: .8em;
+						display: inline-block;
+						margin-left: auto;
+						background: $color__interactive;
+						padding: .25em 1em;
+						position: absolute;
+						bottom: 7px;
+						right: -7px;
+						border: 2px solid $color__borde-recuadro;
+						color: #75282B;
+						transition: .5s background-color;
+						&:hover {
+							background-color: #E38689;
+						}
 					}
 				}
 			}
 		}
-	}
+	}	
+}
+
+
+@media screen and(min-width: $break__hd) {
 	
-	@media screen and(min-width: $break__hd) {
+	.site-content {
+		width: 100%;
+		max-width: $break__hd;
 		
-		.site-content {
-			width: 100%;
-			max-width: $break__hd;
+	}
+	.case-index__wrap {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		
+		.site-main {
+			width: 48%;
+			margin: 0;	
+		}			
+		.case-gallery {
+			width: 48%;
 			
-		}
-		.case-index__wrap {
-			display: flex;
-			width: 100%;
-			justify-content: space-between;
-			
-			.site-main {
+			.case-item {
 				width: 48%;
-				margin: 0;	
-			}			
-			.case-gallery {
-				width: 48%;
-				
-				.case-item {
-					width: 48%;
-				}
 			}
 		}
-		
 	}
-	
 	
 }

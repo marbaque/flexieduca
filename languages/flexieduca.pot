@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-01-16 20:46+0000\n"
+"POT-Creation-Date: 2018-01-25 21:04+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,20 +18,32 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:21
+#: 404.php:23
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: 404.php:30
+#: 404.php:31
 msgid "Most Used Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-#: 404.php:47
+#: 404.php:48
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: archive.php:44 index.php:44 search.php:44
+msgid "Newer"
+msgstr ""
+
+#: archive.php:45 index.php:45 search.php:45
+msgid "Older"
+msgstr ""
+
+#: archive.php:46 index.php:46 search.php:46
+msgid "Page"
 msgstr ""
 
 #. translators: 1: title.
@@ -69,56 +81,56 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:52
+#: functions.php:53
 msgid "Primary menu"
 msgstr ""
 
-#: functions.php:53
+#: functions.php:54
 msgid "Front menu"
 msgstr ""
 
 #. If there are characters in your language that are not
 #. supported by Frdoka One and Rubik, translate this to 'off'. Do not translate
 #. into your own language.
-#: functions.php:107
+#: functions.php:108
 msgctxt "Fredoka One: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:109
 msgctxt "Rubik: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:201
+#: functions.php:202
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:203
+#: functions.php:204
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:210
+#: functions.php:211
 msgid "Page Sidebar"
 msgstr ""
 
-#: functions.php:212
+#: functions.php:213
 msgid "Add page sidebar widgets here."
 msgstr ""
 
-#: functions.php:219
+#: functions.php:220
 msgid "Front Page Sidebar"
 msgstr ""
 
-#: functions.php:221
+#: functions.php:222
 msgid "Add front widgets here."
 msgstr ""
 
-#: functions.php:253
+#: functions.php:254
 msgid "Expand child menu"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:255
 msgid "Collapse child menu"
 msgstr ""
 
@@ -130,20 +142,28 @@ msgstr ""
 msgid "Contents"
 msgstr ""
 
-#: page-casos.php:22 template-parts/content-front.php:31
+#. Name of the template
+msgid "Case Gallery"
+msgstr ""
+
+#: page-casos.php:23 template-parts/content-front.php:31
 #: template-parts/content-multimedia.php:58 template-parts/content-page.php:22
-#: template-parts/content.php:45
+#: template-parts/content-single.php:60
 msgid "Pages:"
 msgstr ""
 
+#: page-casos.php:34
+msgid "Case list"
+msgstr ""
+
 #. %s: Name of current post.
-#: page-casos.php:74
+#: page-casos.php:80 template-parts/content.php:41
 #, php-format
 msgid "Continue reading %s"
 msgstr ""
 
 #. translators: %s: search query.
-#: search.php:21
+#: search.php:18
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
@@ -219,12 +239,17 @@ msgstr ""
 msgid "Previous post:"
 msgstr ""
 
-#: template-parts/content-case.php:10
+#: template-parts/content-case.php:10 template-parts/content-case.php:10
 msgid "Back to gallery"
 msgstr ""
 
+#: template-parts/content-case.php:76
+msgid "More information"
+msgstr ""
+
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-multimedia.php:49 template-parts/content.php:34
+#: template-parts/content-multimedia.php:49
+#: template-parts/content-single.php:49
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
@@ -240,7 +265,7 @@ msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-none.php:38
+#: template-parts/content-none.php:40
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."

@@ -10,8 +10,8 @@ $obj = get_field('objetivos');
     <div class="entry-meta">
         <ul class="accordion">
         <?php if ($audioURL): ?>
-            <li>
-                <button class="accordion-control"><i class="fa fa-headphones" aria-hidden="true"></i> Audio</button>
+            <li class="audio">
+                <button class="accordion-control audio-btn">Audio</button>
                 <div class="accordion-panel audio">
                     <audio controls>
                         <source src="<?php echo $audioURL; ?>" type="audio/mpeg">
@@ -23,17 +23,17 @@ $obj = get_field('objetivos');
         <?php endif; ?>
 
         <?php if ($obj): ?>
-            <li>
-                <button class="accordion-control"><i class="fa fa-eye" aria-hidden="true"></i> Objetivos</button>
-                <div class="accordion-panel objetivos">
+            <li class="objetivos">
+                <button class="accordion-control objetivos">Objetivos</button>
+                <div class="accordion-panel">
                     <?php echo $obj; ?>
                 </div>
             </li>
         <?php endif; ?>
         
         <?php if ($resumen): ?>
-            <li>
-                <button class="accordion-control"><i class="fa fa-eye" aria-hidden="true"></i> Resumen</button>
+            <li class="resumen">
+                <button class="accordion-control">Resumen</button>
                 <div id="resumen" class="accordion-panel resumen">
                     <?php echo $resumen; ?>
                 </div>

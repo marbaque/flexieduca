@@ -7,7 +7,7 @@
  * @package flexieduca
  */
 ?>
-<a href="/mercadeo/casos-estrategias-comercio-movil/" title="Volver a casos" class="back"><i class="fa fa-th" aria-hidden="true"></i> <?php echo __('Back to gallery', 'flexieduca'); ?></a>
+<a href="/mercadeo/casos-estrategias-comercio-movil/" title="<?php echo __( 'Back to gallery', 'flexieduca' ); ?>" class="back"><?php echo __( 'Back to gallery', 'flexieduca' ); ?></a>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
@@ -42,7 +42,7 @@
 	                
 	                <div id="thumbnails">
 						<a href="<?php echo wp_get_attachment_url($img1); ?>" class="thumb active" title="Imagen para <?php the_title(); ?>">
-	        <?php echo wp_get_attachment_image($img1, $sizeThumb); ?>
+					        <?php echo wp_get_attachment_image($img1, $sizeThumb); ?>
 	        			</a>
 	                    
 	
@@ -73,7 +73,7 @@
 			        <div class="enlace">
 				        <?php if ( !empty($url) ): ?>
 	                        <a href="<?php echo wp_get_attachment_url($url) ?>" title="Enlace a <?php the_title(); ?>">
-		                        <?php echo __( 'More info', 'flexieduca' ); ?> <i class="fa fa-external-link" aria-hidden="true"></i></a>
+		                        <?php echo __( 'More information', 'flexieduca' ); ?></i></a>
 	                    <?php endif; ?>
 			        </div>
 	            </div><!-- .case-gallery --> 

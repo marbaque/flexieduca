@@ -46,6 +46,7 @@ if (!function_exists('flexieduca_setup')) :
         add_image_size('flexieduca-index-img', 600, 380, true);
         add_image_size('flexieduca-gallery-img', 600, 300, true);
         add_image_size('flexieduca-thumb', 80, 80, true);
+        add_image_size('flexieduca-case-thumb', 300, 150, true);
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus(array(
