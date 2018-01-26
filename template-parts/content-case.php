@@ -48,22 +48,26 @@
 	
 	                    <?php if ( !empty($img2) ): ?>
 	                        <a href="<?php echo wp_get_attachment_url($img2); ?>" class="thumb" title="Imagen para <?php the_title(); ?>">
-		                        <?php echo wp_get_attachment_image($img2, $sizeThumb); ?></a>
+		                        <?php echo wp_get_attachment_image($img2, $sizeThumb); ?>
+				</a>
 	                    <?php endif; ?>
 	
 	                    <?php if ( !empty($img3) ): ?>
 	                        <a href="<?php echo wp_get_attachment_url($img3); ?>" class="thumb" title="Imagen para <?php the_title(); ?>">
-		                        <?php echo wp_get_attachment_image($img1, $sizeThumb); ?></a>
+		                        <?php echo wp_get_attachment_image($img3, $sizeThumb); ?>
+				</a>
 	                    <?php endif; ?>
 	
 	                    <?php if ( !empty($img4) ): ?>
 	                        <a href="<?php echo wp_get_attachment_url($img4); ?>" class="thumb" title="Imagen para <?php the_title(); ?>">
-		                        <?php echo wp_get_attachment_image($img1, $sizeThumb); ?>/a>
+		                        <?php echo wp_get_attachment_image($img4, $sizeThumb); ?>
+							</a>
 	                    <?php endif; ?>
 	
 	                    <?php if ( !empty($img5) ): ?>
 	                        <a href="<?php echo wp_get_attachment_url($img5) ?>" class="thumb" title="Imagen para <?php the_title(); ?>">
-		                        <?php echo wp_get_attachment_image($img1, $sizeThumb); ?></a>
+		                        <?php echo wp_get_attachment_image($img5, $sizeThumb); ?>
+							</a>
 	                    <?php endif; ?>
 	                </div>
 	                <div class="case-trends">
