@@ -76,7 +76,7 @@
 			        
 			        <div class="enlace">
 				        <?php if ( !empty($url) ): ?>
-	                        <a href="<?php echo wp_get_attachment_url($url); ?>" title="Enlace a <?php the_title(); ?>">
+	                        <a href="<?php echo $url; ?>" title="Enlace a <?php the_title(); ?>">
 		                        <?php echo __( 'More information', 'flexieduca' ); ?></i></a>
 	                    <?php endif; ?>
 			        </div>
