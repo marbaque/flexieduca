@@ -18,6 +18,7 @@ get_header();
 	?>
 	
 <div id="primary" class="content-area">
+	<a href="/mercadeo/casos-estrategias-comercio-movil/" title="<?php echo __( 'Back to gallery', 'flexieduca' ); ?>" class="back"><?php echo __( 'Back to gallery', 'flexieduca' ); ?></a>
 	<header class="entry-header">
 		<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->

@@ -2347,22 +2347,26 @@ ul.accordion button:focus {
 /*--------------------------------------------------------------
 ## Casos pages
 --------------------------------------------------------------*/
-.casos-index.tax-tendencia .content-area {
+.casos-index .content-area,
+.tax-tendencia .content-area {
 	padding: 1em;
 }
 
 @media screen and (min-width: 600px) {
-	.casos-index.tax-tendencia .content-area {
+	.casos-index .content-area,
+	.tax-tendencia .content-area {
 		padding: 1em 2em;
 	}
 }
 
-.casos-index.tax-tendencia .site-main {
+.casos-index .site-main,
+.tax-tendencia .site-main {
 	max-width: 780px;
 	margin: 0 auto;
 }
 
-.casos-index.tax-tendencia .case-gallery {
+.casos-index .case-gallery,
+.tax-tendencia .case-gallery {
 	width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2376,14 +2380,16 @@ ul.accordion button:focus {
 	    flex-wrap: wrap;
 }
 
-.casos-index.tax-tendencia .case-gallery .gallery-title {
+.casos-index .case-gallery .gallery-title,
+.tax-tendencia .case-gallery .gallery-title {
 	display: block;
 	width: 100%;
 	font-family: "Fredoka One";
 	margin: 1em 0;
 }
 
-.casos-index.tax-tendencia .case-gallery .case-item {
+.casos-index .case-gallery .case-item,
+.tax-tendencia .case-gallery .case-item {
 	width: 100%;
 	background: #F1EEE5;
 	background-size: cover;
@@ -2396,28 +2402,34 @@ ul.accordion button:focus {
 }
 
 @media screen and (min-width: 600px) {
-	.casos-index.tax-tendencia .case-gallery .case-item {
+	.casos-index .case-gallery .case-item,
+	.tax-tendencia .case-gallery .case-item {
 		width: 18%;
 		min-width: 260px;
 	}
 }
 
-.casos-index.tax-tendencia .case-gallery .case-item a, .casos-index.tax-tendencia .case-gallery .case-item a:hover {
+.casos-index .case-gallery .case-item a, .casos-index .case-gallery .case-item a:hover,
+.tax-tendencia .case-gallery .case-item a,
+.tax-tendencia .case-gallery .case-item a:hover {
 	border: none;
 }
 
-.casos-index.tax-tendencia .case-gallery .case-item .item-text {
+.casos-index .case-gallery .case-item .item-text,
+.tax-tendencia .case-gallery .case-item .item-text {
 	padding: .5em .75em 1.5em;
 }
 
-.casos-index.tax-tendencia .case-gallery .case-item .item-media {
+.casos-index .case-gallery .case-item .item-media,
+.tax-tendencia .case-gallery .case-item .item-media {
 	max-height: 150px;
 	width: 100%;
 	margin: auto 0;
 	overflow: hidden;
 }
 
-.casos-index.tax-tendencia .case-gallery .case-item h2 {
+.casos-index .case-gallery .case-item h2,
+.tax-tendencia .case-gallery .case-item h2 {
 	font-size: 120%;
 	margin: 0.25em 0;
 	text-overflow: ellipsis;
@@ -2425,13 +2437,15 @@ ul.accordion button:focus {
 	overflow: hidden;
 }
 
-.casos-index.tax-tendencia .case-gallery .case-item .excerpt {
+.casos-index .case-gallery .case-item .excerpt,
+.tax-tendencia .case-gallery .case-item .excerpt {
 	font-size: .7em;
 	line-height: 1.3;
 	margin: .25em 0;
 }
 
-.casos-index.tax-tendencia .case-gallery .case-item .continue-reading a {
+.casos-index .case-gallery .case-item .continue-reading a,
+.tax-tendencia .case-gallery .case-item .continue-reading a {
 	font-size: .8em;
 	display: inline-block;
 	margin-left: auto;
@@ -2445,7 +2459,8 @@ ul.accordion button:focus {
 	transition: .5s background-color;
 }
 
-.casos-index.tax-tendencia .case-gallery .case-item .continue-reading a:hover {
+.casos-index .case-gallery .case-item .continue-reading a:hover,
+.tax-tendencia .case-gallery .case-item .continue-reading a:hover {
 	background-color: #E38689;
 }
 
