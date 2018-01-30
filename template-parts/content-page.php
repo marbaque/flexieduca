@@ -10,37 +10,30 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php flexieduca_the_category_list(); ?>
-		<?php
-		if ( is_single() ) :
+		<?php 
+		flexieduca_the_category_list(); 
+		
+		if ( is_page() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-
-		if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-		<div class="entry-meta">
-			<?php flexieduca_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		
-		<?php
-		endif; ?>
+		?>
 
 	</header><!-- .entry-header -->
 
 	<div class="post__wrap">
-		
-		<?php
-		if ( !is_active_sidebar( 'sidebar-2' ) ) : ?>
-		<div class="entry-meta">
-			<?php flexieduca_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		
-		<?php
-		endif; ?>
 
 		
 		<div class="entry-content">
+			<?php
+	        if ( has_post_thumbnail() ) { ?>
+	            <figure class="featured-image full-bleed">
+	                <?php
+	                    the_post_thumbnail('flexieduca-full-bleed');
+	                ?>
+	            </figure>
+	        <?php } ?>
 			<?php
 				the_content( sprintf(
 					wp_kses(

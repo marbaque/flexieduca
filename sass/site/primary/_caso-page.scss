@@ -107,7 +107,7 @@
 		height: 200px;
 		overflow: hidden;
 		margin: 1em 0 0;
-		background: $color__borde-recuadro;
+		background: $color__sombreado;
 		@media screen and (min-width: $break__small) {
 			height: 300px;
 		}
@@ -133,18 +133,23 @@
 	
 	/********** THUMBNAILS **********/
 	#thumbnails {
-		margin: 0 0 2em;
-		padding: .25em .5em;
-		height: 80px;
+		margin: 0 0 1em;
+		padding: .5em .5em;
+		height: auto;
 		display: flex;
+		flex-wrap: nowrap;
 		align-items: center;
 		background-color: $color__sombreado;
+		overflow-x: auto;
+		overflow-y: auto;
+		
 		//border-bottom: 1px solid $color__borde-recuadro;
 		a {
-			height: 100%;
-			width: auto;
-			margin: 2px;
+			height: 80px;
+			width: 80px;
+			margin: 2px .25em;
 			border: 2px solid $color__borde-recuadro;
+			flex-shrink: 0;
 			@include borde(2px);
 			
 			&:hover {
@@ -159,7 +164,8 @@
 	}
 	
 	a.active {
-		opacity: 0.3;
+		opacity: .5;
+		border-color: $color__interactive;
 	}
 	
 

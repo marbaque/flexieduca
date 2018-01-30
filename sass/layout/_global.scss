@@ -441,7 +441,7 @@
 			@media screen and (min-width: $break__medium) {
 				.post__wrap {
 					display: flex;
-					justify-content: space-between;
+					justify-content: space-around;
 					align-items: flex-start;
 					flex-wrap: nowrap;
 					height: auto;			
