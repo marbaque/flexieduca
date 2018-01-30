@@ -9,7 +9,7 @@
     button {
         display: block;
         width: 100%;
-        height: 100%;
+        height: 100%!important;
         margin: 0;
         background: none;
         border: none;
@@ -101,6 +101,7 @@
     li {
         position: relative;
         display: block;
+        margin: 0 0 .5em;
 
         &:hover > a,
             &.focus > a {
@@ -112,6 +113,7 @@
         text-decoration: none;
         padding: .25em .75em .3em;
         border: none;
+        line-height: 1.3;
         
         &:hover {
             //border: none;
