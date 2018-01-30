@@ -10,16 +10,19 @@
 	}
 	.site-main {
 		max-width: $max__column-size;
-		margin: 0 auto;
-
+		margin: 2em auto 0;
 	}
 	
 	.case-gallery {
 		width: 100%;
 		display: flex;
 		align-items: stretch;
+		justify-content: flex-start;
 		align-content: flex-start;
 		flex-wrap: wrap;
+		background-color: $color__sombreado;
+		@include borde(1em);
+		padding: 1em;
 		
 		.gallery-title {
 			display: block;
@@ -34,14 +37,18 @@
 			background-size: cover;
 			border: 2px solid $color__borde-recuadro;
 			@include borde(4px);
-			margin: 5px 5px 10px;
+			margin: 10px 2%;
 			padding: 0;
 			position: relative;
 			box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.28);
 						
 			@media screen and (min-width: $break__small) {
-				width: 18%;
-				min-width: 260px;
+				width: 30%;
+				margin: 10px 1%;
+			}
+			@media screen and (min-width: $break__hd) {
+				width: 45%;
+				margin: 10px 1%;
 			}
 			a, a:hover {
 				border: none;
@@ -57,13 +64,15 @@
 				overflow: hidden;
 			}
 			img {
+				width: 100%;
+				height: auto;
 				
 			}
 			
 			h2 {
 				font-size: 120%;
 				margin: 0.25em 0;
-				text-overflow: ellipsis;
+				text-overflow: ellipsis !important;
 				white-space: nowrap;
 				overflow: hidden;				
 			}

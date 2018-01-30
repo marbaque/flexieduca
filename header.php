@@ -47,7 +47,7 @@
                 </div><!-- .site-branding -->
 
                 <div class="user-info-area">
-                    <button class="user-button"><i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i></button>
+                    <button class="user-button"><i class="fa fa-user fa-2x" aria-hidden="true"></i></button>
                 </div>
 
 

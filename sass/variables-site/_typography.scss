@@ -1,21 +1,7 @@
-$font__main: 'Rubik', Helvetica, Arial, sans-serif;
+$font__main: Helvetica, Arial, sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
-$font__line-height-body: 1.5;
+$font__line-height-body: 1.55;
 $font__line-height-pre: 1.6;
 
-$font__headings: 'Fredoka One';
-
-//fix fonts
-body {
-    -webkit-animation-delay: 0.1s;
-    -webkit-animation-name: fontfix;
-    -webkit-animation-duration: 0.1s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: linear;
-}
-
-@-webkit-keyframes fontfix {
-    from { opacity: 1; }
-    to   { opacity: 1; }
-}
+$font__headings: 'Varela Round';

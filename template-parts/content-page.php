@@ -8,43 +8,66 @@
  */
 
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php flexieduca_the_category_list(); ?>
+		<?php
+		if ( is_single() ) :
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		else :
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;
+
+		if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+		<div class="entry-meta">
+			<?php flexieduca_posted_on(); ?>
+		</div><!-- .entry-meta -->
+		
+		<?php
+		endif; ?>
+
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="post__wrap">
+		
 		<?php
-			the_content();
+		if ( !is_active_sidebar( 'sidebar-2' ) ) : ?>
+		<div class="entry-meta">
+			<?php flexieduca_posted_on(); ?>
+		</div><!-- .entry-meta -->
+		
+		<?php
+		endif; ?>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'flexieduca' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		
+		<div class="entry-content">
 			<?php
-				edit_post_link(
-					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'flexieduca' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
+				the_content( sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'flexieduca' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
 					),
-					'<span class="edit-link">',
-					'</span>'
-				);
+					get_the_title()
+				) );
+	
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'flexieduca' ),
+					'after'  => '</div>',
+				) );
 			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+			
+			
+		</div><!-- .entry-content -->
+		
+		
+		<?php get_sidebar('page'); ?>
+	
+	</div>
+	
+	
 </article><!-- #post-<?php the_ID(); ?> -->

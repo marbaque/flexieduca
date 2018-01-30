@@ -379,7 +379,8 @@
 /***********************************
 **	Single posts
 ************************************/
-.single:not(.single-multimedia) {
+.single:not(.single-multimedia),
+.page {
 	
 	&.has-sidebar {
 		.site-content {

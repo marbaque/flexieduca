@@ -87,47 +87,40 @@ if (!function_exists('flexieduca_setup')) :
 //            'flex-height' => true,
 //        ));
         
+        
         /*Editor styles*/
         add_editor_style( array( 'inc/editor-styles.css', flexieduca_fonts_url() ) );
     }
 
 endif;
 add_action('after_setup_theme', 'flexieduca_setup');
-
 /**
  * Register custom fonts.
  */
 function flexieduca_fonts_url() {
-    $fonts_url = '';
+	$fonts_url = '';
 
-    /*
-     * Translators: If there are characters in your language that are not
-     * supported by Frdoka One and Rubik, translate this to 'off'. Do not translate
-     * into your own language.
-     */
-    $fredoka_one = _x('on', 'Fredoka One: on or off', 'flexieduca');
-    $rubik = _x('on', 'Rubik: on or off', 'flexieduca');
+	/*
+	 * Translators: If there are characters in your language that are not
+	 * supported by Libre Franklin, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$varela_round = _x( 'on', 'Varela Round font: on or off', 'flexieduca' );
 
-    $font_families = array();
+	if ( 'off' !== $varela_round ) {
+		$font_families = array();
 
-    if ('off' !== $fredoka_one) {
-        $font_families[] = 'Fredoka+One';
-    }
-    if ('off' !== $rubik) {
-        $font_families[] = 'Rubik:400,400i,700,700i';
-    }
+		$font_families[] = 'Varela Round';
 
-    if (in_array('on', array($fredoka_one, $rubik))) {
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
 
-        $query_args = array(
-            'family' => urlencode(implode('|', $font_families)),
-            'subset' => urlencode('latin,latin-ext'),
-        );
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
 
-        $fonts_url = add_query_arg($query_args, 'https://fonts.googleapis.com/css');
-    }
-
-    return esc_url_raw($fonts_url);
+	return esc_url_raw( $fonts_url );
 }
 
 /**
@@ -139,18 +132,18 @@ function flexieduca_fonts_url() {
  * @param string $relation_type  The relation type the URLs are printed.
  * @return array $urls           URLs to print for resource hints.
  */
-function flexieduca_resource_hints($urls, $relation_type) {
-    if (wp_style_is('flexieduca-fonts', 'queue') && 'preconnect' === $relation_type) {
-        $urls[] = array(
-            'href' => 'https://fonts.gstatic.com',
-            'crossorigin',
-        );
-    }
+function flexieduca_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'flexieduca-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
 
-    return $urls;
+	return $urls;
 }
+add_filter( 'wp_resource_hints', 'flexieduca_resource_hints', 10, 2 );
 
-add_filter('wp_resource_hints', 'flexieduca_resource_hints', 10, 2);
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
