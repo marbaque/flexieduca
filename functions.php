@@ -44,7 +44,7 @@ if (!function_exists('flexieduca_setup')) :
         add_theme_support('post-thumbnails');
         add_image_size('flexieduca-full-bleed', 2000, 1200, true);
         add_image_size('flexieduca-index-img', 600, 380, true);
-        add_image_size('flexieduca-gallery-img', 600, 300, true);
+        add_image_size('flexieduca-gallery-img', 568, 300, true);
         add_image_size('flexieduca-thumb', 80, 80, true);
         add_image_size('flexieduca-case-thumb', 300, 150, true);
 

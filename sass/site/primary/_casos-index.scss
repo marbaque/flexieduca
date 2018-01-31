@@ -33,10 +33,10 @@
 		
 		.case-item {
 			width: 100%;
-			background: $color__sombreado;
+			background: white;
 			background-size: cover;
-			border: 2px solid $color__borde-recuadro;
-			@include borde(4px);
+			//border: 2px solid $color__borde-recuadro;
+			//@include borde(4px);
 			margin: 10px 2%;
 			padding: 0;
 			position: relative;
@@ -117,6 +117,7 @@
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
+		align-content: flex-start;
 		
 		.site-main {
 			width: 48%;

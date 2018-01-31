@@ -13,10 +13,18 @@ get_header();
     
     <div class="case-index__wrap">
 	    <main id="main" class="site-main" role="main">
-	
+			
 	        <?php
 	        while (have_posts()) : the_post();
-	
+	        
+	        if ( has_post_thumbnail() ) { ?>
+	            <figure class="featured-image full-bleed">
+	                <?php
+	                    the_post_thumbnail('flexieduca-full-bleed');
+	                ?>
+	            </figure>
+	        
+	        <?php }
 				the_content();
 	
 				wp_link_pages( array(

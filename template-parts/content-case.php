@@ -77,7 +77,7 @@
 			        <div class="enlace">
 				        <?php if ( !empty($url) ): ?>
 	                        <a href="<?php echo $url; ?>" title="Enlace a <?php the_title(); ?>">
-		                        <?php echo __( 'More information', 'flexieduca' ); ?></i></a>
+		                        <?php echo preg_replace('#^https?://#', '', $url); ?></i></a>
 	                    <?php endif; ?>
 			        </div>
 	            </div><!-- .case-gallery --> 
