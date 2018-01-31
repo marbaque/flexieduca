@@ -1463,6 +1463,7 @@ li.flexieduca-search, .widget_search {
 	width: auto;
 	display: block;
 	padding: 4px .5em;
+	overflow: hidden;
 }
 
 .site-header .site-branding .site-title {
@@ -2516,8 +2517,9 @@ ul.accordion button:focus {
 		-webkit-box-pack: justify;
 		    -ms-flex-pack: justify;
 		        justify-content: space-between;
-		-ms-flex-line-pack: start;
-		    align-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
 	}
 	.case-index__wrap .site-main {
 		width: 48%;
