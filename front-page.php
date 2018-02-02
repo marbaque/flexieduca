@@ -14,6 +14,14 @@
 get_header();
 ?>
 
+<?php if (has_post_thumbnail()) { ?>
+    <figure class="featured-image full-bleed">
+        <?php
+        the_post_thumbnail('flexieduca-full-bleed');
+        ?>
+    </figure><!-- .featured-image full-bleed -->
+<?php } ?>
+
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 

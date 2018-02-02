@@ -25,3 +25,18 @@
 	font-size: .8em;
 }
 
+
+//actividad
+.module {
+	list-style-type: none;
+	padding: .5em 1em;
+	margin: .5em 0;
+	background: #F1EEE5;
+	border-radius: 5px; 
+	
+}
+body.single-actividad {
+	.entry-header {
+		border-bottom: 3px solid $color__borde-recuadro;
+	}
+}

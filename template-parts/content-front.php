@@ -12,16 +12,6 @@
     <header class="entry-header">
         <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
     </header><!-- .entry-header -->
-
-    <?php if (has_post_thumbnail()) { ?>
-        <figure class="featured-image full-bleed">
-            <?php
-            the_post_thumbnail('flexieduca-full-bleed');
-            ?>
-        </figure><!-- .featured-image full-bleed -->
-    <?php } ?>
-
-
     <div class="front-content_wrap">
 	    <div class="entry-content post-content">
             <?php

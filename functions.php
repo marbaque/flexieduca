@@ -42,7 +42,7 @@ if (!function_exists('flexieduca_setup')) :
          * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
          */
         add_theme_support('post-thumbnails');
-        add_image_size('flexieduca-full-bleed', 2000, 1200, true);
+        add_image_size('flexieduca-full-bleed', 1280, 720, true);
         add_image_size('flexieduca-index-img', 600, 380, true);
         add_image_size('flexieduca-gallery-img', 568, 300, true);
         add_image_size('flexieduca-thumb', 80, 80, true);
@@ -232,7 +232,7 @@ function flexieduca_scripts() {
 
     wp_enqueue_style('flexieduca-style', get_stylesheet_uri());
     
-    wp_enqueue_style('flexieduca-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
+    wp_enqueue_script('flexieduca-fontawesome', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js');
 
     wp_enqueue_script('flexieduca-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20161215', true);
     
