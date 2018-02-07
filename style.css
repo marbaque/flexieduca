@@ -188,7 +188,7 @@ samp {
 	font-size: 1em;
 }
 
-button, .site-header .user-info-area .user-button,
+button,
 input,
 optgroup,
 select,
@@ -198,16 +198,16 @@ textarea {
 	margin: 0;
 }
 
-button, .site-header .user-info-area .user-button {
+button {
 	overflow: visible;
 }
 
-button, .site-header .user-info-area .user-button,
+button,
 select {
 	text-transform: none;
 }
 
-button, .site-header .user-info-area .user-button,
+button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -215,12 +215,12 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
-button[disabled], .site-header .user-info-area [disabled].user-button,
+button[disabled],
 html input[disabled] {
 	cursor: default;
 }
 
-button::-moz-focus-inner, .site-header .user-info-area .user-button::-moz-focus-inner,
+button::-moz-focus-inner,
 input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
@@ -280,14 +280,13 @@ th {
 --------------------------------------------------------------*/
 body,
 button,
-.site-header .user-info-area .user-button,
 input,
 select,
 optgroup,
 textarea {
 	color: #404040;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 18px;
+	font-size: 14.4px;
 	font-size: 1.125rem;
 	line-height: 1.55;
 }
@@ -295,12 +294,11 @@ textarea {
 @media screen and (min-width: 600px) {
 	body,
 	button,
-	.site-header .user-info-area .user-button,
 	input,
 	select,
 	optgroup,
 	textarea {
-		font-size: 20px;
+		font-size: 16px;
 		font-size: 1.25rem;
 	}
 }
@@ -378,7 +376,7 @@ address {
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 18.75px;
+	font-size: 15px;
 	font-size: 1.17188rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
@@ -389,7 +387,7 @@ pre {
 
 code, kbd, tt, var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 18.75px;
+	font-size: 15px;
 	font-size: 1.17188rem;
 }
 
@@ -529,7 +527,7 @@ audio {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button, .site-header .user-info-area .user-button,
+button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -538,20 +536,20 @@ input[type="submit"] {
 	border-radius: 3px;
 	background: #e6e6e6;
 	color: rgba(0, 0, 0, 0.8);
-	font-size: 15px;
+	font-size: 12px;
 	font-size: 0.9375rem;
 	line-height: 1;
 	padding: .6em 1em .4em;
 }
 
-button:hover, .site-header .user-info-area .user-button:hover,
+button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
 	border-color: #ccc #bbb #aaa;
 }
 
-button:active, .site-header .user-info-area .user-button:active, button:focus, .site-header .user-info-area .user-button:focus,
+button:active, button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -960,7 +958,7 @@ a:hover, a:active {
 	        clip-path: none;
 	color: #333;
 	display: block;
-	font-size: 17.5px;
+	font-size: 14px;
 	font-size: 1.09375rem;
 	font-weight: bold;
 	height: auto;
@@ -1445,15 +1443,11 @@ li.flexieduca-search, .widget_search {
 	z-index: 998;
 }
 
-.site-header .main-navigation {
-	width: 60px;
-	display: block;
-	border-right: 1px solid #ccc;
-	-ms-flex-negative: 0;
-	    flex-shrink: 0;
+.site-header form {
+	height: 100%;
 }
 
-.site-header .main-navigation button, .site-header .main-navigation .user-info-area .user-button, .site-header .user-info-area .main-navigation .user-button {
+.site-header button {
 	display: block;
 	width: 100%;
 	height: 100% !important;
@@ -1465,8 +1459,16 @@ li.flexieduca-search, .widget_search {
 	text-align: center;
 }
 
-.site-header .main-navigation span {
+.site-header button span {
 	display: none;
+}
+
+.site-header .main-navigation {
+	width: 60px;
+	display: block;
+	border-right: 1px solid #ccc;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 .site-header .site-branding {
@@ -1504,34 +1506,17 @@ li.flexieduca-search, .widget_search {
 	    flex-shrink: 0;
 }
 
-.site-header .user-info-area .user-button {
-	display: block;
-	width: 100%;
-	height: 100% !important;
-	margin: 0;
-	background: none !important;
-	border: none !important;
-	font-size: .77em;
-	text-rendering: geometricPrecision;
-	text-align: center;
-	padding: .7em .2em .4em;
-}
-
-.site-header .user-info-area .user-button span {
-	display: none;
-}
-
 @media screen and (min-width: 600px) {
 	.site-header {
 		height: 80px;
 	}
+	.site-header button span {
+		display: block;
+		line-height: 1.2;
+	}
 	.site-header .main-navigation {
 		width: 90px;
 		max-width: 120px;
-	}
-	.site-header .main-navigation span {
-		display: block;
-		line-height: 1.2;
 	}
 	.site-header .site-branding {
 		padding: 4px 1em;
@@ -1542,12 +1527,6 @@ li.flexieduca-search, .widget_search {
 	.site-header .user-info-area {
 		width: 90px;
 		max-width: 90px;
-	}
-	.site-header .user-info-area a.user-button {
-		padding: 1.1em .2em .4em;
-	}
-	.site-header .user-info-area a.user-button span {
-		display: block;
 	}
 }
 
@@ -1621,8 +1600,8 @@ li.flexieduca-search, .widget_search {
 	padding: 0;
 	margin: 0 0 1.8em 0;
 	font-family: "Varela Round";
-	font-size: 70%;
-	line-height: 1.4;
+	font-size: 90%;
+	line-height: 1.2;
 }
 
 .home .site-content .menu li a {
@@ -2022,20 +2001,20 @@ ul.accordion > li {
 	border-radius: 5px;
 }
 
-ul.accordion > li button:before, ul.accordion > li .site-header .user-info-area .user-button:before, .site-header .user-info-area ul.accordion > li .user-button:before {
+ul.accordion > li button:before {
 	font-family: 'FontAwesome';
 	content: "\f0d7";
 	margin-right: .3em;
 }
 
-ul.accordion button, ul.accordion .site-header .user-info-area .user-button, .site-header .user-info-area ul.accordion .user-button {
+ul.accordion button {
 	width: 100%;
 	background: none;
 	text-align: left;
 	border: none;
 }
 
-ul.accordion button:focus, ul.accordion .site-header .user-info-area .user-button:focus, .site-header .user-info-area ul.accordion .user-button:focus {
+ul.accordion button:focus {
 	border: none;
 }
 

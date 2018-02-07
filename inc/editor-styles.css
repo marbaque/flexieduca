@@ -20,11 +20,11 @@ input,
 select,
 optgroup,
 textarea {
-    color: #404040;
-    font-family: "Rubik", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    font-size: 1.125rem;
-    line-height: 1.5;
+    //color: #404040;
+    font-family: Helvetica, Arial, sans-serif;
+    //font-size: 18px;
+    //font-size: 1.125rem;
+    //line-height: 1.5;
 }
 
 @media screen and (min-width: 600px) {
@@ -41,7 +41,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
     clear: both;
-    font-family: "Fredoka One";
+    font-family: "Varela Round";
     line-height: 1.2;
 }
 

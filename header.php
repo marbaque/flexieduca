@@ -26,7 +26,7 @@
             <header id="masthead" class="site-header">
 
                 <nav id="site-navigation" class="main-navigation">
-                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars fa-2x" aria-hidden="true"></i> <span><?php esc_html_e('Contents', 'flexieduca'); ?></span></button>
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><i class="fa fa-bars fa-2x" aria-hidden="true"></i> <span><?php esc_html_e('Contents', 'flexieduca'); ?></span></button>
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'menu-1',
@@ -48,10 +48,14 @@
 
                 <div class="user-info-area">
                     <?php if ( is_user_logged_in() ) { ?>
-					    <a href="<?php echo wp_logout_url( home_url() ); ?>" class="user-button"><i class="far fa-user-circle fa-2x"></i><span><?php esc_html_e('Log out', 'flexieduca'); ?></span></a>
-					<?php } else { ?>
-					    <a href="<?php echo wp_login_url( home_url() ); ?>" class="user-button" title="Members Area Login" rel="home"><i class="far fa-user-circle fa-2x"></i><span><?php esc_html_e('Login', 'flexieduca'); ?></span></a>
-					<?php } ?>
+                    <form action="<?php echo wp_logout_url( home_url() ); ?>">
+                        <button><i class="far fa-user-circle fa-2x"></i><span><?php esc_html_e('Log out', 'flexieduca'); ?></span>
+                    <?php } else { ?>
+                        <form action="<?php echo wp_login_url( home_url() ); ?>">
+                            <button type="button" tabindex="0" role="button"><i class="far fa-user-circle fa-2x"></i><span><?php esc_html_e('Login', 'flexieduca'); ?></span>
+                    <?php } ?>
+                        </button>  
+                    </form>
                 </div>
 
 

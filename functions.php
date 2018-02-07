@@ -256,7 +256,7 @@ function flexieduca_scripts() {
 
     
     wp_register_script('flexieduca-fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'),'', true);
-    wp_register_script('arlqeuin-my-fitvids', get_template_directory_uri() . '/js/my-fitvids.js', array('flexieduca-fitvids'),'', true);
+    wp_register_script('flexieduca-my-fitvids', get_template_directory_uri() . '/js/my-fitvids.js', array('flexieduca-fitvids'),'', true);
 
     if(! is_admin() ) {    
         wp_enqueue_script('flexieduca-fitvids');
