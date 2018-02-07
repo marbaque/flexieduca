@@ -6,6 +6,7 @@
 }
 .single-caso {
 	.comments-area {
+            border: none;
 		@media screen and (min-width:$break__medium) {
 			max-width: $size__ratio-large;
 		}
@@ -28,7 +29,10 @@
 		list-style-type: none;
 	}
 }
-
+.comment-notes {
+    font-size: .8em;
+    color: $color__text-input;
+}
 .comment-body {
 	border-bottom: 1px solid #c3c3c3;
 	margin-bottom: 3em;
@@ -242,6 +246,7 @@
 		display: block;
 		font-style: italic;
 		padding-bottom: .4em;
+                font-size: .8em;
 	}
 	
 	.required {

@@ -2543,6 +2543,10 @@ ul.accordion button:focus {
 	border-top: 1px solid #cccccc;
 }
 
+.single-caso .comments-area {
+	border: none;
+}
+
 @media screen and (min-width: 900px) {
 	.single-caso .comments-area {
 		max-width: 60%;
@@ -2563,6 +2567,11 @@ ul.accordion button:focus {
 
 .comment-list ol {
 	list-style-type: none;
+}
+
+.comment-notes {
+	font-size: .8em;
+	color: #666;
 }
 
 .comment-body {
@@ -2749,6 +2758,7 @@ ul.accordion button:focus {
 	display: block;
 	font-style: italic;
 	padding-bottom: .4em;
+	font-size: .8em;
 }
 
 .comment-form .required {
