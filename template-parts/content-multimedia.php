@@ -29,7 +29,7 @@
         if ( has_post_thumbnail() ) { ?>
             <figure class="featured-image full-bleed">
                 <?php
-                    the_post_thumbnail('flexieduca-full-bleed');
+                    the_post_thumbnail('flexieduca-index-img');
                 ?>
             </figure>
         <?php } ?>
