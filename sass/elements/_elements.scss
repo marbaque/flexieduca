@@ -28,6 +28,13 @@ img {
 
 figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+	a, a:hover {
+		border: none;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
 }
 
 @import "tables";

@@ -18,7 +18,7 @@ $trendDesc = get_field('trend-desc', $term);
 
 ?>
 
-<a href="index.php/?page_id=1829" title="<?php echo __( 'Back to gallery', 'flexieduca' ); ?>" class="back"><?php echo __( 'Back to gallery', 'flexieduca' ); ?></a>
+<!-- <a href="index.php/?page_id=1829" title="<?php echo __( 'Back to gallery', 'flexieduca' ); ?>" class="back"><?php echo __( 'Back to gallery', 'flexieduca' ); ?></a> -->
 
 <div id="primary" class="content-area">
 	<?php

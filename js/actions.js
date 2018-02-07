@@ -20,7 +20,7 @@
 //});
 
 var menu = document.getElementById('primary-menu');
-var head = document.getElementById('masthead');
+var head = document.getElementById('site-navigation');
 
 var menuPosition = head.getBoundingClientRect();
 

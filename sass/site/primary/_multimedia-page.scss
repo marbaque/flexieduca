@@ -27,7 +27,7 @@
 
 /*----------------------  ACCORDION -----------------------*/
 ul.accordion {
-    margin: 2em 0;
+    margin: 1em 0;
     overflow: auto;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -156,7 +156,7 @@ ul.accordion {
 .formato-ejercicio,
 .formato-idea {
     padding: 1em 1em 1.2em 100px;
-    margin: 1em -1em 2em;
+    margin: .5em -1em 2em;
     color: $color__borde-recuadro;
     height: auto;
     background-position: 1.25em 1.75em;
@@ -168,7 +168,7 @@ ul.accordion {
     
     @media screen and (min-width: $break__medium) {
         padding-left: 140px;
-        margin: 2em -2em;
+        margin: 2em -1em;
         font-size: 1em;
         background-size: 80px;
         border: 3px solid $color__borde-recuadro; 

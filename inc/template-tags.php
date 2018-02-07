@@ -120,6 +120,7 @@ function flexieduca_the_category_list() {
     }
 }
 
+
 /**
  * Returns true if a blog has more than 1 category.
  *
