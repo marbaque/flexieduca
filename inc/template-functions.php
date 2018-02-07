@@ -128,3 +128,11 @@ function my_mce_before_init_insert_formats( $init_array ) {
 } 
 // Attach callback to 'tiny_mce_before_init' 
 add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' ); 
+
+
+add_filter( 'rest_post_collection_params', 'my_prefix_add_rest_orderby_params', 10, 1 );
+function my_prefix_add_rest_orderby_params( $params ) {
+    $params['orderby']['enum'][] = 'menu_order';
+
+    return $params;
+}
