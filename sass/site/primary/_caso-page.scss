@@ -52,6 +52,16 @@
 				padding: .5em 1em;
 				margin: .5em 0;
 				border: none;
+				a {
+					background: $color__interactive;
+					color: #F2C9CA;
+					padding: 2px 6px;
+					border: 0;
+					@include borde(2px);
+					&:hover {
+						color: white;
+					}
+				}
 			}
 			//more info
 			.enlace {

@@ -18,12 +18,16 @@ $trendDesc = get_field('trend-desc', $term);
 
 ?>
 
-<!-- <a href="index.php/?page_id=1829" title="<?php echo __( 'Back to gallery', 'flexieduca' ); ?>" class="back"><?php echo __( 'Back to gallery', 'flexieduca' ); ?></a> -->
+<?php get_template_part('template-parts/tools'); ?>
 
 <div id="primary" class="content-area">
 	<?php
 	if ( have_posts() ) : ?>
-
+	<?php 
+	if(function_exists('bcn_display')) {
+		bcn_display();
+	}
+	?>
 	<header class="page-header">
 		<?php
 			the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -36,7 +40,6 @@ $trendDesc = get_field('trend-desc', $term);
 	<div class="case-index__wrap">
 		
 		<main id="main" class="site-main" role="main">
-				
 			<?php echo $trendDesc; ?>
 			
 		</main><!-- #main -->

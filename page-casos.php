@@ -5,7 +5,8 @@
 get_header();
 ?>
 
-	
+<?php get_template_part('template-parts/tools'); ?>
+
 <div id="primary" class="content-area">
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -23,7 +24,6 @@ get_header();
 	                    the_post_thumbnail('flexieduca-full-bleed');
 	                ?>
 	            </figure>
-	        
 	        <?php }
 				the_content();
 	

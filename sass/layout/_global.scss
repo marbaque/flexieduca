@@ -128,8 +128,30 @@
     }
 }
 
-
-
+/****************************
+** Breadcrumbs 
+*****************************/
+span[property="itemListElement"] {
+	font-size: .66em;
+	margin: 0;
+	color: #aaa;
+	line-height: 1!important;
+	a {
+		border: none;
+		text-decoration: underline;
+		
+		span {
+			margin: 0;
+			padding: 0;
+			line-height: 1!important;
+		}
+	}
+	
+}
+.separator {
+	font-size: .5em;
+	margin: 0 .5em;
+}
 
 /****************************
 ** Front page 

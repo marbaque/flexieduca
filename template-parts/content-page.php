@@ -9,6 +9,11 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php 
+	if(function_exists('bcn_display')) {
+		bcn_display();
+	}
+	?>
 	<header class="entry-header">
 		<?php 
 		flexieduca_the_category_list(); 

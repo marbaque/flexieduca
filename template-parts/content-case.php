@@ -8,8 +8,14 @@
  */
 ?>
 <!-- <a href="index.php/?page_id=1829" title="<?php echo __( 'Back to gallery', 'flexieduca' ); ?>" class="back"><?php echo __( 'Back to gallery', 'flexieduca' ); ?></a> -->
+<?php get_template_part('template-parts/tools'); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php 
+	if(function_exists('bcn_display')) {
+		bcn_display();
+	}
+	?>
     <header class="entry-header">
         <?php
         the_title('<h1 class="entry-title">', '</h1>');
@@ -71,7 +77,7 @@
 	                    <?php endif; ?>
 	                </div>
 	                <div class="case-trends">
-			            <?php the_terms($post->ID, 'tendencia', 'Tendencia: ', ', ', ' '); ?>
+			            <?php the_terms($post->ID, 'tendencia', 'Estrategia: ', ' ', ' '); ?>
 			        </div>
 			        
 			        <div class="enlace">

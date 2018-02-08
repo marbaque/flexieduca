@@ -52,17 +52,18 @@ jQuery(function($) {
   }); 
 });
 
-/*
-(function($) {                                    // Use $ as variable name
-  $.fn.accordion = function (speed) {        // Return the jQuery selection
-    this.on('click', '.accordion-control', function (e) {
-      e.preventDefault();
-      $(this)
-        .next('.accordion-panel')
-        .not(':animated')
-        .slideToggle(speed);
+jQuery(document).ready(function () {
+ 
+    jQuery(document).keydown(function(e) {
+        var url = false;
+        if (e.which == 37) {  // Left arrow key code
+            url = jQuery('.nav-prev a').attr('href');
+        }
+        else if (e.which == 39) {  // Right arrow key code
+            url = jQuery('.nav-next a').attr('href');
+        }
+        if (url) {
+            window.location = url;
+        }
     });
-    return this;                                 // Return the jQuery selection
-  };
-}(jQuery));   
-*/                                   // Pass in jQUery object
+ });

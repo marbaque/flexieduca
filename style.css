@@ -286,9 +286,9 @@ optgroup,
 textarea {
 	color: #404040;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 14.4px;
-	font-size: 1.125rem;
-	line-height: 1.55;
+	font-size: 16.2px;
+	font-size: 1.0125rem;
+	line-height: 1.58;
 }
 
 @media screen and (min-width: 600px) {
@@ -298,8 +298,8 @@ textarea {
 	select,
 	optgroup,
 	textarea {
-		font-size: 16px;
-		font-size: 1.25rem;
+		font-size: 18px;
+		font-size: 1.125rem;
 	}
 }
 
@@ -376,9 +376,9 @@ address {
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 1.17188rem;
-	line-height: 1.6;
+	font-size: 16.875px;
+	font-size: 1.05469rem;
+	line-height: 1.5;
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
@@ -387,8 +387,8 @@ pre {
 
 code, kbd, tt, var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 1.17188rem;
+	font-size: 16.875px;
+	font-size: 1.05469rem;
 }
 
 abbr, acronym {
@@ -536,8 +536,8 @@ input[type="submit"] {
 	border-radius: 3px;
 	background: #e6e6e6;
 	color: rgba(0, 0, 0, 0.8);
-	font-size: 12px;
-	font-size: 0.9375rem;
+	font-size: 13.5px;
+	font-size: 0.84375rem;
 	line-height: 1;
 	padding: .6em 1em .4em;
 }
@@ -958,8 +958,8 @@ a:hover, a:active {
 	        clip-path: none;
 	color: #333;
 	display: block;
-	font-size: 14px;
-	font-size: 1.09375rem;
+	font-size: 15.75px;
+	font-size: 0.98438rem;
 	font-weight: bold;
 	height: auto;
 	left: 5px;
@@ -1528,6 +1528,32 @@ li.flexieduca-search, .widget_search {
 		width: 90px;
 		max-width: 90px;
 	}
+}
+
+/****************************
+** Breadcrumbs 
+*****************************/
+span[property="itemListElement"] {
+	font-size: .66em;
+	margin: 0;
+	color: #aaa;
+	line-height: 1 !important;
+}
+
+span[property="itemListElement"] a {
+	border: none;
+	text-decoration: underline;
+}
+
+span[property="itemListElement"] a span {
+	margin: 0;
+	padding: 0;
+	line-height: 1 !important;
+}
+
+.separator {
+	font-size: .5em;
+	margin: 0 .5em;
 }
 
 /****************************
@@ -2270,6 +2296,18 @@ ul.accordion button:focus {
 	padding: .5em 1em;
 	margin: .5em 0;
 	border: none;
+}
+
+.single-caso .case-content .case__wrap .case-trends a {
+	background: #D96C70;
+	color: #F2C9CA;
+	padding: 2px 6px;
+	border: 0;
+	border-radius: 2px;
+}
+
+.single-caso .case-content .case__wrap .case-trends a:hover {
+	color: white;
 }
 
 .single-caso .case-content .case__wrap .enlace {

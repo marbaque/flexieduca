@@ -49,10 +49,10 @@
                 <div class="user-info-area">
                     <?php if ( is_user_logged_in() ) { ?>
                     <form action="<?php echo wp_logout_url( home_url() ); ?>">
-                        <button><i class="far fa-user-circle fa-2x"></i><span><?php esc_html_e('Log out', 'flexieduca'); ?></span>
+                        <button tabindex="0" role="button"><i class="far fa-user-circle fa-2x"></i><span><?php esc_html_e('Log out', 'flexieduca'); ?></span>
                     <?php } else { ?>
-                        <form action="<?php echo wp_login_url( home_url() ); ?>">
-                            <button type="button" tabindex="0" role="button"><i class="far fa-user-circle fa-2x"></i><span><?php esc_html_e('Login', 'flexieduca'); ?></span>
+                    <form action="<?php echo wp_login_url(); ?>">
+                        <button tabindex="0" role="button"><i class="far fa-user-circle fa-2x"></i><span><?php esc_html_e('Login', 'flexieduca'); ?></span>
                     <?php } ?>
                         </button>  
                     </form>
@@ -60,5 +60,5 @@
 
 
             </header><!-- #masthead -->
-
+			
             <div id="content" class="site-content">
