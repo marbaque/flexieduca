@@ -10,7 +10,9 @@
 ?>
 <?php 
 if(function_exists('bcn_display')) {
+	echo '<div class="breadcrumbs">';
 	bcn_display();
+	echo '</div>';
 }
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

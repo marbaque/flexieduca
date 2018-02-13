@@ -131,26 +131,28 @@
 /****************************
 ** Breadcrumbs 
 *****************************/
-span[property="itemListElement"] {
+.breadcrumbs {
 	font-size: .66em;
 	margin: 0;
 	color: #aaa;
-	line-height: 1!important;
-	a {
-		border: none;
-		text-decoration: underline;
-		
-		span {
-			margin: 0;
-			padding: 0;
-			line-height: 1!important;
-		}
-	}
+	line-height: 1.4;
 	
-}
-.separator {
-	font-size: .5em;
-	margin: 0 .5em;
+	span {
+		
+		
+		a {
+			border: none;
+			display: inline-block;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-width: 200px;
+		}
+		
+	}
+	.separator {
+		margin: 0 .5em;
+	}
 }
 
 /****************************

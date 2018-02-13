@@ -11,7 +11,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php 
 	if(function_exists('bcn_display')) {
+		echo '<div class="breadcrumbs">';
 		bcn_display();
+		echo '</div>';
 	}
 	?>
 	<header class="entry-header">

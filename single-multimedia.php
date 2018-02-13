@@ -18,7 +18,9 @@ get_header();
     <main id="main" class="site-main" role="main">
 		<?php 
 			if(function_exists('bcn_display')) {
+				echo '<div class="breadcrumbs">';
 				bcn_display();
+				echo '</div>';
 			}
 			?>
         <?php
