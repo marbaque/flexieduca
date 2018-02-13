@@ -57,7 +57,7 @@ jQuery(document).ready(function () {
     jQuery(document).keydown(function(e) {
         var url = false;
         if (e.which == 37) {  // Left arrow key code
-            url = jQuery('.nav-prev a').attr('href');
+            url = jQuery('.nav-previous a').attr('href');
         }
         else if (e.which == 39) {  // Right arrow key code
             url = jQuery('.nav-next a').attr('href');
