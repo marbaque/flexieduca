@@ -67,16 +67,13 @@ if(function_exists('bcn_display')) {
 					'after'  => '</div>',
 				) );
 				?>
-				<hr>
-								
+							
 				<?php
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
 				endif;
 
-
-				flexieduca_post_navigation();
 			?>
 			
 			
