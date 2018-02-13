@@ -118,6 +118,7 @@ function flexieduca_the_category_list() {
         /* translators: 1: list of categories. */
         printf('<span class="cat-links">' . esc_html__('%1$s', 'flexieduca') . '</span>', $categories_list); // WPCS: XSS OK.
     }
+
 }
 
 
@@ -229,3 +230,19 @@ function flexieduca_excerpt_length( $length ) {
     return 30;
 }
 add_filter( 'excerpt_length', 'flexieduca_excerpt_length' );
+
+
+
+
+/************************************************************************/
+// Dar a actividades el mismo template de multimedia
+/************************************************************************/
+add_filter( 'template_include', function( $template ) {
+  if ( is_singular( array( 'actividad', 'multimedia' ) ) ) {
+    $locate = locate_template( 'single-multimedia.php', false, false );
+    if ( ! empty( $locate ) ) {
+      $template = $locate;
+    }
+  }
+  return $template;
+});

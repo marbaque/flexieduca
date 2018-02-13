@@ -76,10 +76,11 @@
             comments_template();
         endif;
         ?>
-        
+        <?php if ( ! is_singular('actividad') ) { ?>
         <div class="ebook-nav">
             <?php flexieduca_post_navigation(); ?>
         </div>
+        <?php } ?>
         
 
     </div><!--post content-->

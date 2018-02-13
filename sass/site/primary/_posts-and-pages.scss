@@ -23,6 +23,11 @@
 
 .cat-links {
 	font-size: .8em;
+    a {
+	    border: 0;
+	    background-color: $color__skin;
+	    padding: 2px;
+    }
 }
 
 
@@ -54,6 +59,6 @@
 }
 body.single-actividad {
 	.entry-header {
-		border-bottom: 3px solid $color__borde-recuadro;
+		//border-bottom: 3px solid $color__borde-recuadro;
 	}
 }

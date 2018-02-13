@@ -1530,7 +1530,7 @@ li.flexieduca-search, .widget_search {
 *****************************/
 .breadcrumbs {
 	font-size: .66em;
-	margin: 0;
+	margin: 0 0 2em;
 	color: #aaa;
 	line-height: 1.4;
 }
@@ -1963,6 +1963,12 @@ li.flexieduca-search, .widget_search {
 	font-size: .8em;
 }
 
+.cat-links a {
+	border: 0;
+	background-color: #DDBE59;
+	padding: 2px;
+}
+
 .relation-title {
 	font-size: .8em;
 }
@@ -1989,35 +1995,41 @@ li.flexieduca-search, .widget_search {
 	border: none;
 }
 
-body.single-actividad .entry-header {
-	border-bottom: 3px solid #41423F;
-}
-
 /*--------------------------------------------------------------
 ## Multimedia pages
 --------------------------------------------------------------*/
-.single-multimedia .site-content {
+.single-multimedia .site-content,
+.single-actividad .site-content {
 	margin-bottom: 60px;
 }
 
 @media screen and (min-width: 900px) {
-	.single-multimedia .site-content {
+	.single-multimedia .site-content,
+	.single-actividad .site-content {
 		max-width: 780px;
 	}
 }
 
-.single-multimedia .entry-meta {
+.single-multimedia .entry-title,
+.single-actividad .entry-title {
+	margin: .2em 0 .67em;
+}
+
+.single-multimedia .entry-meta,
+.single-actividad .entry-meta {
 	font-size: 80%;
 	margin: 0 -1em 1em;
 }
 
 @media screen and (min-width: 600px) {
-	.single-multimedia .entry-meta {
+	.single-multimedia .entry-meta,
+	.single-actividad .entry-meta {
 		margin: 0 0 1em;
 	}
 }
 
-.single-multimedia .site-footer {
+.single-multimedia .site-footer,
+.single-actividad .site-footer {
 	display: none;
 }
 
