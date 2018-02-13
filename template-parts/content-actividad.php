@@ -23,11 +23,27 @@ if(function_exists('bcn_display')) {
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 		?>
+
 	</header><!-- .entry-header -->
 
 	<div class="post__wrap">
 		
 		<div class="entry-content">
+		<?php 
+		$posts = get_field('contenido_relacionado');
+		
+		if( $posts ): ?>
+			<span class="relation-title">Actividad correspondiente al tema:</span>
+		    <ul class="relation">
+		    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+		        <?php setup_postdata($post); ?>
+		        <li>
+		            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		        </li>
+		    <?php endforeach; ?>
+		    </ul>
+		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+		<?php endif; ?>
 			
 				
 			<?php
@@ -50,23 +66,7 @@ if(function_exists('bcn_display')) {
 				) );
 				?>
 				<hr>
-				<?php 
-
-				$posts = get_field('contenido_relacionado');
-				
-				if( $posts ): ?>
-					<h5>Este actividad aparece en:</h5>
-				    <ul class="relation">
-				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-				        <?php setup_postdata($post); ?>
-				        <li>
-				            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-				        </li>
-				    <?php endforeach; ?>
-				    </ul>
-				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-				<?php endif; ?>
-				
+								
 				<?php
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :

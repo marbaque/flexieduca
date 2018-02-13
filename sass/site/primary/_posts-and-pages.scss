@@ -27,15 +27,28 @@
 
 
 //actividad
+.relation-title {
+	font-size: .8em;
+}
 .relation {
 	list-style-type: none;
-	padding: .5em 1em;
-	margin: .5em 0;
-	background: #F1EEE5;
-	border-radius: 5px;
+	padding: 0px 0px 1em 0px;
+	margin: 0;
 	list-style: none;
+	border-bottom: 1px solid $color__borde-recuadro;
+	font-size: .8em;
 	li {
-		
+		&:before {
+			font-family: 'FontAwesome';
+			content: "\f15c";
+			margin-right: .2em;
+			background-color: $color__interactive;
+			color: white;
+			padding: .25em;
+		}
+		a{
+			border: none;
+		}
 	} 
 	
 }

@@ -614,7 +614,6 @@ a {
 	color: #404040;
 	text-decoration: none;
 	border-bottom: 3px solid currentcolor;
-	transition: .2s all;
 }
 
 a:visited {
@@ -1967,13 +1966,30 @@ span[property="itemListElement"] a span {
 	font-size: .8em;
 }
 
+.relation-title {
+	font-size: .8em;
+}
+
 .relation {
 	list-style-type: none;
-	padding: .5em 1em;
-	margin: .5em 0;
-	background: #F1EEE5;
-	border-radius: 5px;
+	padding: 0px 0px 1em 0px;
+	margin: 0;
 	list-style: none;
+	border-bottom: 1px solid #41423F;
+	font-size: .8em;
+}
+
+.relation li:before {
+	font-family: 'FontAwesome';
+	content: "\f15c";
+	margin-right: .2em;
+	background-color: #D96C70;
+	color: white;
+	padding: .25em;
+}
+
+.relation li a {
+	border: none;
 }
 
 body.single-actividad .entry-header {
