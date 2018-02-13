@@ -94,6 +94,7 @@
 	        <?php endif; ?>
 	        
 	        <div class="case-desc">
+		        <h4>Descripción</h4>
 	            <?php
 	            the_content();
 	            ?>

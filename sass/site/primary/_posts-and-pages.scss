@@ -27,12 +27,16 @@
 
 
 //actividad
-.module {
+.relation {
 	list-style-type: none;
 	padding: .5em 1em;
 	margin: .5em 0;
 	background: #F1EEE5;
-	border-radius: 5px; 
+	border-radius: 5px;
+	list-style: none;
+	li {
+		
+	} 
 	
 }
 body.single-actividad {

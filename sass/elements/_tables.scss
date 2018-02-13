@@ -28,9 +28,6 @@ tr:not(:last-child) {
 
 td {
 	padding: .5em 1em;
-	&:hover {
-		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
-	}
 }
 
 th:first-child,

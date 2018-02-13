@@ -510,10 +510,6 @@ td {
 	padding: .5em 1em;
 }
 
-td:hover {
-	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.35);
-}
-
 .table-source {
 	font-size: .75em;
 	color: gray;
@@ -1971,12 +1967,13 @@ span[property="itemListElement"] a span {
 	font-size: .8em;
 }
 
-.module {
+.relation {
 	list-style-type: none;
 	padding: .5em 1em;
 	margin: .5em 0;
 	background: #F1EEE5;
 	border-radius: 5px;
+	list-style: none;
 }
 
 body.single-actividad .entry-header {

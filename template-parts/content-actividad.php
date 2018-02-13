@@ -8,7 +8,11 @@
  */
 
 ?>
-
+<?php 
+if(function_exists('bcn_display')) {
+	bcn_display();
+}
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		
@@ -24,10 +28,8 @@
 	<div class="post__wrap">
 		
 		<div class="entry-content">
-			<p class="module">
-				<span><?php echo __( 'This activity features in' , 'flexieduca' ) . ' '; ?></span>
-				<?php flexieduca_the_category_list(); ?>
-			</p>
+			
+				
 			<?php
 				the_content( sprintf(
 					wp_kses(
@@ -46,6 +48,26 @@
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'flexieduca' ),
 					'after'  => '</div>',
 				) );
+				?>
+				<hr>
+				<?php 
+
+				$posts = get_field('contenido_relacionado');
+				
+				if( $posts ): ?>
+					<h5>Este actividad aparece en:</h5>
+				    <ul class="relation">
+				    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+				        <?php setup_postdata($post); ?>
+				        <li>
+				            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				        </li>
+				    <?php endforeach; ?>
+				    </ul>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endif; ?>
+				
+				<?php
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
