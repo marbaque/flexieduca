@@ -25,7 +25,9 @@ $trendDesc = get_field('trend-desc', $term);
 	if ( have_posts() ) : ?>
 	<?php 
 	if(function_exists('bcn_display')) {
+		echo '<div class="breadcrumbs">';
 		bcn_display();
+		echo '</div>';
 	}
 	?>
 	<header class="page-header">

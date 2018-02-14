@@ -246,16 +246,3 @@ add_filter( 'template_include', function( $template ) {
   }
   return $template;
 });
-
-
-/************************************************************************/
-// orden de contenidos
-/************************************************************************/
-// Example using query_posts
-// Example using wp_query
-$args = array(
-    'post_type' => 'contenidos',
-    'orderby' => 'menu_order',
-    'order' => 'ASC',
-);
-$query = new WP_Query( $args );
