@@ -168,6 +168,7 @@ add_action('save_post', 'flexieduca_category_transient_flusher');
 
 
 function flexieduca_post_navigation() {
+
 	the_post_navigation( array(
 		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'flexieduca' ) . '</span> ' .
 			'<span class="screen-reader-text">' . __( 'Next post:', 'flexieduca' ) . '</span> ' .
@@ -176,6 +177,7 @@ function flexieduca_post_navigation() {
 			'<span class="screen-reader-text">' . __( 'Previous post:', 'flexieduca' ) . '</span> ' .
 			'<span class="post-title">%title</span>',
 	) );
+
 }
 
 
@@ -246,3 +248,8 @@ add_filter( 'template_include', function( $template ) {
   }
   return $template;
 });
+
+/************************************************************************/
+// orden de posts
+/************************************************************************/
+
