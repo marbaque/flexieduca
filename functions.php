@@ -286,11 +286,10 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
 /**
- * Tools: font resizer, breadcrumbs
+ * Custom posts types.
  */
-//require get_template_directory() . '/inc/breadcrumbs.php';
+require get_template_directory() . '/inc/cpt.php';
 
 /**
  * Load Jetpack compatibility file.

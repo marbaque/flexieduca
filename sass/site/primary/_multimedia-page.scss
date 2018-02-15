@@ -40,7 +40,7 @@ ul.accordion {
 
     >li {
         list-style-type: none;
-        padding: .5em 1em;
+        padding: 0;
         margin: .5em 0;
 	    background: $color__sombreado;
 	    @include borde(5px);
@@ -57,6 +57,7 @@ ul.accordion {
         background: none;
         text-align: left;
         border: none;
+        padding: 1em;
         &:focus {
 	        border: none;
         }
@@ -70,7 +71,7 @@ ul.accordion {
     min-height: 1px;
     overflow-x: hidden;
     border-top: 1px solid white;
-    padding-top: 1em;
+    padding: 1em 1.5em;
     
     p, li {
 	    margin: .25em 0;
@@ -85,9 +86,9 @@ ul.accordion {
     
     &.resumen {	    
 	   @include vector-bg-with-fallback(resumen);
-	   background-position: 1em 1em;
+	   background-position: 2em 1em;
 	   background-size: 60px;
-	   padding-left: 60px;
+	   padding-left: 50px;
 	   @media screen and (min-width: $break__small) {
 		   background-size: 80px;
 		   padding-left: 110px;
@@ -166,21 +167,23 @@ ul.accordion {
     background-position: 1.25em 1.75em;
     background-size: 60px;
     background-color: #F1EEE5;
-    font-size: .9em;
+    font-size: .89em;
     border-top: 2px solid $color__borde-recuadro;
     border-bottom: 2px solid $color__borde-recuadro;
+    position: relative;
     
     @media screen and (min-width: $break__medium) {
         padding-left: 140px;
-        margin: 2em -1em;
-        font-size: 1em;
+        margin: 2em 0;
+        font-size: .96em;
+        line-height: 1.45;
         background-size: 80px;
         border: 3px solid $color__borde-recuadro; 
         background-color: #F1EEE5;
 		box-shadow: 2px 3px 4px 0 rgba(0,0,0,0.32);
 		@include borde(4px);
     }
-/*
+    /*
     a {
 	    word-break: break-all;
 	    word-wrap: break-word;
@@ -207,6 +210,21 @@ ul.accordion {
 }
 .formato-ejercicio{
     @include vector-bg-with-fallback(ejercicio);
+    &:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border: 48px solid transparent;
+		border-top-color: $color__sombreado;
+		border-bottom: 0;
+		border-left: 0;
+		margin-left: -24px;
+		margin-bottom: -48px;
+	}
+
 }
 .formato-idea{
     @include vector-bg-with-fallback(idea);
