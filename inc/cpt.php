@@ -1,11 +1,7 @@
 <?php
 /*
-Plugin Name: Contenidos principales para multimedia de mercadeo digital
-Description: Simple plugin que agrega custom post types al material multimedia de Mercadeo
-Version: 0.1.0
-Author: Universidad Estatal a Distancia - PEM
-Author URI: http://mariobadilla.com
-GitHub Plugin URI: https://github.com/marbaque/flexieduca-custom-posts
+Simple plugin que agrega custom post types al material multimedia de Mercadeo
+Universidad Estatal a Distancia - PEM
 */
 function my_custom_posttypes() {
 
