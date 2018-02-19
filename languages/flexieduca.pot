@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-02-01 22:16+0000\n"
+"POT-Creation-Date: 2018-02-19 18:04+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,15 +34,15 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: archive.php:44 index.php:44 search.php:44 taxonomy-tendencia.php:65
-msgid "Newer"
+#: archive.php:44 inc/template-tags.php:176
+msgid "Previous"
 msgstr ""
 
-#: archive.php:45 index.php:45 search.php:45 taxonomy-tendencia.php:66
-msgid "Older"
+#: archive.php:45 inc/template-tags.php:173
+msgid "Next"
 msgstr ""
 
-#: archive.php:46 index.php:46 search.php:46 taxonomy-tendencia.php:67
+#: archive.php:46 index.php:46 search.php:46 taxonomy-tendencia.php:72
 msgid "Page"
 msgstr ""
 
@@ -137,21 +137,29 @@ msgstr ""
 msgid "Contents"
 msgstr ""
 
-#: header.php:51
-msgid "Log out"
+#: header.php:52
+msgid "Hello"
 msgstr ""
 
-#: header.php:53
-msgid "Members area"
+#: header.php:55
+msgid "Login"
+msgstr ""
+
+#: index.php:44 search.php:44 taxonomy-tendencia.php:70
+msgid "Newer"
+msgstr ""
+
+#: index.php:45 search.php:45 taxonomy-tendencia.php:71
+msgid "Older"
 msgstr ""
 
 #. Name of the template
 msgid "Case Gallery"
 msgstr ""
 
-#: page-casos.php:31 template-parts/content-actividad.php:52
-#: template-parts/content-front.php:21 template-parts/content-multimedia.php:58
-#: template-parts/content-page.php:52 template-parts/content-single.php:60
+#: page-casos.php:31 template-parts/content-front.php:32
+#: template-parts/content-multimedia.php:58 template-parts/content-page.php:59
+#: template-parts/content-single.php:60
 msgid "Pages:"
 msgstr ""
 
@@ -163,11 +171,6 @@ msgstr ""
 #: search.php:18
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
-
-#: taxonomy-tendencia.php:21 taxonomy-tendencia.php:21
-#: template-parts/content-case.php:10 template-parts/content-case.php:10
-msgid "Back to gallery"
 msgstr ""
 
 #. %s: post date.
@@ -225,38 +228,29 @@ msgstr ""
 msgid "%1$s"
 msgstr ""
 
-#: inc/template-tags.php:171
-msgid "Next"
-msgstr ""
-
-#: inc/template-tags.php:172
-msgid "Next post:"
-msgstr ""
-
 #: inc/template-tags.php:174
-msgid "Previous"
+msgid "Next:"
 msgstr ""
 
-#: inc/template-tags.php:175
-msgid "Previous post:"
-msgstr ""
-
-#: template-parts/content-actividad.php:31
-msgid "This activity appears in"
-msgstr ""
-
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-actividad.php:41
-#: template-parts/content-multimedia.php:49 template-parts/content-page.php:41
-#: template-parts/content-single.php:49
-#, php-format
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+#: inc/template-tags.php:177
+msgid "Previous:"
 msgstr ""
 
 #. %s: Name of current post.
 #: template-parts/content-case-item.php:32 template-parts/content.php:41
 #, php-format
 msgid "Continue reading %s"
+msgstr ""
+
+#: template-parts/content-case.php:10 template-parts/content-case.php:10
+msgid "Back to gallery"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content-multimedia.php:49 template-parts/content-page.php:48
+#: template-parts/content-single.php:49
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: template-parts/content-none.php:14

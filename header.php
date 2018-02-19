@@ -48,8 +48,8 @@
 
                 <div class="user-info-area">
                     <?php if ( is_user_logged_in() ) { ?>
-                    <form action="<?php echo wp_logout_url( home_url() ); ?>">
-                        <button tabindex="0" role="button"><i class="far fa-user-circle fa-2x"></i><span><?php esc_html_e('Log out', 'flexieduca'); ?></span>
+                    <form action="<?php echo site_url(); ?>">
+                        <button tabindex="0" role="button"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/h-icon.svg"><span><?php esc_html_e('Hello', 'flexieduca'); ?></span>
                     <?php } else { ?>
                     <form action="<?php echo wp_login_url(); ?>">
                         <button tabindex="0" role="button"><i class="far fa-user-circle fa-2x"></i><span><?php esc_html_e('Login', 'flexieduca'); ?></span>
