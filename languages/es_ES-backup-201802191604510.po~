@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-01-16 20:38+0000\n"
+"POT-Creation-Date: 2018-01-16 20:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-01-16 20:48+0000\n"
+"PO-Revision-Date: 2018-01-16 20:51+0000\n"
 "Last-Translator: Mario Badilla\n"
 "Language-Team: Spanish (Spain)\n"
 "X-Generator: Loco - https://localise.biz/\n"
@@ -17,112 +17,31 @@ msgstr ""
 msgid "https://wordpress.org/"
 msgstr ""
 
-#. Name of the template
-msgid "Galería de casos"
-msgstr ""
-
-#: page-casos.php:22 template-parts/content-front.php:31
-#: template-parts/content-multimedia.php:58 template-parts/content-page.php:22
-#: template-parts/content.php:45
-msgid "Pages:"
-msgstr "Páginas:"
-
-#. %s: Name of current post.
-#: page-casos.php:74
-#, php-format
-msgid "Continue reading %s"
-msgstr "Continuar leyendo"
-
-#. translators: %s: search query.
-#: search.php:21
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Resultados para: %s"
-
-#. %s: post date.
-#: inc/template-tags.php:30
-#, php-format
-msgctxt "post date"
-msgid "%s"
-msgstr "%s"
-
-#. %s: post author.
-#: inc/template-tags.php:35
-#, php-format
-msgctxt "post author"
-msgid "Published by %s"
-msgstr "Publicado por %s"
-
-#. translators: %s: post title
-#: inc/template-tags.php:43 inc/template-tags.php:81
-#, php-format
-msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr "Comentar<span class=\"screen-reader-text\"> on %s</span>"
-
-#. %s: Name of current post
-#: inc/template-tags.php:50
-#, php-format
-msgid "Edit %s"
-msgstr "Editar %s"
-
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:68
-msgctxt "list item separator"
-msgid ", "
-msgstr ","
-
-#. translators: 1: list of tags.
-#: inc/template-tags.php:71
-#, php-format
-msgid "Tagged %1$s"
-msgstr "Etiquetado %1$s"
-
-#. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:96 template-parts/content-page.php:35
-#, php-format
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "Editar %s"
-
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:116
-msgid ", "
-msgstr ","
-
-#. 1: list of categories.
-#: inc/template-tags.php:119
-#, php-format
-msgid "%1$s"
-msgstr "%1$s"
-
-#: inc/template-tags.php:170
-msgid "Next"
-msgstr "Siguiente"
-
 #: inc/template-tags.php:171
 msgid "Next post:"
-msgstr ""
+msgstr "Siguiente entrada:"
 
 #: inc/template-tags.php:173
 msgid "Previous"
-msgstr ""
+msgstr "Anterior:"
 
 #: inc/template-tags.php:174
 msgid "Previous post:"
-msgstr ""
+msgstr "Entrada anterior:"
 
 #: template-parts/content-case.php:10
 msgid "Back to gallery"
-msgstr ""
+msgstr "Regresar a galería"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content-multimedia.php:49 template-parts/content.php:34
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Continuar leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "No encontramos nada"
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:25
@@ -130,18 +49,21 @@ msgstr ""
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"¿Lista para ubicar su primera entrada? <a href=\"%1$s\">Comience aquí</a>."
 
 #: template-parts/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Lo siento, eso no lo encuentro. Por favor, intente de nuevo con palabras "
+"clave."
 
 #: template-parts/content-none.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
+msgstr "Parece que no puedo encontrar lo que busca. Intente una búsqueda."
 
 #. Name of the theme
 msgid "Flexieduca"
@@ -149,7 +71,7 @@ msgstr ""
 
 #. Description of the theme
 msgid "Theme for educational content"
-msgstr ""
+msgstr "Plantilla para contenido educativo."
 
 #. URI of the theme
 msgid "http://underscores.me/"
@@ -276,3 +198,80 @@ msgstr "Continuar con los contenidos"
 #: header.php:29
 msgid "Contents"
 msgstr "Contenidos"
+
+#: page-casos.php:22 template-parts/content-front.php:31
+#: template-parts/content-multimedia.php:58 template-parts/content-page.php:22
+#: template-parts/content.php:45
+msgid "Pages:"
+msgstr "Páginas:"
+
+#. %s: Name of current post.
+#: page-casos.php:74
+#, php-format
+msgid "Continue reading %s"
+msgstr "Continuar leyendo"
+
+#. translators: %s: search query.
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados para: %s"
+
+#. %s: post date.
+#: inc/template-tags.php:30
+#, php-format
+msgctxt "post date"
+msgid "%s"
+msgstr "%s"
+
+#. %s: post author.
+#: inc/template-tags.php:35
+#, php-format
+msgctxt "post author"
+msgid "Published by %s"
+msgstr "Publicado por %s"
+
+#. translators: %s: post title
+#: inc/template-tags.php:43 inc/template-tags.php:81
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Comentar<span class=\"screen-reader-text\"> on %s</span>"
+
+#. %s: Name of current post
+#: inc/template-tags.php:50
+#, php-format
+msgid "Edit %s"
+msgstr "Editar %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:68
+msgctxt "list item separator"
+msgid ", "
+msgstr ","
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:71
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Etiquetado %1$s"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:96 template-parts/content-page.php:35
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Editar %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:116
+msgid ", "
+msgstr ","
+
+#. 1: list of categories.
+#: inc/template-tags.php:119
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+#: inc/template-tags.php:170
+msgid "Next"
+msgstr "Siguiente"
