@@ -61,21 +61,16 @@
                     ?>
                 </div><!-- .entry-content -->
 
-                <footer class="entry-footer">
-                    <?php flexieduca_entry_footer(); ?>
-                </footer><!-- .entry-footer -->
-
             </div><!----.post_content__body--->
         </div><!----.post_content__wrap--->
         
         <?php
-        
-
         // If comments are open or we have at least one comment, load up the comment template.
         if (comments_open() || get_comments_number()) :
             comments_template();
         endif;
         ?>
+        
         <?php if ( ! is_singular('actividad') ) { ?>
         <div class="ebook-nav">
             <?php flexieduca_post_navigation(); ?>

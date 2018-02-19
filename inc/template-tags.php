@@ -171,14 +171,16 @@ function flexieduca_post_navigation() {
 
 	the_post_navigation( array(
 		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'flexieduca' ) . '</span> ' .
-			'<span class="screen-reader-text">' . __( 'Next post:', 'flexieduca' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Next:', 'flexieduca' ) . '</span> ' .
 			'<span class="post-title">%title</span>',
 		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'flexieduca' ) . '</span> ' .
-			'<span class="screen-reader-text">' . __( 'Previous post:', 'flexieduca' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Previous:', 'flexieduca' ) . '</span> ' .
 			'<span class="post-title">%title</span>',
 	) );
 
 }
+
+
 
 
 // filter to show caption, if available, on thumbnail, wrapped with '.wp-caption thumb-caption' div;
@@ -248,3 +250,28 @@ add_filter( 'template_include', function( $template ) {
   }
   return $template;
 });
+
+/************************************************************************/
+// orden de posts
+/************************************************************************/
+function my_previous_post_where() {
+	global $post, $wpdb;
+	return $wpdb->prepare( "WHERE p.menu_order < %s AND p.post_type = %s AND p.post_status = 'publish'", $post->menu_order, $post->post_type);
+}
+add_filter( 'get_previous_post_where', 'my_previous_post_where' );
+
+function my_next_post_where() {
+	global $post, $wpdb;
+	return $wpdb->prepare( "WHERE p.menu_order > %s AND p.post_type = %s AND p.post_status = 'publish'", $post->menu_order, $post->post_type);
+}
+add_filter( 'get_next_post_where', 'my_next_post_where' );
+
+function my_previous_post_sort() {
+	return "ORDER BY p.menu_order desc LIMIT 1";
+}
+add_filter( 'get_previous_post_sort', 'my_previous_post_sort' );
+
+function my_next_post_sort() {
+	return "ORDER BY p.menu_order asc LIMIT 1";
+}
+add_filter( 'get_next_post_sort', 'my_next_post_sort' );

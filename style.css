@@ -613,7 +613,7 @@ textarea {
 a {
 	color: #404040;
 	text-decoration: none;
-	border-bottom: 3px solid currentcolor;
+	border-bottom: 2.5px solid currentcolor;
 }
 
 a:visited {
@@ -631,6 +631,20 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
+}
+
+.post-edit-link {
+	margin: 1em 0;
+	background-color: orange;
+	color: cyan;
+	padding: 1em;
+	border: none;
+}
+
+.post-edit-link:hover {
+	border: none;
+	color: white;
+	background-color: cyan;
 }
 
 /*--------------------------------------------------------------
@@ -1529,23 +1543,27 @@ li.flexieduca-search, .widget_search {
 ** Breadcrumbs 
 *****************************/
 .breadcrumbs {
-	font-size: .66em;
-	margin: 0 0 2em;
-	color: #aaa;
-	line-height: 1.4;
+	display: none;
 }
 
-.breadcrumbs span a {
-	border: none;
-	display: inline-block;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	max-width: 200px;
-}
-
-.breadcrumbs .separator {
-	margin: 0 .5em;
+@media screen and (min-width: 600px) {
+	.breadcrumbs {
+		font-size: .66em;
+		margin: 0 0 2em;
+		color: #aaa;
+		line-height: 1.4;
+	}
+	.breadcrumbs span a {
+		border: none;
+		display: inline-block;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 200px;
+	}
+	.breadcrumbs .separator {
+		margin: 0 .5em;
+	}
 }
 
 /****************************
@@ -2043,7 +2061,7 @@ ul.accordion {
 
 ul.accordion > li {
 	list-style-type: none;
-	padding: .5em 1em;
+	padding: 0;
 	margin: .5em 0;
 	background: #F1EEE5;
 	border-radius: 5px;
@@ -2060,6 +2078,7 @@ ul.accordion button {
 	background: none;
 	text-align: left;
 	border: none;
+	padding: 1em;
 }
 
 ul.accordion button:focus {
@@ -2073,7 +2092,7 @@ ul.accordion button:focus {
 	min-height: 1px;
 	overflow-x: hidden;
 	border-top: 1px solid white;
-	padding-top: 1em;
+	padding: 1em 1.5em;
 }
 
 .accordion-panel p, .accordion-panel li {
@@ -2092,9 +2111,9 @@ ul.accordion button:focus {
 	background-image: url("./img/resumen.png");
 	background-image: none, url("./img/resumen.svg");
 	background-repeat: no-repeat;
-	background-position: 1em 1em;
+	background-position: 2em 1em;
 	background-size: 60px;
-	padding-left: 60px;
+	padding-left: 50px;
 }
 
 @media screen and (min-width: 600px) {
@@ -2183,9 +2202,10 @@ ul.accordion button:focus {
 	background-position: 1.25em 1.75em;
 	background-size: 60px;
 	background-color: #F1EEE5;
-	font-size: .9em;
+	font-size: .89em;
 	border-top: 2px solid #41423F;
 	border-bottom: 2px solid #41423F;
+	position: relative;
 	/*
     a {
 	    word-break: break-all;
@@ -2210,8 +2230,9 @@ ul.accordion button:focus {
 	.formato-ejercicio,
 	.formato-idea {
 		padding-left: 140px;
-		margin: 2em -1em;
-		font-size: 1em;
+		margin: 2em 0;
+		font-size: .96em;
+		line-height: 1.45;
 		background-size: 80px;
 		border: 3px solid #41423F;
 		background-color: #F1EEE5;
@@ -2242,6 +2263,21 @@ ul.accordion button:focus {
 	background-image: url("./img/ejercicio.png");
 	background-image: none, url("./img/ejercicio.svg");
 	background-repeat: no-repeat;
+}
+
+.formato-ejercicio:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 48px solid transparent;
+	border-top-color: #F1EEE5;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -24px;
+	margin-bottom: -48px;
 }
 
 .formato-idea {
@@ -2603,8 +2639,9 @@ ul.accordion button:focus {
 .comments-area {
 	width: 100%;
 	margin: 3em 0;
-	padding: 1.5em 0;
+	padding: 1.5em 2em;
 	border-top: 1px solid #cccccc;
+	background: #f9f9f9;
 }
 
 .single-caso .comments-area {

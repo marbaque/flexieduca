@@ -132,26 +132,29 @@
 ** Breadcrumbs 
 *****************************/
 .breadcrumbs {
-	font-size: .66em;
-	margin: 0 0 2em;
-	color: #aaa;
-	line-height: 1.4;
-	
-	span {
+	display: none;
+	@media screen and (min-width: $break__small) {
+		font-size: .66em;
+		margin: 0 0 2em;
+		color: #aaa;
+		line-height: 1.4;
 		
-		
-		a {
-			border: none;
-			display: inline-block;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			max-width: 200px;
+		span {
+			
+			
+			a {
+				border: none;
+				display: inline-block;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				max-width: 200px;
+			}
+			
 		}
-		
-	}
-	.separator {
-		margin: 0 .5em;
+		.separator {
+			margin: 0 .5em;
+		}
 	}
 }
 

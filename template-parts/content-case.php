@@ -84,7 +84,7 @@
 			        
 			        <div class="enlace">
 				        <?php if ( !empty($url) ): ?>
-	                        <a href="<?php echo $url; ?>" title="Enlace a <?php the_title(); ?>">
+	                        <a href="<?php echo $url; ?>" title="Enlace a <?php the_title(); ?>" target="_blank">
 		                        <?php echo preg_replace('#^https?://#', '', $url); ?></i></a>
 	                    <?php endif; ?>
 			        </div>
