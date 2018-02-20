@@ -118,7 +118,18 @@ function my_mce_before_init_insert_formats( $init_array ) {
             'block' => 'div',  
             'classes' => 'table-source',
             'wrapper' => true,
-        )
+        ),
+        array(
+	        'title' => 'Llamada de comentario',
+	        'block' => 'div',
+	        'classes' => 'comenta',
+	        'wrapper' => 'true',
+        ),
+        array(
+	        'title' => 'Bibliografía',
+	        'block' => 'p',
+	        'classes' => 'biblio',
+        ),
     );  
     // Insert the array, JSON ENCODED, into 'style_formats'
     $init_array['style_formats'] = json_encode( $style_formats );  

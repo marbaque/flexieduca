@@ -1536,6 +1536,7 @@ li.flexieduca-search, .widget_search {
 	.site-header .user-info-area {
 		width: 90px;
 		max-width: 90px;
+		font-size: .77em;
 	}
 }
 
@@ -1976,6 +1977,7 @@ li.flexieduca-search, .widget_search {
 	padding: 2em 1em;
 	font-size: 70%;
 	text-align: center;
+	color: #aaa;
 }
 
 /*--------------------------------------------------------------
