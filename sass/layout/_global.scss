@@ -1,14 +1,8 @@
 .site {
 	width: 100%;
-	//max-width: 1280px;
-	margin: 0 auto;
+	margin: 0;
 	position: relative;
 	background: white;
-	@media screen and (min-width: $break__medium) {
-		border-left: 1px solid #ccc;
-		border-right: 1px solid #ccc;
-		border-bottom: 1px solid #ccc;
-	}
 }
 .site-content {
     max-width: $max__size;
@@ -134,6 +128,7 @@
 .breadcrumbs {
 	display: none;
 	@media screen and (min-width: $break__small) {
+		display: block;
 		font-size: .66em;
 		margin: 0 0 2em;
 		color: #aaa;

@@ -96,21 +96,12 @@
 	        <?php endif; ?>
 	        
 	        <div class="case-desc">
-		        <h4>Descripción</h4>
 	            <?php
 	            the_content();
 	            ?>
 	        </div>
         
         </div><!-- case__wrap -->
-        
-        
-
-        
-
-
-        
-
         <?php
         // If comments are open or we have at least one comment, load up the comment template.
         if (comments_open() || get_comments_number()) :
