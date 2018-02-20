@@ -17,7 +17,7 @@ msgstr ""
 #. supported by Libre Franklin, translate this to 'off'. Do not translate
 #. into your own language.
 #: functions.php:108
-msgctxt "Varela Round font: on or off"
+msgctxt "Asap font: on or off"
 msgid "on"
 msgstr "activado"
 

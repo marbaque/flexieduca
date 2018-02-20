@@ -105,12 +105,12 @@ function flexieduca_fonts_url() {
 	 * supported by Libre Franklin, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$varela_round = _x( 'on', 'Varela Round font: on or off', 'flexieduca' );
+	$gfont = _x( 'on', 'Rubik font: on or off', 'flexieduca' );
 
-	if ( 'off' !== $varela_round ) {
+	if ( 'off' !== $gfont ) {
 		$font_families = array();
 
-		$font_families[] = 'Varela Round';
+		$font_families[] = 'Rubik:400,400i,700,700i';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),

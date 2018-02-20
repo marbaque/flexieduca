@@ -51,7 +51,7 @@
                     <form action="<?php echo site_url(); ?>">
                         <button tabindex="0" role="button"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/h-icon.svg"><span><?php esc_html_e('Hello', 'flexieduca'); ?></span>
                     <?php } else { ?>
-                    <form action="<?php echo wp_login_url(); ?>">
+                    <form action="<?php echo wp_login_url(home_url()); ?>">
                         <button tabindex="0" role="button"><i class="far fa-user-circle fa-2x"></i><span><?php esc_html_e('Login', 'flexieduca'); ?></span>
                     <?php } ?>
                         </button>  

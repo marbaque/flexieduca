@@ -170,11 +170,11 @@ add_action('save_post', 'flexieduca_category_transient_flusher');
 function flexieduca_post_navigation() {
 
 	the_post_navigation( array(
-		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'flexieduca' ) . '</span> ' .
-			'<span class="screen-reader-text">' . __( 'Next:', 'flexieduca' ) . '</span> ' .
-			'<span class="post-title">%title</span>',
-		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'flexieduca' ) . '</span> ' .
+		'prev_text' => '<span class="meta-nav" aria-hidden="true">&#8672; ' . __( 'Previous', 'flexieduca' ) . '</span> ' .
 			'<span class="screen-reader-text">' . __( 'Previous:', 'flexieduca' ) . '</span> ' .
+			'<span class="post-title">%title</span>',
+		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'flexieduca' ) . ' &#8674;</span> ' .
+			'<span class="screen-reader-text">' . __( 'Next:', 'flexieduca' ) . '</span> ' .
 			'<span class="post-title">%title</span>',
 	) );
 

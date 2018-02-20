@@ -36,14 +36,21 @@
         </div><!-- .entry-content .post-content -->
     	
     	<aside class="side-content">
-            <div class="exitometro">
-                <h4>Bienvenido 
-                    <?php if ( is_user_logged_in() ) { ?>
-                    estudiante
-                    <?php } else { ?>
-                    visitante
-                    <?php } ?>
-                </h4>
+            <div class="exitometro">	                 
+					<?php
+					if ( is_user_logged_in() ) {
+						global $current_user;
+						wp_get_current_user();
+						/**
+						* @example Safe usage: $current_user = wp_get_current_user();
+						* if ( !($current_user instanceof WP_User) )
+						*     return;
+						*/
+					    echo '<h4>' . __("Welcome, ", "flexieduca") . $current_user->display_name . '</h4>';
+					} else {
+					    echo __('Welcome, visitor!', 'flexieduca');
+					}
+					?>
                 <div class="datos">
                     <p>
                         <span class="mi-exitometro">Mi Exitómetro</span> <br>

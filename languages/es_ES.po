@@ -2,32 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-02-19 18:05+0000\n"
+"POT-Creation-Date: 2018-02-20 16:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-19 18:05+0000\n"
-"Last-Translator: admin <mbadilla@uned.ac.cr>\n"
+"PO-Revision-Date: 2018-02-20 18:08+0000\n"
+"Last-Translator: Mario Badilla\n"
 "Language-Team: Spanish (Spain)\n"
-"X-Generator: Loco - https://localise.biz/\n"
-"Language: es-ES\n"
-"Plural-Forms: nplurals=2; plural=n != 1"
-
-#: header.php:52
-msgid "Hello"
-msgstr "Bienvenida"
-
-#: header.php:55
-msgid "Login"
-msgstr "Ingresar"
-
-#: inc/template-tags.php:174
-msgid "Next:"
-msgstr "Siguiente:"
-
-#: inc/template-tags.php:177
-msgid "Previous:"
-msgstr "Anterior:"
+"X-Generator: Loco https://localise.biz/\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
@@ -51,11 +35,11 @@ msgstr "Categorías mas utilizadas"
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Intente buscando en los archivos mensuales."
 
-#: archive.php:44 inc/template-tags.php:176
+#: archive.php:44 inc/template-tags.php:173
 msgid "Previous"
 msgstr "Anterior:"
 
-#: archive.php:45 inc/template-tags.php:173
+#: archive.php:45 inc/template-tags.php:176
 msgid "Next"
 msgstr "Siguiente"
 
@@ -63,24 +47,29 @@ msgstr "Siguiente"
 msgid "Page"
 msgstr "Página"
 
-#. translators: 1: title.
-#: comments.php:34
-#, php-format
-msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr "Un comentario acerca de &ldquo;%1$s&rdquo;"
-
-#. translators: 1: comment count number, 2: title.
-#: comments.php:40
+#: comments.php:31
 #, php-format
 msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "%1$s comentario acerca de &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s comentarios acerca de &ldquo;%2$s&rdquo;"
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] "Un comentario"
+msgstr[1] "%1$s comentarios"
 
-#: comments.php:63
+#: comments.php:50
+msgid "Comment navigation"
+msgstr "Navegar comentarios"
+
+#: comments.php:53
+msgid "Older Comments"
+msgstr "Comentarios anteriores"
+
+#: comments.php:54
+msgid "Newer Comments"
+msgstr "Comentarios recientes"
+
+#: comments.php:67
 msgid "Comments are closed."
-msgstr "Ya no puede comentar."
+msgstr "Los comentario se han cerrado."
 
 #: footer.php:18
 msgid "https://wordpress.org/"
@@ -110,9 +99,9 @@ msgstr "Menu de inicio"
 #. supported by Libre Franklin, translate this to 'off'. Do not translate
 #. into your own language.
 #: functions.php:108
-msgctxt "Varela Round font: on or off"
+msgctxt "Asap font: on or off"
 msgid "on"
-msgstr "Activado"
+msgstr "on"
 
 #: functions.php:195
 msgid "Sidebar"
@@ -153,6 +142,14 @@ msgstr "Continuar con los contenidos"
 #: header.php:29
 msgid "Contents"
 msgstr "Contenidos"
+
+#: header.php:52
+msgid "Hello"
+msgstr "Bienvenida"
+
+#: header.php:55
+msgid "Login"
+msgstr "Acceder"
 
 #: index.php:44 search.php:44 taxonomy-tendencia.php:70
 msgid "Newer"
@@ -237,15 +234,31 @@ msgstr ","
 msgid "%1$s"
 msgstr "%1$s"
 
+#: inc/template-tags.php:174
+msgid "Previous:"
+msgstr "Anterior:"
+
+#: inc/template-tags.php:177
+msgid "Next:"
+msgstr "Siguiente:"
+
 #. %s: Name of current post.
 #: template-parts/content-case-item.php:32 template-parts/content.php:41
 #, php-format
 msgid "Continue reading %s"
 msgstr "Continuar leyendo"
 
-#: template-parts/content-case.php:10 template-parts/content-case.php:10
+#: template-parts/content-case.php:10
 msgid "Back to gallery"
 msgstr "Regresar a galería"
+
+#: template-parts/content-front.php:49
+msgid "Welcome, "
+msgstr "Hola, "
+
+#: template-parts/content-front.php:51
+msgid "Welcome, visitor!"
+msgstr "¡Bienvenido, visitante!"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content-multimedia.php:49 template-parts/content-page.php:48
@@ -263,8 +276,7 @@ msgstr "No encontramos nada"
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"¿Lista para ubicar su primera entrada? <a href=\"%1$s\">Comience aquí</a>."
+msgstr "¿Lista para hacer su primer post? <a href=\"%1$s\">Comience aquí</a>."
 
 #: template-parts/content-none.php:40
 msgid ""

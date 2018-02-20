@@ -139,3 +139,52 @@ function my_mce_before_init_insert_formats( $init_array ) {
 } 
 // Attach callback to 'tiny_mce_before_init' 
 add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' ); 
+
+/************************************************************************/
+// custom logo
+/************************************************************************/
+
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+	        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png);
+	        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg);
+			height:65px;
+			width:320px;
+			background-size: 320px 65px;
+			background-repeat: no-repeat;
+        	padding-bottom: 0;
+        }
+        .login #nav a,
+        .login #nav a:visited {
+			text-decoration: none;
+			color: #fff!important;
+			background: #D96C70;
+			padding: 4px;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+		}
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+    return 'Mercadeo digital';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+
+/************************************************************************/
+// custom top bar
+/************************************************************************/
+add_action( 'wp_before_admin_bar_render', 'remove_logo', 7);
+function remove_logo() {
+	global $wp_admin_bar;
+	$wp_admin_bar->remove_menu('wp-logo');
+}
