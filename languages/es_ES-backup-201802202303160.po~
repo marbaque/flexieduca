@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-20 16:40+0000\n"
+"PO-Revision-Date: 2018-02-20 23:03+0000\n"
 "Last-Translator: Mario Badilla\n"
 "Language-Team: Spanish (Spain)\n"
 "X-Generator: Loco https://localise.biz/\n"
@@ -101,7 +101,7 @@ msgstr "Menu de inicio"
 #: functions.php:108
 msgctxt "Asap font: on or off"
 msgid "on"
-msgstr "Activado"
+msgstr "on"
 
 #: functions.php:195
 msgid "Sidebar"
@@ -240,7 +240,7 @@ msgstr "Anterior:"
 
 #: inc/template-tags.php:177
 msgid "Next:"
-msgstr "Siguiente:"
+msgstr "Siguiente"
 
 #. %s: Name of current post.
 #: template-parts/content-case-item.php:32 template-parts/content.php:41
