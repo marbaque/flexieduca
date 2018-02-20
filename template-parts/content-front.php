@@ -35,7 +35,23 @@
             ?>
         </div><!-- .entry-content .post-content -->
     	
-    	<div class="side-content">
+    	<aside class="side-content">
+            <div class="exitometro">
+                <h4>Bienvenido 
+                    <?php if ( is_user_logged_in() ) { ?>
+                    estudiante
+                    <?php } else { ?>
+                    visitante
+                    <?php } ?>
+                </h4>
+                <div class="datos">
+                    <p>
+                        <span class="mi-exitometro">Mi Exitómetro</span> <br>
+                        <i><span>2/28 actividades completadas</span></i>
+                    </p>
+                    <span class="porcentaje">10%</span>
+                </div>
+            </div>
     		<?php
     		wp_nav_menu( array(
     			'theme_location' => 'menu-2',
@@ -45,7 +61,7 @@
     	    dynamic_sidebar( 'sidebar-3' );
     	    ?>
     		
-    	</div>
+    	</aside>
 	    
     </div>
     

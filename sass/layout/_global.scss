@@ -181,31 +181,44 @@
 }
 
 .home{ 
+    .site-main{
+        @media screen and (min-width: $break__small){
+            margin-top: 60px;
+        }
+    }
     .entry-title {
         display: none;
     }
     
-    .full-bleed {
-	    width: 100vw;
-	    max-height: 1080px;
-	    margin-top: -1em;
-	    margin-left: -1em;
-	    margin-bottom: 1em;
-	    padding: 0;
-	    overflow: hidden;
-	    z-index: 0;
-	    
-	    @media screen and (min-width:$break__medium) {
-		    width: 100%;
-		    margin-top: 0;
-		    margin-left: 0;
-		    margin-right: 0;
-		    margin-bottom: 2em;
-	    }
-    }
-
-    .site-content {
-		
+    aside.side-content {
+        .exitometro {
+            padding: 1em;
+            margin: .5em 0 2em;
+            border: 4px solid #ACACAC;
+            @include borde(10px);
+            h4,h5{margin-top: 0}
+            .datos{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: #AAAAAA;
+                .mi-exitometro {
+                    width: auto;
+                    text-transform: capitalize;
+                    font-weight: 700;
+                }
+                .porcentaje{
+                    border: 10px solid #B4CF7E;
+                    width: 80px;
+                    height: 80px;
+                    text-align: center;
+                    line-height: 2.4;
+                    font-size: 24px;
+                    flex-shrink: 0;
+                    @include borde(50%);
+                }
+            }
+        }
 		
         .menu {
             display: flex;

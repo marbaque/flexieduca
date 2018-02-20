@@ -1,56 +1,73 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-02-19 18:04+0000\n"
+"POT-Creation-Date: 2018-02-19 18:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-02-19 18:05+0000\n"
+"Last-Translator: admin <mbadilla@uned.ac.cr>\n"
+"Language-Team: Spanish (Spain)\n"
 "X-Generator: Loco - https://localise.biz/\n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION"
+"Language: es-ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1"
+
+#: header.php:52
+msgid "Hello"
+msgstr "Bienvenida"
+
+#: header.php:55
+msgid "Login"
+msgstr "Ingresar"
+
+#: inc/template-tags.php:174
+msgid "Next:"
+msgstr "Siguiente:"
+
+#: inc/template-tags.php:177
+msgid "Previous:"
+msgstr "Anterior:"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "No encuentro esa página."
 
 #: 404.php:23
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"No puedo encontrar nada en esa página. Intente con uno de estos enlaces o "
+"con una búsqueda."
 
 #: 404.php:31
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Categorías mas utilizadas"
 
 #. translators: %1$s: smiley
 #: 404.php:48
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "Intente buscando en los archivos mensuales."
 
 #: archive.php:44 inc/template-tags.php:176
 msgid "Previous"
-msgstr ""
+msgstr "Anterior:"
 
 #: archive.php:45 inc/template-tags.php:173
 msgid "Next"
-msgstr ""
+msgstr "Siguiente"
 
 #: archive.php:46 index.php:46 search.php:46 taxonomy-tendencia.php:72
 msgid "Page"
-msgstr ""
+msgstr "Página"
 
 #. translators: 1: title.
 #: comments.php:34
 #, php-format
 msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
+msgstr "Un comentario acerca de &ldquo;%1$s&rdquo;"
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:40
@@ -58,36 +75,36 @@ msgstr ""
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1$s comentario acerca de &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comentarios acerca de &ldquo;%2$s&rdquo;"
 
 #: comments.php:63
 msgid "Comments are closed."
-msgstr ""
+msgstr "Ya no puede comentar."
 
 #: footer.php:18
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://wordpress.org/"
 
 #. translators: %s: CMS name, i.e. WordPress.
 #: footer.php:20
 #, php-format
 msgid "Proudly powered by %s"
-msgstr ""
+msgstr "Hecho con %s"
 
 #. translators: 1: Theme name, 2: Theme author.
 #: footer.php:25
 #, php-format
 msgid "Theme: %1$s by %2$s."
-msgstr ""
+msgstr "Plantilla: %1$s by %2$s."
 
 #: functions.php:53
 msgid "Primary menu"
-msgstr ""
+msgstr "Menu principal"
 
 #: functions.php:54
 msgid "Front menu"
-msgstr ""
+msgstr "Menu de inicio"
 
 #. If there are characters in your language that are not
 #. supported by Libre Franklin, translate this to 'off'. Do not translate
@@ -95,167 +112,151 @@ msgstr ""
 #: functions.php:108
 msgctxt "Varela Round font: on or off"
 msgid "on"
-msgstr ""
+msgstr "Activado"
 
 #: functions.php:195
 msgid "Sidebar"
-msgstr ""
+msgstr "Barra lateral"
 
 #: functions.php:197
 msgid "Add widgets here."
-msgstr ""
+msgstr "Agregue widgets aquí"
 
 #: functions.php:204
 msgid "Page Sidebar"
-msgstr ""
+msgstr "Barra lateral de páginas"
 
 #: functions.php:206
 msgid "Add page sidebar widgets here."
-msgstr ""
+msgstr "Agregue widgets a la barra lateral de la página."
 
 #: functions.php:213
 msgid "Front Page Sidebar"
-msgstr ""
+msgstr "Barra lateral de la página de inicio"
 
 #: functions.php:215
 msgid "Add front widgets here."
-msgstr ""
+msgstr "Agregue widgets a la barra lateral de la página inicial."
 
 #: functions.php:247
 msgid "Expand child menu"
-msgstr ""
+msgstr "Expandir submenu"
 
 #: functions.php:248
 msgid "Collapse child menu"
-msgstr ""
+msgstr "Colapsar submenu"
 
 #: header.php:24
 msgid "Skip to content"
-msgstr ""
+msgstr "Continuar con los contenidos"
 
 #: header.php:29
 msgid "Contents"
-msgstr ""
-
-#: header.php:52
-msgid "Hello"
-msgstr ""
-
-#: header.php:55
-msgid "Login"
-msgstr ""
+msgstr "Contenidos"
 
 #: index.php:44 search.php:44 taxonomy-tendencia.php:70
 msgid "Newer"
-msgstr ""
+msgstr "Reciente"
 
 #: index.php:45 search.php:45 taxonomy-tendencia.php:71
 msgid "Older"
-msgstr ""
+msgstr "Anterior"
 
 #. Name of the template
 msgid "Case Gallery"
-msgstr ""
+msgstr "Galería de casos"
 
 #: page-casos.php:31 template-parts/content-front.php:32
 #: template-parts/content-multimedia.php:58 template-parts/content-page.php:59
 #: template-parts/content-single.php:60
 msgid "Pages:"
-msgstr ""
+msgstr "Páginas:"
 
 #: page-casos.php:41
 msgid "Case list"
-msgstr ""
+msgstr "Lista de casos"
 
 #. translators: %s: search query.
 #: search.php:18
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Resultados para: %s"
 
 #. %s: post date.
 #: inc/template-tags.php:30
 #, php-format
 msgctxt "post date"
 msgid "%s"
-msgstr ""
+msgstr "%s"
 
 #. %s: post author.
 #: inc/template-tags.php:35
 #, php-format
 msgctxt "post author"
 msgid "Published by %s"
-msgstr ""
+msgstr "Publicado por %s"
 
 #. translators: %s: post title
 #: inc/template-tags.php:43 inc/template-tags.php:81
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
+msgstr "Comentar<span class=\"screen-reader-text\"> on %s</span>"
 
 #. %s: Name of current post
 #: inc/template-tags.php:50
 #, php-format
 msgid "Edit %s"
-msgstr ""
+msgstr "Editar %s"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:68
 msgctxt "list item separator"
 msgid ", "
-msgstr ""
+msgstr ","
 
 #. translators: 1: list of tags.
 #: inc/template-tags.php:71
 #, php-format
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "Etiquetado %1$s"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:96
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
+msgstr "Editar %s"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:116
 msgid ", "
-msgstr ""
+msgstr ","
 
 #. 1: list of categories.
 #: inc/template-tags.php:119
 #, php-format
 msgid "%1$s"
-msgstr ""
-
-#: inc/template-tags.php:174
-msgid "Next:"
-msgstr ""
-
-#: inc/template-tags.php:177
-msgid "Previous:"
-msgstr ""
+msgstr "%1$s"
 
 #. %s: Name of current post.
 #: template-parts/content-case-item.php:32 template-parts/content.php:41
 #, php-format
 msgid "Continue reading %s"
-msgstr ""
+msgstr "Continuar leyendo"
 
 #: template-parts/content-case.php:10 template-parts/content-case.php:10
 msgid "Back to gallery"
-msgstr ""
+msgstr "Regresar a galería"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content-multimedia.php:49 template-parts/content-page.php:48
 #: template-parts/content-single.php:49
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Continuar leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "No encontramos nada"
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:25
@@ -263,35 +264,38 @@ msgstr ""
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"¿Lista para ubicar su primera entrada? <a href=\"%1$s\">Comience aquí</a>."
 
 #: template-parts/content-none.php:40
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Lo siento, eso no lo encuentro. Por favor, intente de nuevo con palabras "
+"clave."
 
 #: template-parts/content-none.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
+msgstr "Parece que no puedo encontrar lo que busca. Intente una búsqueda."
 
 #. Name of the theme
 msgid "Flexieduca"
-msgstr ""
+msgstr "Flexieduca"
 
 #. Description of the theme
 msgid "Theme for educational content"
-msgstr ""
+msgstr "Plantilla para contenido educativo."
 
 #. URI of the theme
 msgid "http://underscores.me/"
-msgstr ""
+msgstr "http://underscores.me/"
 
 #. Author of the theme
 msgid "Multimedia UNED"
-msgstr ""
+msgstr "Multimedia UNED"
 
 #. Author URI of the theme
 msgid "http://multimedia.uned.ac.cr"
-msgstr ""
+msgstr "http://multimedia.uned.ac.cr"
