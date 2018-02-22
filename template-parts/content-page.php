@@ -8,6 +8,7 @@
  */
 
 ?>
+<?php get_template_part('template-parts/tools'); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php 
 	if(function_exists('bcn_display')) {

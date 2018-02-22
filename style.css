@@ -1079,9 +1079,21 @@ a:hover, a:active {
 
 .widget {
 	margin: 0 0 2em;
-	padding: 0 0 2em;
-	font-family: Helvetica, Arial, sans-serif;
+	padding: 0;
+	border: 3px solid #333;
+	border-radius: 0.5em;
 	/* Make sure select elements fit in widgets. */
+}
+
+.widget .widget-title {
+	padding: .5em 1em;
+	border-bottom: 3px solid #41423F;
+	margin: 0;
+	font-size: 1.2em;
+}
+
+.widget > div {
+	padding: 1em;
 }
 
 .widget ul,
@@ -1128,12 +1140,6 @@ a:hover, a:active {
 	padding: 10px;
 	font-family: Helvetica, Arial, sans-serif;
 	border: 1px solid #ccc;
-}
-
-.widget-title {
-	margin-top: 0;
-	margin-bottom: .5em;
-	font-size: 1.2em;
 }
 
 /* Archive and Categories widgets */
@@ -1275,76 +1281,6 @@ a:hover, a:active {
 .textwidget {
 	font-size: 80%;
 	line-height: 1.3em;
-}
-
-/* Footer widget stylings */
-.footer-widgets {
-	margin: 2em 0 0;
-	padding: 1em 0;
-	background-color: #1a1a1a;
-}
-
-@media screen and (min-width: 600px) {
-	.footer-widgets {
-		padding: 2em 1em;
-	}
-}
-
-.footer-widgets .widget {
-	-webkit-box-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
-	margin: 0 1em 2em;
-	padding-top: 1em;
-}
-
-.footer-widgets .widget .original-title {
-	color: rgba(255, 255, 255, 0.5);
-}
-
-.footer-widgets .widget,
-.footer-widgets .widget-title,
-.footer-widgets .widget a,
-.footer-widgets .widget_calendar thead,
-.footer-widgets .rss-date,
-.footer-widgets .widget_rss cite {
-	color: white;
-}
-
-.footer-widgets .widget_calendar td,
-.footer-widgets .widget_calendar a {
-	color: black;
-}
-
-@media screen and (min-width: 900px) {
-	.footer-widgets {
-		/* Use flex to create a responsive layout */
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-wrap: wrap;
-		    flex-wrap: wrap;
-		-ms-flex-pack: distribute;
-		    justify-content: space-around;
-		/* If only one widget is displayed, make it full width. */
-		/* If 2 or 3 widgets are displayed, make the second one twice as wide. */
-		/* If 4 or more widgets are displayed, show three across when available. */
-	}
-	.footer-widgets .widget:only-of-type {
-		width: 100%;
-	}
-	.footer-widgets .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
-		-webkit-box-flex: 2;
-		    -ms-flex: 2;
-		        flex: 2;
-	}
-	.footer-widgets .widget:nth-last-child(n+4),
-	.footer-widgets .widget:nth-last-child(n+4) ~ .widget {
-		width: 30%;
-		-webkit-box-flex: 1;
-		    -ms-flex: 1 1 30%;
-		        flex: 1 1 30%;
-	}
 }
 
 /*------------------------------------------
@@ -1809,6 +1745,14 @@ li.flexieduca-search, .widget_search {
 	}
 }
 
+.archive-view p.post_post-type {
+	font-size: .6em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 0;
+	color: #aaa;
+}
+
 .archive-view .post,
 .archive-view .multimedia,
 .archive-view .page,
@@ -2007,10 +1951,11 @@ li.flexieduca-search, .widget_search {
 *****************************/
 .site-footer {
 	width: 100%;
-	padding: 2em 1em;
+	padding: 80px 1em 20px;
 	font-size: 70%;
 	text-align: center;
 	color: #aaa;
+	background: #f4f4f4;
 }
 
 /*--------------------------------------------------------------
@@ -2216,18 +2161,22 @@ ul.accordion button:focus {
 	font-size: .6em;
 }
 
-.mmtools .zeno_font_resizer_container {
+.mmtools a {
+	text-decoration: none;
+}
+
+.zeno_font_resizer_container {
 	display: inline-block;
 	position: relative;
 	margin: 0;
 }
 
-.mmtools .zeno_font_resizer_container .zeno_font_resizer {
+.zeno_font_resizer_container .zeno_font_resizer {
 	margin: 0;
 	line-height: 1;
 }
 
-.mmtools .zeno_font_resizer_container .zeno_font_resizer span {
+.zeno_font_resizer_container .zeno_font_resizer span {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -2236,20 +2185,16 @@ ul.accordion button:focus {
 	        align-items: baseline;
 }
 
-.mmtools .zeno_font_resizer_container a {
+.zeno_font_resizer_container a {
 	margin: 0 .25em;
 	color: #777;
 	border: none;
 	font-weight: 700;
 }
 
-.mmtools .zeno_font_resizer_container a:hover {
+.zeno_font_resizer_container a:hover {
 	text-decoration: underline;
 	border: none;
-}
-
-.mmtools a {
-	text-decoration: none;
 }
 
 .formato-actividad,
@@ -2349,17 +2294,21 @@ ul.accordion button:focus {
 }
 
 .fuente-apa {
-	font-size: .8em;
+	font-size: .9em;
 	line-height: 1.7;
 	margin-left: 2em;
 	text-indent: -2em;
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
+	padding-bottom: 1em;
+	border-bottom: 2px dashed #f4f4f4;
 }
 
 .fuente-apa a {
 	word-break: break-all;
 	word-wrap: break-word;
+	border: none;
+	text-decoration: underline;
 }
 
 @media print {

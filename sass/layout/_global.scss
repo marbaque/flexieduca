@@ -351,7 +351,13 @@
 			}
 		}
 	}
-	
+	p.post_post-type {
+		font-size: .6em;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin: 0;
+		color: #aaa;
+	}
 	.post,
 	.multimedia,
 	.page,
@@ -548,8 +554,9 @@
 *****************************/
 .site-footer {
     width: 100%;
-    padding: 2em 1em;
+    padding: 80px 1em 20px;
     font-size: 70%;
     text-align: center;
     color: #aaa;
+    background: #f4f4f4;
 }

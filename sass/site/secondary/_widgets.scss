@@ -4,9 +4,18 @@
 
 .widget {
     margin: 0 0 2em;
-    padding: 0 0 2em;
-    font-family: $font__main;
-
+    padding: 0;
+	border: 3px solid $color__text-screen;
+	@include borde(.5em);
+	.widget-title {
+		padding: .5em 1em;
+		border-bottom: 3px solid $color__borde-recuadro;
+		margin: 0;
+	    font-size: 1.2em;
+	}
+	>div {
+		padding: 1em;
+	}
     ul,
     ol {
         padding: .7em 0 0;
@@ -32,7 +41,7 @@
     a {
         font-weight: 600;
         text-decoration: none;
-
+		
         &:hover,
             &:focus {
             border-bottom: 3px solid $color__interactive;
@@ -47,13 +56,8 @@
         font-family: $font__main;
         border: 1px solid #ccc;
     }
-
-}
-
-.widget-title {
-    margin-top: 0;
-    margin-bottom: .5em;
-    font-size: 1.2em;
+    
+    
 }
 
 /* Archive and Categories widgets */
@@ -207,70 +211,6 @@
     font-size: 80%;
     line-height: 1.3em;
 }
-
-
-/* Footer widget stylings */
-
-.footer-widgets {
-    margin: 2em 0 0;
-    padding: 1em 0;
-    background-color: hsl(0, 0%, 10%);
-
-    @media screen and (min-width: $break__small) {
-        padding: 2em 1em;
-    }
-
-    .widget {
-        flex: 1;
-        margin: 0 1em 2em;
-        padding-top: 1em;
-
-        .original-title {
-            color: hsla(0, 0%, 100%, .5);
-        }
-    }
-
-    .widget,
-    .widget-title,
-    .widget a,
-    .widget_calendar thead,
-    .rss-date, 
-    .widget_rss cite {
-        color: white;
-    }
-
-    .widget_calendar td,
-    .widget_calendar a {
-        color: black;
-    }
-
-    @media screen and (min-width: $break__medium) {
-        /* Use flex to create a responsive layout */
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-
-        /* If only one widget is displayed, make it full width. */
-        .widget:only-of-type {
-            width: 100%;
-        }
-
-        /* If 2 or 3 widgets are displayed, make the second one twice as wide. */
-        .widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) { 
-            flex: 2;
-        }
-
-        /* If 4 or more widgets are displayed, show three across when available. */
-        .widget:nth-last-child(n+4), 
-            .widget:nth-last-child(n+4) ~ .widget { 
-            width: 30%;
-            flex: 1 1 30%;
-        }
-    }
-
-}
-
-
 
 /*------------------------------------------
 ** Estilos para la search bar

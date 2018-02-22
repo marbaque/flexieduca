@@ -106,7 +106,7 @@ ul.accordion {
     
 }
 
-.mmtools{
+.mmtools {
     display: none;
     
     @media screen and (min-width: $break__small) {
@@ -124,36 +124,34 @@ ul.accordion {
         color: #999;
         font-size: .6em;
     }
-
-    .zeno_font_resizer_container{
-        display: inline-block;
-        position: relative;
-        margin: 0;
-
-        .zeno_font_resizer{
-            margin: 0;
-            line-height: 1;
-            span {
-	            display: flex;
-	            align-items: baseline;
-            }
-        }
-        a{
-            margin: 0 .25em;
-            color: #777;
-            border: none;
-            font-weight: 700;
-            &:hover{
-                text-decoration: underline;
-                border: none;
-            }
-        }
-    }
     a{
         text-decoration: none;
     }
 }
+.zeno_font_resizer_container{
+    display: inline-block;
+    position: relative;
+    margin: 0;
 
+    .zeno_font_resizer{
+        margin: 0;
+        line-height: 1;
+        span {
+            display: flex;
+            align-items: baseline;
+        }
+    }
+    a{
+        margin: 0 .25em;
+        color: #777;
+        border: none;
+        font-weight: 700;
+        &:hover{
+            text-decoration: underline;
+            border: none;
+        }
+    }
+}
 //Formatos personalizados para recuadros en el contenido multimedia
 .formato-actividad,
 .formato-importante,
@@ -231,15 +229,19 @@ ul.accordion {
 }
 
 .fuente-apa {
-	font-size: .8em;
+	font-size: .9em;
 	line-height: 1.7;
 	margin-left:   2em;
 	text-indent:  -2em;
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
+	padding-bottom: 1em;
+	border-bottom: 2px dashed #f4f4f4;
 	a {
 		word-break: break-all;
 	    word-wrap: break-word;
+	    border: none;
+	    text-decoration: underline;
 	}
 }
 @media print {

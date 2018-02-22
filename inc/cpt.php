@@ -7,8 +7,8 @@ function my_custom_posttypes() {
 
     //Contenidos multimedia
     $labels = array(
-        'name' => 'Contenido multimedia',
-        'singular_name' => 'Contenido multimedia',
+        'name' => 'Contenido',
+        'singular_name' => 'Contenido',
         'menu_name' => 'Contenido multimedia',
         'name_admin_bar' => 'Contenido multimedia',
         'add_new' => 'Agregar contenido nuevo',
@@ -49,7 +49,7 @@ function my_custom_posttypes() {
     
     //Casos
     $labelsC = array(
-        'name' => 'Casos',
+        'name' => 'Caso de comercialización',
         'singular_name' => 'Caso',
         'menu_name' => 'Caso',
         'name_admin_bar' => 'Caso',
@@ -91,7 +91,7 @@ function my_custom_posttypes() {
 	
 	//Actividades
     $labelsA = array(
-        'name' => 'Actividades',
+        'name' => 'Actividad de autoevaluación',
         'singular_name' => 'Actividad',
         'menu_name' => 'Actividad',
         'name_admin_bar' => 'Actividad',

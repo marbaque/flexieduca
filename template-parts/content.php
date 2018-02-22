@@ -11,6 +11,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post__content">
+		<p class="post_post-type">
+			<?php 
+			$postType = get_post_type_object(get_post_type());
+			if ($postType) {
+			    echo esc_html($postType->labels->name);
+			}
+			?>
+			</p>
 		<header class="entry-header">
 			
 			
