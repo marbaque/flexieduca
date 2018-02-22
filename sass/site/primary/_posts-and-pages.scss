@@ -22,11 +22,12 @@
 }
 
 .cat-links {
-	font-size: .8em;
+	font-size: .55em;
+	letter-spacing: 1px;
+	font-weight: 200;
+	text-transform: uppercase;
     a {
-	    border: 0;
-	    background-color: $color__skin;
-	    padding: 2px;
+		margin: 0 2px;
     }
 }
 
@@ -43,16 +44,15 @@
 	border-bottom: 1px solid $color__borde-recuadro;
 	font-size: .8em;
 	li {
+		padding-left: 1.25em;
+		position: relative;
+		margin-bottom: .5em;
+		font-family: $font__headings;
 		&:before {
 			font-family: 'FontAwesome';
 			content: "\f15c";
-			margin-right: .2em;
-			background-color: $color__interactive;
-			color: white;
-			padding: .25em;
-		}
-		a{
-			border: none;
+			position: absolute;
+			left: 0;
 		}
 	} 
 	

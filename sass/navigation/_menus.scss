@@ -63,16 +63,6 @@
              li {
 	             padding-left: 1.25em;
 	             position: relative;
-	             &:before {
-					content: "\021B3";
-					position: absolute;
-					left: 1em;
-					top: 1em;
-					line-height: .9em;
-					font-size: 1em;
-					color: #aaa;
-		            
-	             }
 	             
                  &:hover > ul,
                      &.focus > ul {
@@ -111,7 +101,7 @@
     a {
         display: block;
         text-decoration: none;
-        padding: .85em 1em;
+        padding: .5em 1em;
         border: none;
         line-height: 1.3;
         
@@ -120,25 +110,11 @@
             color: $color__interactive;
         }
     }
-	.current_page_item,
-    .current-menu-item {
-	    position: relative;
-    }
-    .current_page_item > a,
-    .current-menu-item > a {
-	    font-weight: 700;
-	    &:after {
-		    content: "";
-		    position: absolute;
-		    width: 10px;
-		    height: 100%;
-		    background: $color__interactive;
-		    right: 0;
-		    top: 0;
-	    }
-    }
+	.current_page_item > a,
+    .current-menu-item > a,
     .current_page_ancestor > a,
     .current-menu-ancestor > a {
+	    font-weight: 700;
 	    
     }
 }

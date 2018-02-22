@@ -40,7 +40,27 @@
             <?php get_template_part('template-parts/auxiliar'); ?>
             
             <div class="post-content__body">
-
+				
+				<?php 
+				//ojo-> esto que sigue solo aparece si estamos en una actividad
+				if ( is_singular('actividad') ): ?> 
+					<?php 
+					$posts = get_field('contenido_relacionado');
+					
+					if( $posts ): ?>
+						<h5>Este actividad aparece en:</h5>
+					    <ul class="relation">
+					    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+					        <?php setup_postdata($post); ?>
+					        <li>
+					            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					        </li>
+					    <?php endforeach; ?>
+					    </ul>
+					    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+					<?php endif; ?>
+				<?php endif; ?>
+				
                 <div class="entry-content">
                     <?php
                     the_content(sprintf(
@@ -71,11 +91,9 @@
         endif;
         ?>
         
-        <?php if ( ! is_singular('actividad') ) { ?>
         <div class="ebook-nav">
             <?php flexieduca_post_navigation(); ?>
         </div>
-        <?php } ?>
         
 
     </div><!--post content-->

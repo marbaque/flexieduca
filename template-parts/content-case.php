@@ -57,13 +57,13 @@
 	                    <?php if ( !empty($img2) ): ?>
 	                        <a href="<?php echo wp_get_attachment_url($img2); ?>" class="thumb" title="Imagen para <?php the_title(); ?>">
 		                        <?php echo wp_get_attachment_image($img2, $sizeThumb); ?>
-				</a>
+							</a>
 	                    <?php endif; ?>
 	
 	                    <?php if ( !empty($img3) ): ?>
 	                        <a href="<?php echo wp_get_attachment_url($img3); ?>" class="thumb" title="Imagen para <?php the_title(); ?>">
 		                        <?php echo wp_get_attachment_image($img3, $sizeThumb); ?>
-				</a>
+							</a>
 	                    <?php endif; ?>
 	
 	                    <?php if ( !empty($img4) ): ?>
@@ -96,6 +96,9 @@
 	        <?php endif; ?>
 	        
 	        <div class="case-desc">
+		        
+		        <?php get_template_part('template-parts/auxiliar'); ?>
+		        
 	            <?php
 	            the_content();
 	            ?>

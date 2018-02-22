@@ -7,7 +7,7 @@ function my_custom_posttypes() {
 
     //Contenidos multimedia
     $labels = array(
-        'name' => 'Contenido',
+        'name' => 'Contenidos principales',
         'singular_name' => 'Contenido',
         'menu_name' => 'Contenido multimedia',
         'name_admin_bar' => 'Contenido multimedia',
@@ -49,7 +49,7 @@ function my_custom_posttypes() {
     
     //Casos
     $labelsC = array(
-        'name' => 'Caso de comercialización',
+        'name' => 'Casos de comercialización',
         'singular_name' => 'Caso',
         'menu_name' => 'Caso',
         'name_admin_bar' => 'Caso',
@@ -189,7 +189,7 @@ function custom_taxonomies() {
         'show_ui' => true,
         'show_admin_column' => false,
         'query_var' => true,
-        'rewrite' => array('slug' => 'tendencia'),
+        'rewrite' => array('slug' => 'estrategia'),
     );
 
     register_taxonomy('tendencia', array('caso'), $argsT);

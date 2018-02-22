@@ -11,7 +11,7 @@
         
     }
     .entry-title {
-        margin: .2em 0 .67em;
+        //margin: .2em 0 .67em;
     }
     .entry-meta {
         font-size: 80%;
@@ -44,12 +44,7 @@ ul.accordion {
         margin: .5em 0;
 	    background: $color__sombreado;
 	    @include borde(5px);
-	    
-	    button:before {
-			font-family: 'FontAwesome';
-			content: "\f0d7";
-			margin-right: .3em;
-		}
+
     }
 
     button {
@@ -66,7 +61,6 @@ ul.accordion {
 
 .accordion-panel {
     display: none; //comment this line to show and test
-    color: $color__borde-recuadro;
     height: auto;
     min-height: 1px;
     overflow-x: hidden;
@@ -100,6 +94,13 @@ ul.accordion {
 		audio {
 			width: 80%;
 			margin: 0 auto;
+			display: block;
+		}
+		.descargar-audio {
+			width: auto;
+			margin: 0 auto;
+			display: inline-block;
+			margin: 1em 0;
 		}
 	}
     
@@ -158,16 +159,15 @@ ul.accordion {
 .formato-mirada,
 .formato-ejercicio,
 .formato-idea {
-    padding: 1em 1em 1.2em 100px;
+    padding: 1em 2em 1.2em 100px;
     margin: .5em -1em 2em;
-    color: $color__borde-recuadro;
     height: auto;
     background-position: 1.25em 1.75em;
     background-size: 60px;
     background-color: #F1EEE5;
     font-size: .89em;
-    border-top: 2px solid $color__borde-recuadro;
-    border-bottom: 2px solid $color__borde-recuadro;
+    border-top: none;
+    border-bottom: none;
     position: relative;
     
     @media screen and (min-width: $break__medium) {
@@ -208,24 +208,24 @@ ul.accordion {
 }
 .formato-ejercicio{
     @include vector-bg-with-fallback(ejercicio);
-    &:before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		width: 0;
-		height: 0;
-		border: 48px solid transparent;
-		border-top-color: $color__sombreado;
-		border-bottom: 0;
-		border-left: 0;
-		margin-left: -24px;
-		margin-bottom: -48px;
-	}
 
 }
 .formato-idea{
     @include vector-bg-with-fallback(idea);
+}
+
+.comenta {
+	margin: 1em 0;
+	display: block;
+	&:before,
+	&:after {
+		content: "";
+		width: 20%;
+		height: 2px;
+		display: block;
+		background: $color__interactive;
+		margin: 2em auto 3em;
+	}
 }
 
 .fuente-apa {
