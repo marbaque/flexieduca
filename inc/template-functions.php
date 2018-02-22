@@ -123,12 +123,13 @@ function my_mce_before_init_insert_formats( $init_array ) {
 	        'title' => 'Llamada de comentario',
 	        'block' => 'div',
 	        'classes' => 'comenta',
-	        'wrapper' => 'true',
+	        'wrapper' => true,
         ),
         array(
-	        'title' => 'Bibliografía',
+	        'title' => 'Fuente consultada (APA)',
 	        'block' => 'p',
-	        'classes' => 'biblio',
+	        'classes' => 'fuente-apa',
+	        'wrapper' => false,
         ),
     );  
     // Insert the array, JSON ENCODED, into 'style_formats'

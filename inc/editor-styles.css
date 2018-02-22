@@ -37,7 +37,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
     clear: both;
-    font-family: "Asap";
+    font-family: "Rubik";
     line-height: 1.2;
 }
 
@@ -237,4 +237,13 @@ a:hover, a:active {
 }
 .table-source p {
 	font-size: .8em!important;
+}
+
+.fuente-apa {
+	font-size: .8em;
+	line-height: 1.7;
+	margin-left:   2em;
+	text-indent:  -2em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 }

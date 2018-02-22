@@ -1816,6 +1816,7 @@ li.flexieduca-search, .widget_search {
 .archive-view .actividad {
 	background: white;
 	position: relative;
+	margin-bottom: 1em;
 }
 
 .archive-view .post__content {
@@ -2345,6 +2346,29 @@ ul.accordion button:focus {
 	background-image: url("./img/idea.png");
 	background-image: none, url("./img/idea.svg");
 	background-repeat: no-repeat;
+}
+
+.fuente-apa {
+	font-size: .8em;
+	line-height: 1.7;
+	margin-left: 2em;
+	text-indent: -2em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.fuente-apa a {
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+@media print {
+	.fuente-apa {
+		margin-left: .5in;
+		text-indent: -.5in;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
 }
 
 /*--------------------------------------------------------------

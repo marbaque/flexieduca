@@ -230,3 +230,23 @@ ul.accordion {
     @include vector-bg-with-fallback(idea);
 }
 
+.fuente-apa {
+	font-size: .8em;
+	line-height: 1.7;
+	margin-left:   2em;
+	text-indent:  -2em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	a {
+		word-break: break-all;
+	    word-wrap: break-word;
+	}
+}
+@media print {
+	.fuente-apa{
+		margin-left:   .5in;
+		text-indent:  -.5in;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+}
