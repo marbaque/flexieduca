@@ -61,6 +61,13 @@ jQuery(function($) {
 	      'src': src,                         // Add src attribute to load image
 	      'alt': this.title || ''             // Add title if one was given in link
 	    });
+	    
+	    //resize quiz height
+	    $(window).resize(function() {
+		$('#photo-viewer img').height($('#photo-viewer').height() + 80);
+	    });
+
+	    $(window).trigger('resize');
 	
 	  }
 	

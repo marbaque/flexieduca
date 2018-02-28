@@ -2322,6 +2322,11 @@ ul.accordion button:focus {
 	/********** THUMBNAILS **********/
 }
 
+.single-caso .site-content {
+	width: 100%;
+	max-width: 1400px;
+}
+
 .single-caso .entry-title {
 	margin: 1em 0 .25em;
 }
@@ -2486,8 +2491,8 @@ ul.accordion button:focus {
 	position: absolute;
 	top: calc(50% - 30px);
 	left: calc(50% - 20px);
-	-webkit-animation-name: spin;
-	        animation-name: spin;
+	-webkit-animation: spin 5s linear 1s infinite;
+	        animation: spin 5s linear 1s infinite;
 }
 
 .single-caso #thumbnails {

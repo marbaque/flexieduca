@@ -76,7 +76,7 @@ function my_custom_posttypes() {
         'rewrite' => array('slug' => 'casos'),
         'capability_type' => 'post',
         'has_archive' => false,
-        'hierarchical' => true,
+        'hierarchical' => false,
         'menu_position' => 5,
         'supports' => array(
             'title',

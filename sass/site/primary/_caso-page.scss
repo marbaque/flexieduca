@@ -14,7 +14,9 @@
 }
 
 .single-caso {
-    .content-area {
+    .site-content {
+	width: 100%;
+	max-width: $break__hd;
 
     }
 
@@ -150,7 +152,7 @@
 	position: absolute;
 	top: calc(50% - 30px);
 	left: calc(50% - 20px);
-	animation-name: spin;
+	animation: spin 5s linear 1s infinite;
     }
 
     
