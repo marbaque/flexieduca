@@ -121,8 +121,6 @@
 
 </article><!-- #post-## -->
 
-<?php get_template_part('template-parts/auxiliar'); ?>
-
 <div class="ebook-nav">
     <?php flexieduca_post_navigation(); ?>
 </div>

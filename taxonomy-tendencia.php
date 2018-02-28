@@ -41,9 +41,7 @@ $trendDesc = get_field('trend-desc', $term);
 	
 	<div class="case-index__wrap">
 		
-		<main id="main" class="site-main" role="main">
-			<?php get_template_part('template-parts/auxiliar'); ?>
-			
+		<main id="main" class="site-main" role="main">			
 			<?php echo $trendDesc; ?>
 			
 		</main><!-- #main -->

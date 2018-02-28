@@ -18,7 +18,7 @@ function flexieduca_body_classes( $classes ) {
 		$classes[] = 'archive-view';
 	}
 	
-	if ( is_page('casos-estrategias-comercio-movil') ) {
+	if ( is_page_template('page-casos.php') ) {
 		$classes[] = 'casos-index';
 	}
 	
