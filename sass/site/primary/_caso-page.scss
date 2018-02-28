@@ -51,12 +51,15 @@
 	    }
 	    .case-trends {
 		display: block;
-		padding: .5em 1em;
+		//padding: .5em 1em;
 		margin: .5em 0;
 		border: none;
 		a {
 		    background: $color__interactive;
-		    color: #F2C9CA;
+		    color: white;
+		    text-transform: uppercase;
+		    font-size: .9em;
+		    letter-spacing: 1px;
 		    padding: 2px 6px;
 		    border: 0;
 		    @include borde(2px);
@@ -71,14 +74,27 @@
 		display: block;
 		padding: .5em 1em;
 		overflow: hidden;
-		box-sizing: border-box;
 
 		a {
 		    position: relative;
 		    margin-left: 2.2em;
-		    text-overflow: clip;
-		    white-space: nowrap;
-		    overflow: hidden;
+		    display: inline-block;
+		    border: none;
+		    /* These are technically the same, but use both */
+		    overflow-wrap: break-word;
+		    word-wrap: break-word;
+
+		    -ms-word-break: break-all;
+		    /* This is the dangerous one in WebKit, as it breaks things wherever */
+		    word-break: break-all;
+		    /* Instead use this non-standard one: */
+		    word-break: break-word;
+
+		    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+		    -ms-hyphens: auto;
+		    -moz-hyphens: auto;
+		    -webkit-hyphens: auto;
+		    hyphens: auto;
 
 		    &:before {
 			font-family: 'FontAwesome';
@@ -86,7 +102,6 @@
 			margin-right: .25em;
 			position: absolute;
 			left: -2.2em;
-
 			text-align: center;
 			color: white;
 			background-color: $color__interactive;

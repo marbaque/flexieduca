@@ -9,6 +9,13 @@ get_header();
 <?php get_template_part('template-parts/tools'); ?>
 
 <div id="primary" class="content-area">
+    <?php
+    if (function_exists('bcn_display')) {
+	echo '<div class="breadcrumbs">';
+	bcn_display();
+	echo '</div>';
+    }
+    ?>
     <header class="entry-header">
         <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
     </header><!-- .entry-header -->

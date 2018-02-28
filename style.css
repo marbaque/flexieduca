@@ -285,7 +285,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Rubik", Helvetica, Arial, sans-serif;
 	font-size: 16.2px;
 	font-size: 1.0125rem;
 	line-height: 1.58;
@@ -908,7 +908,7 @@ a:hover, a:active {
 }
 
 .pagination {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Rubik", Helvetica, Arial, sans-serif;
 }
 
 .pagination .nav-links {
@@ -1115,7 +1115,7 @@ a:hover, a:active {
 	width: 100%;
 	height: 2.5em;
 	padding: 10px;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Rubik", Helvetica, Arial, sans-serif;
 	border: 1px solid #ccc;
 }
 
@@ -1311,7 +1311,7 @@ li.flexieduca-search, .widget_search {
 	-webkit-appearance: none;
 	border-radius: 0;
 	background: rgba(0, 0, 0, 0.2);
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Rubik", Helvetica, Arial, sans-serif;
 	font-size: 95%;
 	font-weight: 400;
 	color: #fff;
@@ -2368,14 +2368,16 @@ ul.accordion button:focus {
 
 .single-caso .case-content .case__wrap .case-trends {
 	display: block;
-	padding: .5em 1em;
 	margin: .5em 0;
 	border: none;
 }
 
 .single-caso .case-content .case__wrap .case-trends a {
 	background: #D96C70;
-	color: #F2C9CA;
+	color: white;
+	text-transform: uppercase;
+	font-size: .9em;
+	letter-spacing: 1px;
 	padding: 2px 6px;
 	border: 0;
 	border-radius: 2px;
@@ -2390,15 +2392,25 @@ ul.accordion button:focus {
 	display: block;
 	padding: .5em 1em;
 	overflow: hidden;
-	box-sizing: border-box;
 }
 
 .single-caso .case-content .case__wrap .enlace a {
 	position: relative;
 	margin-left: 2.2em;
-	text-overflow: clip;
-	white-space: nowrap;
-	overflow: hidden;
+	display: inline-block;
+	border: none;
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-all;
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
 }
 
 .single-caso .case-content .case__wrap .enlace a:before {
@@ -2753,7 +2765,7 @@ ul.accordion button:focus {
 .comment-meta {
 	position: relative;
 	margin-left: 70px;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Rubik", Helvetica, Arial, sans-serif;
 	font-size: 80%;
 }
 
@@ -2858,7 +2870,7 @@ ul.accordion button:focus {
 .reply a {
 	display: inline-block;
 	padding: .5em 1.4em;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Rubik", Helvetica, Arial, sans-serif;
 	font-size: 85%;
 	color: #000;
 	line-height: 1.3em;
@@ -2897,7 +2909,7 @@ ul.accordion button:focus {
 }
 
 .comment-form {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Rubik", Helvetica, Arial, sans-serif;
 	line-height: 1.3em;
 }
 
@@ -2937,7 +2949,7 @@ ul.accordion button:focus {
 }
 
 .pingback {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Rubik", Helvetica, Arial, sans-serif;
 }
 
 .pingback .comment-body {
