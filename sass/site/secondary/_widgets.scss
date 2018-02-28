@@ -5,20 +5,20 @@
 .widget {
     margin: 0 0 2em;
     padding: 0;
-	border: 3px solid $color__text-screen;
-	@include borde(.5em);
-	.widget-title {
-		padding: .5em 1em;
-		border-bottom: 3px solid $color__text-screen;
-		margin: 0;
-	    font-size: 1.2em;
-	}
-	>div {
-		padding: 1em;
-	}
+    border: 3px solid $color__text-screen;
+    @include borde(.5em);
+    .widget-title {
+	padding: .5em 1em;
+	border-bottom: 3px solid $color__text-screen;
+	margin: 0;
+	font-size: 1.2em;
+    }
+    >div {
+	padding: 1em;
+    }
     ul,
     ol {
-        padding: .7em 0 0;
+        padding: .7em 1em;
         margin: 0;
         list-style-type: none;
 
@@ -41,7 +41,7 @@
     a {
         font-weight: 600;
         text-decoration: none;
-		
+
         &:hover,
             &:focus {
             border-bottom: 3px solid $color__interactive;
@@ -56,8 +56,8 @@
         font-family: $font__main;
         border: 1px solid #ccc;
     }
-    
-    
+
+
 }
 
 /* Archive and Categories widgets */

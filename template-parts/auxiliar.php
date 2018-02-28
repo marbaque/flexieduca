@@ -3,11 +3,11 @@
 $audioURL = get_field('audio_contenido');
 $resumen = get_field('resumen');
 $obj = get_field('objetivos');
+$posts = get_field('contenido_relacionado');
 ?>
 
-<?php if ($audioURL || $resumen || $obj): ?>
+<?php if ($audioURL || $resumen || $obj || $posts): ?>
 
-    <div class="entry-meta">
         <ul class="accordion">
         <?php if ($audioURL): ?>
             <li class="audio">
@@ -39,8 +39,22 @@ $obj = get_field('objetivos');
                 </div>
             </li>
         <?php endif; ?>
+	    
+	<?php if ($posts): ?>
+            <li class="relacionado">
+                <button class="accordion-control"><i class="far fa-edit"></i> Contenido relacionado</button>
+                <div class="accordion-panel">
+                    <ul>
+			<?php foreach ($posts as $post): // variable must be called $post (IMPORTANT)  ?>
+			<?php setup_postdata($post); ?>
+			    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+			<?php endforeach; ?>
+		    </ul>
+                </div>
+            </li>
+	    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly  ?>
+        <?php endif; ?>
         </ul>
 
-    </div><!-- .entry-meta -->
 
 <?php endif; ?>

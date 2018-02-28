@@ -1075,7 +1075,7 @@ a:hover, a:active {
 
 .widget ul,
 .widget ol {
-	padding: .7em 0 0;
+	padding: .7em 1em;
 	margin: 0;
 	list-style-type: none;
 }
@@ -1496,15 +1496,17 @@ li.flexieduca-search, .widget_search {
 		font-size: .66em;
 		margin: 0 0 2em;
 		color: #aaa;
-		line-height: 1.4;
+		line-height: 1;
 	}
-	.breadcrumbs span a {
-		border: none;
+	.breadcrumbs span {
 		display: inline-block;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		max-width: 200px;
+	}
+	.breadcrumbs span a {
+		border: none;
 	}
 	.breadcrumbs .separator {
 		margin: 0 .5em;
@@ -1977,33 +1979,6 @@ li.flexieduca-search, .widget_search {
 	margin: 0 2px;
 }
 
-.relation-title {
-	font-size: .8em;
-}
-
-.relation {
-	list-style-type: none;
-	padding: 0px 0px 1em 0px;
-	margin: 0;
-	list-style: none;
-	border-bottom: 1px solid #E6E1D3;
-	font-size: .8em;
-}
-
-.relation li {
-	padding-left: 1.25em;
-	position: relative;
-	margin-bottom: .5em;
-	font-family: "Rubik", sans;
-}
-
-.relation li:before {
-	font-family: 'FontAwesome';
-	content: "\f15c";
-	position: absolute;
-	left: 0;
-}
-
 /*--------------------------------------------------------------
 ## Multimedia pages
 --------------------------------------------------------------*/
@@ -2063,6 +2038,7 @@ ul.accordion button {
 
 ul.accordion button:focus {
 	border: none;
+	outline: none;
 }
 
 .accordion-panel {
@@ -2072,6 +2048,7 @@ ul.accordion button:focus {
 	overflow-x: hidden;
 	border-top: 1px solid white;
 	padding: 1em 1.5em;
+	font-size: .9em;
 }
 
 .accordion-panel p, .accordion-panel li {
@@ -2206,7 +2183,7 @@ ul.accordion button:focus {
 		    color: black;
 	    }
 	}
-*/
+    */
 }
 
 @media screen and (min-width: 900px) {

@@ -8,7 +8,7 @@
         }
     }
     .entry-header {
-        
+
     }
     .entry-title {
         //margin: .2em 0 .67em;
@@ -42,8 +42,8 @@ ul.accordion {
         list-style-type: none;
         padding: 0;
         margin: .5em 0;
-	    background: $color__sombreado;
-	    @include borde(5px);
+	background: $color__sombreado;
+	@include borde(5px);
 
     }
 
@@ -54,7 +54,8 @@ ul.accordion {
         border: none;
         padding: 1em;
         &:focus {
-	        border: none;
+	    border: none;
+	    outline: none;
         }
     }
 }
@@ -66,50 +67,50 @@ ul.accordion {
     overflow-x: hidden;
     border-top: 1px solid white;
     padding: 1em 1.5em;
-    
+    font-size: .9em;
     p, li {
-	    margin: .25em 0;
+	margin: .25em 0;
     }
-    
+
     p:first-child {
-	    margin-top: 0;
+	margin-top: 0;
     }
     p:last-child {
-	    margin-bottom: 0;
+	margin-bottom: 0;
     }
-    
+
     &.resumen {	    
-	   @include vector-bg-with-fallback(resumen);
-	   background-position: 2em 1em;
-	   background-size: 60px;
-	   padding-left: 50px;
-	   @media screen and (min-width: $break__small) {
-		   background-size: 80px;
-		   padding-left: 110px;
-	   }
+	@include vector-bg-with-fallback(resumen);
+	background-position: 2em 1em;
+	background-size: 60px;
+	padding-left: 50px;
+	@media screen and (min-width: $break__small) {
+	    background-size: 80px;
+	    padding-left: 110px;
 	}
-	
-	&.audio {
-		text-align: center;
-		audio {
-			width: 80%;
-			margin: 0 auto;
-			display: block;
-		}
-		.descargar-audio {
-			width: auto;
-			margin: 0 auto;
-			display: inline-block;
-			margin: 1em 0;
-		}
+    }
+
+    &.audio {
+	text-align: center;
+	audio {
+	    width: 80%;
+	    margin: 0 auto;
+	    display: block;
 	}
-    
-    
+	.descargar-audio {
+	    width: auto;
+	    margin: 0 auto;
+	    display: inline-block;
+	    margin: 1em 0;
+	}
+    }
+
+
 }
 
 .mmtools {
     display: none;
-    
+
     @media screen and (min-width: $break__small) {
         display: block;
         padding: 0;
@@ -169,7 +170,7 @@ ul.accordion {
     border-top: none;
     border-bottom: none;
     position: relative;
-    
+
     @media screen and (min-width: $break__medium) {
         padding-left: 140px;
         margin: 2em 0;
@@ -178,8 +179,8 @@ ul.accordion {
         background-size: 80px;
         border: 3px solid $color__borde-recuadro; 
         background-color: #F1EEE5;
-		box-shadow: 2px 3px 4px 0 rgba(0,0,0,0.32);
-		@include borde(4px);
+	box-shadow: 2px 3px 4px 0 rgba(0,0,0,0.32);
+	@include borde(4px);
     }
     /*
     a {
@@ -195,7 +196,7 @@ ul.accordion {
 		    color: black;
 	    }
 	}
-*/
+    */
 }
 .formato-actividad{
     @include vector-bg-with-fallback(actividad_virtual);  
@@ -215,40 +216,40 @@ ul.accordion {
 }
 
 .comenta {
-	margin: 1em 0;
-	display: block;
-	&:before,
+    margin: 1em 0;
+    display: block;
+    &:before,
 	&:after {
-		content: "";
-		width: 20%;
-		height: 2px;
-		display: block;
-		background: $color__interactive;
-		margin: 2em auto 3em;
-	}
+	content: "";
+	width: 20%;
+	height: 2px;
+	display: block;
+	background: $color__interactive;
+	margin: 2em auto 3em;
+    }
 }
 
 .fuente-apa {
-	font-size: .9em;
-	line-height: 1.7;
-	margin-left:   2em;
-	text-indent:  -2em;
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
-	padding-bottom: 1em;
-	border-bottom: 2px dashed #f4f4f4;
-	a {
-		word-break: break-all;
-	    word-wrap: break-word;
-	    border: none;
-	    text-decoration: underline;
-	}
+    font-size: .9em;
+    line-height: 1.7;
+    margin-left:   2em;
+    text-indent:  -2em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 2px dashed #f4f4f4;
+    a {
+	word-break: break-all;
+	word-wrap: break-word;
+	border: none;
+	text-decoration: underline;
+    }
 }
 @media print {
-	.fuente-apa{
-		margin-left:   .5in;
-		text-indent:  -.5in;
-		margin-top: 1em;
-		margin-bottom: 1em;
-	}
+    .fuente-apa{
+	margin-left:   .5in;
+	text-indent:  -.5in;
+	margin-top: 1em;
+	margin-bottom: 1em;
+    }
 }

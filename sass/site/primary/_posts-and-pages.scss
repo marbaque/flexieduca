@@ -33,32 +33,3 @@
 
 
 //actividad
-.relation-title {
-	font-size: .8em;
-}
-.relation {
-	list-style-type: none;
-	padding: 0px 0px 1em 0px;
-	margin: 0;
-	list-style: none;
-	border-bottom: 1px solid $color__borde-recuadro;
-	font-size: .8em;
-	li {
-		padding-left: 1.25em;
-		position: relative;
-		margin-bottom: .5em;
-		font-family: $font__headings;
-		&:before {
-			font-family: 'FontAwesome';
-			content: "\f15c";
-			position: absolute;
-			left: 0;
-		}
-	} 
-	
-}
-body.single-actividad {
-	.entry-header {
-		//border-bottom: 3px solid $color__borde-recuadro;
-	}
-}
