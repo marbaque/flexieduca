@@ -63,16 +63,6 @@
              li {
 	             padding-left: 1.25em;
 	             position: relative;
-	             &:before {
-					content: "\021B3";
-					position: absolute;
-					left: 1em;
-					top: 1em;
-					line-height: .9em;
-					font-size: 1em;
-					color: #aaa;
-		            
-	             }
 	             
                  &:hover > ul,
                      &.focus > ul {

@@ -30,7 +30,7 @@
     }
 
     a {
-        font-weight: 600;
+        font-weight: 400;
         text-decoration: none;
 
         &:hover,
@@ -54,6 +54,7 @@
     margin-top: 0;
     margin-bottom: .5em;
     font-size: 1.2em;
+    font-family: $font__headings;
 }
 
 /* Archive and Categories widgets */

@@ -717,16 +717,6 @@ a:hover, a:active {
 	position: relative;
 }
 
-.main-navigation ul ul li:before {
-	content: "\021B3";
-	position: absolute;
-	left: 1em;
-	top: 1em;
-	line-height: .9em;
-	font-size: 1em;
-	color: #aaa;
-}
-
 .main-navigation li {
 	position: relative;
 	display: block;
@@ -837,7 +827,6 @@ a:hover, a:active {
 	white-space: nowrap;
 	overflow: hidden;
 	height: 100%;
-	background: #eee;
 }
 
 .ebook-nav a:hover {
@@ -1114,7 +1103,7 @@ a:hover, a:active {
 }
 
 .widget a {
-	font-weight: 600;
+	font-weight: 400;
 	text-decoration: none;
 }
 
@@ -1134,6 +1123,7 @@ a:hover, a:active {
 	margin-top: 0;
 	margin-bottom: .5em;
 	font-size: 1.2em;
+	font-family: "Rubik", sans;
 }
 
 /* Archive and Categories widgets */
@@ -1816,6 +1806,7 @@ li.flexieduca-search, .widget_search {
 .archive-view .actividad {
 	background: white;
 	position: relative;
+	margin-bottom: 1em;
 }
 
 .archive-view .post__content {
