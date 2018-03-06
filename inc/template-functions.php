@@ -17,13 +17,12 @@ function flexieduca_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 		$classes[] = 'archive-view';
 	}
-	
-	if ( is_page('casos-estrategias-comercio-movil') ) {
+	if ( is_page_template('page-casos.php') ) {
 		$classes[] = 'casos-index';
 	}
 	
 	// Adds a class telling us if the sidebar is in use.
-    if (!is_singular('multimedia') && is_active_sidebar('sidebar-1')) {
+    if ( !is_singular('multimedia') && is_active_sidebar('sidebar-1') ) {
         $classes[] = 'has-sidebar';
     } else {
         $classes[] = 'no-sidebar';
@@ -41,6 +40,8 @@ function flexieduca_body_classes( $classes ) {
     } else if (!is_active_sidebar('sidebar-3') && is_front_page()) {
         $classes[] = 'has-no-front-sidebar';
     }
+    
+    
     
 	return $classes;
 }
@@ -83,6 +84,13 @@ function my_mce_before_init_insert_formats( $init_array ) {
 * Wrapper whether or not to add a new block-level element around any selected elements
 */
         array(  
+            'title' => 'Recuadro',  
+            'block' => 'div',  
+            'classes' => 'formato-recuadro',
+            'wrapper' => true,
+             
+        ),  
+        array(  
             'title' => 'Actividad virtual',  
             'block' => 'div',  
             'classes' => 'formato-actividad',
@@ -123,12 +131,13 @@ function my_mce_before_init_insert_formats( $init_array ) {
 	        'title' => 'Llamada de comentario',
 	        'block' => 'div',
 	        'classes' => 'comenta',
-	        'wrapper' => 'true',
+	        'wrapper' => true,
         ),
         array(
-	        'title' => 'Bibliografía',
+	        'title' => 'Fuente consultada (APA)',
 	        'block' => 'p',
-	        'classes' => 'biblio',
+	        'classes' => 'fuente-apa',
+	        'wrapper' => false,
         ),
     );  
     // Insert the array, JSON ENCODED, into 'style_formats'
@@ -188,3 +197,43 @@ function remove_logo() {
 	global $wp_admin_bar;
 	$wp_admin_bar->remove_menu('wp-logo');
 }
+
+
+//Las siguientes funciones son para agregar un metabox de parent-post
+//o sea, para escoger el curso al que pertenecen los casos
+//Updating the “Parent” meta box
+function my_add_meta_boxes() {
+    add_meta_box('caso-parent', 'Contenido Padre', 'lesson_attributes_meta_box', 'caso', 'side', 'high');
+}
+
+add_action('add_meta_boxes', 'my_add_meta_boxes');
+
+function lesson_attributes_meta_box($post) {
+    $post_type_object	= get_post_type_object($post->post_type);
+    $pages		= wp_dropdown_pages(array('post_type' => 'multimedia', 'selected' => $post->post_parent, 'name' => 'parent_id', 'show_option_none' => __('(no parent)'), 'sort_column' => 'menu_order, post_title', 'echo' => 0));
+    if (!empty($pages)) {
+	echo $pages;
+    }
+}
+
+//Setting the exactly URL structure
+function my_add_rewrite_rules() {
+    add_rewrite_tag('%caso%', '([^/]+)', 'caso=');
+    add_permastruct('caso', '/caso/%multimedia%/%caso%', false);
+    add_rewrite_rule('^caso/([^/]+)/([^/]+)/?', 'index.php?caso=$matches[2]', 'top');
+}
+
+add_action('init', 'my_add_rewrite_rules');
+
+//Updating the permalink for our custom post type
+function my_permalinks($permalink, $post, $leavename) {
+    $post_id	 = $post->ID;
+    if ($post->post_type != 'caso' || empty($permalink) || in_array($post->post_status, array('draft', 'pending', 'auto-draft')))
+	return $permalink;
+    $parent		= $post->post_parent;
+    $parent_post	= get_post($parent);
+    $permalink		= str_replace('%multimedia%', $parent_post->post_name, $permalink);
+    return $permalink;
+}
+
+add_filter('post_type_link', 'my_permalinks', 10, 3);

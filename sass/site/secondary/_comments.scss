@@ -1,13 +1,25 @@
 .comments-area {
-	width: 100%;
-	margin: 3em 0;
-	padding: 1.5em 2em;
+	width: 100vw;
+	max-width: $max__column-size;
+	margin: 2em -1em 80px;
+	margin-top: 3em;
+	margin-left: -1em;
+	margin-right: -2em;
+	padding: 1em 1em 80px;
 	border-top: 1px solid #cccccc;
-	background: #f9f9f9;
+	background: #eee;
+	
+	@media screen and (min-width:$break__small) {
+		width: 100%;
+		position: inherit;
+		margin: 2em auto 80px;
+		padding: 1em 2em;
+		
+	}
 }
 .single-caso {
 	.comments-area {
-            border: none;
+        border: none;
 		@media screen and (min-width:$break__medium) {
 			max-width: $size__ratio-large;
 		}

@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-02-20 18:06+0000\n"
+"POT-Creation-Date: 2018-02-20 23:02+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-03-06 22:10+0000\n"
+"PO-Revision-Date: 2018-03-06 22:17+0000\n"
 "Last-Translator: Mario Badilla\n"
 "Language-Team: Spanish (Spain)\n"
 "X-Generator: Loco https://localise.biz/\n"
@@ -35,11 +35,11 @@ msgstr "Categorías mas utilizadas"
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Intente buscando en los archivos mensuales."
 
-#: archive.php:44 inc/template-tags.php:173
+#: archive.php:44 inc/template-tags.php:173 inc/template-tags.php:174
 msgid "Previous"
 msgstr "Anterior"
 
-#: archive.php:45 inc/template-tags.php:176
+#: archive.php:45 inc/template-tags.php:176 inc/template-tags.php:177
 msgid "Next"
 msgstr "Siguiente"
 
@@ -47,7 +47,7 @@ msgstr "Siguiente"
 msgid "Page"
 msgstr "Página"
 
-#: comments.php:31
+#: comments.php:29
 #, php-format
 msgctxt "comments title"
 msgid "One comment"
@@ -55,19 +55,19 @@ msgid_plural "%1$s comments"
 msgstr[0] "Un comentario"
 msgstr[1] "%1$s comentarios"
 
-#: comments.php:50
+#: comments.php:48
 msgid "Comment navigation"
 msgstr "Navegar comentarios"
 
-#: comments.php:53
+#: comments.php:51
 msgid "Older Comments"
 msgstr "Comentarios anteriores"
 
-#: comments.php:54
+#: comments.php:52
 msgid "Newer Comments"
 msgstr "Comentarios recientes"
 
-#: comments.php:67
+#: comments.php:65
 msgid "Comments are closed."
 msgstr "Los comentario se han cerrado."
 
@@ -234,14 +234,6 @@ msgstr ","
 msgid "%1$s"
 msgstr "%1$s"
 
-#: inc/template-tags.php:174
-msgid "Previous:"
-msgstr "Anterior:"
-
-#: inc/template-tags.php:177
-msgid "Next:"
-msgstr "Siguiente:"
-
 #. %s: Name of current post.
 #: template-parts/content-case-item.php:32 template-parts/content.php:41
 #, php-format
@@ -258,7 +250,7 @@ msgstr "Hola, "
 
 #: template-parts/content-front.php:51
 msgid "Welcome, visitor!"
-msgstr "¡Bienvenido, visitante!"
+msgstr "¡Hola, visitante!"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content-multimedia.php:49 template-parts/content-page.php:48

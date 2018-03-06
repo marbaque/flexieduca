@@ -8,10 +8,10 @@
         }
     }
     .entry-header {
-        
+
     }
     .entry-title {
-        margin: .2em 0 .67em;
+        //margin: .2em 0 .67em;
     }
     .entry-meta {
         font-size: 80%;
@@ -42,14 +42,9 @@ ul.accordion {
         list-style-type: none;
         padding: 0;
         margin: .5em 0;
-	    background: $color__sombreado;
-	    @include borde(5px);
-	    
-	    button:before {
-			font-family: 'FontAwesome';
-			content: "\f0d7";
-			margin-right: .3em;
-		}
+	background: $color__sombreado;
+	@include borde(5px);
+
     }
 
     button {
@@ -59,56 +54,63 @@ ul.accordion {
         border: none;
         padding: 1em;
         &:focus {
-	        border: none;
+	    border: none;
+	    outline: none;
         }
     }
 }
 
 .accordion-panel {
     display: none; //comment this line to show and test
-    color: $color__borde-recuadro;
     height: auto;
     min-height: 1px;
     overflow-x: hidden;
     border-top: 1px solid white;
     padding: 1em 1.5em;
-    
+    font-size: .9em;
     p, li {
-	    margin: .25em 0;
+	margin: .25em 0;
     }
-    
+
     p:first-child {
-	    margin-top: 0;
+	margin-top: 0;
     }
     p:last-child {
-	    margin-bottom: 0;
+	margin-bottom: 0;
     }
-    
+
     &.resumen {	    
-	   @include vector-bg-with-fallback(resumen);
-	   background-position: 2em 1em;
-	   background-size: 60px;
-	   padding-left: 50px;
-	   @media screen and (min-width: $break__small) {
-		   background-size: 80px;
-		   padding-left: 110px;
-	   }
+	@include vector-bg-with-fallback(resumen);
+	background-position: 2em 1em;
+	background-size: 60px;
+	padding-left: 50px;
+	@media screen and (min-width: $break__small) {
+	    background-size: 80px;
+	    padding-left: 110px;
 	}
-	
-	&.audio {
-		text-align: center;
-		audio {
-			width: 80%;
-			margin: 0 auto;
-		}
+    }
+
+    &.audio {
+	text-align: center;
+	audio {
+	    width: 80%;
+	    margin: 0 auto;
+	    display: block;
 	}
-    
-    
+	.descargar-audio {
+	    width: auto;
+	    margin: 0 auto;
+	    display: inline-block;
+	    margin: 1em 0;
+	}
+    }
+
+
 }
 
-.mmtools{
+.mmtools {
     display: none;
-    
+
     @media screen and (min-width: $break__small) {
         display: block;
         padding: 0;
@@ -124,54 +126,52 @@ ul.accordion {
         color: #999;
         font-size: .6em;
     }
-
-    .zeno_font_resizer_container{
-        display: inline-block;
-        position: relative;
-        margin: 0;
-
-        .zeno_font_resizer{
-            margin: 0;
-            line-height: 1;
-            span {
-	            display: flex;
-	            align-items: baseline;
-            }
-        }
-        a{
-            margin: 0 .25em;
-            color: #777;
-            border: none;
-            font-weight: 700;
-            &:hover{
-                text-decoration: underline;
-                border: none;
-            }
-        }
-    }
     a{
         text-decoration: none;
     }
 }
+.zeno_font_resizer_container{
+    display: inline-block;
+    position: relative;
+    margin: 0;
 
+    .zeno_font_resizer{
+        margin: 0;
+        line-height: 1;
+        span {
+            display: flex;
+            align-items: baseline;
+        }
+    }
+    a{
+        margin: 0 .25em;
+        color: #777;
+        border: none;
+        font-weight: 700;
+        &:hover{
+            text-decoration: underline;
+            border: none;
+        }
+    }
+}
 //Formatos personalizados para recuadros en el contenido multimedia
 .formato-actividad,
 .formato-importante,
 .formato-mirada,
 .formato-ejercicio,
-.formato-idea {
-    padding: 1em 1em 1.2em 100px;
+.formato-idea,
+.formato-recuadro {
+    padding: 1em 2em 1.2em 100px;
     margin: .5em -1em 2em;
-    color: $color__borde-recuadro;
     height: auto;
     background-position: 1.25em 1.75em;
     background-size: 60px;
     background-color: #F1EEE5;
     font-size: .89em;
-    border-top: 2px solid $color__borde-recuadro;
-    border-bottom: 2px solid $color__borde-recuadro;
+    border-top: none;
+    border-bottom: none;
     position: relative;
-    
+
     @media screen and (min-width: $break__medium) {
         padding-left: 140px;
         margin: 2em 0;
@@ -180,8 +180,8 @@ ul.accordion {
         background-size: 80px;
         border: 3px solid $color__borde-recuadro; 
         background-color: #F1EEE5;
-		box-shadow: 2px 3px 4px 0 rgba(0,0,0,0.32);
-		@include borde(4px);
+	box-shadow: 2px 3px 4px 0 rgba(0,0,0,0.32);
+	@include borde(4px);
     }
     /*
     a {
@@ -197,7 +197,10 @@ ul.accordion {
 		    color: black;
 	    }
 	}
-*/
+    */
+}
+.formato-recuadro {
+	padding: 1em 2em 1.2em;
 }
 .formato-actividad{
     @include vector-bg-with-fallback(actividad_virtual);  
@@ -210,23 +213,47 @@ ul.accordion {
 }
 .formato-ejercicio{
     @include vector-bg-with-fallback(ejercicio);
-    &:before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		width: 0;
-		height: 0;
-		border: 48px solid transparent;
-		border-top-color: $color__sombreado;
-		border-bottom: 0;
-		border-left: 0;
-		margin-left: -24px;
-		margin-bottom: -48px;
-	}
 
 }
 .formato-idea{
     @include vector-bg-with-fallback(idea);
 }
 
+.comenta {
+    margin: 1em 0;
+    display: block;
+    &:before,
+	&:after {
+	content: "";
+	width: 20%;
+	height: 2px;
+	display: block;
+	background: $color__interactive;
+	margin: 2em auto 3em;
+    }
+}
+
+.fuente-apa {
+    font-size: .9em;
+    line-height: 1.7;
+    margin-left:   2em;
+    text-indent:  -2em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 2px dashed #f4f4f4;
+    a {
+	word-break: break-all;
+	word-wrap: break-word;
+	border: none;
+	text-decoration: underline;
+    }
+}
+@media print {
+    .fuente-apa{
+	margin-left:   .5in;
+	text-indent:  -.5in;
+	margin-top: 1em;
+	margin-bottom: 1em;
+    }
+}

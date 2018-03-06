@@ -22,43 +22,14 @@
 }
 
 .cat-links {
-	font-size: .8em;
+	font-size: .55em;
+	letter-spacing: 1px;
+	font-weight: 200;
+	text-transform: uppercase;
     a {
-	    border: 0;
-	    background-color: $color__skin;
-	    padding: 2px;
+		margin: 0 2px;
     }
 }
 
 
 //actividad
-.relation-title {
-	font-size: .8em;
-}
-.relation {
-	list-style-type: none;
-	padding: 0px 0px 1em 0px;
-	margin: 0;
-	list-style: none;
-	border-bottom: 1px solid $color__borde-recuadro;
-	font-size: .8em;
-	li {
-		&:before {
-			font-family: 'FontAwesome';
-			content: "\f15c";
-			margin-right: .2em;
-			background-color: $color__interactive;
-			color: white;
-			padding: .25em;
-		}
-		a{
-			border: none;
-		}
-	} 
-	
-}
-body.single-actividad {
-	.entry-header {
-		//border-bottom: 3px solid $color__borde-recuadro;
-	}
-}
