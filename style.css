@@ -307,7 +307,7 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: "Rubik", sans;
 	line-height: 1.2;
-	font-weight: 400;
+	font-weight: 700;
 }
 
 h1 {
@@ -335,33 +335,19 @@ dfn, cite, em, i {
 blockquote {
 	margin: 1em 0 2em;
 	position: relative;
-	padding: .5em 1em 1em;
-	background-color: #333;
-	color: #ccc;
-	border-radius: 1em;
-}
-
-blockquote:before, blockquote:after {
-	font-family: 'FontAwesome';
-	line-height: 1;
-	position: absolute;
-	color: #eee;
-	font-size: 50px;
-	opacity: .2;
+	border-radius: 0.2em;
+	font-size: 1.2em;
+	padding-left: 30px;
+	line-height: 1.55;
 }
 
 blockquote:before {
-	content: "\f10d";
-	margin-right: 13px;
-	left: 8px;
-	top: 4px;
-}
-
-blockquote:after {
-	content: "\f10e";
-	margin-left: 13px;
-	right: 4px;
-	bottom: 4px;
+	content: "\0201F";
+	left: -12px;
+	top: -12px;
+	position: absolute;
+	font-size: 100px;
+	line-height: 1;
 }
 
 blockquote p:last-child {
@@ -408,6 +394,10 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+.entry-content ul li {
+	margin-bottom: .5em;
 }
 
 /*--------------------------------------------------------------
