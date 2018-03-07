@@ -110,7 +110,7 @@ function flexieduca_fonts_url() {
 	if ( 'off' !== $gfont ) {
 		$font_families = array();
 
-		$font_families[] = 'Rubik:400,400i,700,700i';
+		$font_families[] = 'Rubik:300,300i,400,700,700i';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),

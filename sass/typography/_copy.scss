@@ -12,18 +12,20 @@ dfn, cite, em, i {
 }
 
 blockquote {
-    margin: 1em 0 2em;
+    margin: 2em 0;
     position: relative;
     @include borde(.2em);
+    padding-left: 60px;
     font-size: 1.2em;
-    padding-left: 30px;
+    font-weight: 300;
     line-height: 1.55;
     &:before{
 	content: "\0201F";
-	left: -12px;
-	top: -12px;
+	left: -18px;
+	top: -22px;
 	position: absolute;
-	font-size: 100px;
+	font-size: 140px;
+	font-weight: 700;
 	line-height: 1;
     }
     p:last-child {
@@ -75,4 +77,8 @@ big {
     ul li {
 	margin-bottom: .5em;
     }
+}
+
+.entry-title {
+    font-weight: 300;
 }
