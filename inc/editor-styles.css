@@ -50,45 +50,28 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 1em 0 2em;
+	margin: 2em 0;
 	position: relative;
-	padding: .5em 1em 1em;
-	background-color: #333;
-	color: #ccc;
-	border-radius: 1em;
-}
-
-blockquote:before, blockquote:after {
-	font-family: 'FontAwesome';
-	line-height: 1;
-	position: absolute;
-	color: #eee;
-	font-size: 50px;
-	opacity: .2;
+	border-radius: 0.2em;
+	padding-left: 40px;
+	font-size: 1.25em;
+	font-weight: 300;
+	line-height: 1.55;
 }
 
 blockquote:before {
-	content: "\f10d";
-	margin-right: 13px;
-	left: 8px;
-	top: 4px;
-}
-
-blockquote:after {
-	content: "\f10e";
-	margin-left: 13px;
-	right: 4px;
-	bottom: 4px;
+	content: "\0201F";
+	left: -12px;
+	top: -10px;
+	position: absolute;
+	font-size: 100px;
+	font-weight: 700;
+	line-height: 1;
+	color: #DDBE59;
 }
 
 blockquote p:last-child {
 	margin-bottom: 0;
-}
-
-@media screen and (min-width: 600px) {
-	blockquote {
-		margin: 1em 1em 2em;
-	}
 }
 
 address {
