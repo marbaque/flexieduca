@@ -83,10 +83,10 @@ ul.accordion {
 	@include vector-bg-with-fallback(resumen);
 	background-position: 2em 1em;
 	background-size: 60px;
-	padding-left: 50px;
+	padding-left: 100px;
 	@media screen and (min-width: $break__small) {
 	    background-size: 80px;
-	    padding-left: 110px;
+	    padding-left: 130px;
 	}
     }
 
@@ -97,11 +97,12 @@ ul.accordion {
 	    margin: 0 auto;
 	    display: block;
 	}
-	.descargar-audio {
+	a.descargar-audio {
 	    width: auto;
 	    margin: 0 auto;
 	    display: inline-block;
 	    margin: 1em 0;
+	    border: none,
 	}
     }
 

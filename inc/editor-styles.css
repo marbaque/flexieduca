@@ -50,7 +50,45 @@ dfn, cite, em, i {
 }
 
 blockquote {
-    margin: 0 1.5em;
+	margin: 1em 0 2em;
+	position: relative;
+	padding: .5em 1em 1em;
+	background-color: #333;
+	color: #ccc;
+	border-radius: 1em;
+}
+
+blockquote:before, blockquote:after {
+	font-family: 'FontAwesome';
+	line-height: 1;
+	position: absolute;
+	color: #eee;
+	font-size: 50px;
+	opacity: .2;
+}
+
+blockquote:before {
+	content: "\f10d";
+	margin-right: 13px;
+	left: 8px;
+	top: 4px;
+}
+
+blockquote:after {
+	content: "\f10e";
+	margin-left: 13px;
+	right: 4px;
+	bottom: 4px;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 600px) {
+	blockquote {
+		margin: 1em 1em 2em;
+	}
 }
 
 address {
@@ -183,52 +221,75 @@ a:hover, a:active {
 }
 
 
-
 .formato-actividad,
 .formato-importante,
 .formato-mirada,
 .formato-ejercicio,
-.formato-idea {
-    padding: 1em 2em 1.2em;
-    background: #F1EEE5;
-    border-radius: 5px;
-    border: 3px solid #41423F;
-    color: #41423F;
-    height: auto;
-    background-position: 1em center;
-    background-size: 80px;
-    padding-left: 120px;
-    margin-bottom: 1em;
+.formato-idea,
+.formato-recuadro {
+	padding: 1em 2em 1.2em 100px;
+	margin: .5em -1em 2em;
+	height: auto;
+	background-position: 1.25em 1.75em;
+	background-size: 60px;
+	background-color: #F1EEE5;
+	font-size: .89em;
+	border-top: none;
+	border-bottom: none;
+	position: relative;
+}
+
+@media screen and (min-width: 900px) {
+	.formato-actividad,
+	.formato-importante,
+	.formato-mirada,
+	.formato-ejercicio,
+	.formato-idea,
+	.formato-recuadro {
+		padding-left: 140px;
+		margin: 2em 0;
+		font-size: .96em;
+		line-height: 1.45;
+		background-size: 80px;
+		border: 3px solid #393A38;
+		background-color: #F1EEE5;
+		box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.32);
+		border-radius: 4px;
+	}
+}
+
+.formato-recuadro {
+	padding: 1em 2em 1.2em;
 }
 
 .formato-actividad {
-    background-image: url("../img/actividad_virtual.png");
-    background-image: none, url("../img/actividad_virtual.svg");
-    background-repeat: no-repeat;
+	background-image: url("../img/actividad_virtual.png");
+	background-image: none, url("../img/actividad_virtual.svg");
+	background-repeat: no-repeat;
 }
 
 .formato-mirada {
-    background-image: url("../img/mirada.png");
-    background-image: none, url("../img/mirada.svg");
-    background-repeat: no-repeat;
+	background-image: url("../img/mirada.png");
+	background-image: none, url("../img/mirada.svg");
+	background-repeat: no-repeat;
 }
 
 .formato-importante {
-    background-image: url("../img/importante.png");
-    background-image: none, url("../img/importante.svg");
-    background-repeat: no-repeat;
+	background-image: url("../img/importante.png");
+	background-image: none, url("../img/importante.svg");
+	background-repeat: no-repeat;
 }
 
 .formato-ejercicio {
-    background-image: url("../img/ejercicio.png");
-    background-image: none, url("../img/ejercicio.svg");
-    background-repeat: no-repeat;
+	background-image: url("../img/ejercicio.png");
+	background-image: none, url("../img/ejercicio.svg");
+	background-repeat: no-repeat;
 }
 
 .formato-idea {
-    background-image: url("../img/idea.png");
-    background-image: none, url("../img/idea.svg");
-    background-repeat: no-repeat;
+	background-image: url("../img/idea.png");
+	background-image: none, url("../img/idea.svg");
+	background-repeat: no-repeat;
 }
 .table-source {
 	font-size: .8em!important;

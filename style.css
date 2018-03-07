@@ -2068,13 +2068,13 @@ ul.accordion button:focus {
 	background-repeat: no-repeat;
 	background-position: 2em 1em;
 	background-size: 60px;
-	padding-left: 50px;
+	padding-left: 100px;
 }
 
 @media screen and (min-width: 600px) {
 	.accordion-panel.resumen {
 		background-size: 80px;
-		padding-left: 110px;
+		padding-left: 130px;
 	}
 }
 
@@ -2088,11 +2088,12 @@ ul.accordion button:focus {
 	display: block;
 }
 
-.accordion-panel.audio .descargar-audio {
+.accordion-panel.audio a.descargar-audio {
 	width: auto;
 	margin: 0 auto;
 	display: inline-block;
 	margin: 1em 0;
+	border: none;
 }
 
 .mmtools {

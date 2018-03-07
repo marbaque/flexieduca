@@ -17,7 +17,7 @@ $posts = get_field('contenido_relacionado');
                         <source src="<?php echo $audioURL; ?>" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
-                   <a class="descargar-audio button" href="<?php echo $audioURL; ?>" title="Descargar audio">Descargar audio</a>
+                   <a class="descargar-audio button" href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fas fa-download"></i> Descargar</a>
                 </div>
             </li>
         <?php endif; ?>
