@@ -28,10 +28,8 @@ get_header();
 
             get_template_part('template-parts/content', 'multimedia');
 
-
         endwhile; // End of the loop.
         ?>
-
     </main><!-- #main -->
 </div><!-- #primary -->
 
