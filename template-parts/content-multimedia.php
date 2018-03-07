@@ -85,8 +85,9 @@
 			    </li>
 			    <?php endforeach; ?>
 			</ul>
+		    </div>	
 		    <?php endif; ?>
-		    </div>
+		    
                 </div><!-- .entry-content -->
 
             </div><!----.post_content__body--->
