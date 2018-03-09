@@ -16,7 +16,7 @@ $GLOBALS['wp_embed']->post_ID	 = $taxonomy . '_' . $term_id;
 $trendDesc = get_field('trend-desc', $term);
 
 $audioURL = get_field('audio_contenido', $term);
-$resumen = get_field('resumen');
+$resumen = get_field('resumen', $term);
 ?>
 
 <?php get_template_part('template-parts/tools'); ?>
