@@ -125,30 +125,25 @@
 ** Breadcrumbs 
 *****************************/
 .breadcrumbs {
-    display: none;
-    @media screen and (min-width: $break__small) {
 	display: block;
 	font-size: .66em;
 	margin: 0 0 2em;
 	color: #aaa;
-	line-height: 1;
+	line-height: 1.5;
 
 	span {
 	    display: inline-block;
 	    white-space: nowrap;
 	    overflow: hidden;
 	    text-overflow: ellipsis;
-	    max-width: 200px;
+	    max-width: 300px;
 	    a {
-		border: none;
-
+			border: none;
 	    }
-
 	}
 	.separator {
 	    margin: 0 .5em;
 	}
-    }
 }
 
 /****************************
@@ -190,18 +185,27 @@
             margin: .5em 0 2em;
             border: 4px solid #ACACAC;
             @include borde(10px);
+            
+            .avatar {
+	            float: left;
+	            margin-right: 10px;
+	            @include borde(50%);
+            }
+            
             h4{
-		margin-top: 0
-	    }
+				margin-top: 0;
+				padding-top: 20px;
+				clear: none;
+		    }
             .datos{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                color: #AAAAAA;
                 .mi-exitometro {
                     width: auto;
                     text-transform: uppercase;
                     font-weight: 700;
+                    letter-spacing: 1px;
                 }
                 .porcentaje{
                     border: 10px solid #B4CF7E;
@@ -555,11 +559,14 @@
 *****************************/
 .site-footer {
     width: 100%;
-    padding: 80px 1em 20px;
-    font-size: 70%;
+    padding: 20px 1em;
     text-align: center;
     color: #aaa;
     background: #f4f4f4;
+}
+.site-info {
+	font-size: .6em;
+	display: none;
 }
 .single-multimedia,
 .single-caso {

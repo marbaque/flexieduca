@@ -223,14 +223,16 @@ ul.accordion {
 .comenta {
     margin: 1em 0;
     display: block;
+	padding: 0 1em;
+	    
     &:before,
 	&:after {
-	content: "";
-	width: 20%;
-	height: 2px;
-	display: block;
-	background: $color__interactive;
-	margin: 2em auto 3em;
+		content: "";
+		width: 20%;
+		height: 2px;
+		display: block;
+		background: $color__interactive;
+		margin: 2em auto;
     }
 }
 

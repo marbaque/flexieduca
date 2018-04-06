@@ -62,12 +62,13 @@ jQuery(function($) {
 	      'alt': this.title || ''             // Add title if one was given in link
 	    });
 	    
-	    //resize quiz height
-	    $(window).resize(function() {
-		$('#photo-viewer img').height($('#photo-viewer').height() + 80);
-	    });
+	    function updateImageSize() {
+		    $("#photo-viewer").each(function(){
+		        var $img = jQuery(this).find("img");
+		        $img.css({"width": "auto", "height": "100%", "top": "50%", "left": "50%"});
 
-	    $(window).trigger('resize');
+		    });
+		};
 	
 	  }
 	

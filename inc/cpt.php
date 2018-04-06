@@ -196,7 +196,3 @@ function custom_taxonomies() {
 }
 
 add_action('init', 'custom_taxonomies');
-
-
-
-

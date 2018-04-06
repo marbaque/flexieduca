@@ -6,11 +6,10 @@
     width: 100%;
     height: 60px;
     overflow: hidden;
-    background: white;
+    background: #eee;
     font-size: .8em;
     border-top: 1px solid #ddd;
-    z-index: 98;
-	
+    z-index: 98;	
     nav, 
     .navigation,
     .nav-links {
@@ -21,18 +20,16 @@
     .nav-links {
 	    display: flex;
 	    align-items: stretch;
-	
 	    span.meta-nav {
 	        display: block;
-	        font-size: .7em;
-	        color: #999;
+	        font-size: .6em;
 	    }
 	
 	    .nav-previous, .nav-next {
 	        width: 50%;
 	        margin-top: -1px;
 	        padding: 0;
-	        border: 1px solid #ddd;
+	        border: 0;
 	        @include borde(0);
 			overflow: hidden;
 	    }
@@ -54,15 +51,10 @@
         white-space: nowrap;
         overflow: hidden;  
 		height: 100%;
-		
 		&:hover {
 			background: $color__interactive;
 			color: white;
 			transition: .2s all;
-			span.meta-nav {
-
-		        color: white;
-		    }
 		}
 	}
 
@@ -70,14 +62,14 @@
 
 @media screen and (min-width: $break__medium) {
     .ebook-nav {
-        height: 80px;
+        height: 70px;
         font-size: .9em;
 
         .nav-links {
 
             span.meta-nav {
                 display: block;
-                font-size: .8em;
+                font-size: .7em;
             }
 
             .nav-previous, .nav-next {
