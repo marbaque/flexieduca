@@ -36,38 +36,45 @@
         </div><!-- .entry-content .post-content -->
     	
     	<aside class="side-content">
-            <?php
+            <div class="exitometro">	                 
+		<?php
+		if ( is_user_logged_in() ) {
+			global $current_user;
+			wp_get_current_user();
+			/**
+			* @example Safe usage: $current_user = wp_get_current_user();
+			* if ( !($current_user instanceof WP_User) )
+			*     return;
+			*/
+			echo get_avatar( $current_user->user_email, 64 );
+		    echo '<h4>' . __('Welcome, ', 'flexieduca') . $current_user->display_name . '</h4>'; ?>
+		
+		<div class="datos">
+                    <p>
+                        <span class="mi-exitometro">Exitómetro</span> <br>
+                        Actividades completadas <?php echo do_shortcode('[wpc_progress_in_ratio]'); ?>
+                    </p>
+                    <span><?php echo do_shortcode('[wpc_progress_graph]'); ?></span>
+                </div>
+		<?php
+		
+		} else {
+		    echo __('Welcome, visitor!', 'flexieduca');
+		    echo '<p>Acceda y guarde su progreso en el multimedia.</p>';
+		}
+		?>
+                
+            </div>
+
+	    
+	    <?php
     		wp_nav_menu( array(
     			'theme_location' => 'menu-2',
     			'menu_id'        => 'front-menu',
     		) );
 			?>
 			
-			<div class="exitometro">	                 
-					<?php
-					if ( is_user_logged_in() ) {
-						global $current_user;
-						wp_get_current_user();
-						/**
-						* @example Safe usage: $current_user = wp_get_current_user();
-						* if ( !($current_user instanceof WP_User) )
-						*     return;
-						*/
-						echo get_avatar( $current_user->user_email, 64 );
-					    echo '<h4>' . __('Welcome, ', 'flexieduca') . $current_user->display_name . '</h4>';
-					} else {
-					    echo __('Welcome, visitor!', 'flexieduca');
-					}
-					?>
-                <div class="datos">
-                    <p>
-                        <span class="mi-exitometro">Exitómetro</span> <br>
-                        <i><span>2/28 actividades completadas</span></i>
-                    </p>
-                    <span class="porcentaje">10%</span>
-                </div>
-            </div>
-
+	    
 			
 			<?php dynamic_sidebar( 'sidebar-3' ); ?>
     		

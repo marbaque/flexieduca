@@ -2181,7 +2181,8 @@ ul.accordion button:focus {
 .formato-mirada,
 .formato-ejercicio,
 .formato-idea,
-.formato-recuadro {
+.formato-recuadro,
+.comentario-inicial {
 	padding: 1em 2em 1.2em 100px;
 	margin: .5em -1em 2em;
 	height: auto;
@@ -2215,7 +2216,8 @@ ul.accordion button:focus {
 	.formato-mirada,
 	.formato-ejercicio,
 	.formato-idea,
-	.formato-recuadro {
+	.formato-recuadro,
+	.comentario-inicial {
 		padding-left: 140px;
 		margin: 2em 0;
 		font-size: .96em;
@@ -2223,7 +2225,6 @@ ul.accordion button:focus {
 		background-size: 80px;
 		border: 3px solid #393A38;
 		background-color: #F1EEE5;
-		box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.32);
 		border-radius: 4px;
 	}
 }
@@ -2262,19 +2263,17 @@ ul.accordion button:focus {
 	background-repeat: no-repeat;
 }
 
-.comenta {
-	margin: 1em 0;
-	display: block;
-	padding: 0 1em;
+.comentario-inicial {
+	background-image: url("./img/avatar_comentario.png");
+	background-image: none, url("./img/avatar_comentario.svg");
+	background-repeat: no-repeat;
+	background-color: white;
 }
 
-.comenta:before, .comenta:after {
-	content: "";
-	width: 20%;
-	height: 2px;
-	display: block;
-	background: #D96C70;
-	margin: 2em auto;
+@media screen and (min-width: 900px) {
+	.comentario-inicial {
+		background-size: 100px;
+	}
 }
 
 .fuente-apa {

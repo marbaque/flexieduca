@@ -130,7 +130,7 @@ function my_mce_before_init_insert_formats( $init_array ) {
         array(
 	        'title' => 'Llamada de comentario',
 	        'block' => 'div',
-	        'classes' => 'comenta',
+	        'classes' => 'comentario-inicial',
 	        'wrapper' => true,
         ),
         array(
