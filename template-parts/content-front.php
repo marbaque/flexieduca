@@ -63,7 +63,7 @@
 			} else {
 			    echo __('Welcome!', 'flexieduca');
 			    echo '<h5 class="mi-exitometro">Exitómetro</h5>';
-			    echo '<p><a id="user">Acceda</a> al multimedia para guardar su progr.</p>';
+			    echo '<p>Acceda al multimedia para guardar su progreso.</p>';
 			}
 			?>
             </div><!-- exitometro -->

@@ -50,13 +50,13 @@
 	                
                     <?php if ( is_user_logged_in() ) { ?>
                     
-                    <form action="<?php echo wp_logout(); ?>">
-                        <button tabindex="0" role="button"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/h-icon.svg"><span><?php esc_html_e('Salir', 'flexieduca'); ?></span></button>
+                    <form action="<?php echo site_url(); ?>">
+                        <button tabindex="0" role="button"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/h-icon.svg"><span><?php esc_html_e('Hello', 'flexieduca'); ?></span></button>
                     </form>
                     
                     <?php } else { ?>
 						
-						<button tabindex="0" role="button"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/h-icon.svg"><span><?php esc_html_e('Login', 'flexieduca'); ?></span></button> 
+						<button tabindex="0" role="button"><i class="fa fa-user-circle fa-2x"></i><span><?php esc_html_e('Login', 'flexieduca'); ?></span></button> 
                         
                     <?php } ?>
                          
