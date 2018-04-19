@@ -2,16 +2,68 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-02-20 23:02+0000\n"
+"POT-Creation-Date: 2018-04-19 23:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-03-06 22:17+0000\n"
+"PO-Revision-Date: 2018-04-19 23:31+0000\n"
 "Last-Translator: Mario Badilla\n"
-"Language-Team: Spanish (Spain)\n"
+"Language-Team: Español\n"
 "X-Generator: Loco https://localise.biz/\n"
 "Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;"
+
+#: functions.php:53
+msgid "Primary menu"
+msgstr "Menu principal"
+
+#: functions.php:54
+msgid "Front menu"
+msgstr "Menu de inicio"
+
+#: functions.php:55
+msgid "Footer menu"
+msgstr "Pie de página"
+
+#. If there are characters in your language that are not
+#. supported by Libre Franklin, translate this to 'off'. Do not translate
+#. into your own language.
+#: functions.php:109
+msgctxt "Rubik font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:196
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: functions.php:198
+msgid "Add widgets here."
+msgstr "Agregue widgets aquí"
+
+#: functions.php:205
+msgid "Page Sidebar"
+msgstr "Barra lateral de páginas"
+
+#: functions.php:207
+msgid "Add page sidebar widgets here."
+msgstr "Agregue widgets a la barra lateral de la página."
+
+#: functions.php:214
+msgid "Front Page Sidebar"
+msgstr "Barra lateral de la página de inicio"
+
+#: functions.php:216
+msgid "Add front widgets here."
+msgstr "Agregue widgets a la barra lateral de la página inicial."
+
+#: functions.php:253
+msgid "Expand child menu"
+msgstr "Expandir submenu"
+
+#: functions.php:254
+msgid "Collapse child menu"
+msgstr "Colapsar submenu"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
@@ -35,6 +87,18 @@ msgstr "Categorías mas utilizadas"
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Intente buscando en los archivos mensuales."
 
+#: index.php:44 search.php:44 taxonomy-tendencia.php:95
+msgid "Newer"
+msgstr "Reciente"
+
+#: index.php:45 search.php:45 taxonomy-tendencia.php:96
+msgid "Older"
+msgstr "Anterior"
+
+#: index.php:46 archive.php:46 search.php:46 taxonomy-tendencia.php:97
+msgid "Page"
+msgstr "Página"
+
 #: archive.php:44 inc/template-tags.php:173 inc/template-tags.php:174
 msgid "Previous"
 msgstr "Anterior"
@@ -42,10 +106,6 @@ msgstr "Anterior"
 #: archive.php:45 inc/template-tags.php:176 inc/template-tags.php:177
 msgid "Next"
 msgstr "Siguiente"
-
-#: archive.php:46 index.php:46 search.php:46 taxonomy-tendencia.php:72
-msgid "Page"
-msgstr "Página"
 
 #: comments.php:29
 #, php-format
@@ -71,69 +131,25 @@ msgstr "Comentarios recientes"
 msgid "Comments are closed."
 msgstr "Los comentario se han cerrado."
 
-#: footer.php:18
-msgid "https://wordpress.org/"
-msgstr "https://wordpress.org/"
-
-#. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:20
+#. translators: %s: search query.
+#: search.php:18
 #, php-format
-msgid "Proudly powered by %s"
-msgstr "Hecho con %s"
+msgid "Search Results for: %s"
+msgstr "Resultados para: %s"
 
-#. translators: 1: Theme name, 2: Theme author.
-#: footer.php:25
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr "Plantilla: %1$s by %2$s."
+#. Name of the template
+msgid "Case Gallery"
+msgstr "Galería de casos"
 
-#: functions.php:53
-msgid "Primary menu"
-msgstr "Menu principal"
+#: page-casos.php:44 template-parts/content-multimedia.php:54
+#: template-parts/content-single.php:60 template-parts/content-page.php:60
+#: template-parts/content-front.php:32
+msgid "Pages:"
+msgstr "Páginas:"
 
-#: functions.php:54
-msgid "Front menu"
-msgstr "Menu de inicio"
-
-#. If there are characters in your language that are not
-#. supported by Libre Franklin, translate this to 'off'. Do not translate
-#. into your own language.
-#: functions.php:108
-msgctxt "Rubik font: on or off"
-msgid "on"
-msgstr ""
-
-#: functions.php:195
-msgid "Sidebar"
-msgstr "Barra lateral"
-
-#: functions.php:197
-msgid "Add widgets here."
-msgstr "Agregue widgets aquí"
-
-#: functions.php:204
-msgid "Page Sidebar"
-msgstr "Barra lateral de páginas"
-
-#: functions.php:206
-msgid "Add page sidebar widgets here."
-msgstr "Agregue widgets a la barra lateral de la página."
-
-#: functions.php:213
-msgid "Front Page Sidebar"
-msgstr "Barra lateral de la página de inicio"
-
-#: functions.php:215
-msgid "Add front widgets here."
-msgstr "Agregue widgets a la barra lateral de la página inicial."
-
-#: functions.php:247
-msgid "Expand child menu"
-msgstr "Expandir submenu"
-
-#: functions.php:248
-msgid "Collapse child menu"
-msgstr "Colapsar submenu"
+#: page-casos.php:52
+msgid "Case list"
+msgstr "Lista de casos"
 
 #: header.php:24
 msgid "Skip to content"
@@ -143,41 +159,33 @@ msgstr "Continuar con los contenidos"
 msgid "Contents"
 msgstr "Contenidos"
 
-#: header.php:52
+#: header.php:54
 msgid "Hello"
 msgstr "Bienvenida"
 
-#: header.php:55
+#: header.php:59 header.php:72
 msgid "Login"
 msgstr "Acceder"
 
-#: index.php:44 search.php:44 taxonomy-tendencia.php:70
-msgid "Newer"
-msgstr "Reciente"
+#: header.php:77
+msgid "Register"
+msgstr "Registrarse"
 
-#: index.php:45 search.php:45 taxonomy-tendencia.php:71
-msgid "Older"
-msgstr "Anterior"
+#: footer.php:28
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
 
-#. Name of the template
-msgid "Case Gallery"
-msgstr "Galería de casos"
-
-#: page-casos.php:31 template-parts/content-front.php:32
-#: template-parts/content-multimedia.php:58 template-parts/content-page.php:59
-#: template-parts/content-single.php:60
-msgid "Pages:"
-msgstr "Páginas:"
-
-#: page-casos.php:41
-msgid "Case list"
-msgstr "Lista de casos"
-
-#. translators: %s: search query.
-#: search.php:18
+#. translators: %s: CMS name, i.e. WordPress.
+#: footer.php:30
 #, php-format
-msgid "Search Results for: %s"
-msgstr "Resultados para: %s"
+msgid "Proudly powered by %s"
+msgstr "Hecho con %s"
+
+#. translators: 1: Theme name, 2: Theme author.
+#: footer.php:35
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Plantilla: %1$s by %2$s."
 
 #. %s: post date.
 #: inc/template-tags.php:30
@@ -234,27 +242,9 @@ msgstr ","
 msgid "%1$s"
 msgstr "%1$s"
 
-#. %s: Name of current post.
-#: template-parts/content-case-item.php:32 template-parts/content.php:41
-#, php-format
-msgid "Continue reading %s"
-msgstr "Continuar leyendo"
-
-#: template-parts/content-case.php:10
-msgid "Back to gallery"
-msgstr "Regresar a galería"
-
-#: template-parts/content-front.php:49
-msgid "Welcome, "
-msgstr "Hola, "
-
-#: template-parts/content-front.php:51
-msgid "Welcome, visitor!"
-msgstr "¡Hola, visitante!"
-
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-multimedia.php:49 template-parts/content-page.php:48
-#: template-parts/content-single.php:49
+#: template-parts/content-multimedia.php:45
+#: template-parts/content-single.php:49 template-parts/content-page.php:49
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Continuar leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
@@ -283,6 +273,20 @@ msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr "Parece que no puedo encontrar lo que busca. Intente una búsqueda."
+
+#. %s: Name of current post.
+#: template-parts/content.php:49 template-parts/content-case-item.php:32
+#, php-format
+msgid "Continue reading %s"
+msgstr "Continuar leyendo"
+
+#: template-parts/content-front.php:50
+msgid "Welcome, "
+msgstr "Hola, "
+
+#: template-parts/content-front.php:64
+msgid "Welcome!"
+msgstr "Bienvenidos"
 
 #. Name of the theme
 msgid "Flexieduca"
