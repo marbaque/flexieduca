@@ -1463,6 +1463,7 @@ li.flexieduca-search, .widget_search {
 .site-header .user-info-area {
 	width: 60px;
 	max-width: 60px;
+	height: 100%;
 	border-left: 1px solid #ccc;
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
@@ -1511,6 +1512,7 @@ li.flexieduca-search, .widget_search {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	max-width: 300px;
+	line-height: 1;
 }
 
 .breadcrumbs span a {
@@ -1581,6 +1583,9 @@ li.flexieduca-search, .widget_search {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	line-height: 1.2;
+	font-size: .9em;
+	color: #777;
 }
 
 .home aside.side-content .exitometro .datos .mi-exitometro {
@@ -1588,6 +1593,11 @@ li.flexieduca-search, .widget_search {
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 1px;
+	margin: 0 0 .5em;
+}
+
+.home aside.side-content .exitometro .datos p {
+	margin: 0;
 }
 
 .home aside.side-content .exitometro .datos .porcentaje {
@@ -1707,6 +1717,75 @@ li.flexieduca-search, .widget_search {
 	background-color: #D96C70;
 	border: 5px solid #843942;
 	color: #843942;
+}
+
+.modal {
+	position: absolute;
+	z-index: 1000;
+	padding: 20px;
+	background-color: #F1EEE5;
+	border: 3px solid #393A38;
+	border-radius: 4px;
+	box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.41);
+}
+
+.modal:before {
+	content: "";
+	display: block;
+	position: absolute;
+	right: -25px;
+	top: -44px;
+	width: calc(194px / 2);
+	height: calc(162px / 2);
+	background-image: url("./img/ranita-recuadro.png");
+	background-image: none, url("./img/ranita-recuadro.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.modal #user-options {
+	background-color: #fff;
+	text-align: center;
+	clear: both;
+	padding: 15px;
+	border: 10px solid #DDBE59;
+}
+
+.modal #user-options p {
+	font-size: .8em;
+}
+
+.modal button.modal-close {
+	background-color: #393A38;
+	color: #ffffff;
+	border: none;
+	padding: 7px 10px 9px 10px;
+	margin: 10px 0 0 0;
+	float: right;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.modal hr {
+	margin: 1em 0;
+}
+
+.modal a.button-login,
+.modal a.button-register {
+	padding: 7px 10px 9px 10px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	border: none;
+	background-color: #D96C70;
+	margin: .25em auto;
+	display: inline-block;
+	color: #fff;
+}
+
+.modal a.button-login:hover,
+.modal a.button-register:hover {
+	color: #fff;
+	opacity: .8;
 }
 
 /**************************************
@@ -1946,7 +2025,7 @@ li.flexieduca-search, .widget_search {
 ** Footer 
 *****************************/
 .site-footer {
-	width: 100%;
+	width: auto;
 	padding: 20px 1em;
 	text-align: center;
 	color: #aaa;

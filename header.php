@@ -46,19 +46,37 @@
                     <?php endif; ?>
                 </div><!-- .site-branding -->
 
-                <div class="user-info-area">
+                <div <?php if ( !is_user_logged_in() ) {echo 'id="user"';} ?> class="user-info-area">
+	                
                     <?php if ( is_user_logged_in() ) { ?>
-                    <form action="<?php echo site_url(); ?>">
-                        <button tabindex="0" role="button"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/h-icon.svg"><span><?php esc_html_e('Hello', 'flexieduca'); ?></span>
-                    <?php } else { ?>
-                    <form action="<?php echo wp_login_url(home_url()); ?>">
-                        <button tabindex="0" role="button"><i class="far fa-user-circle fa-2x"></i><span><?php esc_html_e('Login', 'flexieduca'); ?></span>
-                    <?php } ?>
-                        </button>  
+                    
+                    <form action="<?php echo wp_logout(); ?>">
+                        <button tabindex="0" role="button"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/h-icon.svg"><span><?php esc_html_e('Salir', 'flexieduca'); ?></span></button>
                     </form>
+                    
+                    <?php } else { ?>
+						
+						<button tabindex="0" role="button"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/h-icon.svg"><span><?php esc_html_e('Login', 'flexieduca'); ?></span></button> 
+                        
+                    <?php } ?>
+                         
+                    
                 </div>
 
 
             </header><!-- #masthead -->
+            
+            <div id="user-options">
+				<div class="login-block">
+					<p><?php echo esc_html('If you already have an account:', 'flexieduca') ?></p>
+					<a class="button-login" href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login"><?php esc_html_e('Login', 'flexieduca'); ?></a>
+				</div>
+				<hr>
+				<div class="register-block">
+					<p><?php echo esc_html('If you haven not created an account yet:', 'flexieduca') ?></p>
+					<a class="button-register" href="<?php echo wp_registration_url(); ?>"><?php esc_html_e('Register', 'flexieduca'); ?></a>
+				</div>
+				
+		    </div>
 			
             <div id="content" class="site-content">

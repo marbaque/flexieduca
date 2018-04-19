@@ -62,13 +62,7 @@ jQuery(function($) {
 	      'alt': this.title || ''             // Add title if one was given in link
 	    });
 	    
-	    function updateImageSize() {
-		    $("#photo-viewer").each(function(){
-		        var $img = jQuery(this).find("img");
-		        $img.css({"width": "auto", "height": "100%", "top": "50%", "left": "50%"});
-
-		    });
-		};
+	    
 	
 	  }
 	
@@ -76,4 +70,12 @@ jQuery(function($) {
 	
 	// Final line runs once when rest of script has loaded to show the first image
 	$('.thumb').eq(0).click();                // Simulate click on first thumb
+	
+	function updateImageSize() {
+	    $("#photo-viewer").each(function(){
+	        var $img = jQuery(this).find("img");
+	        $img.css({"width": "auto", "height": "100%", "top": "50%", "left": "50%"});
+	
+	    });
+	}
 });
