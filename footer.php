@@ -36,9 +36,25 @@
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+	
+	<div id="user-options">
+		<div class="login-block">
+			<p><?php echo esc_html_e('If you already have an account:', 'flexieduca'); ?></p>
+			<a class="button-login" href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login"><?php esc_html_e('Login', 'flexieduca'); ?></a>
+		</div>
+		<hr>
+		<div class="register-block">
+			<p><?php echo esc_html_e('If you haven not created an account yet:', 'flexieduca'); ?></p>
+			<a class="button-register" href="<?php echo wp_registration_url(); ?>"><?php esc_html_e('Register', 'flexieduca'); ?></a>
+		</div>
+		
+	</div><!-- #user-options -->
+	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
+
 
 </body>
 </html>
