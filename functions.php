@@ -235,7 +235,7 @@ function flexieduca_scripts() {
     
     //wp_enqueue_script('flexieduca-fontawesome', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js');
     
-    wp_enqueue_style('flexieduca-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    wp_enqueue_style('flexieduca-font-awesome', 'https://use.fontawesome.com/releases/v5.0.10/css/all.css');
 
     wp_enqueue_script('flexieduca-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20161215', true);
     

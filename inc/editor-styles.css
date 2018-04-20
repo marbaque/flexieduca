@@ -120,7 +120,6 @@ html {
 *,
 *:before,
 *:after {
-    /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
     box-sizing: inherit;
 }
 
@@ -209,7 +208,8 @@ a:hover, a:active {
 .formato-mirada,
 .formato-ejercicio,
 .formato-idea,
-.formato-recuadro {
+.formato-recuadro,
+.comentario-inicial {
 	padding: 1em 2em 1.2em 100px;
 	margin: .5em -1em 2em;
 	height: auto;
@@ -228,7 +228,8 @@ a:hover, a:active {
 	.formato-mirada,
 	.formato-ejercicio,
 	.formato-idea,
-	.formato-recuadro {
+	.formato-recuadro,
+	.comentario-inicial {
 		padding-left: 140px;
 		margin: 2em 0;
 		font-size: .96em;
@@ -236,7 +237,6 @@ a:hover, a:active {
 		background-size: 80px;
 		border: 3px solid #393A38;
 		background-color: #F1EEE5;
-		box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.32);
 		border-radius: 4px;
 	}
 }
@@ -246,55 +246,46 @@ a:hover, a:active {
 }
 
 .formato-actividad {
-	background-image: url("../img/actividad_virtual.png");
-	background-image: none, url("../img/actividad_virtual.svg");
+	background-image: url("./img/actividad_virtual.png");
+	background-image: none, url("./img/actividad_virtual.svg");
 	background-repeat: no-repeat;
 }
 
 .formato-mirada {
 	background-image: url("../img/mirada.png");
-	background-image: none, url("../img/mirada.svg");
+	background-image: none, url("./img/mirada.svg");
 	background-repeat: no-repeat;
 }
 
 .formato-importante {
 	background-image: url("../img/importante.png");
-	background-image: none, url("../img/importante.svg");
+	background-image: none, url("./img/importante.svg");
 	background-repeat: no-repeat;
 }
 
 .formato-ejercicio {
 	background-image: url("../img/ejercicio.png");
-	background-image: none, url("../img/ejercicio.svg");
+	background-image: none, url("./img/ejercicio.svg");
 	background-repeat: no-repeat;
 }
 
 .formato-idea {
 	background-image: url("../img/idea.png");
-	background-image: none, url("../img/idea.svg");
+	background-image: none, url("./img/idea.svg");
 	background-repeat: no-repeat;
 }
-.table-source {
-	font-size: .8em!important;
-	color: gray;
-	margin-bottom: 4em;
-}
-.table-source p {
-	font-size: .8em!important;
+
+.comentario-inicial {
+	background-image: url("../img/avatar_comentario.png");
+	background-image: none, url("../img/avatar_comentario.svg");
+	background-repeat: no-repeat;
+	background-color: white;
 }
 
-.comenta {
-	margin: 1em 0;
-	display: block;
-}
-
-.comenta:before, .comenta:after {
-	content: "";
-	width: 20%;
-	height: 2px;
-	display: block;
-	background: #D96C70;
-	margin: 2em auto 3em;
+@media screen and (min-width: 900px) {
+	.comentario-inicial {
+		background-size: 100px;
+	}
 }
 
 .fuente-apa {
