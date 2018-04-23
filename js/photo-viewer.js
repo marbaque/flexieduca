@@ -1,4 +1,4 @@
-jQuery(function($) {
+(function($) {
 	var request;                         // Latest image to be requested
 	var $current;                        // Image currently being shown 
 	var cache = {};                      // Cache object
@@ -75,7 +75,7 @@ jQuery(function($) {
 	    $("#photo-viewer").each(function(){
 	        var $img = jQuery(this).find("img");
 	        $img.css({"width": "auto", "height": "100%", "top": "50%", "left": "50%"});
-	
+		return;
 	    });
 	}
-});
+})( jQuery );

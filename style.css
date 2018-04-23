@@ -2262,11 +2262,11 @@ ul.accordion button:focus {
 .formato-idea,
 .formato-recuadro,
 .comentario-inicial {
-	padding: 1em 2em 1.2em 100px;
+	padding: 110px 2em 1.2em;
 	margin: .5em -1em 2em;
 	height: auto;
-	background-position: 1.25em 1.75em;
-	background-size: 60px;
+	background-position: center 10px;
+	background-size: 80px;
 	background-color: #F1EEE5;
 	font-size: .89em;
 	border-top: none;
@@ -2297,13 +2297,14 @@ ul.accordion button:focus {
 	.formato-idea,
 	.formato-recuadro,
 	.comentario-inicial {
-		padding-left: 140px;
+		padding: 1em 2em 1.2em 140px;
 		margin: 2em 0;
 		font-size: .96em;
 		line-height: 1.45;
 		background-size: 80px;
 		border: 3px solid #393A38;
 		background-color: #F1EEE5;
+		background-position: 20px 20px;
 		border-radius: 4px;
 	}
 }
@@ -2347,12 +2348,7 @@ ul.accordion button:focus {
 	background-image: none, url("./img/avatar_comentario.svg");
 	background-repeat: no-repeat;
 	background-color: white;
-}
-
-@media screen and (min-width: 900px) {
-	.comentario-inicial {
-		background-size: 100px;
-	}
+	background-size: 100px;
 }
 
 .fuente-apa {

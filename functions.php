@@ -231,10 +231,7 @@ function flexieduca_scripts() {
     wp_enqueue_style('flexieduca-fonts', flexieduca_fonts_url());
 
 
-    wp_enqueue_style('flexieduca-style', get_stylesheet_uri());
-    
-    wp_enqueue_script('flexieduca-modal-window-init', get_template_directory_uri() . '/js/modal-init.js', array('jquery'), '20180419', true);
-    wp_enqueue_script('flexieduca-modal-window', get_template_directory_uri() . '/js/modal-window.js', array('jquery'), '20180419', true);
+    wp_enqueue_style('flexieduca-style', get_stylesheet_uri());   
     
     wp_enqueue_style('flexieduca-font-awesome', 'https://use.fontawesome.com/releases/v5.0.10/css/all.css');
 
@@ -242,7 +239,7 @@ function flexieduca_scripts() {
     
     wp_enqueue_script('flexieduca-actions', get_template_directory_uri() . '/js/actions.js', array('jquery'), '20171215', true);
     
-    
+    wp_enqueue_script('flexieduca-modal-window', get_template_directory_uri() . '/js/modal-window.js', array('jquery'), '20180419', true);
         
     if ( is_singular('caso') ) {
 	    wp_enqueue_script('flexieduca-photoviewer', get_template_directory_uri() . '/js/photo-viewer.js', array('jquery'), '20161215', true);
