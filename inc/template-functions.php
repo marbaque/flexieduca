@@ -237,3 +237,14 @@ function my_permalinks($permalink, $post, $leavename) {
 }
 
 add_filter('post_type_link', 'my_permalinks', 10, 3);
+
+
+
+//hide admin bar for users except administrators
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+    if (!current_user_can('administrator') && !is_admin()) {
+	show_admin_bar(false);
+    }
+}

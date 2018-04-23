@@ -49,14 +49,19 @@
                 <div <?php if ( !is_user_logged_in() ) {echo 'id="user"';} ?> class="user-info-area">
 	                
                     <?php if ( is_user_logged_in() ) { ?>
+		    
+		    <?php
+		    global $current_user;
+		    wp_get_current_user();
+		    ?>
                     
-                    <form action="<?php echo site_url(); ?>">
-                        <button tabindex="0" role="button"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/h-icon.svg"><span><?php esc_html_e('Hello', 'flexieduca'); ?></span></button>
+                    <form action="<?php echo get_edit_user_link(); ?>">
+                        <button tabindex="0" role="button"><?php echo get_avatar( $current_user->user_email, 32 ); ?><span><?php echo $current_user->display_name; ?></span></button>
                     </form>
                     
                     <?php } else { ?>
 						
-						<button tabindex="0" role="button"><i class="fa fa-user-circle fa-2x"></i><span><?php esc_html_e('Login', 'flexieduca'); ?></span></button> 
+						<button tabindex="0" role="button"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/h-icon.svg"><span><?php esc_html_e('Login', 'flexieduca'); ?></span></button> 
                         
                     <?php } ?>
                          

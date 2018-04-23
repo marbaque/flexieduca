@@ -67,10 +67,6 @@
             font-weight: 400;
             text-overflow: ellipsis;
 	    white-space: wrap;
-
-
-
-
             a {
 		border: none;
 
@@ -116,7 +112,9 @@
             width: 90px;
             max-width: 90px;
             font-size: .77em;
-
+	    .avatar {
+		@include borde(50%);
+	    }
 
         }
     }
