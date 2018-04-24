@@ -53,10 +53,10 @@
                     <div>
 	                    <h5 class="mi-exitometro"> <?php echo esc_html__('Success \'o meter', 'flexieduca'); ?></h5>
 	                    <p>
-	                        <?php echo esc_html__('Progress ', 'flexieduca') . do_shortcode('[wpc_progress_in_ratio]'); ?>
+	                        <?php echo esc_html__('Progress ', 'flexieduca') . do_shortcode('[wpc_progress_in_ratio async="true"]'); ?>
 	                    </p>
 					</div>
-                    <span><?php echo do_shortcode('[wpc_progress_graph]'); ?></span>
+                    <span><?php echo do_shortcode('[wpc_progress_graph async="true"]'); ?></span>
                 </div><!-- .datos -->
 			<?php
 			
