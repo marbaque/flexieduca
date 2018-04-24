@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-04-20 16:34+0000\n"
+"POT-Creation-Date: 2018-04-24 21:51+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-04-20 16:41+0000\n"
+"PO-Revision-Date: 2018-04-24 21:52+0000\n"
 "Last-Translator: Mario Badilla\n"
 "Language-Team: Español\n"
 "X-Generator: Loco https://localise.biz/\n"
@@ -57,11 +57,11 @@ msgstr "Barra lateral de la página de inicio"
 msgid "Add front widgets here."
 msgstr "Agregue widgets a la barra lateral de la página inicial."
 
-#: functions.php:253
+#: functions.php:250
 msgid "Expand child menu"
 msgstr "Expandir submenu"
 
-#: functions.php:254
+#: functions.php:251
 msgid "Collapse child menu"
 msgstr "Colapsar submenu"
 
@@ -159,41 +159,37 @@ msgstr "Continuar con los contenidos"
 msgid "Contents"
 msgstr "Contenidos"
 
-#: header.php:54
-msgid "Hello"
-msgstr "Bienvenida"
-
-#: header.php:59 header.php:72
+#: header.php:64 footer.php:42
 msgid "Login"
 msgstr "Acceder"
 
-#: header.php:71
-msgid "If you already have an account:"
-msgstr "Ya soy usuario del multimedia"
-
-#: header.php:76
-msgid "If you haven not created an account yet:"
-msgstr "No estoy registrado todavia"
-
-#: header.php:77
-msgid "Register"
-msgstr "Registrarse"
-
-#: footer.php:28
+#: footer.php:27
 msgid "https://wordpress.org/"
 msgstr "https://wordpress.org/"
 
 #. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:30
+#: footer.php:29
 #, php-format
 msgid "Proudly powered by %s"
 msgstr "Hecho con %s"
 
 #. translators: 1: Theme name, 2: Theme author.
-#: footer.php:35
+#: footer.php:34
 #, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr "Plantilla: %1$s by %2$s."
+
+#: footer.php:41
+msgid "If you already have an account:"
+msgstr "Ya soy usuario del multimedia"
+
+#: footer.php:46
+msgid "If you haven not created an account yet:"
+msgstr "No estoy registrado todavia"
+
+#: footer.php:47
+msgid "Register"
+msgstr "Registrarse"
 
 #. %s: post date.
 #: inc/template-tags.php:30
@@ -291,6 +287,14 @@ msgstr "Continuar leyendo"
 #: template-parts/content-front.php:50
 msgid "Welcome, "
 msgstr "Hola, "
+
+#: template-parts/content-front.php:54
+msgid "Success 'o meter"
+msgstr "Exitómetro"
+
+#: template-parts/content-front.php:56
+msgid "Progress "
+msgstr "Mi progreso "
 
 #: template-parts/content-front.php:64
 msgid "Welcome!"

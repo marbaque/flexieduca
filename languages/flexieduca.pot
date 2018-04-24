@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-04-20 16:34+0000\n"
+"POT-Creation-Date: 2018-04-24 21:51+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -58,11 +58,11 @@ msgstr ""
 msgid "Add front widgets here."
 msgstr ""
 
-#: functions.php:253
+#: functions.php:250
 msgid "Expand child menu"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:251
 msgid "Collapse child menu"
 msgstr ""
 
@@ -158,40 +158,36 @@ msgstr ""
 msgid "Contents"
 msgstr ""
 
-#: header.php:54
-msgid "Hello"
-msgstr ""
-
-#: header.php:59 header.php:72
+#: header.php:64 footer.php:42
 msgid "Login"
 msgstr ""
 
-#: header.php:71
-msgid "If you already have an account:"
-msgstr ""
-
-#: header.php:76
-msgid "If you haven not created an account yet:"
-msgstr ""
-
-#: header.php:77
-msgid "Register"
-msgstr ""
-
-#: footer.php:28
+#: footer.php:27
 msgid "https://wordpress.org/"
 msgstr ""
 
 #. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:30
+#: footer.php:29
 #, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
 #. translators: 1: Theme name, 2: Theme author.
-#: footer.php:35
+#: footer.php:34
 #, php-format
 msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: footer.php:41
+msgid "If you already have an account:"
+msgstr ""
+
+#: footer.php:46
+msgid "If you haven not created an account yet:"
+msgstr ""
+
+#: footer.php:47
+msgid "Register"
 msgstr ""
 
 #. %s: post date.
@@ -287,6 +283,14 @@ msgstr ""
 
 #: template-parts/content-front.php:50
 msgid "Welcome, "
+msgstr ""
+
+#: template-parts/content-front.php:54
+msgid "Success 'o meter"
+msgstr ""
+
+#: template-parts/content-front.php:56
+msgid "Progress "
 msgstr ""
 
 #: template-parts/content-front.php:64
