@@ -246,32 +246,32 @@ a:hover, a:active {
 }
 
 .formato-actividad {
-	background-image: url("./img/actividad_virtual.png");
-	background-image: none, url("./img/actividad_virtual.svg");
+	background-image: url("../img/actividad_virtual.png");
+	background-image: none, url("../img/actividad_virtual.svg");
 	background-repeat: no-repeat;
 }
 
 .formato-mirada {
 	background-image: url("../img/mirada.png");
-	background-image: none, url("./img/mirada.svg");
+	background-image: none, url("../img/mirada.svg");
 	background-repeat: no-repeat;
 }
 
 .formato-importante {
 	background-image: url("../img/importante.png");
-	background-image: none, url("./img/importante.svg");
+	background-image: none, url("../img/importante.svg");
 	background-repeat: no-repeat;
 }
 
 .formato-ejercicio {
 	background-image: url("../img/ejercicio.png");
-	background-image: none, url("./img/ejercicio.svg");
+	background-image: none, url("../img/ejercicio.svg");
 	background-repeat: no-repeat;
 }
 
 .formato-idea {
 	background-image: url("../img/idea.png");
-	background-image: none, url("./img/idea.svg");
+	background-image: none, url("../img/idea.svg");
 	background-repeat: no-repeat;
 }
 

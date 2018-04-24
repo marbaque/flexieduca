@@ -51,9 +51,9 @@
 		
 				<div class="datos">
                     <div>
-	                    <h5 class="mi-exitometro">Exitómetro</h5>
+	                    <h5 class="mi-exitometro"> <?php echo esc_html__('Success \'o meter', 'flexieduca'); ?></h5>
 	                    <p>
-	                        Actividades completadas <?php echo do_shortcode('[wpc_progress_in_ratio]'); ?>
+	                        <?php echo esc_html__('Progress ', 'flexieduca') . do_shortcode('[wpc_progress_in_ratio]'); ?>
 	                    </p>
 					</div>
                     <span><?php echo do_shortcode('[wpc_progress_graph]'); ?></span>
