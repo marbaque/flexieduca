@@ -1819,6 +1819,10 @@ li.flexieduca-search, .widget_search {
 	}
 }
 
+.archive-view .wpc-list li {
+	margin-bottom: .5em;
+}
+
 .archive-view p.post_post-type {
 	font-size: .6em;
 	text-transform: uppercase;

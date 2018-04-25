@@ -89,7 +89,7 @@ function my_custom_posttypes() {
     );
     register_post_type('caso', $argsC);
 	
-	//Actividades
+//Actividades
     $labelsA = array(
         'name' => 'Actividad de autoevaluación',
         'singular_name' => 'Actividad',
@@ -117,14 +117,14 @@ function my_custom_posttypes() {
         'query_var' => true,
         'rewrite' => array('slug' => 'actividades'),
         'capability_type' => 'post',
-        'has_archive' => true,
+        'has_archive' => false,
         'hierarchical' => false,
         'menu_position' => 5,
         'supports' => array(
             'title',
             'editor',
             'revisions',
-			'comments'
+	    'comments',
         ),
     );
     register_post_type('actividad', $argsA);

@@ -55,7 +55,7 @@
 		    wp_get_current_user();
 		    ?>
                     
-                    <form action="<?php echo get_edit_user_link(); ?>">
+                    <form action="<?php echo get_dashboard_url(); ?>">
                         <button tabindex="0" role="button"><?php echo get_avatar( $current_user->user_email, 32 ); ?><span><?php echo $current_user->display_name; ?></span></button>
                     </form>
                     

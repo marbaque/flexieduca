@@ -62,8 +62,8 @@
 			
 			} else {
 			    echo __('Welcome!', 'flexieduca');
-			    echo '<h5 class="mi-exitometro">Exitómetro</h5>';
-			    echo '<p>Acceda al multimedia para guardar su progreso.</p>';
+			    echo '<p><a id="user" href="' . wp_login_url(get_permalink()) . '">';
+			    echo 'Acceda</a> al multimedia para guardar su progreso.</p>';
 			}
 			?>
             </div><!-- exitometro -->

@@ -242,7 +242,7 @@ add_filter( 'excerpt_length', 'flexieduca_excerpt_length' );
 // Dar a actividades el mismo template de multimedia
 /************************************************************************/
 add_filter('template_include', function( $template ) {
-    if (is_singular(array('actividad'))) {
+    if ( is_singular('actividad') && !is_single('caso-nuevo') ) {
         $locate = locate_template('single-multimedia.php', false, false);
         if (!empty($locate)) {
             $template = $locate;
