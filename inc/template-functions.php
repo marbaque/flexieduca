@@ -128,9 +128,15 @@ function my_mce_before_init_insert_formats( $init_array ) {
             'wrapper' => true,
         ),
         array(
-	        'title' => 'Llamada de comentario',
+	        'title' => 'Recuadro de comentario',
 	        'block' => 'div',
 	        'classes' => 'comentario-inicial',
+	        'wrapper' => true,
+        ),
+	array(
+	        'title' => 'Recuadro de comentario + H5P',
+	        'block' => 'div',
+	        'classes' => 'comentario-h5p',
 	        'wrapper' => true,
         ),
         array(
