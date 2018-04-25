@@ -1654,10 +1654,6 @@ li.flexieduca-search, .widget_search {
 	border-radius: 10px;
 	border: 5px solid #937931;
 	background-color: #DDBE59;
-	word-break: normal;
-	-webkit-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
 }
 
 .home aside.side-content .menu li a:before {
