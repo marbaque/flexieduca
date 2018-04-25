@@ -275,16 +275,28 @@ a:hover, a:active {
 	background-repeat: no-repeat;
 }
 
-.comentario-inicial {
+.comentario-inicial, .comentario-h5p {
 	background-image: url("../img/avatar_comentario.png");
 	background-image: none, url("../img/avatar_comentario.svg");
 	background-repeat: no-repeat;
 	background-color: white;
+	background-size: 100px;
+	padding: 130px 2em 1.2em;
 }
 
 @media screen and (min-width: 900px) {
-	.comentario-inicial {
-		background-size: 100px;
+	.comentario-inicial, .comentario-h5p {
+		padding: 1em 2em 1.2em 140px;
+	}
+}
+
+.comentario-h5p {
+	padding: 130px 0 1.2em;
+}
+
+@media screen and (min-width: 900px) {
+	.comentario-h5p {
+		padding: 1em 2em 1.2em 140px;
 	}
 }
 
