@@ -75,5 +75,7 @@ window.addEventListener('scroll', function () {
 
     $('#user').on('click', function () {           // Click handler to open modal
 	modal.open({content: $content, width: 320});
+	
+	$('.modal').wrap( '<div class="overlay"/>' );
     });
 })( jQuery );

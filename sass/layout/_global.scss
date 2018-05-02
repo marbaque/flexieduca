@@ -334,6 +334,14 @@
 }
 
 //modal window
+.overlay {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.75);
+    z-index: 999;
+}
 .modal {
     position: absolute;
     z-index: 1000;
@@ -342,7 +350,7 @@
     border: 3px solid $color__borde-recuadro;
     @include borde(4px);
     box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.41);
-    &:before {
+    &:after {
 	content: "";
 	display: block;
 	position: absolute;
