@@ -2480,6 +2480,7 @@ ul.accordion button:focus {
 
 .single-caso .case-content .case__wrap .case-trends {
 	display: block;
+	padding: .5em 1em;
 	margin: .5em 0;
 	border: none;
 }
