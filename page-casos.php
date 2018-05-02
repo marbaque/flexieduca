@@ -16,66 +16,66 @@ get_header();
 	echo '</div>';
     }
     ?>
-    
+
 
     <div class="case-index__wrap">
         <main id="main" class="site-main" role="main">
-			<header class="entry-header">
-		        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-		    </header><!-- .entry-header -->
-            <?php
-            while (have_posts()) : the_post();
+	    <header class="entry-header">
+		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+	    </header><!-- .entry-header -->
+	    <?php
+	    while (have_posts()) : the_post();
 
-                if (has_post_thumbnail()) {
-                    ?>
-                    <figure class="featured-image full-bleed">
-                        <?php
-                        the_post_thumbnail('flexieduca-full-bleed');
-                        ?>
-                    </figure>
-                <?php
-                }
-                
-                get_template_part('template-parts/auxiliar');
-                
-                the_content();
+		if ( has_post_thumbnail() ) {
+		    ?>
+		    <figure class="featured-image full-bleed">
+			<?php
+			the_post_thumbnail('flexieduca-full-bleed');
+			?>
+		    </figure>
+		    <?php
+		}
+		
+		get_template_part('template-parts/auxiliar');
 
-                wp_link_pages(array(
-                    'before' => '<div class="page-links">' . esc_html__('Pages:', 'flexieduca'),
-                    'after'  => '</div>',
-                ));
-                ?>
-                </main><!-- #main -->
-		        <section class="case-gallery">
-		
-		            <h2 class="gallery-title">
-		            	<?php echo esc_html__('Case list', 'flexieduca'); ?>
-		            </h2>
-		            <?php
-						global $post;
-						$argsC = array( 
-							'post_type'      => 'caso',
-			                'posts_per_page' => -1,
-			                'order'          => 'asc',
-		                );
-						$myposts = get_posts( $argsC );
-						
-						foreach( $myposts as $post ) :  setup_postdata($post); ?>
-						    <?php get_template_part('template-parts/content', 'case-item'); ?>
-						<?php endforeach; 
-							wp_reset_postdata(); ?>
-		
-					
-		
-		
-		
-		        </section><!-- .case-gallery -->
-                
-                <?php
-				wp_reset_postdata();
-            endwhile; // End of the loop.
-            ?>
-        
+		the_content();
+
+		wp_link_pages(array(
+		    'before' => '<div class="page-links">' . esc_html__('Pages:', 'flexieduca'),
+		    'after'	 => '</div>',
+		));
+		?>
+    	</main><!-- #main -->
+    	<section class="case-gallery">
+
+    	    <h2 class="gallery-title">
+		    <?php echo esc_html__('Case list', 'flexieduca'); ?>
+    	    </h2>
+	    <?php
+
+	    global $post;
+	    $args = array( 
+		'posts_per_page' => -1, 
+		'post_type' => 'caso'
+	    );
+
+	    $myposts = get_posts( $args );
+	    foreach ( $myposts as $post ) : 
+		setup_postdata( $post ); ?>
+		<?php get_template_part('template-parts/content', 'case-item'); ?>
+	    <?php endforeach; 
+	    wp_reset_postdata();?>
+
+
+
+
+    	</section><!-- .case-gallery -->
+
+	    <?php
+	    wp_reset_postdata();
+	endwhile; // End of the loop.
+	?>
+
 
 
     </div> <!-- .case-index__wrap -->
