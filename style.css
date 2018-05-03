@@ -336,21 +336,16 @@ blockquote {
 	margin: 2em 0;
 	position: relative;
 	border-radius: 0.2em;
-	padding-left: 40px;
-	font-size: 1.25em;
+	padding: 10px 20px 20px;
+	font-size: 1em;
 	font-weight: 300;
 	line-height: 1.55;
+	background: #F1EEE5;
+	color: #393A38;
 }
 
-blockquote:before {
-	content: "\0201F";
-	left: -12px;
-	top: -10px;
-	position: absolute;
-	font-size: 100px;
-	font-weight: 700;
-	line-height: 1;
-	color: #DDBE59;
+blockquote p {
+	margin: .25em 0;
 }
 
 blockquote p:last-child {
@@ -359,10 +354,9 @@ blockquote p:last-child {
 
 @media screen and (min-width: 900px) {
 	blockquote {
-		padding-left: 0;
-	}
-	blockquote:before {
-		left: -60px;
+		width: 40%;
+		float: left;
+		margin: .5em 2em 1em -3em;
 	}
 }
 
@@ -628,6 +622,7 @@ a:visited {
 a:hover, a:focus, a:active {
 	color: #D96C70;
 	border-bottom: 3px solid #D96C70;
+	opacity: .8;
 }
 
 a:focus {
@@ -2496,15 +2491,23 @@ ul.accordion button:focus {
 	border-radius: 2px;
 }
 
-.single-caso .case-content .case__wrap .case-trends a:hover {
+.single-caso .case-content .case__wrap .case-trends:before {
+	font-family: 'Fontawesome';
+	content: "\f12e";
+	margin-right: .25em;
+	left: -2.2em;
+	text-align: center;
 	color: white;
+	background-color: #D96C70;
+	padding: .5em;
+	line-height: 1;
+	border-radius: 50%;
 }
 
 .single-caso .case-content .case__wrap .enlace {
 	margin: .5em 0;
 	display: block;
-	padding: .5em 1em;
-	overflow: hidden;
+	padding: .75em 1em .5em;
 }
 
 .single-caso .case-content .case__wrap .enlace a {
@@ -2516,14 +2519,13 @@ ul.accordion button:focus {
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 	-ms-word-break: break-all;
-	/* This is the dangerous one in WebKit, as it breaks things wherever */
-	word-break: break-all;
 	/* Instead use this non-standard one: */
 	word-break: break-word;
 	/* Adds a hyphen where the word breaks, if supported (No Blink) */
 	-ms-hyphens: auto;
 	-webkit-hyphens: auto;
 	hyphens: auto;
+	line-height: 1.2;
 }
 
 .single-caso .case-content .case__wrap .enlace a:before {

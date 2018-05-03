@@ -15,30 +15,23 @@ blockquote {
     margin: 2em 0;
     position: relative;
     @include borde(.2em);
-    padding-left: 40px;
-    font-size: 1.25em;
+    padding: 10px 20px 20px;
+    font-size: 1em;
     font-weight: 300;
     line-height: 1.55;
-    &:before{
-	content: "\0201F";
-	left: -12px;
-	top: -10px;
-	position: absolute;
-	font-size: 100px;
-	font-weight: 700;
-	line-height: 1;
-	color: $color__skin;
+    background: $color__sombreado;
+    color: $color__borde-recuadro;
+    p{
+	    margin: .25em 0;
     }
     p:last-child {
-	margin-bottom: 0;
+		margin-bottom: 0;
     }
 
     @media screen and (min-width:$break__medium) {
-	padding-left: 0;
-	
-	&:before {
-	    left: -60px;
-	}
+		width: 40%;
+		float: left;
+		margin: .5em 2em 1em -3em;
     }
 }
 

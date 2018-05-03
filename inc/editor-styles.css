@@ -59,17 +59,6 @@ blockquote {
 	line-height: 1.55;
 }
 
-blockquote:before {
-	content: "\0201F";
-	left: -12px;
-	top: -10px;
-	position: absolute;
-	font-size: 100px;
-	font-weight: 700;
-	line-height: 1;
-	color: #DDBE59;
-}
-
 blockquote p:last-child {
 	margin-bottom: 0;
 }

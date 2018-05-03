@@ -11,6 +11,7 @@ a {
         &:active {
         color: $color__interactive;
         border-bottom: 3px solid $color__interactive;
+        opacity: .8;
     }
     &:focus {
         outline: thin dotted;

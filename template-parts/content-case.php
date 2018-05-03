@@ -42,7 +42,7 @@
 			    <?php endif; ?>
 		</div>
 		<div class="case-trends">
-			<?php the_terms($post->ID, 'tendencia', 'Estrategia utilizada: ', ' ', ' '); ?>
+			<?php the_terms($post->ID, 'tendencia', __('Strategy: ', 'flexieduca'), ' ', ' '); ?>
     		</div>
 
 		
