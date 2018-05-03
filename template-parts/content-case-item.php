@@ -2,7 +2,7 @@
 
 
     <?php if ( has_post_thumbnail() ) : ?>
-	<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'flexieduca-case-thumb' ); ?>
+	<?php $url = get_the_post_thumbnail_url($post->ID, 'flexieduca-case-thumb'); ?>
 	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 	    <img src="<?php echo $url ?>">
 	</a>
