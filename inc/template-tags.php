@@ -171,9 +171,9 @@ function flexieduca_post_navigation() {
 
 	the_post_navigation( array(
 		'prev_text' => '<span class="screen-reader-text">' . __( 'Previous', 'flexieduca' ) . '</span> ' .
-			'<span class="post-title">&#8672; %title</span>',
+			'<span class="arrow">&#8672;</span><span class="post-title">%title</span>',
 		'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'flexieduca' ) . '</span> ' .
-			'<span class="post-title">%title &#8674;</span>',
+			'<span class="arrow">&#8674;</span><span class="post-title">%title </span>',
 	) );
 
 }

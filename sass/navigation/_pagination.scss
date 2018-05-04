@@ -33,24 +33,36 @@
 	        border: 0;
 	        @include borde(0);
 			overflow: hidden;
+			.post-title {
+			    /* Required for text-overflow to do anything */
+		        text-overflow: ellipsis;
+		        white-space: nowrap;
+		        overflow: hidden;
+		        display: block;
+		    }
 	    }
 	
 	    .nav-previous {
 	        margin-right: auto;
+	        .arrow {
+		        float: left;
+		        margin-right: 2px;
+	        }
 	    }
 	    .nav-next {
 	        margin-left: auto;
+	        .arrow {
+		        float: right;
+		        margin-left: 2px;
+	        }
 	    }
+	    
 	}
 	
 	a {
 		border: none;
 		display: block;
-		padding: 1em .5em .5em;
-        /* Required for text-overflow to do anything */
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;  
+		padding: 1em .5em .5em; 
 		height: 100%;
 		&:hover {
 			background: $color__interactive;

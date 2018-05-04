@@ -809,22 +809,36 @@ ul#footer-menu li a {
 	overflow: hidden;
 }
 
+.ebook-nav .nav-links .nav-previous .post-title, .ebook-nav .nav-links .nav-next .post-title {
+	/* Required for text-overflow to do anything */
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+}
+
 .ebook-nav .nav-links .nav-previous {
 	margin-right: auto;
+}
+
+.ebook-nav .nav-links .nav-previous .arrow {
+	float: left;
+	margin-right: 2px;
 }
 
 .ebook-nav .nav-links .nav-next {
 	margin-left: auto;
 }
 
+.ebook-nav .nav-links .nav-next .arrow {
+	float: right;
+	margin-left: 2px;
+}
+
 .ebook-nav a {
 	border: none;
 	display: block;
 	padding: 1em .5em .5em;
-	/* Required for text-overflow to do anything */
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
 	height: 100%;
 }
 
