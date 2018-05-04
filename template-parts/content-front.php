@@ -47,11 +47,11 @@
 				*     return;
 				*/
 				echo get_avatar( $current_user->user_email, 64 );
-			    echo '<h4>' . __('Welcome, ', 'flexieduca') . $current_user->display_name . '</h4>'; ?>
+			    echo '<p class="name">' . __('Welcome, ', 'flexieduca') . $current_user->display_name . '</p>'; ?>
 		
 				<div class="datos">
                     <div>
-	                    <h5 class="mi-exitometro"> <?php echo esc_html__('Success \'o meter', 'flexieduca'); ?></h5>
+	                    <h3 class="mi-exitometro"> <?php echo esc_html__('Success \'o meter', 'flexieduca'); ?></h3>
 	                    <p>
 	                        <?php echo esc_html__('Progress ', 'flexieduca') . do_shortcode('[wpc_progress_in_ratio course=all]'); ?>
 	                    </p>

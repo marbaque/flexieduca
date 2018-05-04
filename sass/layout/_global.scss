@@ -188,17 +188,15 @@
             @include borde(10px);
 
             .avatar {
-		float: left;
-		margin-right: 10px;
-		@include borde(50%);
+				float: left;
+				margin-right: 10px;
+				@include borde(50%);
             }
-
-            h4{
-		margin-top: 0;
-		padding-top: 20px;
-		clear: none;
-	    }
+            .name {
+	            font-weight: 700;
+            }
             .datos{
+	            clear: both;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -210,10 +208,12 @@
                     text-transform: uppercase;
                     font-weight: 700;
                     letter-spacing: 1px;
-                    margin: 0 0 .5em;
+                    margin-top: 0;
+                    margin-bottom: .5em;
+                    line-height: 1;
                 }
-                p{
-		    margin: 0;
+                p {
+					margin: 0;
                 }
                 .porcentaje{
                     border: 10px solid #B4CF7E;

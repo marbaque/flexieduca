@@ -1569,13 +1569,12 @@ li.flexieduca-search, .widget_search {
 	border-radius: 50%;
 }
 
-.home aside.side-content .exitometro h4 {
-	margin-top: 0;
-	padding-top: 20px;
-	clear: none;
+.home aside.side-content .exitometro .name {
+	font-weight: 700;
 }
 
 .home aside.side-content .exitometro .datos {
+	clear: both;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1595,7 +1594,9 @@ li.flexieduca-search, .widget_search {
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 1px;
-	margin: 0 0 .5em;
+	margin-top: 0;
+	margin-bottom: .5em;
+	line-height: 1;
 }
 
 .home aside.side-content .exitometro .datos p {
