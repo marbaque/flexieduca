@@ -290,11 +290,11 @@ msgstr "Hola, "
 
 #: template-parts/content-front.php:54
 msgid "Success 'o meter"
-msgstr ""
+msgstr "Exitómetro"
 
 #: template-parts/content-front.php:56
 msgid "Progress "
-msgstr ""
+msgstr "Mi progreso "
 
 #: template-parts/content-front.php:64
 msgid "Welcome!"

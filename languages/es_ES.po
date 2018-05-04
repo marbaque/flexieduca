@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-04-25 02:22+0000\n"
+"POT-Creation-Date: 2018-05-03 23:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-04-25 02:22+0000\n"
+"PO-Revision-Date: 2018-05-03 23:32+0000\n"
 "Last-Translator: Mario Badilla\n"
 "Language-Team: Español\n"
 "X-Generator: Loco https://localise.biz/\n"
@@ -279,10 +279,14 @@ msgid ""
 msgstr "Parece que no puedo encontrar lo que busca. Intente una búsqueda."
 
 #. %s: Name of current post.
-#: template-parts/content.php:49 template-parts/content-case-item.php:32
+#: template-parts/content.php:49 template-parts/content-case-item.php:21
 #, php-format
 msgid "Continue reading %s"
 msgstr "Continuar leyendo"
+
+#: template-parts/content-case.php:45
+msgid "Strategy: "
+msgstr "Estrategia: "
 
 #: template-parts/content-front.php:50
 msgid "Welcome, "
