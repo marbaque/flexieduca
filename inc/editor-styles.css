@@ -198,12 +198,13 @@ a:hover, a:active {
 .formato-ejercicio,
 .formato-idea,
 .formato-recuadro,
-.comentario-inicial {
-	padding: 1em 2em 1.2em 100px;
+.comentario-inicial,
+.comentario-h5p {
+	padding: 120px 2em 1.2em;
 	margin: .5em -1em 2em;
 	height: auto;
-	background-position: 1.25em 1.75em;
-	background-size: 60px;
+	background-position: center 20px;
+	background-size: 80px;
 	background-color: #F1EEE5;
 	font-size: .89em;
 	border-top: none;
@@ -218,18 +219,19 @@ a:hover, a:active {
 	.formato-ejercicio,
 	.formato-idea,
 	.formato-recuadro,
-	.comentario-inicial {
-		padding-left: 140px;
+	.comentario-inicial,
+	.comentario-h5p {
+		padding: 1em 2em 1.2em 140px;
 		margin: 2em 0;
 		font-size: .96em;
 		line-height: 1.45;
 		background-size: 80px;
 		border: 3px solid #393A38;
 		background-color: #F1EEE5;
+		background-position: 20px 20px;
 		border-radius: 4px;
 	}
 }
-
 .formato-recuadro {
 	padding: 1em 2em 1.2em;
 }

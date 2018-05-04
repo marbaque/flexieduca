@@ -69,42 +69,42 @@ ul.accordion {
     padding: 1em 1.5em;
     font-size: .9em;
     p, li {
-	margin: .25em 0;
+		margin: .25em 0;
     }
 
     p:first-child {
-	margin-top: 0;
+		margin-top: 0;
     }
     p:last-child {
-	margin-bottom: 0;
+		margin-bottom: 0;
     }
-
+	
     &.resumen {	    
-	@include vector-bg-with-fallback(resumen);
-	background-position: 2em 1em;
-	background-size: 60px;
-	padding-left: 100px;
-	@media screen and (min-width: $break__small) {
-	    background-size: 80px;
-	    padding-left: 130px;
-	}
+		@include vector-bg-with-fallback(resumen);
+		background-position: 2em 1em;
+		background-size: 60px;
+		padding-left: 100px;
+		@media screen and (min-width: $break__small) {
+		    background-size: 80px;
+		    padding-left: 130px;
+		}
     }
 
     &.audio {
-	text-align: center;
-	audio {
-	    width: 80%;
-	    margin: 0 auto;
-	    display: block;
+		text-align: center;
+		audio {
+		    width: 80%;
+		    margin: 0 auto;
+		    display: block;
+		}
+		a.descargar-audio {
+		    width: auto;
+		    margin: 0 auto;
+		    display: inline-block;
+		    margin: 1em 0;
+		    border: none,
+		}
 	}
-	a.descargar-audio {
-	    width: auto;
-	    margin: 0 auto;
-	    display: inline-block;
-	    margin: 1em 0;
-	    border: none,
-	}
-    }
 
 
 }
