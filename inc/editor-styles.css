@@ -198,6 +198,8 @@ a:hover, a:active {
 .formato-ejercicio,
 .formato-idea,
 .formato-recuadro,
+.formato-resumen,
+.formato-nota,
 .comentario-inicial,
 .comentario-h5p {
 	padding: 120px 2em 1.2em;
@@ -210,6 +212,21 @@ a:hover, a:active {
 	border-top: none;
 	border-bottom: none;
 	position: relative;
+	/*
+    a {
+	    word-break: break-all;
+	    word-wrap: break-word;
+	    background-color: $color__skin;
+	    border: none;
+	    padding: 0 .25em;
+	    
+	    &:hover {
+		    background-color: $color__interactive;
+		    border: none;
+		    color: black;
+	    }
+	}
+    */
 }
 
 @media screen and (min-width: 900px) {
@@ -219,6 +236,8 @@ a:hover, a:active {
 	.formato-ejercicio,
 	.formato-idea,
 	.formato-recuadro,
+	.formato-resumen,
+	.formato-nota,
 	.comentario-inicial,
 	.comentario-h5p {
 		padding: 1em 2em 1.2em 140px;
@@ -232,43 +251,62 @@ a:hover, a:active {
 		border-radius: 4px;
 	}
 }
+
 .formato-recuadro {
 	padding: 1em 2em 1.2em;
 }
 
 .formato-actividad {
-	background-image: url("../img/actividad_virtual.png");
-	background-image: none, url("../img/actividad_virtual.svg");
+	background-image: url("./img/actividad_virtual.png");
+	background-image: none, url("./img/actividad_virtual.svg");
 	background-repeat: no-repeat;
 }
 
 .formato-mirada {
-	background-image: url("../img/mirada.png");
-	background-image: none, url("../img/mirada.svg");
+	background-image: url("./img/mirada.png");
+	background-image: none, url("./img/mirada.svg");
 	background-repeat: no-repeat;
 }
 
 .formato-importante {
-	background-image: url("../img/importante.png");
-	background-image: none, url("../img/importante.svg");
+	background-image: url("./img/importante.png");
+	background-image: none, url("./img/importante.svg");
 	background-repeat: no-repeat;
 }
 
 .formato-ejercicio {
-	background-image: url("../img/ejercicio.png");
-	background-image: none, url("../img/ejercicio.svg");
+	background-image: url("./img/ejercicio.png");
+	background-image: none, url("./img/ejercicio.svg");
 	background-repeat: no-repeat;
 }
 
 .formato-idea {
-	background-image: url("../img/idea.png");
-	background-image: none, url("../img/idea.svg");
+	background-image: url("./img/idea.png");
+	background-image: none, url("./img/idea.svg");
+	background-repeat: no-repeat;
+}
+
+.formato-busqueda {
+	background-image: url("./img/busqueda.png");
+	background-image: none, url("./img/busqueda.svg");
+	background-repeat: no-repeat;
+}
+
+.formato-nota {
+	background-image: url("./img/nota.png");
+	background-image: none, url("./img/nota.svg");
+	background-repeat: no-repeat;
+}
+
+.formato-resumen {
+	background-image: url("./img/resumen.png");
+	background-image: none, url("./img/resumen.svg");
 	background-repeat: no-repeat;
 }
 
 .comentario-inicial, .comentario-h5p {
-	background-image: url("../img/avatar_comentario.png");
-	background-image: none, url("../img/avatar_comentario.svg");
+	background-image: url("./img/avatar_comentario.png");
+	background-image: none, url("./img/avatar_comentario.svg");
 	background-repeat: no-repeat;
 	background-color: white;
 	background-size: 100px;

@@ -162,6 +162,8 @@ ul.accordion {
 .formato-ejercicio,
 .formato-idea,
 .formato-recuadro,
+.formato-resumen,
+.formato-nota,
 .comentario-inicial{
     padding: 120px 2em 1.2em;
     margin: .5em -1em 2em;
@@ -185,21 +187,6 @@ ul.accordion {
 	background-position: 20px 20px;
 	@include borde(4px);
     }
-    /*
-    a {
-	    word-break: break-all;
-	    word-wrap: break-word;
-	    background-color: $color__skin;
-	    border: none;
-	    padding: 0 .25em;
-	    
-	    &:hover {
-		    background-color: $color__interactive;
-		    border: none;
-		    color: black;
-	    }
-	}
-    */
 }
 .formato-recuadro {
 	padding: 1em 2em 1.2em;
@@ -219,6 +206,15 @@ ul.accordion {
 }
 .formato-idea{
     @include vector-bg-with-fallback(idea);
+}
+.formato-busqueda{
+    @include vector-bg-with-fallback(busqueda);
+}
+.formato-nota{
+    @include vector-bg-with-fallback(nota);
+}
+.formato-resumen{
+    @include vector-bg-with-fallback(resumen);
 }
 
 .comentario-inicial {

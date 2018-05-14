@@ -2288,6 +2288,8 @@ ul.accordion button:focus {
 .formato-ejercicio,
 .formato-idea,
 .formato-recuadro,
+.formato-resumen,
+.formato-nota,
 .comentario-inicial,
 .comentario-h5p {
 	padding: 120px 2em 1.2em;
@@ -2300,21 +2302,6 @@ ul.accordion button:focus {
 	border-top: none;
 	border-bottom: none;
 	position: relative;
-	/*
-    a {
-	    word-break: break-all;
-	    word-wrap: break-word;
-	    background-color: $color__skin;
-	    border: none;
-	    padding: 0 .25em;
-	    
-	    &:hover {
-		    background-color: $color__interactive;
-		    border: none;
-		    color: black;
-	    }
-	}
-    */
 }
 
 @media screen and (min-width: 900px) {
@@ -2324,6 +2311,8 @@ ul.accordion button:focus {
 	.formato-ejercicio,
 	.formato-idea,
 	.formato-recuadro,
+	.formato-resumen,
+	.formato-nota,
 	.comentario-inicial,
 	.comentario-h5p {
 		padding: 1em 2em 1.2em 140px;
@@ -2369,6 +2358,24 @@ ul.accordion button:focus {
 .formato-idea {
 	background-image: url("./img/idea.png");
 	background-image: none, url("./img/idea.svg");
+	background-repeat: no-repeat;
+}
+
+.formato-busqueda {
+	background-image: url("./img/busqueda.png");
+	background-image: none, url("./img/busqueda.svg");
+	background-repeat: no-repeat;
+}
+
+.formato-nota {
+	background-image: url("./img/nota.png");
+	background-image: none, url("./img/nota.svg");
+	background-repeat: no-repeat;
+}
+
+.formato-resumen {
+	background-image: url("./img/resumen.png");
+	background-image: none, url("./img/resumen.svg");
 	background-repeat: no-repeat;
 }
 

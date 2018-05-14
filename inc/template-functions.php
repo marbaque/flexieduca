@@ -112,44 +112,56 @@ function my_mce_before_init_insert_formats($init_array) {
 	    'wrapper'	 => true,
 	),
 	array(
-	    'title'		 => 'Ejercicio de autoevaluación',
-	    'block'		 => 'div',
-	    'classes'	 => 'formato-ejercicio',
-	    'wrapper'	 => true,
+	    'title'	=> 'Ejercicio de autoevaluación',
+	    'block'	=> 'div',
+	    'classes'	=> 'formato-ejercicio',
+	    'wrapper'	=> true,
 	),
 	array(
-	    'title'		 => 'Idea',
-	    'block'		 => 'div',
-	    'classes'	 => 'formato-idea',
-	    'wrapper'	 => true,
+	    'title'	=> 'Idea',
+	    'block'	=> 'div',
+	    'classes'	=> 'formato-idea',
+	    'wrapper'	=> true,
 	),
 	array(
-	    'title'		 => 'Pie de tabla',
-	    'block'		 => 'div',
-	    'classes'	 => 'table-source',
-	    'wrapper'	 => true,
+	    'title'	=> 'Pie de tabla',
+	    'block'	=> 'div',
+	    'classes'	=> 'table-source',
+	    'wrapper'	=> true,
 	),
 	array(
-	    'title'		 => 'Recuadro de comentario',
-	    'block'		 => 'div',
-	    'classes'	 => 'comentario-inicial',
-	    'wrapper'	 => true,
+	    'title'	=> 'Comentario',
+	    'block'	=> 'div',
+	    'classes'	=> 'comentario-inicial',
+	    'wrapper'	=> true,
 	),
 	array(
-	    'title'		 => 'Recuadro de comentario + H5P',
-	    'block'		 => 'div',
-	    'classes'	 => 'comentario-h5p',
-	    'wrapper'	 => true,
+	    'title'	=> 'Recuadro de comentario + H5P',
+	    'block'	=> 'div',
+	    'classes'	=> 'comentario-h5p',
+	    'wrapper'	=> true,
 	),
 	array(
-	    'title'		 => 'Fuente consultada (APA)',
-	    'block'		 => 'p',
-	    'classes'	 => 'fuente-apa',
-	    'wrapper'	 => false,
+	    'title'	=> 'Fuente consultada (APA)',
+	    'block'	=> 'p',
+	    'classes'	=> 'fuente-apa',
+	    'wrapper'	=> false,
+	),
+	array(
+	    'title'	=> 'Recuadro para resumen',
+	    'block'	=> 'div',
+	    'classes'	=> 'formato-resumen',
+	    'wrapper'	=> false,
+	),
+	array(
+	    'title'	=> 'Recuadro con nota',
+	    'block'	=> 'div',
+	    'classes'	=> 'formato-nota',
+	    'wrapper'	=> false,
 	),
     );
     // Insert the array, JSON ENCODED, into 'style_formats'
-    $init_array['style_formats']	 = json_encode($style_formats);
+    $init_array['style_formats'] = json_encode($style_formats);
 
     return $init_array;
 }
