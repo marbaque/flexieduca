@@ -26,7 +26,7 @@
             <header id="masthead" class="site-header">
 
                 <nav id="site-navigation" class="main-navigation">
-                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><i class="fa fa-bars fa-2x" aria-hidden="true"></i> <span><?php esc_html_e('Contents', 'flexieduca'); ?></span></button>
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php esc_html_e('Contents', 'flexieduca'); ?></span></button>
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'menu-1',

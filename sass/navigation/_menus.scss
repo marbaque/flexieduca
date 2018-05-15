@@ -51,36 +51,37 @@
         padding-left: 0;
 
         ul { //submenus
-             position: relative;
-             top: 100%;
-             z-index: 99999;
-
-             ul { //submenu 2
+	        display: none;
+			position: relative;
+			top: 100%;
+			z-index: 99999;
+			background: rgba(243, 240, 231, 0.5);
+			
+			ul { //submenu 2
+				top: 100%;
+			}
+			
+			li {
+				padding-left: 1.25em;
+				position: relative;
+			 
+				&:hover > ul,
+				&.focus > ul {
 				
-                top: 100%;
-             }
-
-             li {
-	             padding-left: 1.25em;
-	             position: relative;
-	             
-                 &:hover > ul,
-                     &.focus > ul {
-
-                 }
-             }
-
-             a {
-                 //width: 200px;
-             }
-
-             :hover > a,
-                 .focus > a {
-             }
-
-             a:hover,
-                 a.focus {
-             }
+				}
+			}
+			
+			a {
+			 //width: 200px;
+			}
+			
+			:hover > a,
+			.focus > a {
+			}
+			
+			a:hover,
+			a.focus {
+			}
         }
 
         li:hover > ul,
@@ -115,8 +116,15 @@
     .current_page_ancestor > a,
     .current-menu-ancestor > a {
 	    font-weight: 700;
-	    
     }
+    .menu-item-has-children,
+	.page_item_has_children {
+		//min-width: 218px;
+	}
+	.menu-item-has-children > a,
+	.page_item_has_children > a {
+		padding-right: 2em;
+	}
 }
 
 
@@ -126,6 +134,25 @@
 .main-navigation.toggled ul {
     display: block;    
 }
+
+//boton para desplegar submenus
+button.dropdown-toggle {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: none;
+	background: inherit;
+	color: white;
+	line-height: 1.5em;
+	padding: .4em 1em .4em .5em;
+	color: $color__text-screen;
+}
+/* Toggle small menu and children on */
+.toggled-on ul,
+.sub-menu.toggled-on {
+	display: block;
+}
+
 
 @media screen and (min-width: $break__small) {
     .menu-toggle {

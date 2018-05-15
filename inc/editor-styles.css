@@ -170,8 +170,9 @@ audio {
 ## Links
 --------------------------------------------------------------*/
 a {
-    color: #404040;
-    text-decoration: none;
+	color: #404040;
+	text-decoration: none;
+	border-bottom: 2.5px solid currentcolor;
 }
 
 a:visited {
