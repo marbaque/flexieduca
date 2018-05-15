@@ -164,10 +164,12 @@ ul.accordion {
 .formato-recuadro,
 .formato-resumen,
 .formato-nota,
+.formato-busqueda,
 .comentario-inicial{
     padding: 120px 2em 1.2em;
     margin: .5em -1em 2em;
     height: auto;
+    min-height: 140px;
     background-position: center 20px;
     background-size: 80px;
     background-color: #F1EEE5;
@@ -223,14 +225,14 @@ ul.accordion {
     background-size: 100px;
     padding: 130px 2em 1.2em;
     @media screen and (min-width:$break__medium) {
-	padding: 1em 2em 1.2em 140px;
+		padding: 1em 2em 1.2em 140px;
     }
 }
 .comentario-h5p {
     @extend .comentario-inicial;
     padding: 130px 0 1.2em;
     @media screen and (min-width:$break__medium) {
-	padding: 1em 2em 1.2em 140px;
+		padding: 1em 2em 1.2em 140px;
     }
 }
 
