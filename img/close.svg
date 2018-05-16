@@ -5,11 +5,10 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="metafora" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-HD-Copy" transform="translate(-51.000000, -161.000000)" fill="#333333">
+        <g id="Desktop-HD-Copy" transform="translate(-51.000000, -161.000000)">
             <g id="close" transform="translate(51.000000, 161.000000)">
-                <rect id="Rectangle-14" x="0" y="0" width="8" height="4"></rect>
-                <rect id="Rectangle-14-Copy" x="0" y="16" width="32" height="4"></rect>
-                <rect id="Rectangle-14-Copy-4" x="0" y="8" width="18" height="4"></rect>
+                <rect id="Rectangle-14-Copy-2" fill="#FFFFFF" x="0" y="0" width="32" height="20"></rect>
+                <rect id="Rectangle-14-Copy" fill="#333333" x="9" y="8" width="14" height="3"></rect>
             </g>
         </g>
     </g>
