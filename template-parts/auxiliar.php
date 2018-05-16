@@ -4,6 +4,7 @@ $audioURL = get_field('audio_contenido');
 $resumen = get_field('resumen');
 $obj = get_field('objetivos');
 $posts = get_field('contenido_relacionado');
+$meta = get_field('metadatos_audio');
 ?>
 
 <?php if ($audioURL || $resumen || $obj || $posts): ?>
@@ -17,7 +18,12 @@ $posts = get_field('contenido_relacionado');
                         <source src="<?php echo $audioURL; ?>" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
-                   <a class="descargar-audio button" href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fas fa-download"></i> Descargar</a>
+                   <p class="descargar-audio button"><a href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fas fa-download"></i> Descargar</a></p>		   
+		   
+		   <?php if ($meta): ?>
+		   <p class="meta"><?php echo $meta; ?></p>
+		   <?php endif; ?>
+		   
                 </div>
             </li>
         <?php endif; ?>

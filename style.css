@@ -2260,6 +2260,7 @@ ul.accordion button:focus {
 
 .accordion-panel.audio {
 	text-align: center;
+	font-size: .8em;
 }
 
 .accordion-panel.audio audio {
@@ -2268,11 +2269,15 @@ ul.accordion button:focus {
 	display: block;
 }
 
-.accordion-panel.audio a.descargar-audio {
-	width: auto;
-	margin: 0 auto;
-	display: inline-block;
-	margin: 1em 0;
+.accordion-panel.audio p.meta {
+	margin: 1em auto;
+}
+
+.accordion-panel.audio p.descargar-audio {
+	margin: 1em auto;
+}
+
+.accordion-panel.audio p.descargar-audio a {
 	border: none;
 }
 

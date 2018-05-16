@@ -92,17 +92,22 @@ ul.accordion {
 
     &.audio {
 		text-align: center;
+		font-size: .8em;
 		audio {
 		    width: 80%;
 		    margin: 0 auto;
 		    display: block;
 		}
-		a.descargar-audio {
-		    width: auto;
-		    margin: 0 auto;
-		    display: inline-block;
-		    margin: 1em 0;
-		    border: none,
+		p.meta {
+		    margin: 1em auto;
+		    
+		}
+		p.descargar-audio {
+		    a {
+			border: none;
+		    }
+		    
+		    margin: 1em auto;
 		}
 	}
 
