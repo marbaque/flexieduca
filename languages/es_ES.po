@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-03 23:31+0000\n"
+"POT-Creation-Date: 2018-05-17 16:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-05-03 23:32+0000\n"
+"PO-Revision-Date: 2018-05-17 18:08+0000\n"
 "Last-Translator: Mario Badilla\n"
 "Language-Team: Español\n"
 "X-Generator: Loco https://localise.biz/\n"
@@ -99,11 +99,11 @@ msgstr "Anterior"
 msgid "Page"
 msgstr "Página"
 
-#: archive.php:44 inc/template-tags.php:173 inc/template-tags.php:174
+#: archive.php:44 inc/template-tags.php:173
 msgid "Previous"
 msgstr "Anterior"
 
-#: archive.php:45 inc/template-tags.php:176 inc/template-tags.php:177
+#: archive.php:45 inc/template-tags.php:175
 msgid "Next"
 msgstr "Siguiente"
 
@@ -303,6 +303,10 @@ msgstr "Mi progreso "
 #: template-parts/content-front.php:64
 msgid "Welcome!"
 msgstr "Bienvenidos"
+
+#: template-parts/auxiliar.php:21
+msgid "Your browser does not support the audio element."
+msgstr "Su navegador no es compatible con el elemento de audio."
 
 #. Name of the theme
 msgid "Flexieduca"
