@@ -4,7 +4,7 @@ $audioURL = get_field('audio_contenido');
 $resumen = get_field('resumen');
 $obj = get_field('objetivos');
 $posts = get_field('contenido_relacionado');
-$meta = get_field('metadatos_audio');
+$meta = get_field('metadatos_audio'); 
 ?>
 
 <?php if ($audioURL || $resumen || $obj || $posts): ?>
@@ -21,7 +21,9 @@ $meta = get_field('metadatos_audio');
                    <p class="descargar-audio button"><a href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fas fa-download"></i> Descargar</a></p>		   
 		   
 		   <?php if ($meta): ?>
-		   <p class="meta"><?php echo $meta; ?></p>
+			   <p class="meta"><?php echo $meta; ?></p>
+		   <?php else: ?>
+		   	<p class="meta">© Universidad Estatal a Distancia, 2018. <i>Mercadeo digital para la nueva economía</i> [Audio en podcast].</p>
 		   <?php endif; ?>
 		   
                 </div>
