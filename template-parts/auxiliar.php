@@ -5,6 +5,8 @@ $resumen = get_field('resumen');
 $obj = get_field('objetivos');
 $posts = get_field('contenido_relacionado');
 $meta = get_field('metadatos_audio'); 
+$post = get_post( $post );
+$title = isset( $post->post_title ) ? $post->post_title : '';
 ?>
 
 <?php if ($audioURL || $resumen || $obj || $posts): ?>
@@ -23,7 +25,7 @@ $meta = get_field('metadatos_audio');
 		   <?php if ($meta): ?>
 			   <p class="meta"><?php echo $meta; ?></p>
 		   <?php else: ?>
-		   	<p class="meta">© Universidad Estatal a Distancia, 2018. <i>Mercadeo digital para la nueva economía</i> [Audio en podcast].</p>
+		   	<p class="meta">© Universidad Estatal a Distancia, 2018. <i><?php echo $title; ?></i>. Mercadeo digital para la nueva economía [Audio en podcast].</p>
 		   <?php endif; ?>
 		   
                 </div>
