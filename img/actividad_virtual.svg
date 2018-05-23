@@ -10,7 +10,7 @@
 			transform: rotate(45deg);
 	  		transform-origin: 37.5px 37.5px;
 	  
-	  		animation: dash .5s linear infinite;
+	  		animation: dash 1s linear infinite;
 		}
 	  @keyframes dash {
 	  	to {

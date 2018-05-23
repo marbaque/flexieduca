@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="121px" height="113px" viewBox="0 0 121 113" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
     <title>idea</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M51,96 L69,96 C70.1045695,96 71,96.8954305 71,98 L71,105 C71,108.865993 67.8659932,112 64,112 L56,112 C52.1340068,112 49,108.865993 49,105 L49,98 C49,96.8954305 49.8954305,96 51,96 Z" id="path-1"></path>
-    </defs>
-    <g id="iconos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-57.000000, -110.000000)">
-        <g id="idea" transform="translate(58.000000, 111.000000)">
-            <path d="M58.821089,0.5 L58.821089,13.7180444 M100.576477,17.1873043 L91.229908,26.5338731 M118.302289,58.5125282 L105.084244,58.5125282 M101.614985,100.267916 L92.2684157,90.9213473 M18.5343727,101.306424 L27.8809415,91.9598549 M0.808560732,59.9811998 L14.0266051,59.9811998 M17.495865,18.2258119 L26.8424338,27.5723808" id="Line" stroke="#4A4A4A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-            <g id="Combined-Shape">
-                <use fill="#DBD6C6" fill-rule="evenodd" xlink:href="#path-1"></use>
-                <path stroke="#4A4A4A" stroke-width="3" d="M51,97.5 C50.7238576,97.5 50.5,97.7238576 50.5,98 L50.5,105 C50.5,108.037566 52.9624339,110.5 56,110.5 L64,110.5 C67.0375661,110.5 69.5,108.037566 69.5,105 L69.5,98 C69.5,97.7238576 69.2761424,97.5 69,97.5 L51,97.5 Z"></path>
-            </g>
-            <path d="M41.5578302,69.6198411 C36.890933,64.9984202 34,58.5868169 34,51.5 C34,37.4167389 45.4167389,26 59.5,26 C73.5832611,26 85,37.4167389 85,51.5 C85,57.8166131 82.7033006,63.5968032 78.8994197,68.0510527 C78.914802,68.0619261 78.9300997,68.0728219 78.9453125,68.0837402 C72.5340169,75.5277507 69.3283691,82.1665039 69.3283691,88 L50.4902344,88 C50.4902344,82.6907081 47.5127673,76.5639894 41.5578332,69.6198441 Z" id="Combined-Shape" stroke="#4A4A4A" stroke-width="3" fill="#FDD289" stroke-linecap="round" stroke-linejoin="round"></path>
+	<style>
+	@keyframes balancea {
+		from {
+			opacity: .1;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	.line {
+		animation: balancea 1s ease-in 0 infinite alternate;	
+		
+		transform-origin: 50% 30%;
+	} 
+	</style>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="idea" transform="translate(1.000000, 1.000000)" stroke="#4A4A4A" stroke-width="3">
+            <path d="M58.821089,0.5 L58.821089,13.7180444 M100.576477,17.1873043 L91.229908,26.5338731 M118.302289,58.5125282 L105.084244,58.5125282 M101.614985,100.267916 L92.2684157,90.9213473 M18.5343727,101.306424 L27.8809415,91.9598549 M0.808560732,59.9811998 L14.0266051,59.9811998 M17.495865,18.2258119 L26.8424338,27.5723808" id="Line" stroke-linecap="round" stroke-linejoin="round" class="line"></path>
+            <path d="M51,94 L69,94 C70.1045695,94 71,94.8954305 71,96 L71,103 C71,106.865993 67.8659932,110 64,110 L56,110 C52.1340068,110 49,106.865993 49,103 L49,96 C49,94.8954305 49.8954305,94 51,94 Z" id="path-1" fill="#DBD6C6"></path>
+            <path d="M40.2892331,68.841116 C35.1707007,63.7724609 32,56.7403798 32,48.9677419 C32,33.5215846 44.5215846,21 59.9677419,21 C75.4138993,21 87.9354839,33.5215846 87.9354839,48.9677419 C87.9354839,55.8956402 85.4165232,62.2352035 81.2445248,67.1205094 C81.2613957,67.1324351 81.2781739,67.1443853 81.2948589,67.1563602 C74.2631153,75.3207588 70.7472435,82.601972 70.7472435,89 L50.0860635,89 C50.0860635,83.1769057 46.8204545,76.4572787 40.2892364,68.8411193 L40.2892331,68.841116 Z" id="Combined-Shape" fill="#FDD289" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" class="bombillo"></path>
         </g>
     </g>
 </svg>

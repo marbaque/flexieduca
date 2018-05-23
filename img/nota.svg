@@ -1,22 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="96px" height="97px" viewBox="0 0 96 97" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
     <title>nota</title>
     <desc>Created with Sketch.</desc>
+	<style>
+	.hi1 {
+		animation: dash 2s linear infinite alternate;
+	}
+	.hi2 {
+		animation: dash 2s linear .5s infinite alternate;
+	}
+	@keyframes dash {
+		from {
+	  		opacity: 0;
+	  	}
+		to {
+			opacity: 1;
+		}
+	}
+	</style>
     <defs></defs>
-    <g id="metafora" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="iconos" transform="translate(-425.000000, -494.000000)">
-            <g id="nota" transform="translate(410.000000, 478.000000)">
-                <circle id="Oval-2-Copy-2" stroke="#41423F" stroke-width="3" fill="#B0F7E7" stroke-linecap="round" stroke-linejoin="round" cx="63.5" cy="65.5" r="45.5"></circle>
-                <g id="postit" transform="translate(61.082054, 61.082054) rotate(-12.000000) translate(-61.082054, -61.082054) translate(9.582054, 9.582054)">
-                    <path d="M8.74256087,24.4224511 C8.20234486,24.5372775 7.8574985,25.0682943 7.97232496,25.6085104 L19.9491525,81.9550536 C20.0639789,82.4952696 20.5949957,82.840116 21.1352118,82.7252896 L42.8807618,78.1031302 C42.983242,78.0813474 43.0872754,78.0676508 43.1919014,78.062167 C44.2949568,78.0043517 45.2360284,78.8516863 45.2938436,79.9547416 L45.9948955,93.330089 C46.0082501,93.5848815 46.1184904,93.8249332 46.303049,94.0011027 C46.7025472,94.3824419 47.335541,94.3677211 47.7168803,93.9682229 L66.9156581,73.8552176 C67.3244487,73.4269607 67.8508149,73.1292332 68.4284738,72.9995265 L93.7621442,67.3111412 C94.2966594,67.191122 94.6351071,66.6633766 94.5212083,66.1275238 L82.5396753,9.75872993 C82.4248489,9.21851393 81.8938321,8.87366756 81.3536161,8.98849402 L8.74256088,24.4224511 Z" id="Combined-Shape" stroke="#41423F" stroke-width="2" fill="#FFFFFF" transform="translate(51.246759, 51.621991) rotate(10.000000) translate(-51.246759, -51.621991) "></path>
-                    <path d="M27.2045825,50.2191206 L75.3712427,50.2191206" id="Line-4-Copy-3" stroke="#F8E71C" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M26.7642913,62.014217 L52.7962125,62.014217" id="Line-4-Copy-4" stroke="#F8E71C" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M27.6448736,38.4240242 L75.8115339,38.4240242" id="Line-4" stroke="#41423F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,4,4,3"></path>
-                    <path d="M27.6448736,50.3763195 L75.8115339,50.3763195" id="Line-4-Copy" stroke="#41423F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,4,4,3"></path>
-                    <path d="M27.6448736,62.3286147 L49.2226335,62.3286147" id="Line-4-Copy-2" stroke="#41423F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,4,4,3"></path>
-                </g>
-            </g>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="nota" transform="translate(-14.000000, -14.000000)">
+            <circle id="Oval" stroke="#41423F" stroke-width="3" fill="#B0F7E7" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" cx="62.5" cy="63.5" r="45.5"></circle>
+            <path d="M17.3555157,32.0544909 C16.8152997,32.1693173 16.4704533,32.7003341 16.5852798,33.2405502 L28.5621073,89.5870934 C28.6769337,90.1273094 29.2079505,90.4721558 29.7481666,90.3573294 L51.4937166,85.73517 C51.5961968,85.7133872 51.7002302,85.6996906 51.8048562,85.6942068 C52.9079116,85.6363915 53.8489832,86.4837261 53.9067984,87.5867814 L54.6078503,100.962129 C54.6212049,101.216921 54.7314452,101.456973 54.9160038,101.633142 C55.315502,102.014482 55.9484958,101.999761 56.3298351,101.600263 L75.5286129,81.4872574 C75.9374035,81.0590005 76.4637697,80.761273 77.0414286,80.6315663 L102.375099,74.943181 C102.909614,74.8231618 103.248062,74.2954164 103.134163,73.7595636 L91.1526301,17.3907697 C91.0378037,16.8505537 90.5067869,16.5057073 89.9665709,16.6205338 L17.3555157,32.0544909 Z" id="postit" stroke="#41423F" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" transform="translate(59.859718, 59.254132) rotate(-2.000000) translate(-59.859718, -59.254132) "></path>
+            <path d="M35.6289172,57.8623341 L83.7955774,57.8623341" id="hi1" class="hi1" stroke="#E6465A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" transform="translate(59.712247, 58.362334) rotate(-12.000000) translate(-59.712247, -58.362334) "></path>
+            <path d="M37.8924344,71.7922566 L63.9243556,71.7922566" id="hi2" class="hi2" stroke="#E6465A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" transform="translate(50.908395, 72.292257) rotate(-12.000000) translate(-50.908395, -72.292257) "></path>
+            <path d="M33.6072484,46.2334472 L81.7739087,46.2334472" id="linea1" stroke="#41423F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,4,4,3" transform="translate(57.690579, 46.733447) rotate(-12.000000) translate(-57.690579, -46.733447) "></path>
+            <path d="M36.0922703,57.9245562 L84.2589306,57.9245562" id="linea2" stroke="#41423F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,4,4,3" transform="translate(60.175600, 58.424556) rotate(-12.000000) translate(-60.175600, -58.424556) "></path>
+            <path d="M38.8678079,72.3797367 L60.4455678,72.3797367" id="linea3" stroke="#41423F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2,4,4,3" transform="translate(49.656688, 72.879737) rotate(-12.000000) translate(-49.656688, -72.879737) "></path>
         </g>
     </g>
 </svg>

@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="95px" height="97px" viewBox="0 0 95 97" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+<svg width="95px" height="102px" viewBox="0 0 95 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
     <title>resumen</title>
     <desc>Created with Sketch.</desc>
+	<style>
+	@keyframes balancea {
+		to {
+			-ms-transform: rotate(5deg); /* IE 9 */
+			-webkit-transform: rotate(5deg); /* Safari */
+			transform: rotate(5deg);
+		}
+	  }
+	.lapiz {
+		animation: balancea 1s ease-in-out .5s infinite alternate;
+		transform-origin: 72px 58px;
+		
+		-ms-transform: rotate(-15deg); /* IE 9 */
+		-webkit-transform: rotate(-15deg); /* Safari */
+		transform: rotate(-15deg);
+		
+	} 
+	</style>
     <defs></defs>
-    <g id="metafora" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="iconos" transform="translate(-426.000000, -312.000000)">
-            <g id="resumen" transform="translate(428.000000, 312.000000)">
-                <circle id="Oval-2-Copy-2" stroke="#41423F" stroke-width="3" fill="#D96C70" stroke-linecap="round" stroke-linejoin="round" cx="45.5" cy="49.5" r="45.5"></circle>
-                <path d="M85.2066746,69.6121997 L70.9830958,2.69552259 C70.8682693,2.15530659 70.3372525,1.81046022 69.7970365,1.92528668 L3.28299964,16.0632817 C2.74278364,16.1781081 2.39793728,16.7091249 2.51276373,17.2493409 L16.5519299,83.2984247 C24.5562927,90.161203 34.7295184,94 45.5,94 C62.4466235,94 77.6810656,84.4426789 85.2066746,69.6121997 Z" id="Combined-Shape" stroke="#41423F" stroke-width="2" fill="#FFFFFF"></path>
-                <g id="Group" transform="translate(42.356486, 36.120188) rotate(-12.000000) translate(-42.356486, -36.120188) translate(19.856486, 24.120188)" stroke="#41423F" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-                    <path d="M0,1 L44.3289973,1" id="Line-4"></path>
-                    <path d="M0,12 L44.3289973,12" id="Line-4-Copy"></path>
-                    <path d="M0,23 L19.8585589,23" id="Line-4-Copy-2"></path>
-                </g>
-                <g id="pencil" transform="translate(72.500000, 42.500000) rotate(90.000000) translate(-72.500000, -42.500000) translate(41.000000, 36.000000)">
-                    <path d="M1,1 L1,11.3600454 L43.2957575,11.3600454 L43.2957575,1 L1,1 Z" id="Rectangle-4" stroke="#41423F" stroke-width="2" fill="#4A79AF"></path>
-                    <path d="M47.4260205,1 L43.7361818,1 L43.7361818,11.2385721 L50.6277108,10.4467729 L59.8647084,7.1564256 C60.384971,6.97110081 60.6564917,6.39910922 60.4711669,5.87884663 C60.3690297,5.59211668 60.1418624,5.36751412 59.8539913,5.26863895 L47.4260205,1 Z" id="Rectangle-4-Copy" stroke="#41423F" stroke-width="2" fill="#F1E1AE"></path>
-                    <polygon id="Path-34" fill="#4A4A4A" points="52.20638 9.70752047 53.7088288 2.69613096 58.8206692 5.09762044 62.9834813 6.73193853"></polygon>
-                </g>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="resumen" transform="translate(2.000000, 1.000000)" stroke="#41423F">
+            <circle id="oval" stroke-width="3" fill="#D96C70" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" cx="45.5" cy="53.5" r="45.5"></circle>
+            <path d="M85.2066746,73.6121997 L70.9830958,6.69552259 C70.8682693,6.15530659 70.3372525,5.81046022 69.7970365,5.92528668 L3.28299964,20.0632817 C2.74278364,20.1781081 2.39793728,20.7091249 2.51276373,21.2493409 L16.5519299,87.2984247 C24.5562927,94.161203 34.7295184,98 45.5,98 C62.4466235,98 77.6810656,88.4426789 85.2066746,73.6121997 Z" id="hoja" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <g id="rayas" stroke-linecap="round" stroke-linejoin="round" transform="translate(42.460442, 40.609262) rotate(-12.000000) translate(-42.460442, -40.609262) translate(19.960442, 29.109262)" stroke-width="3">
+                <path d="M0,0 L44.3289973,0" id="line1"></path>
+                <path d="M0,11 L44.3289973,11" id="line2"></path>
+                <path d="M0,22 L19.8585589,22" id="line3"></path>
             </g>
+            <path d="M77,3.55271368e-15 L77,45.0713155 L73.555419,58.7841615 C73.4756316,59.1017944 73.2943884,59.3524476 73.0630115,59.4651443 C72.6431853,59.669629 72.1816163,59.370037 72.0320683,58.7959866 L69.3769204,48.604015 L68.8468562,42.2957575 L68.6399546,42.2957575 L68.6399546,3.55271368e-15 L77,3.55271368e-15 Z" id="lapiz" class="lapiz" stroke-width="2" fill="#4A79AF" fill-rule="nonzero"></path>
         </g>
     </g>
 </svg>
