@@ -36,6 +36,7 @@ function my_custom_posttypes() {
         'has_archive' => false,
         'hierarchical' => true,
         'menu_position' => 5,
+		'taxonomies' => array( 'category' ),
         'supports' => array(
             'title',
             'editor',

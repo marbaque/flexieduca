@@ -17,7 +17,7 @@ function flexieduca_body_classes($classes) {
 	$classes[]	 = 'hfeed';
 	$classes[]	 = 'archive-view';
     }
-    if (is_page_template('page-casos.php')) {
+    if ( is_page_template('page-casos.php') || is_page_template('page-casos-estrategia.php') ) {
 	$classes[] = 'casos-index';
     }
 
@@ -185,23 +185,23 @@ function my_login_logo() {
     ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
-    	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png);
-    	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg);
-    	height:65px;
-    	width:320px;
-    	background-size: 320px 65px;
-    	background-repeat: no-repeat;
-    	padding-bottom: 0;
+			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png);
+			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg);
+			height:65px;
+			width:320px;
+			background-size: 320px 65px;
+			background-repeat: no-repeat;
+			padding-bottom: 0;
         }
         .login #nav a,
         .login #nav a:visited {
-    	text-decoration: none;
-    	color: #fff!important;
-    	background: #D96C70;
-    	padding: 4px;
-    	-webkit-border-radius: 4px;
-    	-moz-border-radius: 4px;
-    	border-radius: 4px;
+			text-decoration: none;
+			color: #fff!important;
+			background: #D96C70;
+			padding: 4px;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
         }
     </style>
     <?php

@@ -31,7 +31,7 @@
     	    <div class="gallery">
 
 		    <?php if ( has_post_thumbnail() ) {
-			the_post_thumbnail();
+				the_post_thumbnail();
 		    } ?>
 		
 		<?php $url = get_field('enlace'); ?>    
@@ -42,8 +42,19 @@
 			    <?php endif; ?>
 		</div>
 		<div class="case-trends">
-			<?php the_terms($post->ID, 'tendencia', __('Strategy: ', 'flexieduca'), ' ', ' '); ?>
-    		</div>
+			<?php 
+
+			$posts = get_field('galeria_relacionada');
+			
+			if( $posts ): ?>
+				<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+					<?php setup_postdata($post); ?>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				<?php endforeach; ?>
+				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
+			
+    	</div>
 
 		
     	    </div><!-- .case-gallery --> 
