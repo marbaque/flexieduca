@@ -98,7 +98,7 @@
         height: 100%;
         border-left: 1px solid #ccc;
         flex-shrink: 0;
-	text-rendering: geometricPrecision;
+		text-rendering: geometricPrecision;
     }
 
     @media screen and (min-width: $break__small) {
