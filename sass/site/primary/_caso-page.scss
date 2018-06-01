@@ -68,15 +68,14 @@
 			&:before {
 				font-family: 'Fontawesome';
 				content: "\f12e";
-				margin-right: .25em;
-				//position: absolute;
-				left: -2.2em;
+				margin-right: 1em;
 				text-align: center;
 				color: white;
 				background-color: $color__interactive;
 				padding: .5em;
 				line-height: 1;
 				@include borde(50%);
+				float: left;
 		    }
 
 	    }
@@ -87,10 +86,11 @@
 			padding: .75em 1em .5em;
 
 			a {
-			    position: relative;
-			    margin-left: 2.2em;
-			    display: inline-block;
-			    border: none;
+
+				display: block;
+				margin-left: 3em;
+				border: none;
+			    
 			    /* These are technically the same, but use both */
 			    overflow-wrap: break-word;
 			    word-wrap: break-word;
@@ -105,20 +105,18 @@
 			    -webkit-hyphens: auto;
 			    hyphens: auto;
 			    line-height: 1.2;
-	
-			    &:before {
-					font-family: 'FontAwesome';
-					content: "\f0c1";
-					margin-right: .25em;
-					position: absolute;
-					left: -2.2em;
-					text-align: center;
-					color: white;
-					background-color: $color__interactive;
-					padding: .5em;
-					line-height: 1;
-					@include borde(50%);
-			    }
+  
+			}
+			&:before {
+				font-family: 'FontAwesome';
+				content: "\f0c1";
+				text-align: center;
+				color: white;
+				background-color: $color__interactive;
+				padding: .5em;
+				line-height: 1;
+				@include borde(50%);
+				float: left;
 			}
 	    }
 	}

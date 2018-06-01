@@ -2564,14 +2564,14 @@ ul.accordion button:focus {
 .single-caso .case-content .case__wrap .case-trends:before {
 	font-family: 'Fontawesome';
 	content: "\f12e";
-	margin-right: .25em;
-	left: -2.2em;
+	margin-right: 1em;
 	text-align: center;
 	color: white;
 	background-color: #D96C70;
 	padding: .5em;
 	line-height: 1;
 	border-radius: 50%;
+	float: left;
 }
 
 .single-caso .case-content .case__wrap .enlace {
@@ -2581,9 +2581,8 @@ ul.accordion button:focus {
 }
 
 .single-caso .case-content .case__wrap .enlace a {
-	position: relative;
-	margin-left: 2.2em;
-	display: inline-block;
+	display: block;
+	margin-left: 3em;
 	border: none;
 	/* These are technically the same, but use both */
 	overflow-wrap: break-word;
@@ -2598,18 +2597,16 @@ ul.accordion button:focus {
 	line-height: 1.2;
 }
 
-.single-caso .case-content .case__wrap .enlace a:before {
+.single-caso .case-content .case__wrap .enlace:before {
 	font-family: 'FontAwesome';
 	content: "\f0c1";
-	margin-right: .25em;
-	position: absolute;
-	left: -2.2em;
 	text-align: center;
 	color: white;
 	background-color: #D96C70;
 	padding: .5em;
 	line-height: 1;
 	border-radius: 50%;
+	float: left;
 }
 
 .single-caso .gallery {
