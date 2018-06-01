@@ -310,24 +310,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
-h1 {
-	font-size: 1.2em;
-}
-
-@media screen and (min-width: 600px) {
-	h1 {
-		font-size: 2em;
-	}
-}
-
-/*
-p {
-	margin-bottom: 1.5em;
-	-webkit-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
-}
-*/
 dfn, cite, em, i {
 	font-style: italic;
 }
@@ -776,6 +758,8 @@ ul#footer-menu {
 	padding: 0;
 	font-size: .7em;
 	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 ul#footer-menu li {
@@ -1570,27 +1554,25 @@ li.flexieduca-search, .widget_search {
 *****************************/
 .breadcrumbs {
 	display: block;
-	font-size: .66em;
+	font-size: .6em;
 	margin: 0 0 2em;
 	color: #aaa;
 	line-height: 1.5;
+	text-transform: uppercase;
 }
 
 .breadcrumbs span {
 	display: inline-block;
+	line-height: 1;
+	vertical-align: middle;
+	max-width: 300px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: 300px;
-	line-height: 1;
 }
 
 .breadcrumbs span a {
 	border: none;
-}
-
-.breadcrumbs .separator {
-	margin: 0 .5em;
 }
 
 /****************************

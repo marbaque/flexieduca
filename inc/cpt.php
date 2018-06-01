@@ -169,31 +169,6 @@ function custom_taxonomies() {
 
     register_taxonomy('autor', array('multimedia'), $args);
     
-    //estrategias
-    $labelsT = array(
-        'name' => 'Estrategia',
-        'singular_name' => 'Estrategia',
-        'search_items' => 'Buscar estrategia',
-        'all_items' => 'Todas',
-        'parent_item' => 'ID principal de la estrategia',
-        'parent_item_colon' => 'ID principal de la estrategia:',
-        'edit_item' => 'Editar estrategia',
-        'update_item' => 'Actualizar estrategia asignada',
-        'add_new_item' => 'Nombrar la estrategia',
-        'new_item_name' => 'Nueva estrategia',
-        'menu_name' => 'Estrategia asignada',
-    );
-
-    $argsT = array(
-        'hierarchical' => false,
-        'labels' => $labelsT,
-        'show_ui' => true,
-        'show_admin_column' => false,
-        'query_var' => true,
-        'rewrite' => array('slug' => 'estrategia'),
-    );
-
-    register_taxonomy('tendencia', array('caso'), $argsT);
 }
 
 add_action('init', 'custom_taxonomies');

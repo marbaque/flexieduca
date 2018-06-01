@@ -144,25 +144,26 @@
 *****************************/
 .breadcrumbs {
     display: block;
-    font-size: .66em;
+    font-size: .6em;
     margin: 0 0 2em;
     color: #aaa;
     line-height: 1.5;
+    text-transform: uppercase;
+    
 
     span {
-	display: inline-block;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	max-width: 300px;
-	line-height: 1;
-	a {
-	    border: none;
-	}
+		display: inline-block;
+		line-height: 1;
+		vertical-align: middle;
+	    max-width: 300px;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+		a {
+		    border: none;
+		}
     }
-    .separator {
-	margin: 0 .5em;
-    }
+
 }
 
 /****************************
