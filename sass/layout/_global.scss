@@ -99,6 +99,9 @@
         border-left: 1px solid #ccc;
         flex-shrink: 0;
 		text-rendering: geometricPrecision;
+		.avatar {
+			@include borde(50%);
+		}
     }
 
     @media screen and (min-width: $break__small) {
@@ -131,9 +134,7 @@
             width: 90px;
             max-width: 90px;
             font-size: .77em;
-	    .avatar {
-		@include borde(50%);
-	    }
+			
 
         }
     }
@@ -190,7 +191,7 @@
 
 .home{ 
     .site-main{
-        @media screen and (min-width: $break__small){
+        @media screen and (min-width: $break__small) {
             margin-top: 40px;
         }
     }

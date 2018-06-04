@@ -1544,6 +1544,10 @@ li.flexieduca-search, .widget_search {
 	text-rendering: geometricPrecision;
 }
 
+.site-header .user-info-area .avatar {
+	border-radius: 50%;
+}
+
 @media screen and (min-width: 600px) {
 	.site-header {
 		height: 80px;
@@ -1567,9 +1571,6 @@ li.flexieduca-search, .widget_search {
 		width: 90px;
 		max-width: 90px;
 		font-size: .77em;
-	}
-	.site-header .user-info-area .avatar {
-		border-radius: 50%;
 	}
 }
 
