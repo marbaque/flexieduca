@@ -637,7 +637,7 @@ a:hover, a:active {
 	display: block;
 	width: 100%;
 	position: relative;
-	font-size: .8em;
+	font-size: .9em;
 	z-index: 99;
 }
 
@@ -652,6 +652,13 @@ a:hover, a:active {
 	overflow-y: scroll;
 	border-right: 1px solid #ccc;
 	box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.32);
+}
+
+@media screen and (min-width: 600px) {
+	.main-navigation ul.menu {
+		width: 400px;
+		max-width: none;
+	}
 }
 
 .main-navigation ul.menu::-webkit-scrollbar {
@@ -685,7 +692,7 @@ a:hover, a:active {
 	position: relative;
 	top: 100%;
 	z-index: 99999;
-	background: rgba(243, 240, 231, 0.85);
+	background: rgba(243, 240, 231, 0.8);
 }
 
 .main-navigation ul ul ul {
@@ -727,6 +734,22 @@ a:hover, a:active {
 	padding-right: 2em;
 }
 
+.main-navigation .modulo1 {
+	border-left: 6px solid #DDBE59;
+}
+
+.main-navigation .modulo4 {
+	border-left: 6px solid #D96C70;
+}
+
+.main-navigation .modulo2 {
+	border-left: 6px solid #B4CF7E;
+}
+
+.main-navigation .modulo3 {
+	border-left: 6px solid #7A6FB9;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -744,6 +767,7 @@ button.dropdown-toggle {
 	color: #333;
 	text-align: center;
 	border-radius: 0;
+	font-size: 1.1em;
 }
 
 /* Toggle small menu and children on */
@@ -2743,9 +2767,6 @@ ul.accordion button:focus {
 	    align-content: flex-start;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
-	background-color: #F1EEE5;
-	border-radius: 1em;
-	padding: 1em;
 }
 
 .casos-index .case-gallery .gallery-title,
@@ -2761,16 +2782,23 @@ ul.accordion button:focus {
 	width: 100%;
 	background: white;
 	background-size: cover;
-	margin: 10px 2%;
+	border: 2px solid #393A38;
+	border-radius: 4px;
+	margin: 10px 0;
 	padding: 0;
 	position: relative;
 	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.28);
 }
 
+.casos-index .case-gallery .case-item:hover,
+.tax-tendencia .case-gallery .case-item:hover {
+	border-color: #D96C70;
+}
+
 @media screen and (min-width: 600px) {
 	.casos-index .case-gallery .case-item,
 	.tax-tendencia .case-gallery .case-item {
-		width: 30%;
+		width: 31%;
 		margin: 10px 1%;
 	}
 }
@@ -2778,7 +2806,7 @@ ul.accordion button:focus {
 @media screen and (min-width: 1400px) {
 	.casos-index .case-gallery .case-item,
 	.tax-tendencia .case-gallery .case-item {
-		width: 45%;
+		width: 40%;
 		margin: 10px 1%;
 	}
 }
@@ -2835,7 +2863,7 @@ ul.accordion button:focus {
 	bottom: 7px;
 	right: -7px;
 	border: 2px solid #393A38;
-	color: #75282B;
+	color: white;
 	transition: .5s background-color;
 }
 
@@ -2845,14 +2873,6 @@ ul.accordion button:focus {
 }
 
 @media screen and (min-width: 900px) {
-	.casos-index .site-content,
-	.tax-tendencia .site-content {
-		width: 100%;
-		max-width: intrinsic;
-	}
-}
-
-@media screen and (min-width: 1400px) {
 	.casos-index .site-content,
 	.tax-tendencia .site-content {
 		width: 100%;

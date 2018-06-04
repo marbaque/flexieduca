@@ -233,7 +233,7 @@ function remove_logo() {
 }
 
 //Las siguientes funciones son para agregar un metabox de parent-post
-//o sea, para escoger el curso al que pertenecen los casos
+//o sea, para escoger el contenido al que pertenecen los casos
 //Updating the “Parent” meta box
 function my_add_meta_boxes() {
     add_meta_box('caso-parent', 'Contenido Padre', 'lesson_attributes_meta_box', 'caso', 'side', 'high');
