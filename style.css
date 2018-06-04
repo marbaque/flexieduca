@@ -858,7 +858,7 @@ ul#footer-menu li a {
 
 .ebook-nav .nav-links .nav-previous .arrow {
 	float: left;
-	margin-right: 2px;
+	margin-right: 4px;
 }
 
 .ebook-nav .nav-links .nav-next {
@@ -867,7 +867,7 @@ ul#footer-menu li a {
 
 .ebook-nav .nav-links .nav-next .arrow {
 	float: right;
-	margin-left: 2px;
+	margin-left: 4px;
 }
 
 .ebook-nav a {
@@ -1645,6 +1645,13 @@ li.flexieduca-search, .widget_search {
 
 .home aside.side-content .exitometro .name {
 	font-weight: 700;
+}
+
+.home aside.side-content .exitometro .name span {
+	background-color: #D96C70;
+	border-radius: 3px;
+	padding: 2px 3px;
+	color: white;
 }
 
 .home aside.side-content .exitometro .datos {
