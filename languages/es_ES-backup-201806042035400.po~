@@ -2,16 +2,106 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-03 23:31+0000\n"
+"POT-Creation-Date: 2018-06-04 20:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-05-03 23:32+0000\n"
-"Last-Translator: Mario Badilla\n"
+"PO-Revision-Date: 2018-06-04 20:35+0000\n"
+"Last-Translator: admin <mbadilla@uned.ac.cr>\n"
 "Language-Team: Español\n"
 "X-Generator: Loco https://localise.biz/\n"
 "Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=n != 1;"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "No encuentro esa página."
+
+#: 404.php:23
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"No puedo encontrar nada en esa página. Intente con uno de estos enlaces o "
+"con una búsqueda."
+
+#: 404.php:31
+msgid "Most Used Categories"
+msgstr "Categorías mas utilizadas"
+
+#. translators: %1$s: smiley
+#: 404.php:48
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Intente buscando en los archivos mensuales."
+
+#: archive.php:44 inc/template-tags.php:169
+msgid "Previous"
+msgstr "Anterior"
+
+#: archive.php:45 inc/template-tags.php:171
+msgid "Next"
+msgstr "Siguiente"
+
+#: archive.php:46 index.php:46 search.php:46 taxonomy-tendencia.php:97
+msgid "Page"
+msgstr "Página"
+
+#: comments.php:29
+#, php-format
+msgctxt "comments title"
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] "Un comentario"
+msgstr[1] "%1$s comentarios"
+
+#: comments.php:48
+msgid "Comment navigation"
+msgstr "Navegar comentarios"
+
+#: comments.php:51
+msgid "Older Comments"
+msgstr "Comentarios anteriores"
+
+#: comments.php:52
+msgid "Newer Comments"
+msgstr "Comentarios recientes"
+
+#: comments.php:65
+msgid "Comments are closed."
+msgstr "Los comentario se han cerrado."
+
+#: footer.php:27
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#. translators: %s: CMS name, i.e. WordPress.
+#: footer.php:29
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Hecho con %s"
+
+#. translators: 1: Theme name, 2: Theme author.
+#: footer.php:34
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Plantilla: %1$s by %2$s."
+
+#: footer.php:41
+msgid "If you already have an account:"
+msgstr "Ya soy usuario del multimedia"
+
+#: footer.php:42 header.php:64
+msgid "Login"
+msgstr "Acceder"
+
+#: footer.php:46
+msgid "If you haven not created an account yet:"
+msgstr "No estoy registrado todavia"
+
+#: footer.php:47
+msgid "Register"
+msgstr "Registrarse"
 
 #: functions.php:53
 msgid "Primary menu"
@@ -65,27 +155,13 @@ msgstr "Expandir submenu"
 msgid "Collapse child menu"
 msgstr "Colapsar submenu"
 
-#: 404.php:17
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "No encuentro esa página."
+#: header.php:24
+msgid "Skip to content"
+msgstr "Continuar con los contenidos"
 
-#: 404.php:23
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"No puedo encontrar nada en esa página. Intente con uno de estos enlaces o "
-"con una búsqueda."
-
-#: 404.php:31
-msgid "Most Used Categories"
-msgstr "Categorías mas utilizadas"
-
-#. translators: %1$s: smiley
-#: 404.php:48
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Intente buscando en los archivos mensuales."
+#: header.php:29
+msgid "Contents"
+msgstr "Contenidos"
 
 #: index.php:44 search.php:44 taxonomy-tendencia.php:95
 msgid "Newer"
@@ -95,41 +171,30 @@ msgstr "Reciente"
 msgid "Older"
 msgstr "Anterior"
 
-#: index.php:46 archive.php:46 search.php:46 taxonomy-tendencia.php:97
-msgid "Page"
-msgstr "Página"
+#. Name of the template
+msgid "Strategy template"
+msgstr "Plantilla para estrategia"
 
-#: archive.php:44 inc/template-tags.php:173 inc/template-tags.php:174
-msgid "Previous"
-msgstr "Anterior"
+#: page-casos-estrategia.php:44 page-casos.php:44
+#: template-parts/content-front.php:32 template-parts/content-multimedia.php:53
+#: template-parts/content-page.php:60 template-parts/content-single.php:60
+msgid "Pages:"
+msgstr "Páginas:"
 
-#: archive.php:45 inc/template-tags.php:176 inc/template-tags.php:177
-msgid "Next"
-msgstr "Siguiente"
+#: page-casos-estrategia.php:52 page-casos.php:52
+msgid "Case list"
+msgstr "Lista de casos"
 
-#: comments.php:29
+#. %s: Name of current post.
+#: page-casos-estrategia.php:97 template-parts/content-case-item.php:21
+#: template-parts/content.php:49
 #, php-format
-msgctxt "comments title"
-msgid "One comment"
-msgid_plural "%1$s comments"
-msgstr[0] "Un comentario"
-msgstr[1] "%1$s comentarios"
+msgid "Continue reading %s"
+msgstr "Continuar leyendo"
 
-#: comments.php:48
-msgid "Comment navigation"
-msgstr "Navegar comentarios"
-
-#: comments.php:51
-msgid "Older Comments"
-msgstr "Comentarios anteriores"
-
-#: comments.php:52
-msgid "Newer Comments"
-msgstr "Comentarios recientes"
-
-#: comments.php:65
-msgid "Comments are closed."
-msgstr "Los comentario se han cerrado."
+#. Name of the template
+msgid "Case Gallery"
+msgstr "Galería de casos"
 
 #. translators: %s: search query.
 #: search.php:18
@@ -137,118 +202,84 @@ msgstr "Los comentario se han cerrado."
 msgid "Search Results for: %s"
 msgstr "Resultados para: %s"
 
-#. Name of the template
-msgid "Case Gallery"
-msgstr "Galería de casos"
-
-#: page-casos.php:44 template-parts/content-multimedia.php:54
-#: template-parts/content-single.php:60 template-parts/content-page.php:60
-#: template-parts/content-front.php:32
-msgid "Pages:"
-msgstr "Páginas:"
-
-#: page-casos.php:52
-msgid "Case list"
-msgstr "Lista de casos"
-
-#: header.php:24
-msgid "Skip to content"
-msgstr "Continuar con los contenidos"
-
-#: header.php:29
-msgid "Contents"
-msgstr "Contenidos"
-
-#: header.php:64 footer.php:42
-msgid "Login"
-msgstr "Acceder"
-
-#: footer.php:27
-msgid "https://wordpress.org/"
-msgstr "https://wordpress.org/"
-
-#. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:29
-#, php-format
-msgid "Proudly powered by %s"
-msgstr "Hecho con %s"
-
-#. translators: 1: Theme name, 2: Theme author.
-#: footer.php:34
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr "Plantilla: %1$s by %2$s."
-
-#: footer.php:41
-msgid "If you already have an account:"
-msgstr "Ya soy usuario del multimedia"
-
-#: footer.php:46
-msgid "If you haven not created an account yet:"
-msgstr "No estoy registrado todavia"
-
-#: footer.php:47
-msgid "Register"
-msgstr "Registrarse"
-
 #. %s: post date.
-#: inc/template-tags.php:30
+#: inc/template-tags.php:29
 #, php-format
 msgctxt "post date"
 msgid "%s"
 msgstr "%s"
 
 #. %s: post author.
-#: inc/template-tags.php:35
+#: inc/template-tags.php:34
 #, php-format
 msgctxt "post author"
 msgid "Published by %s"
 msgstr "Publicado por %s"
 
 #. translators: %s: post title
-#: inc/template-tags.php:43 inc/template-tags.php:81
+#: inc/template-tags.php:42 inc/template-tags.php:80
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "Comentar<span class=\"screen-reader-text\"> on %s</span>"
 
 #. %s: Name of current post
-#: inc/template-tags.php:50
+#: inc/template-tags.php:49
 #, php-format
 msgid "Edit %s"
 msgstr "Editar %s"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:68
+#: inc/template-tags.php:67
 msgctxt "list item separator"
 msgid ", "
 msgstr ","
 
 #. translators: 1: list of tags.
-#: inc/template-tags.php:71
+#: inc/template-tags.php:70
 #, php-format
 msgid "Tagged %1$s"
 msgstr "Etiquetado %1$s"
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:96
+#: inc/template-tags.php:95
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "Editar %s"
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:116
+#: inc/template-tags.php:115
 msgid ", "
 msgstr ","
 
 #. 1: list of categories.
-#: inc/template-tags.php:119
+#: inc/template-tags.php:118
 #, php-format
 msgid "%1$s"
 msgstr "%1$s"
 
+#: template-parts/auxiliar.php:21
+msgid "Your browser does not support the audio element."
+msgstr "Su navegador no es compatible con el elemento de audio."
+
+#: template-parts/content-front.php:50
+msgid "Welcome, "
+msgstr "Hola, "
+
+#: template-parts/content-front.php:54
+msgid "Success 'o meter"
+msgstr "Exitómetro"
+
+#: template-parts/content-front.php:56
+msgid "Progress "
+msgstr "Mi progreso "
+
+#: template-parts/content-front.php:64
+msgid "Welcome!"
+msgstr "Bienvenidos"
+
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-multimedia.php:45
-#: template-parts/content-single.php:49 template-parts/content-page.php:49
+#: template-parts/content-multimedia.php:44 template-parts/content-page.php:49
+#: template-parts/content-single.php:49
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Continuar leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
@@ -277,32 +308,6 @@ msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr "Parece que no puedo encontrar lo que busca. Intente una búsqueda."
-
-#. %s: Name of current post.
-#: template-parts/content.php:49 template-parts/content-case-item.php:21
-#, php-format
-msgid "Continue reading %s"
-msgstr "Continuar leyendo"
-
-#: template-parts/content-case.php:45
-msgid "Strategy: "
-msgstr "Estrategia: "
-
-#: template-parts/content-front.php:50
-msgid "Welcome, "
-msgstr "Hola, "
-
-#: template-parts/content-front.php:54
-msgid "Success 'o meter"
-msgstr "Exitómetro"
-
-#: template-parts/content-front.php:56
-msgid "Progress "
-msgstr "Mi progreso "
-
-#: template-parts/content-front.php:64
-msgid "Welcome!"
-msgstr "Bienvenidos"
 
 #. Name of the theme
 msgid "Flexieduca"
