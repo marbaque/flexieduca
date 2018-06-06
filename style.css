@@ -2507,6 +2507,45 @@ ul.accordion button:focus {
 	}
 }
 
+.wpc-button {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: none;
+	position: fixed;
+	right: 20px;
+	bottom: 80px;
+	background-image: url("img/check@2x.png") !important;
+	background-image: none, url("img/check.svg") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-size: 26px 20px !important;
+}
+
+.wpc-button .wpc-inactive, .wpc-button .wpc-active {
+	display: none;
+}
+
+.wpc-button:hover, .wpc-button:active, .wpc-button:focus {
+	border: none;
+}
+
+.wpc-button:hover .wpc-inactive {
+	display: inline-block;
+	padding: 4px;
+	width: auto;
+	white-space: nowrap;
+	background-color: black;
+	font-size: 14px;
+	line-height: 1;
+	position: absolute;
+	right: 55px;
+}
+
+.wpc-button.wpc-completed {
+	opacity: .25;
+}
+
 /*--------------------------------------------------------------
 ## Casos pages
 --------------------------------------------------------------*/
