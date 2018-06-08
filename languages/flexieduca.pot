@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-17 16:06+0000\n"
+"POT-Creation-Date: 2018-06-04 20:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,6 +13,94 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:23
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:31
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:48
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: archive.php:44 inc/template-tags.php:169
+msgid "Previous"
+msgstr ""
+
+#: archive.php:45 inc/template-tags.php:171
+msgid "Next"
+msgstr ""
+
+#: archive.php:46 index.php:46 search.php:46 taxonomy-tendencia.php:97
+msgid "Page"
+msgstr ""
+
+#: comments.php:29
+#, php-format
+msgctxt "comments title"
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:48
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:51
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:52
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:65
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:27
+msgid "https://wordpress.org/"
+msgstr ""
+
+#. translators: %s: CMS name, i.e. WordPress.
+#: footer.php:29
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#. translators: 1: Theme name, 2: Theme author.
+#: footer.php:34
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: footer.php:41
+msgid "If you already have an account:"
+msgstr ""
+
+#: footer.php:42 header.php:64
+msgid "Login"
+msgstr ""
+
+#: footer.php:46
+msgid "If you haven not created an account yet:"
+msgstr ""
+
+#: footer.php:47
+msgid "Register"
+msgstr ""
 
 #: functions.php:53
 msgid "Primary menu"
@@ -66,24 +154,12 @@ msgstr ""
 msgid "Collapse child menu"
 msgstr ""
 
-#: 404.php:17
-msgid "Oops! That page can&rsquo;t be found."
+#: header.php:24
+msgid "Skip to content"
 msgstr ""
 
-#: 404.php:23
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-
-#: 404.php:31
-msgid "Most Used Categories"
-msgstr ""
-
-#. translators: %1$s: smiley
-#: 404.php:48
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
+#: header.php:29
+msgid "Contents"
 msgstr ""
 
 #: index.php:44 search.php:44 taxonomy-tendencia.php:95
@@ -94,40 +170,29 @@ msgstr ""
 msgid "Older"
 msgstr ""
 
-#: index.php:46 archive.php:46 search.php:46 taxonomy-tendencia.php:97
-msgid "Page"
+#. Name of the template
+msgid "Strategy template"
 msgstr ""
 
-#: archive.php:44 inc/template-tags.php:173
-msgid "Previous"
+#: page-casos-estrategia.php:44 page-casos.php:44
+#: template-parts/content-front.php:32 template-parts/content-multimedia.php:53
+#: template-parts/content-page.php:60 template-parts/content-single.php:60
+msgid "Pages:"
 msgstr ""
 
-#: archive.php:45 inc/template-tags.php:175
-msgid "Next"
+#: page-casos-estrategia.php:52 page-casos.php:52
+msgid "Case list"
 msgstr ""
 
-#: comments.php:29
+#. %s: Name of current post.
+#: page-casos-estrategia.php:97 template-parts/content-case-item.php:21
+#: template-parts/content.php:49
 #, php-format
-msgctxt "comments title"
-msgid "One comment"
-msgid_plural "%1$s comments"
-msgstr[0] ""
-msgstr[1] ""
-
-#: comments.php:48
-msgid "Comment navigation"
+msgid "Continue reading %s"
 msgstr ""
 
-#: comments.php:51
-msgid "Older Comments"
-msgstr ""
-
-#: comments.php:52
-msgid "Newer Comments"
-msgstr ""
-
-#: comments.php:65
-msgid "Comments are closed."
+#. Name of the template
+msgid "Case Gallery"
 msgstr ""
 
 #. translators: %s: search query.
@@ -136,118 +201,84 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#. Name of the template
-msgid "Case Gallery"
-msgstr ""
-
-#: page-casos.php:44 template-parts/content-multimedia.php:54
-#: template-parts/content-single.php:60 template-parts/content-page.php:60
-#: template-parts/content-front.php:32
-msgid "Pages:"
-msgstr ""
-
-#: page-casos.php:52
-msgid "Case list"
-msgstr ""
-
-#: header.php:24
-msgid "Skip to content"
-msgstr ""
-
-#: header.php:29
-msgid "Contents"
-msgstr ""
-
-#: header.php:64 footer.php:42
-msgid "Login"
-msgstr ""
-
-#: footer.php:27
-msgid "https://wordpress.org/"
-msgstr ""
-
-#. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:29
-#, php-format
-msgid "Proudly powered by %s"
-msgstr ""
-
-#. translators: 1: Theme name, 2: Theme author.
-#: footer.php:34
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
-#: footer.php:41
-msgid "If you already have an account:"
-msgstr ""
-
-#: footer.php:46
-msgid "If you haven not created an account yet:"
-msgstr ""
-
-#: footer.php:47
-msgid "Register"
-msgstr ""
-
 #. %s: post date.
-#: inc/template-tags.php:30
+#: inc/template-tags.php:29
 #, php-format
 msgctxt "post date"
 msgid "%s"
 msgstr ""
 
 #. %s: post author.
-#: inc/template-tags.php:35
+#: inc/template-tags.php:34
 #, php-format
 msgctxt "post author"
 msgid "Published by %s"
 msgstr ""
 
 #. translators: %s: post title
-#: inc/template-tags.php:43 inc/template-tags.php:81
+#: inc/template-tags.php:42 inc/template-tags.php:80
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. %s: Name of current post
-#: inc/template-tags.php:50
+#: inc/template-tags.php:49
 #, php-format
 msgid "Edit %s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:68
+#: inc/template-tags.php:67
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: 1: list of tags.
-#: inc/template-tags.php:71
+#: inc/template-tags.php:70
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:96
+#: inc/template-tags.php:95
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:116
+#: inc/template-tags.php:115
 msgid ", "
 msgstr ""
 
 #. 1: list of categories.
-#: inc/template-tags.php:119
+#: inc/template-tags.php:118
 #, php-format
 msgid "%1$s"
 msgstr ""
 
+#: template-parts/auxiliar.php:21
+msgid "Your browser does not support the audio element."
+msgstr ""
+
+#: template-parts/content-front.php:50
+msgid "Welcome, "
+msgstr ""
+
+#: template-parts/content-front.php:54
+msgid "Success 'o meter"
+msgstr ""
+
+#: template-parts/content-front.php:56
+msgid "Progress "
+msgstr ""
+
+#: template-parts/content-front.php:64
+msgid "Welcome!"
+msgstr ""
+
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-multimedia.php:45
-#: template-parts/content-single.php:49 template-parts/content-page.php:49
+#: template-parts/content-multimedia.php:44 template-parts/content-page.php:49
+#: template-parts/content-single.php:49
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
@@ -273,36 +304,6 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
-
-#. %s: Name of current post.
-#: template-parts/content.php:49 template-parts/content-case-item.php:21
-#, php-format
-msgid "Continue reading %s"
-msgstr ""
-
-#: template-parts/content-case.php:45
-msgid "Strategy: "
-msgstr ""
-
-#: template-parts/content-front.php:50
-msgid "Welcome, "
-msgstr ""
-
-#: template-parts/content-front.php:54
-msgid "Success 'o meter"
-msgstr ""
-
-#: template-parts/content-front.php:56
-msgid "Progress "
-msgstr ""
-
-#: template-parts/content-front.php:64
-msgid "Welcome!"
-msgstr ""
-
-#: template-parts/auxiliar.php:21
-msgid "Your browser does not support the audio element."
 msgstr ""
 
 #. Name of the theme

@@ -3,10 +3,10 @@
     display: block;
     width: 100%;
     position: relative;
-    font-size: .8em;
+    font-size: .9em;
     z-index: 99;
 
-
+	
 
     ul.menu {
         //position: absolute;
@@ -21,6 +21,11 @@
         overflow-y: scroll;
         border-right: 1px solid #ccc;
         box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.32);
+		
+		@media screen and (min-width: $break__small) {
+			width: 400px;
+			max-width: none;
+		}
 		
 		
         
@@ -51,13 +56,13 @@
         list-style: disc;
         margin: 0;
         padding-left: 0;
-
+		
         ul { //submenus
 	        display: none;
 			position: relative;
 			top: 100%;
 			z-index: 99999;
-			background: rgba(243, 240, 231, 0.85);
+			background: rgba(243, 240, 231, 0.8);
 			
 			
 			ul { //submenu 2
@@ -129,7 +134,20 @@
 	.page_item_has_children > a {
 		padding-right: 2em;
 	}
+	.modulo1 {
+		border-left: 6px solid $color__skin;
+	}
+	.modulo4 {
+		border-left: 6px solid $color__interactive;
+	}
+	.modulo2 {
+		border-left: 6px solid #B4CF7E;
+	}
+	.modulo3 {
+		border-left: 6px solid #7A6FB9;
+	}
 }
+
 
 
 
@@ -151,7 +169,7 @@ button.dropdown-toggle {
 	color: $color__text-screen;
 	text-align: center;
 	@include borde(0);
-	
+	font-size: 1.1em;
 }
 /* Toggle small menu and children on */
 .toggled-on ul,
@@ -177,6 +195,8 @@ ul#footer-menu{
 	padding: 0;
 	font-size: .7em;
 	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	li {
 		display: inline-block;
 		margin: 0 .25em;

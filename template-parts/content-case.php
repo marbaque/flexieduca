@@ -37,8 +37,7 @@
 		<?php $url = get_field('enlace'); ?>    
 		<div class="enlace">
 			<?php if (!empty($url)): ?>
-			    <a href="<?php echo $url; ?>" title="Enlace a <?php the_title(); ?>" target="_blank">
-				<?php echo preg_replace('#^https?://#', '', $url); ?></i></a>
+			    <a href="<?php echo $url; ?>" title="Enlace a <?php the_title(); ?>" target="_blank"><?php echo "Mas información: " . preg_replace('#^https?://#', '', $url); ?></i></a>
 			    <?php endif; ?>
 		</div>
 		<div class="case-trends">
@@ -49,7 +48,7 @@
 			if( $posts ): ?>
 				<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 					<?php setup_postdata($post); ?>
-						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						<span>Estrategia de comercialización: <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
 				<?php endforeach; ?>
 				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 			<?php endif; ?>

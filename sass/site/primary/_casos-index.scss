@@ -13,9 +13,6 @@
         justify-content: space-around;
         align-content: flex-start;
         flex-wrap: wrap;
-        background-color: $color__sombreado;
-        @include borde(1em);
-        padding: 1em;
 
         .gallery-title {
             display: block;
@@ -28,19 +25,23 @@
             width: 100%;
             background: white;
             background-size: cover;
-            //border: 2px solid $color__borde-recuadro;
-            //@include borde(4px);
-            margin: 10px 2%;
+            border: 2px solid $color__borde-recuadro;
+            @include borde(4px);
+            margin: 10px 0;
             padding: 0;
             position: relative;
             box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.28);
+			
+			&:hover{
+				border-color: $color__interactive;
+			}
 
             @media screen and (min-width: $break__small) {
-                width: 30%;
+                width: 31%;
                 margin: 10px 1%;
             }
             @media screen and (min-width: $break__hd) {
-                width: 45%;
+                width: 40%;
                 margin: 10px 1%;
             }
             a, a:hover {
@@ -87,7 +88,7 @@
                     bottom: 7px;
                     right: -7px;
                     border: 2px solid $color__borde-recuadro;
-                    color: #75282B;
+                    color: white;
                     transition: .5s background-color;
                     &:hover {
                         background-color: #E38689;
@@ -96,13 +97,7 @@
             }
         }
     }
-    @media screen and (min-width: $break__medium) {
-	    .site-content {
-		    width: 100%;
-		    max-width: intrinsic
-	    }
-    }
-    @media screen and(min-width: $break__hd) {
+    @media screen and(min-width: $break__medium) {
         .site-content {
             width: 100%;
             max-width: $break__hd;

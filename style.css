@@ -310,24 +310,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
-h1 {
-	font-size: 1.2em;
-}
-
-@media screen and (min-width: 600px) {
-	h1 {
-		font-size: 2em;
-	}
-}
-
-/*
-p {
-	margin-bottom: 1.5em;
-	-webkit-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
-}
-*/
 dfn, cite, em, i {
 	font-style: italic;
 }
@@ -655,7 +637,7 @@ a:hover, a:active {
 	display: block;
 	width: 100%;
 	position: relative;
-	font-size: .8em;
+	font-size: .9em;
 	z-index: 99;
 }
 
@@ -670,6 +652,13 @@ a:hover, a:active {
 	overflow-y: scroll;
 	border-right: 1px solid #ccc;
 	box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.32);
+}
+
+@media screen and (min-width: 600px) {
+	.main-navigation ul.menu {
+		width: 400px;
+		max-width: none;
+	}
 }
 
 .main-navigation ul.menu::-webkit-scrollbar {
@@ -703,7 +692,7 @@ a:hover, a:active {
 	position: relative;
 	top: 100%;
 	z-index: 99999;
-	background: rgba(243, 240, 231, 0.85);
+	background: rgba(243, 240, 231, 0.8);
 }
 
 .main-navigation ul ul ul {
@@ -745,6 +734,22 @@ a:hover, a:active {
 	padding-right: 2em;
 }
 
+.main-navigation .modulo1 {
+	border-left: 6px solid #DDBE59;
+}
+
+.main-navigation .modulo4 {
+	border-left: 6px solid #D96C70;
+}
+
+.main-navigation .modulo2 {
+	border-left: 6px solid #B4CF7E;
+}
+
+.main-navigation .modulo3 {
+	border-left: 6px solid #7A6FB9;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -762,6 +767,7 @@ button.dropdown-toggle {
 	color: #333;
 	text-align: center;
 	border-radius: 0;
+	font-size: 1.1em;
 }
 
 /* Toggle small menu and children on */
@@ -776,6 +782,8 @@ ul#footer-menu {
 	padding: 0;
 	font-size: .7em;
 	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 ul#footer-menu li {
@@ -850,7 +858,7 @@ ul#footer-menu li a {
 
 .ebook-nav .nav-links .nav-previous .arrow {
 	float: left;
-	margin-right: 2px;
+	margin-right: 4px;
 }
 
 .ebook-nav .nav-links .nav-next {
@@ -859,7 +867,7 @@ ul#footer-menu li a {
 
 .ebook-nav .nav-links .nav-next .arrow {
 	float: right;
-	margin-left: 2px;
+	margin-left: 4px;
 }
 
 .ebook-nav a {
@@ -1536,6 +1544,10 @@ li.flexieduca-search, .widget_search {
 	text-rendering: geometricPrecision;
 }
 
+.site-header .user-info-area .avatar {
+	border-radius: 50%;
+}
+
 @media screen and (min-width: 600px) {
 	.site-header {
 		height: 80px;
@@ -1560,9 +1572,6 @@ li.flexieduca-search, .widget_search {
 		max-width: 90px;
 		font-size: .77em;
 	}
-	.site-header .user-info-area .avatar {
-		border-radius: 50%;
-	}
 }
 
 /****************************
@@ -1570,27 +1579,25 @@ li.flexieduca-search, .widget_search {
 *****************************/
 .breadcrumbs {
 	display: block;
-	font-size: .66em;
+	font-size: .6em;
 	margin: 0 0 2em;
 	color: #aaa;
 	line-height: 1.5;
+	text-transform: uppercase;
 }
 
 .breadcrumbs span {
 	display: inline-block;
+	line-height: 1;
+	vertical-align: middle;
+	max-width: 300px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: 300px;
-	line-height: 1;
 }
 
 .breadcrumbs span a {
 	border: none;
-}
-
-.breadcrumbs .separator {
-	margin: 0 .5em;
 }
 
 /****************************
@@ -1639,6 +1646,13 @@ li.flexieduca-search, .widget_search {
 
 .home aside.side-content .exitometro .name {
 	font-weight: 700;
+}
+
+.home aside.side-content .exitometro .name span {
+	background-color: #D96C70;
+	border-radius: 3px;
+	padding: 2px 3px;
+	color: white;
 }
 
 .home aside.side-content .exitometro .datos {
@@ -2493,6 +2507,45 @@ ul.accordion button:focus {
 	}
 }
 
+.wpc-button {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: none;
+	position: fixed;
+	right: 20px;
+	bottom: 80px;
+	background-image: url("img/check@2x.png") !important;
+	background-image: none, url("img/check.svg") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-size: 26px 20px !important;
+}
+
+.wpc-button .wpc-inactive, .wpc-button .wpc-active {
+	display: none;
+}
+
+.wpc-button:hover, .wpc-button:active, .wpc-button:focus {
+	border: none;
+}
+
+.wpc-button:hover .wpc-inactive {
+	display: inline-block;
+	padding: 4px;
+	width: auto;
+	white-space: nowrap;
+	background-color: black;
+	font-size: 14px;
+	line-height: 1;
+	position: absolute;
+	right: 55px;
+}
+
+.wpc-button.wpc-completed {
+	opacity: .25;
+}
+
 /*--------------------------------------------------------------
 ## Casos pages
 --------------------------------------------------------------*/
@@ -2582,14 +2635,14 @@ ul.accordion button:focus {
 .single-caso .case-content .case__wrap .case-trends:before {
 	font-family: 'Fontawesome';
 	content: "\f12e";
-	margin-right: .25em;
-	left: -2.2em;
+	margin-right: 1em;
 	text-align: center;
 	color: white;
 	background-color: #D96C70;
 	padding: .5em;
 	line-height: 1;
 	border-radius: 50%;
+	float: left;
 }
 
 .single-caso .case-content .case__wrap .enlace {
@@ -2599,9 +2652,8 @@ ul.accordion button:focus {
 }
 
 .single-caso .case-content .case__wrap .enlace a {
-	position: relative;
-	margin-left: 2.2em;
-	display: inline-block;
+	display: block;
+	margin-left: 3em;
 	border: none;
 	/* These are technically the same, but use both */
 	overflow-wrap: break-word;
@@ -2616,18 +2668,16 @@ ul.accordion button:focus {
 	line-height: 1.2;
 }
 
-.single-caso .case-content .case__wrap .enlace a:before {
+.single-caso .case-content .case__wrap .enlace:before {
 	font-family: 'FontAwesome';
 	content: "\f0c1";
-	margin-right: .25em;
-	position: absolute;
-	left: -2.2em;
 	text-align: center;
 	color: white;
 	background-color: #D96C70;
 	padding: .5em;
 	line-height: 1;
 	border-radius: 50%;
+	float: left;
 }
 
 .single-caso .gallery {
@@ -2764,9 +2814,6 @@ ul.accordion button:focus {
 	    align-content: flex-start;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
-	background-color: #F1EEE5;
-	border-radius: 1em;
-	padding: 1em;
 }
 
 .casos-index .case-gallery .gallery-title,
@@ -2782,16 +2829,23 @@ ul.accordion button:focus {
 	width: 100%;
 	background: white;
 	background-size: cover;
-	margin: 10px 2%;
+	border: 2px solid #393A38;
+	border-radius: 4px;
+	margin: 10px 0;
 	padding: 0;
 	position: relative;
 	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.28);
 }
 
+.casos-index .case-gallery .case-item:hover,
+.tax-tendencia .case-gallery .case-item:hover {
+	border-color: #D96C70;
+}
+
 @media screen and (min-width: 600px) {
 	.casos-index .case-gallery .case-item,
 	.tax-tendencia .case-gallery .case-item {
-		width: 30%;
+		width: 31%;
 		margin: 10px 1%;
 	}
 }
@@ -2799,7 +2853,7 @@ ul.accordion button:focus {
 @media screen and (min-width: 1400px) {
 	.casos-index .case-gallery .case-item,
 	.tax-tendencia .case-gallery .case-item {
-		width: 45%;
+		width: 40%;
 		margin: 10px 1%;
 	}
 }
@@ -2856,7 +2910,7 @@ ul.accordion button:focus {
 	bottom: 7px;
 	right: -7px;
 	border: 2px solid #393A38;
-	color: #75282B;
+	color: white;
 	transition: .5s background-color;
 }
 
@@ -2866,14 +2920,6 @@ ul.accordion button:focus {
 }
 
 @media screen and (min-width: 900px) {
-	.casos-index .site-content,
-	.tax-tendencia .site-content {
-		width: 100%;
-		max-width: intrinsic;
-	}
-}
-
-@media screen and (min-width: 1400px) {
 	.casos-index .site-content,
 	.tax-tendencia .site-content {
 		width: 100%;

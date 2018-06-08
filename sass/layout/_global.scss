@@ -99,6 +99,9 @@
         border-left: 1px solid #ccc;
         flex-shrink: 0;
 		text-rendering: geometricPrecision;
+		.avatar {
+			@include borde(50%);
+		}
     }
 
     @media screen and (min-width: $break__small) {
@@ -131,9 +134,7 @@
             width: 90px;
             max-width: 90px;
             font-size: .77em;
-	    .avatar {
-		@include borde(50%);
-	    }
+			
 
         }
     }
@@ -144,25 +145,26 @@
 *****************************/
 .breadcrumbs {
     display: block;
-    font-size: .66em;
+    font-size: .6em;
     margin: 0 0 2em;
     color: #aaa;
     line-height: 1.5;
+    text-transform: uppercase;
+    
 
     span {
-	display: inline-block;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	max-width: 300px;
-	line-height: 1;
-	a {
-	    border: none;
-	}
+		display: inline-block;
+		line-height: 1;
+		vertical-align: middle;
+	    max-width: 300px;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+		a {
+		    border: none;
+		}
     }
-    .separator {
-	margin: 0 .5em;
-    }
+
 }
 
 /****************************
@@ -189,7 +191,7 @@
 
 .home{ 
     .site-main{
-        @media screen and (min-width: $break__small){
+        @media screen and (min-width: $break__small) {
             margin-top: 40px;
         }
     }
@@ -213,6 +215,12 @@
             }
             .name {
 	            font-weight: 700;
+				span {
+					background-color: $color__interactive;
+					@include borde(3px);
+					padding: 2px 3px;
+					color: white;
+				}
             }
             .datos{
 	            clear: both;

@@ -47,7 +47,7 @@
 				*     return;
 				*/
 				echo get_avatar( $current_user->user_email, 64 );
-			    echo '<p class="name">' . __('Welcome, ', 'flexieduca') . $current_user->display_name . '</p>'; ?>
+			    echo '<p class="name">' . __('Welcome, ', 'flexieduca') . '<span>' . $current_user->display_name . '</span></p>'; ?>
 		
 				<div class="datos">
                     <div>
