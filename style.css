@@ -2513,13 +2513,82 @@ ul.accordion button:focus {
 	border-radius: 50%;
 	border: none;
 	position: fixed;
-	right: 20px;
-	bottom: 80px;
+	right: 10px;
+	bottom: 60px;
+}
+
+@media screen and (min-width: 900px) {
+	.wpc-button {
+		width: 80px;
+		height: 80px;
+		right: 10px;
+		bottom: 80px;
+	}
+}
+
+.wpc-button.wpc-complete {
 	background-image: url("img/check@2x.png") !important;
 	background-image: none, url("img/check.svg") !important;
 	background-repeat: no-repeat !important;
 	background-position: center center !important;
 	background-size: 26px 20px !important;
+}
+
+.wpc-button.wpc-completed {
+	background-image: url("img/frog.png") !important;
+	background-image: none, url("img/frog.svg") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-size: 34px 26px !important;
+	opacity: .25;
+}
+
+.wpc-button .wpc-active {
+	position: relative;
+}
+
+.wpc-button .wpc-active:after {
+	content: "";
+	width: 50px;
+	height: 50px;
+	background-image: url("img/spinner.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 32px 32px;
+	background-color: transparent;
+	padding: 0;
+	display: block;
+	position: absolute;
+	right: -55px;
+	top: -12.5px;
+	-webkit-animation: spin 5s linear 0 infinite normal;
+	        animation: spin 5s linear 0 infinite normal;
+}
+
+@media screen and (min-width: 900px) {
+	.wpc-button .wpc-active:after {
+		background-size: 50px 50px;
+		top: -12px;
+		right: -70px;
+	}
+}
+
+.wpc-button .wpc-inactive, .wpc-button .wpc-active {
+	padding: 4px;
+	width: auto;
+	white-space: nowrap;
+	background-color: black;
+	font-size: 14px;
+	line-height: 1.2;
+	position: absolute;
+	right: 55px;
+	top: calc(50% - 1em);
+}
+
+@media screen and (min-width: 900px) {
+	.wpc-button .wpc-inactive, .wpc-button .wpc-active {
+		right: 85px;
+	}
 }
 
 .wpc-button .wpc-inactive, .wpc-button .wpc-active {
@@ -2532,18 +2601,36 @@ ul.accordion button:focus {
 
 .wpc-button:hover .wpc-inactive {
 	display: inline-block;
-	padding: 4px;
-	width: auto;
-	white-space: nowrap;
-	background-color: black;
-	font-size: 14px;
-	line-height: 1;
-	position: absolute;
-	right: 55px;
 }
 
-.wpc-button.wpc-completed {
-	opacity: .25;
+@-webkit-keyframes spin {
+	from {
+		/* IE 9 */
+		-webkit-transform: rotate(0deg);
+		/* Safari */
+		transform: rotate(0deg);
+	}
+	to {
+		/* IE 9 */
+		-webkit-transform: rotate(360deg);
+		/* Safari */
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		/* IE 9 */
+		-webkit-transform: rotate(0deg);
+		/* Safari */
+		transform: rotate(0deg);
+	}
+	to {
+		/* IE 9 */
+		-webkit-transform: rotate(360deg);
+		/* Safari */
+		transform: rotate(360deg);
+	}
 }
 
 /*--------------------------------------------------------------
@@ -2710,21 +2797,6 @@ ul.accordion button:focus {
 	max-height: 100%;
 	top: 50%;
 	left: 50%;
-}
-
-@-webkit-keyframes spin {
-	from {
-		/* IE 9 */
-		-webkit-transform: rotate(0deg);
-		/* Safari */
-		transform: rotate(0deg);
-	}
-	to {
-		/* IE 9 */
-		-webkit-transform: rotate(360deg);
-		/* Safari */
-		transform: rotate(360deg);
-	}
 }
 
 @keyframes spin {
