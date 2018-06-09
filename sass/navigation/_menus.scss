@@ -6,8 +6,6 @@
     font-size: .9em;
     z-index: 99;
 
-	
-
     ul.menu {
         //position: absolute;
         //top: 80px;
@@ -26,8 +24,6 @@
 			width: 400px;
 			max-width: none;
 		}
-		
-		
         
         &::-webkit-scrollbar {
 		    width: .75em;
@@ -38,7 +34,7 @@
 		}
 		 
 		&::-webkit-scrollbar-thumb {
-		  background-color: $color__sombreado;
+		  background-color: $color__interactive;
 		  outline: 0;
 		}
         
@@ -62,8 +58,7 @@
 			position: relative;
 			top: 100%;
 			z-index: 99999;
-			background: rgba(243, 240, 231, 0.8);
-			
+			background-color: #f6f6f6;		
 			
 			ul { //submenu 2
 				top: 100%;
@@ -72,6 +67,7 @@
 			li {
 				padding-left: 1.25em;
 				position: relative;
+				font-size: 13px;
 			 
 				&:hover > ul,
 				&.focus > ul {
@@ -113,6 +109,11 @@
         padding: .5em 1em;
         border: none;
         line-height: 1.4;
+        border-bottom: 1px solid #e6e6e6;
+        
+        @media screen and (min-width: $break__small) {
+        	padding: 1em;
+        }
         
         &:hover {
             //border: none;
@@ -124,7 +125,7 @@
     .current-menu-item > a,
     .current_page_ancestor > a,
     .current-menu-ancestor > a {
-	    opacity: .6;
+	    color: $color__interactive;
     }
     .menu-item-has-children,
 	.page_item_has_children {
@@ -132,7 +133,7 @@
 	}
 	.menu-item-has-children > a,
 	.page_item_has_children > a {
-		padding-right: 2em;
+		padding-right: 2.5em;
 	}
 	.modulo1 {
 		border-left: 6px solid $color__skin;
@@ -160,16 +161,18 @@
 //boton para desplegar submenus
 button.dropdown-toggle {
 	position: absolute;
-	right: 0;
-	top: 0;
-	border: none;
+	right: .5em;
+	top: 1em;
+	height: 27px; width: 27px;
+	padding: 0;
+	border: 2px solid $color__text-screen;
 	background: inherit;
-	line-height: 1.5em;
-	padding: .4em .75em;
+	line-height: 1;
 	color: $color__text-screen;
 	text-align: center;
-	@include borde(0);
-	font-size: 1.1em;
+	@include borde(50%);
+	font-weight: 700;
+	font-size: .8em
 }
 /* Toggle small menu and children on */
 .toggled-on ul,

@@ -1,6 +1,8 @@
 .ebook-nav {
     height: auto;
-    position: fixed;
+    max-width: 780px;
+    margin: 2em auto;
+    //position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -8,7 +10,7 @@
     overflow: hidden;
     background: #eee;
     font-size: .8em;
-    border-top: 2px solid $color__borde-recuadro;
+    border: 2px solid $color__borde-recuadro;
     z-index: 98;
     font-family: 'Rubik', Helvetica, Arial, sans-serif;	
     nav, 
@@ -64,10 +66,13 @@
 		display: block;
 		padding: 1em .5em .5em; 
 		height: 100%;
+		outline: 0;
 		&:hover {
 			background: $color__interactive;
 			color: white;
 			transition: .2s all;
+			border: none;
+			opacity: 1;
 		}
 	}
 
@@ -85,7 +90,7 @@
             }
 
             .nav-previous, .nav-next {
-                width: 30%;
+                width: 48%;
                 padding: 0;
                 a{
 				    padding: 1.25em 1em .5em;

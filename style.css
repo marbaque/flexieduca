@@ -401,7 +401,7 @@ html {
 }
 
 body {
-	background: #F6F6F6;
+	background: #FFFFFF;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -670,7 +670,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul.menu::-webkit-scrollbar-thumb {
-	background-color: #F1EEE5;
+	background-color: #D96C70;
 	outline: 0;
 }
 
@@ -692,7 +692,7 @@ a:hover, a:active {
 	position: relative;
 	top: 100%;
 	z-index: 99999;
-	background: rgba(243, 240, 231, 0.8);
+	background-color: #f6f6f6;
 }
 
 .main-navigation ul ul ul {
@@ -702,6 +702,7 @@ a:hover, a:active {
 .main-navigation ul ul li {
 	padding-left: 1.25em;
 	position: relative;
+	font-size: 13px;
 }
 
 .main-navigation li {
@@ -715,6 +716,13 @@ a:hover, a:active {
 	padding: .5em 1em;
 	border: none;
 	line-height: 1.4;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+@media screen and (min-width: 600px) {
+	.main-navigation a {
+		padding: 1em;
+	}
 }
 
 .main-navigation a:hover {
@@ -726,12 +734,12 @@ a:hover, a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
-	opacity: .6;
+	color: #D96C70;
 }
 
 .main-navigation .menu-item-has-children > a,
 .main-navigation .page_item_has_children > a {
-	padding-right: 2em;
+	padding-right: 2.5em;
 }
 
 .main-navigation .modulo1 {
@@ -758,16 +766,19 @@ a:hover, a:active {
 
 button.dropdown-toggle {
 	position: absolute;
-	right: 0;
-	top: 0;
-	border: none;
+	right: .5em;
+	top: 1em;
+	height: 27px;
+	width: 27px;
+	padding: 0;
+	border: 2px solid #333;
 	background: inherit;
-	line-height: 1.5em;
-	padding: .4em .75em;
+	line-height: 1;
 	color: #333;
 	text-align: center;
-	border-radius: 0;
-	font-size: 1.1em;
+	border-radius: 50%;
+	font-weight: 700;
+	font-size: .8em;
 }
 
 /* Toggle small menu and children on */
@@ -800,7 +811,8 @@ ul#footer-menu li a {
 --------------------------------------------------------------*/
 .ebook-nav {
 	height: auto;
-	position: fixed;
+	max-width: 780px;
+	margin: 2em auto;
 	bottom: 0;
 	left: 0;
 	width: 100%;
@@ -808,7 +820,7 @@ ul#footer-menu li a {
 	overflow: hidden;
 	background: #eee;
 	font-size: .8em;
-	border-top: 2px solid #393A38;
+	border: 2px solid #393A38;
 	z-index: 98;
 	font-family: 'Rubik', Helvetica, Arial, sans-serif;
 }
@@ -875,12 +887,15 @@ ul#footer-menu li a {
 	display: block;
 	padding: 1em .5em .5em;
 	height: 100%;
+	outline: 0;
 }
 
 .ebook-nav a:hover {
 	background: #D96C70;
 	color: white;
 	transition: .2s all;
+	border: none;
+	opacity: 1;
 }
 
 @media screen and (min-width: 900px) {
@@ -893,7 +908,7 @@ ul#footer-menu li a {
 		font-size: .7em;
 	}
 	.ebook-nav .nav-links .nav-previous, .ebook-nav .nav-links .nav-next {
-		width: 30%;
+		width: 48%;
 		padding: 0;
 	}
 	.ebook-nav .nav-links .nav-previous a, .ebook-nav .nav-links .nav-next a {
@@ -2132,11 +2147,6 @@ li.flexieduca-search, .widget_search {
 	display: none;
 }
 
-.single-multimedia .site-footer,
-.single-caso .site-footer {
-	display: none;
-}
-
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -2200,11 +2210,6 @@ li.flexieduca-search, .widget_search {
 	.single-actividad .entry-meta {
 		margin: 0 0 1em;
 	}
-}
-
-.single-multimedia .site-footer,
-.single-actividad .site-footer {
-	display: none;
 }
 
 /*----------------------  ACCORDION -----------------------*/
@@ -2514,7 +2519,9 @@ ul.accordion button:focus {
 	border: none;
 	position: fixed;
 	right: 10px;
-	bottom: 60px;
+	bottom: 20px;
+	z-index: 99;
+	box-shadow: -4px 1px 5px rgba(0, 0, 0, 0.27);
 }
 
 @media screen and (min-width: 900px) {
@@ -2522,6 +2529,13 @@ ul.accordion button:focus {
 		width: 80px;
 		height: 80px;
 		right: 10px;
+		bottom: 80px;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.wpc-button {
+		right: 40px;
 		bottom: 80px;
 	}
 }
