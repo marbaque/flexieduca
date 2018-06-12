@@ -15,7 +15,7 @@ get_header(); ?>
 	<header class="page-header">
 		<h1 class="page-title"><?php
 			/* translators: %s: search query. */
-			printf( esc_html__( 'Search Results for: %s', 'flexieduca' ), '<span>' . get_search_query() . '</span>' );
+			printf( esc_html__( 'Resultados para: %s', 'flexieduca' ), '<span>' . get_search_query() . '</span>' );
 		?></h1>
 	</header><!-- .page-header -->
 			
@@ -41,9 +41,9 @@ get_header(); ?>
 			endwhile;
 
 			the_posts_pagination( array(
-				'prev_text' => __( 'Newer', 'flexieduca' ),
-				'next_text' => __( 'Older', 'flexieduca' ),
-				'before_page_number' => '<span class="screen-reader-text">' . __( 'Page', 'flexieduca' ) . '</span>',
+				'prev_text' => __( 'Recientes', 'flexieduca' ),
+				'next_text' => __( 'Antiguos', 'flexieduca' ),
+				'before_page_number' => '<span class="screen-reader-text">' . __( 'Página', 'flexieduca' ) . '</span>',
 			) );
 
 		else :

@@ -21,12 +21,12 @@
 
     <body <?php body_class(); ?>>
         <div id="page" class="site">
-            <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'flexieduca'); ?></a>
+            <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Omitir e ir al contenido', 'flexieduca'); ?></a>
 
             <header id="masthead" class="site-header">
 
                 <nav id="site-navigation" class="main-navigation">
-                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php esc_html_e('Contents', 'flexieduca'); ?></span></button>
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php esc_html_e('Contenidos', 'flexieduca'); ?></span></button>
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'menu-1',
@@ -61,7 +61,7 @@
                     
                     <?php } else { ?>
 						
-						<button tabindex="0" role="button"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/h-icon.svg"><span><?php esc_html_e('Login', 'flexieduca'); ?></span></button> 
+						<button tabindex="0" role="button"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/h-icon.svg"><span><?php esc_html_e('Acceder', 'flexieduca'); ?></span></button> 
                         
                     <?php } ?>
                          

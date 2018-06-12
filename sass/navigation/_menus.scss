@@ -58,7 +58,7 @@
 			position: relative;
 			top: 100%;
 			z-index: 99999;
-			background-color: #f6f6f6;		
+			background-color: $color__grisillo;		
 			
 			ul { //submenu 2
 				top: 100%;
@@ -68,6 +68,10 @@
 				padding-left: 1.25em;
 				position: relative;
 				font-size: 13px;
+				
+				@media screen and (min-width: $break__small) {
+					font-size: 14px;
+				}
 			 
 				&:hover > ul,
 				&.focus > ul {
@@ -106,7 +110,7 @@
     a {
         display: block;
         text-decoration: none;
-        padding: .5em 1em;
+        padding: .5em;
         border: none;
         line-height: 1.4;
         border-bottom: 1px solid #e6e6e6;
@@ -162,17 +166,25 @@
 button.dropdown-toggle {
 	position: absolute;
 	right: .5em;
-	top: 1em;
-	height: 27px; width: 27px;
+	top: .5em;
+	height: 30px; width: 30px;
 	padding: 0;
-	border: 2px solid $color__text-screen;
 	background: inherit;
-	line-height: 1;
+	border: none;
 	color: $color__text-screen;
 	text-align: center;
 	@include borde(50%);
 	font-weight: 700;
-	font-size: .8em
+	font-size: 1em;
+	line-height: 1;
+	
+	&:hover {
+			background-color: $color__grisillo;
+	}
+	&:active {
+		background-color: $color__interactive;
+		color: white;
+	}
 }
 /* Toggle small menu and children on */
 .toggled-on ul,

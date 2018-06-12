@@ -46,7 +46,7 @@
             <?php
             $read_more_link = sprintf(
                 /* translators: %s: Name of current post. */
-                wp_kses(__('Continue reading %s', 'flexieduca'), array('span' => array('class' => array()))), the_title('<span class="screen-reader-text">"', '"</span>', false)
+                wp_kses(__('Abrir %s', 'flexieduca'), array('span' => array('class' => array()))), the_title('<span class="screen-reader-text">"', '"</span>', false)
             );
             ?>
 

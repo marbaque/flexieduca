@@ -14,13 +14,13 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'flexieduca' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'No hemos encontrado esa página.', 'flexieduca' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
 					<?php get_search_form(); ?>
 					
-					<p class="bubble"><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'flexieduca' ); ?></p>
+					<p class="bubble"><?php esc_html_e( 'Parece que no encontramos ese contenido. Intente una búsqueda.', 'flexieduca' ); ?></p>
 					<img aria-hidden="true" src="<?php echo get_stylesheet_directory_uri(); ?>/img/rana404.svg" class="rana404" />
 
 					<?php
@@ -28,7 +28,7 @@ get_header(); ?>
 					?>
 
 					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'flexieduca' ); ?></h2>
+						<h2 class="widget-title"><?php esc_html_e( 'Categorías más utilizadas', 'flexieduca' ); ?></h2>
 						<ul>
 						<?php
 							wp_list_categories( array(
@@ -45,7 +45,7 @@ get_header(); ?>
 					<?php
 
 						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'flexieduca' ), convert_smilies( ':)' ) ) . '</p>';
+						$archive_content = '<p>' . sprintf( esc_html__( 'Busque en los archivos mensuales. %1$s', 'flexieduca' ), convert_smilies( ':)' ) ) . '</p>';
 						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
 						the_widget( 'WP_Widget_Tag_Cloud' );

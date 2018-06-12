@@ -92,9 +92,9 @@ $resumen = get_field('resumen', $term);
 		endwhile;
 
 		the_posts_pagination(array(
-		    'prev_text'		 => __('Newer', 'flexieduca'),
-		    'next_text'		 => __('Older', 'flexieduca'),
-		    'before_page_number'	 => '<span class="screen-reader-text">' . __('Page', 'flexieduca') . '</span>',
+		    'prev_text'		 => __('Más reciente', 'flexieduca'),
+		    'next_text'		 => __('Más antiguo', 'flexieduca'),
+		    'before_page_number'	 => '<span class="screen-reader-text">' . __('Página', 'flexieduca') . '</span>',
 		));
 
 	    else :

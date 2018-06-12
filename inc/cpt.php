@@ -1,7 +1,8 @@
 <?php
 /*
-Simple plugin que agrega custom post types al material multimedia de Mercadeo
-Universidad Estatal a Distancia - PEM
+** Simple plugin que agrega custom post types al material multimedia de Mercadeo
+** Universidad Estatal a Distancia - PEM
+** Mover a la carpeta de plugins
 */
 function my_custom_posttypes() {
 
@@ -85,7 +86,8 @@ function my_custom_posttypes() {
             'thumbnail',
             'revisions',
             'page-attributes',
-            'comments'
+            'comments',
+            'excerpt'
         ),
     );
     register_post_type('caso', $argsC);

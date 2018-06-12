@@ -1,15 +1,15 @@
 @charset "UTF-8";
 /*!
 Theme Name: Flexieduca
-Theme URI: http://underscores.me/
-Author: Multimedia UNED
+Theme URI: https://multimedia.uned.ac.cr
+Author: Mario Badilla, Multimedia UNED
 Author URI: http://multimedia.uned.ac.cr
-Description: Theme for educational content
+Description: Tema para contenido educativo, enfocado en el aprendizaje flexibe y auto-guiado.
 Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: flexieduca
-Tags: translation-ready, responsive
+Tags: translation-ready
 GitHub Theme URI: https://github.com/marbaque/flexieduca
 
 This theme, like WordPress, is licensed under the GPL.
@@ -692,7 +692,7 @@ a:hover, a:active {
 	position: relative;
 	top: 100%;
 	z-index: 99999;
-	background-color: #f6f6f6;
+	background-color: #f4f4f4;
 }
 
 .main-navigation ul ul ul {
@@ -705,6 +705,12 @@ a:hover, a:active {
 	font-size: 13px;
 }
 
+@media screen and (min-width: 600px) {
+	.main-navigation ul ul li {
+		font-size: 14px;
+	}
+}
+
 .main-navigation li {
 	position: relative;
 	display: block;
@@ -713,7 +719,7 @@ a:hover, a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	padding: .5em 1em;
+	padding: .5em;
 	border: none;
 	line-height: 1.4;
 	border-bottom: 1px solid #e6e6e6;
@@ -767,18 +773,27 @@ a:hover, a:active {
 button.dropdown-toggle {
 	position: absolute;
 	right: .5em;
-	top: 1em;
-	height: 27px;
-	width: 27px;
+	top: .5em;
+	height: 30px;
+	width: 30px;
 	padding: 0;
-	border: 2px solid #333;
 	background: inherit;
-	line-height: 1;
+	border: none;
 	color: #333;
 	text-align: center;
 	border-radius: 50%;
 	font-weight: 700;
-	font-size: .8em;
+	font-size: 1em;
+	line-height: 1;
+}
+
+button.dropdown-toggle:hover {
+	background-color: #f4f4f4;
+}
+
+button.dropdown-toggle:active {
+	background-color: #D96C70;
+	color: white;
 }
 
 /* Toggle small menu and children on */
@@ -811,7 +826,6 @@ ul#footer-menu li a {
 --------------------------------------------------------------*/
 .ebook-nav {
 	height: auto;
-	max-width: 780px;
 	margin: 2em auto;
 	bottom: 0;
 	left: 0;
@@ -2512,7 +2526,7 @@ ul.accordion button:focus {
 	}
 }
 
-.wpc-button {
+a.wpc-button {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -2521,47 +2535,50 @@ ul.accordion button:focus {
 	right: 10px;
 	bottom: 20px;
 	z-index: 99;
-	box-shadow: -4px 1px 5px rgba(0, 0, 0, 0.27);
 }
 
-@media screen and (min-width: 900px) {
-	.wpc-button {
+a.wpc-button:hover {
+	opacity: 1;
+}
+
+@media screen and (min-width: 600px) {
+	a.wpc-button {
 		width: 80px;
 		height: 80px;
 		right: 10px;
-		bottom: 80px;
+		bottom: 70px;
 	}
 }
 
 @media screen and (min-width: 1400px) {
-	.wpc-button {
+	a.wpc-button {
 		right: 40px;
-		bottom: 80px;
 	}
 }
 
-.wpc-button.wpc-complete {
+a.wpc-button.wpc-complete {
+	background-image: url("img/frog@2x.png") !important;
+	background-image: none, url("img/frog.svg") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-size: 26px 20px !important;
+	box-shadow: -4px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+a.wpc-button.wpc-completed {
 	background-image: url("img/check@2x.png") !important;
 	background-image: none, url("img/check.svg") !important;
 	background-repeat: no-repeat !important;
 	background-position: center center !important;
 	background-size: 26px 20px !important;
+	opacity: .5;
 }
 
-.wpc-button.wpc-completed {
-	background-image: url("img/frog.png") !important;
-	background-image: none, url("img/frog.svg") !important;
-	background-repeat: no-repeat !important;
-	background-position: center center !important;
-	background-size: 34px 26px !important;
-	opacity: .25;
-}
-
-.wpc-button .wpc-active {
+a.wpc-button .wpc-active {
 	position: relative;
 }
 
-.wpc-button .wpc-active:after {
+a.wpc-button .wpc-active:after {
 	content: "";
 	width: 50px;
 	height: 50px;
@@ -2580,40 +2597,41 @@ ul.accordion button:focus {
 }
 
 @media screen and (min-width: 900px) {
-	.wpc-button .wpc-active:after {
+	a.wpc-button .wpc-active:after {
 		background-size: 50px 50px;
 		top: -12px;
 		right: -70px;
 	}
 }
 
-.wpc-button .wpc-inactive, .wpc-button .wpc-active {
-	padding: 4px;
+a.wpc-button .wpc-inactive, a.wpc-button .wpc-active {
+	padding: 6px;
 	width: auto;
 	white-space: nowrap;
-	background-color: black;
+	background-color: inherit;
 	font-size: 14px;
 	line-height: 1.2;
 	position: absolute;
 	right: 55px;
 	top: calc(50% - 1em);
+	border-radius: 4px;
 }
 
 @media screen and (min-width: 900px) {
-	.wpc-button .wpc-inactive, .wpc-button .wpc-active {
+	a.wpc-button .wpc-inactive, a.wpc-button .wpc-active {
 		right: 85px;
 	}
 }
 
-.wpc-button .wpc-inactive, .wpc-button .wpc-active {
+a.wpc-button .wpc-inactive, a.wpc-button .wpc-active {
 	display: none;
 }
 
-.wpc-button:hover, .wpc-button:active, .wpc-button:focus {
+a.wpc-button:hover, a.wpc-button:active, a.wpc-button:focus {
 	border: none;
 }
 
-.wpc-button:hover .wpc-inactive {
+a.wpc-button:hover .wpc-inactive {
 	display: inline-block;
 }
 
@@ -2995,7 +3013,6 @@ ul.accordion button:focus {
 	position: absolute;
 	bottom: 7px;
 	right: -7px;
-	border: 2px solid #393A38;
 	color: white;
 	transition: .5s background-color;
 }

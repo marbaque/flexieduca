@@ -87,11 +87,13 @@
                     position: absolute;
                     bottom: 7px;
                     right: -7px;
-                    border: 2px solid $color__borde-recuadro;
                     color: white;
                     transition: .5s background-color;
                     &:hover {
                         background-color: #E38689;
+                        &:after {
+	                        
+                        }
                     }
                 }
             }

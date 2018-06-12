@@ -29,7 +29,7 @@
             the_content();
     
             wp_link_pages(array(
-                'before' => '<div class="page-links">' . esc_html__('Pages:', 'flexieduca'),
+                'before' => '<div class="page-links">' . esc_html__('Páginas:', 'flexieduca'),
                 'after' => '</div>',
             ));
             ?>
@@ -47,13 +47,13 @@
 				*     return;
 				*/
 				echo get_avatar( $current_user->user_email, 64 );
-			    echo '<p class="name">' . __('Welcome, ', 'flexieduca') . '<span>' . $current_user->display_name . '</span></p>'; ?>
+			    echo '<p class="name">' . __('Hola, ', 'flexieduca') . '<span>' . $current_user->display_name . '</span></p>'; ?>
 		
 				<div class="datos">
                     <div>
-	                    <h3 class="mi-exitometro"> <?php echo esc_html__('Success \'o meter', 'flexieduca'); ?></h3>
+	                    <h3 class="mi-exitometro"> <?php echo esc_html__('Exit&oacute;metro', 'flexieduca'); ?></h3>
 	                    <p>
-	                        <?php echo esc_html__('Progress ', 'flexieduca') . do_shortcode('[wpc_progress_in_ratio course=all]'); ?>
+	                        <?php echo esc_html__('Progreso ', 'flexieduca') . do_shortcode('[wpc_progress_in_ratio course=all]'); ?>
 	                    </p>
 					</div>
                     <span><?php echo do_shortcode('[wpc_progress_graph course=all]'); ?></span>
@@ -61,9 +61,16 @@
 			<?php
 			
 			} else {
-			    echo __('Welcome!', 'flexieduca');
-			    echo '<p><a id="user" href="' . wp_login_url(get_permalink()) . '">';
-			    echo 'Acceda</a> al multimedia para guardar su progreso.</p>';
+				
+				?>
+			    <h3><?php echo __('¡Hola!', 'flexieduca'); ?></h3>
+			    
+			    <p>
+				    <a id="user" href="<?php echo wp_login_url(get_permalink()); ?>"><?php echo __('Acceda al multimedia', 'flexieduca'); ?></a> <?php echo __('para guardar su progreso', 'flexieduca'); ?>
+				    				    
+			    </p>
+			    <?php 
+			    
 			}
 			?>
             </div><!-- exitometro -->

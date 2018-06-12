@@ -18,7 +18,7 @@ $title = isset( $post->post_title ) ? $post->post_title : '';
                 <div class="accordion-panel audio">
                     <audio controls>
                         <source src="<?php echo $audioURL; ?>" type="audio/mpeg">
-                        <?php echo __( 'Your browser does not support the audio element.', 'flexieduca' ); ?>
+                        <?php echo __( 'Su navegador no admite el elemento de audio.', 'flexieduca' ); ?>
                     </audio>
                    <p class="descargar-audio button"><a href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fas fa-download"></i> Descargar</a></p>		   
 		   

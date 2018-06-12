@@ -11,7 +11,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'flexieduca' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'No se encontró nada', 'flexieduca' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -22,7 +22,7 @@
 				printf(
 					wp_kses(
 						/* translators: 1: link to WP admin new post page. */
-						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'flexieduca' ),
+						__( '¿Listo(a) para publicar su primara entrada? <a href="%1$s">Empiece aquí</a>.', 'flexieduca' ),
 						array(
 							'a' => array(
 								'href' => array(),
@@ -37,11 +37,11 @@
 
 			
 			<?php get_search_form(); ?>			
-			<p class="bubble"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'flexieduca' ); ?></p>
+			<p class="bubble"><?php esc_html_e( 'Lo sentimos, no hay nada con ese t&eacute;rmino. Por favor, utilice otras palabras clave.', 'flexieduca' ); ?></p>
 			<?php else : ?>
 			
 			<?php get_search_form(); ?>
-			<p class="bubble"><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'flexieduca' ); ?></p>
+			<p class="bubble"><?php esc_html_e( 'Parece que no podemos encontrar ese contenido. Quiz&aacute;s una búsqueda sea de ayuda.', 'flexieduca' ); ?></p>
 			<?php endif; ?>
 		
 		<img aria-hidden="true" src="<?php echo get_stylesheet_directory_uri(); ?>/img/rana404.svg" class="rana404" />

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * flexieduca functions and definitions
+ * Flexieduca functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -50,9 +50,9 @@ if (!function_exists('flexieduca_setup')) :
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus(array(
-            'menu-1' => esc_html__('Primary menu', 'flexieduca'),
-            'menu-2' => esc_html__('Front menu', 'flexieduca'),
-            'menu-3' => esc_html__('Footer menu', 'flexieduca'),
+            'menu-1' => esc_html__('Men&uacute; principal', 'flexieduca'),
+            'menu-2' => esc_html__('Menú de página de inicio', 'flexieduca'),
+            'menu-3' => esc_html__('Menú de pie de página', 'flexieduca'),
         ));
 
         /*
@@ -193,27 +193,27 @@ add_filter('wp_calculate_image_sizes', 'flexieduca_content_image_sizes_attr', 10
  */
 function flexieduca_widgets_init() {
     register_sidebar(array(
-        'name' => esc_html__('Sidebar', 'flexieduca'),
+        'name' => esc_html__('Barra lateral', 'flexieduca'),
         'id' => 'sidebar-1',
-        'description' => esc_html__('Add widgets here.', 'flexieduca'),
+        'description' => esc_html__('Agregar widgets aquí.', 'flexieduca'),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget' => '</section>',
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
     register_sidebar(array(
-        'name' => esc_html__('Page Sidebar', 'flexieduca'),
+        'name' => esc_html__('Barra lateral de páginas', 'flexieduca'),
         'id' => 'sidebar-2',
-        'description' => esc_html__('Add page sidebar widgets here.', 'flexieduca'),
+        'description' => esc_html__('Agregar widgets a la Barra lateral de páginas.', 'flexieduca'),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget' => '</section>',
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ));
     register_sidebar(array(
-        'name' => esc_html__('Front Page Sidebar', 'flexieduca'),
+        'name' => esc_html__('Barra lateral de la página de inicio', 'flexieduca'),
         'id' => 'sidebar-3',
-        'description' => esc_html__('Add front widgets here.', 'flexieduca'),
+        'description' => esc_html__('Agregar widgets a la Barra lateral de la página de inicio.', 'flexieduca'),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget' => '</section>',
         'before_title' => '<h2 class="widget-title">',
@@ -247,8 +247,8 @@ function flexieduca_scripts() {
     
     
     wp_localize_script('flexieduca-navigation', 'flexieducaScreenReaderText', array(
-        'expand' => __('Expand child menu', 'flexieduca'),
-        'collapse' => __('Collapse child menu', 'flexieduca'),
+        'expand' => __('Expandir menú hijo', 'flexieduca'),
+        'collapse' => __('Encoger menú hijo', 'flexieduca'),
     ));
 
     wp_enqueue_script('flexieduca-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
@@ -290,9 +290,10 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 /**
- * Custom posts types.
+ * Custom posts types (descomentar para usar los custom post types del tema).
  */
 require get_template_directory() . '/inc/cpt.php';
+
 
 /**
  * Load Jetpack compatibility file.

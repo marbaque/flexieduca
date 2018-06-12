@@ -1,6 +1,6 @@
 <?php
 /*
- * * Template Name: Case Gallery
+ * * Template Name: Galería de casos
  * Template Post Type: post, multimedia
  */
 get_header();
@@ -41,15 +41,15 @@ get_header();
 		the_content();
 
 		wp_link_pages(array(
-		    'before' => '<div class="page-links">' . esc_html__('Pages:', 'flexieduca'),
+		    'before' => '<div class="page-links">' . esc_html__('Páginas:', 'flexieduca'),
 		    'after'	 => '</div>',
 		));
 		?>
     	</main><!-- #main -->
     	<section class="case-gallery">
 
-    	    <h2 class="gallery-title">
-		    <?php echo esc_html__('Case list', 'flexieduca'); ?>
+    	    <h2 class="gallery-title screen-reader-text">
+		    <?php echo esc_html__('Casos destacados', 'flexieduca'); ?>
     	    </h2>
 	    <?php
 

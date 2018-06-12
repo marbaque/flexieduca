@@ -1,6 +1,6 @@
 <?php
 /*
- * * Template Name: Strategy template
+ * * Template Name: Plantilla para categoría 'Estrategias'
  * * Template Post Type: post, multimedia
  */
 get_header();
@@ -41,7 +41,7 @@ get_header();
 		the_content();
 
 		wp_link_pages(array(
-		    'before' => '<div class="page-links">' . esc_html__('Pages:', 'flexieduca'),
+		    'before' => '<div class="page-links">' . esc_html__('Páginas:', 'flexieduca'),
 		    'after'	 => '</div>',
 		));
 		?>
@@ -49,7 +49,7 @@ get_header();
     	<section class="case-gallery">
 
     	    <h2 class="gallery-title">
-		    <?php echo esc_html__('Case list', 'flexieduca'); ?>
+		    <?php echo esc_html__('Casos destacados', 'flexieduca'); ?>
     	    </h2>
 	    <?php
 		/*
@@ -94,7 +94,7 @@ get_header();
 				<?php
 				$read_more_link = sprintf(
 					/* translators: %s: Name of current post. */
-					wp_kses(__('Continue reading %s', 'flexieduca'), array('span' => array('class' => array()))), the_title('<span class="screen-reader-text">"', '"</span>', false)
+					wp_kses(__('Abrir... %s', 'flexieduca'), array('span' => array('class' => array()))), the_title('<span class="screen-reader-text">"', '"</span>', false)
 				);
 				?>
 					<a href="<?php echo esc_url(get_permalink( $caso->ID )) ?>" rel="bookmark">

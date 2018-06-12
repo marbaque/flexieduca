@@ -266,7 +266,7 @@ ul.accordion {
     }
 }
 
-.wpc-button {
+a.wpc-button {
 	width: 50px;
 	height: 50px;
 	@include borde(50%);
@@ -275,33 +275,36 @@ ul.accordion {
 	right: 10px;
 	bottom: 20px;
 	z-index: 99;
-	box-shadow: -4px 1px 5px rgba(0, 0, 0, 0.27);
-	@media screen and (min-width: $break__medium) {
+	
+	&:hover {
+		opacity: 1;
+	}
+	@media screen and (min-width: $break__small) {
 		width: 80px;
 		height: 80px;
 		right: 10px;
-		bottom: 80px;
+		bottom: 70px;
 	}
 	@media screen and (min-width: $break__hd) {
 		right: 40px;
-		bottom: 80px;
 	}
 	
 	&.wpc-complete {
+		background-image: url("img/frog@2x.png")!important;
+		background-image: none, url("img/frog.svg")!important;
+		background-repeat: no-repeat!important;
+		background-position: center center!important;
+		background-size: 26px 20px!important;
+		box-shadow: -4px 1px 2px rgba(0, 0, 0, 0.2);
+	}
+	
+	&.wpc-completed {
 		background-image: url("img/check@2x.png")!important;
 		background-image: none, url("img/check.svg")!important;
 		background-repeat: no-repeat!important;
 		background-position: center center!important;
 		background-size: 26px 20px!important;
-	}
-	
-	&.wpc-completed {
-		background-image: url("img/frog.png")!important;
-		background-image: none, url("img/frog.svg")!important;
-		background-repeat: no-repeat!important;
-		background-position: center center!important;
-		background-size: 34px 26px!important;
-		opacity: .25;
+		opacity: .5;
 	}
 	
 	.wpc-active {
@@ -333,16 +336,16 @@ ul.accordion {
 	}
 	
 	.wpc-inactive, .wpc-active {
-			
-		padding: 4px;
+		padding: 6px;
 		width: auto;
 		white-space: nowrap;
-		background-color: black;
+		background-color: inherit;
 		font-size: 14px;
 		line-height: 1.2;
 		position: absolute;
 		right: 55px;
 		top: calc(50% - 1em);
+		@include borde(4px);
 		
 		
 		@media screen and (min-width: $break__medium) {

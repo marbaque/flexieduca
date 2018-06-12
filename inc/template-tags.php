@@ -26,12 +26,12 @@ if (!function_exists('flexieduca_posted_on')) :
 
 		$posted_on = sprintf(
 				/* translators: %s: post date. */
-				esc_html_x('%s', 'post date', 'flexieduca'), '<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
+				esc_html_x('%s', 'fecha de entrada', 'flexieduca'), '<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
 				/* translators: %s: post author. */
-				esc_html_x('Published by %s', 'post author', 'flexieduca'), '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
+				esc_html_x('Publicado por %s', 'autor de la entrada', 'flexieduca'), '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
 		);
 
 		echo '<span class="byline">' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
@@ -39,14 +39,14 @@ if (!function_exists('flexieduca_posted_on')) :
 		if (!post_password_required() && ( comments_open() || get_comments_number() )) {
 			echo ' <span class="comments-link"><span class="extra">Discussion </span>';
 			/* translators: %s: post title */
-			comments_popup_link(sprintf(wp_kses(__('Leave a Comment<span class="screen-reader-text"> on %s</span>', 'flexieduca'), array('span' => array('class' => array()))), get_the_title()));
+			comments_popup_link(sprintf(wp_kses(__('Hacer un comentario<span class="screen-reader-text"> en %s</span>', 'flexieduca'), array('span' => array('class' => array()))), get_the_title()));
 			echo '</span>';
 		}
 
 		edit_post_link(
 				sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__('Edit %s', 'flexieduca'), the_title('<span class="screen-reader-text">"', '"</span>', false)
+						esc_html__('Editar %s', 'flexieduca'), the_title('<span class="screen-reader-text">"', '"</span>', false)
 				), ' <span class="edit-link"><span class="extra">Admin </span>', '</span>'
 		);
 	}
@@ -64,10 +64,10 @@ if (!function_exists('flexieduca_entry_footer')) :
 
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list('', esc_html_x(', ', 'list item separator', 'flexieduca'));
+			$tags_list = get_the_tag_list('', esc_html_x(', ', 'separador de ítem de lista', 'flexieduca'));
 			if ($tags_list) {
 				/* translators: 1: list of tags. */
-				printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'flexieduca') . '</span>', $tags_list); // WPCS: XSS OK.
+				printf('<span class="tags-links">' . esc_html__('Etiquetado como %1$s', 'flexieduca') . '</span>', $tags_list); // WPCS: XSS OK.
 			}
 		}
 
@@ -77,7 +77,7 @@ if (!function_exists('flexieduca_entry_footer')) :
 					sprintf(
 							wp_kses(
 									/* translators: %s: post title */
-									__('Leave a Comment<span class="screen-reader-text"> on %s</span>', 'flexieduca'), array(
+									__('Hacer un comentario<span class="screen-reader-text"> en %s</span>', 'flexieduca'), array(
 				'span' => array(
 					'class' => array(),
 				),
@@ -92,7 +92,7 @@ if (!function_exists('flexieduca_entry_footer')) :
 				sprintf(
 						wp_kses(
 								/* translators: %s: Name of current post. Only visible to screen readers */
-								__('Edit <span class="screen-reader-text">%s</span>', 'flexieduca'), array(
+								__('Editar <span class="screen-reader-text">%s</span>', 'flexieduca'), array(
 			'span' => array(
 				'class' => array(),
 			),
@@ -166,9 +166,9 @@ add_action('save_post', 'flexieduca_category_transient_flusher');
 function flexieduca_post_navigation() {
 
 	the_post_navigation(array(
-		'prev_text'	 => '<span class="screen-reader-text">' . __('Previous', 'flexieduca') . '</span> ' .
+		'prev_text'	 => '<span class="screen-reader-text">' . __('Anterior', 'flexieduca') . '</span> ' .
 		'<span class="arrow"><i class="fas fa-angle-left"></i></span><span class="post-title">%title</span>',
-		'next_text'	 => '<span class="screen-reader-text">' . __('Next', 'flexieduca') . '</span> ' .
+		'next_text'	 => '<span class="screen-reader-text">' . __('Siguiente', 'flexieduca') . '</span> ' .
 		'<span class="arrow"><i class="fas fa-angle-right"></i></span><span class="post-title">%title </span>',
 	));
 }
@@ -271,3 +271,14 @@ function my_next_post_sort() {
 }
 
 add_filter('get_next_post_sort', 'my_next_post_sort');
+
+
+
+/************************************************************************/
+// Cambiar título de comentarios
+/************************************************************************/
+add_filter('comment_form_defaults', 'set_my_comment_title', 20);
+function set_my_comment_title( $defaults ){
+  $defaults['title_reply'] = __('Discusión', 'flexieduca');
+  return $defaults;
+}

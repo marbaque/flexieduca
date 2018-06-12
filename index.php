@@ -1,13 +1,5 @@
 <?php
 /**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Flexieduca
  */
@@ -41,9 +33,9 @@ get_header(); ?>
 			endwhile;
 
 			the_posts_pagination( array(
-				'prev_text' => __( 'Newer', 'flexieduca' ),
-				'next_text' => __( 'Older', 'flexieduca' ),
-				'before_page_number' => '<span class="screen-reader-text">' . __( 'Page', 'flexieduca' ) . '</span>',
+				'prev_text' => __( 'Más reciente', 'flexieduca' ),
+				'next_text' => __( 'Más antiguo', 'flexieduca' ),
+				'before_page_number' => '<span class="screen-reader-text">' . __( 'Página', 'flexieduca' ) . '</span>',
 			) );
 
 		else :

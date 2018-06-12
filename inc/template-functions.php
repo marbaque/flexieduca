@@ -243,7 +243,7 @@ add_action('add_meta_boxes', 'my_add_meta_boxes');
 
 function lesson_attributes_meta_box($post) {
     $post_type_object	 = get_post_type_object($post->post_type);
-    $pages			 = wp_dropdown_pages(array('post_type' => 'multimedia', 'selected' => $post->post_parent, 'name' => 'parent_id', 'show_option_none' => __('(no parent)'), 'sort_column' => 'menu_order, post_title', 'echo' => 0));
+    $pages			 = wp_dropdown_pages(array('post_type' => 'multimedia', 'selected' => $post->post_parent, 'name' => 'parent_id', 'show_option_none' => __('Sin contenido principal', 'flexieduca'), 'sort_column' => 'menu_order, post_title', 'echo' => 0));
     if (!empty($pages)) {
 	echo $pages;
     }
@@ -274,6 +274,7 @@ add_filter('post_type_link', 'my_permalinks', 10, 3);
 
 
 //hide admin bar for users except administrators
+
 add_action('after_setup_theme', 'remove_admin_bar');
 
 function remove_admin_bar() {
