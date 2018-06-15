@@ -69,3 +69,12 @@ $public_path: "./";
   background-image: none, url('#{$public_path}img/#{$name}.svg');
   background-repeat: no-repeat;
 }
+
+@mixin recuadro-box {
+	border: 3px solid $color__borde-recuadro; 
+    background-color: white;
+    @include borde(4px);
+    height: auto;
+    padding: 1em;
+    margin: .5em 0;
+}

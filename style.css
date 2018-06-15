@@ -2533,7 +2533,7 @@ a.wpc-button {
 	border: none;
 	position: fixed;
 	right: 10px;
-	bottom: 20px;
+	bottom: 120px;
 	z-index: 99;
 }
 
@@ -2546,7 +2546,6 @@ a.wpc-button:hover {
 		width: 80px;
 		height: 80px;
 		right: 10px;
-		bottom: 70px;
 	}
 }
 
@@ -2557,8 +2556,8 @@ a.wpc-button:hover {
 }
 
 a.wpc-button.wpc-complete {
-	background-image: url("img/frog@2x.png") !important;
-	background-image: none, url("img/frog.svg") !important;
+	background-image: url("img/check@2x.png") !important;
+	background-image: none, url("img/check.svg") !important;
 	background-repeat: no-repeat !important;
 	background-position: center center !important;
 	background-size: 26px 20px !important;
@@ -2586,7 +2585,6 @@ a.wpc-button .wpc-active:after {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 32px 32px;
-	background-color: transparent;
 	padding: 0;
 	display: block;
 	position: absolute;
@@ -2617,7 +2615,7 @@ a.wpc-button .wpc-inactive, a.wpc-button .wpc-active {
 	border-radius: 4px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
 	a.wpc-button .wpc-inactive, a.wpc-button .wpc-active {
 		right: 85px;
 	}
@@ -2733,46 +2731,20 @@ a.wpc-button:hover .wpc-inactive {
 	}
 }
 
-.single-caso .case-content .case__wrap .case-trends {
-	display: block;
-	padding: .5em 1em;
+.single-caso .case-content .case__wrap .enlace, .single-caso .case-content .case__wrap .case-trends {
+	border: 3px solid #393A38;
+	background-color: white;
+	border-radius: 4px;
+	height: auto;
+	padding: 1em;
 	margin: .5em 0;
-	border: none;
 }
 
-.single-caso .case-content .case__wrap .case-trends a {
-	background: #D96C70;
-	color: white;
-	text-transform: uppercase;
-	font-size: .9em;
-	letter-spacing: 1px;
-	padding: 2px 6px;
-	border: 0;
-	border-radius: 2px;
-}
-
-.single-caso .case-content .case__wrap .case-trends:before {
-	font-family: 'Fontawesome';
-	content: "\f12e";
-	margin-right: 1em;
-	text-align: center;
-	color: white;
-	background-color: #D96C70;
-	padding: .5em;
-	line-height: 1;
-	border-radius: 50%;
-	float: left;
-}
-
-.single-caso .case-content .case__wrap .enlace {
-	margin: .5em 0;
-	display: block;
-	padding: .75em 1em .5em;
+.single-caso .case-content .case__wrap .enlace:hover, .single-caso .case-content .case__wrap .case-trends:hover {
+	background: #f4f4f4;
 }
 
 .single-caso .case-content .case__wrap .enlace a {
-	display: block;
-	margin-left: 3em;
 	border: none;
 	/* These are technically the same, but use both */
 	overflow-wrap: break-word;
@@ -2789,14 +2761,30 @@ a.wpc-button:hover .wpc-inactive {
 
 .single-caso .case-content .case__wrap .enlace:before {
 	font-family: 'FontAwesome';
-	content: "\f0c1";
-	text-align: center;
+	content: "\f14e";
+	font-size: 1.5em;
+	bottom: -.1em;
+	position: relative;
+}
+
+.single-caso .case-content .case__wrap .case-trends a {
+	background: #333;
 	color: white;
-	background-color: #D96C70;
-	padding: .5em;
-	line-height: 1;
-	border-radius: 50%;
-	float: left;
+	text-transform: uppercase;
+	font-size: .9em;
+	letter-spacing: 1px;
+	padding: 3px 6px;
+	border: 0;
+	border-radius: 2px;
+}
+
+.single-caso .case-content .case__wrap .case-trends:before {
+	font-family: 'Fontawesome';
+	content: "\f02b";
+	margin-right: 2px;
+	font-size: 1.5em;
+	bottom: -.1em;
+	position: relative;
 }
 
 .single-caso .gallery {
@@ -3053,6 +3041,12 @@ a.wpc-button:hover .wpc-inactive {
 	.casos-index .case-index__wrap .case-gallery .case-item,
 	.tax-tendencia .case-index__wrap .case-gallery .case-item {
 		width: 48%;
+	}
+	.casos-index .ebook-nav,
+	.tax-tendencia .ebook-nav {
+		max-width: 48%;
+		margin-right: auto;
+		margin-left: 0;
 	}
 }
 

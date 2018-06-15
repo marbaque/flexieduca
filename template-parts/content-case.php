@@ -100,7 +100,9 @@
 		    </ul>
 		</div>	
 		<?php endif; ?>
-		
+		<div class="ebook-nav">
+		    <?php flexieduca_post_navigation(); ?>
+		</div>
 	    </div>
 
         </div><!-- case__wrap -->
@@ -120,6 +122,4 @@
 
 </article><!-- #post-## -->
 
-<div class="ebook-nav">
-    <?php flexieduca_post_navigation(); ?>
-</div>
+

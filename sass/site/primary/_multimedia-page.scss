@@ -191,8 +191,8 @@ ul.accordion {
         background-size: 80px;
         border: 3px solid $color__borde-recuadro; 
         background-color: #F1EEE5;
-	background-position: 20px 20px;
-	@include borde(4px);
+		background-position: 20px 20px;
+		@include borde(4px);
     }
 }
 .formato-recuadro {
@@ -273,7 +273,7 @@ a.wpc-button {
 	border: none;
 	position: fixed;
 	right: 10px;
-	bottom: 20px;
+	bottom: 120px;
 	z-index: 99;
 	
 	&:hover {
@@ -283,15 +283,14 @@ a.wpc-button {
 		width: 80px;
 		height: 80px;
 		right: 10px;
-		bottom: 70px;
 	}
 	@media screen and (min-width: $break__hd) {
 		right: 40px;
 	}
 	
 	&.wpc-complete {
-		background-image: url("img/frog@2x.png")!important;
-		background-image: none, url("img/frog.svg")!important;
+		background-image: url("img/check@2x.png")!important;
+		background-image: none, url("img/check.svg")!important;
 		background-repeat: no-repeat!important;
 		background-position: center center!important;
 		background-size: 26px 20px!important;
@@ -317,7 +316,7 @@ a.wpc-button {
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: 32px 32px;
-			background-color: transparent;
+			//background-color: transparent;
 			padding: 0;
 			display:block;
 			position: absolute;
@@ -348,7 +347,7 @@ a.wpc-button {
 		@include borde(4px);
 		
 		
-		@media screen and (min-width: $break__medium) {
+		@media screen and (min-width: $break__small) {
 			right: 85px;
 		}
 		

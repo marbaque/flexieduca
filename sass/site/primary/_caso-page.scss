@@ -49,46 +49,19 @@
 			    height: 100%;
 			}
 	    }
-	    .case-trends {
-			display: block;
-			padding: .5em 1em;
-			margin: .5em 0;
-			border: none;
-			a {
-			    background: $color__interactive;
-			    color: white;
-			    text-transform: uppercase;
-			    font-size: .9em;
-			    letter-spacing: 1px;
-			    padding: 2px 6px;
-			    border: 0;
-			    @include borde(2px);
-
-			}
-			&:before {
-				font-family: 'Fontawesome';
-				content: "\f12e";
-				margin-right: 1em;
-				text-align: center;
-				color: white;
-				background-color: $color__interactive;
-				padding: .5em;
-				line-height: 1;
-				@include borde(50%);
-				float: left;
+	    
+	    .enlace,.case-trends {
+		    @include recuadro-box;
+		    &:hover {
+			    background: $color__grisillo;
 		    }
-
 	    }
+	    
 	    //more info
 	    .enlace {
-			margin: .5em 0;
-			display: block;
-			padding: .75em 1em .5em;
 
 			a {
 
-				display: block;
-				margin-left: 3em;
 				border: none;
 			    
 			    /* These are technically the same, but use both */
@@ -109,16 +82,36 @@
 			}
 			&:before {
 				font-family: 'FontAwesome';
-				content: "\f0c1";
-				text-align: center;
-				color: white;
-				background-color: $color__interactive;
-				padding: .5em;
-				line-height: 1;
-				@include borde(50%);
-				float: left;
+				content: "\f14e";
+				font-size: 1.5em;
+				bottom: -.1em;
+				position: relative;
 			}
 	    }
+	    //estrategia
+	    .case-trends {
+			a {
+			    background: $color__text-screen;
+			    color: white;
+			    text-transform: uppercase;
+			    font-size: .9em;
+			    letter-spacing: 1px;
+			    padding: 3px 6px;
+			    border: 0;
+			    @include borde(2px);
+
+			}
+			&:before {
+				font-family: 'Fontawesome';
+				content: "\f02b";
+				margin-right: 2px;
+				font-size: 1.5em;
+				bottom: -.1em;
+				position: relative;
+		    }
+
+	    }
+
 	}
 
     }
