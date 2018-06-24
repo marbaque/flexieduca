@@ -41,8 +41,6 @@ function flexieduca_body_classes($classes) {
 	$classes[] = 'has-no-front-sidebar';
     }
 
-
-
     return $classes;
 }
 
@@ -262,19 +260,16 @@ add_action('init', 'my_add_rewrite_rules');
 function my_permalinks($permalink, $post, $leavename) {
     $post_id	 = $post->ID;
     if ($post->post_type != 'caso' || empty($permalink) || in_array($post->post_status, array('draft', 'pending', 'auto-draft')))
-	return $permalink;
-    $parent		 = $post->post_parent;
-    $parent_post	 = get_post($parent);
-    $permalink	 = str_replace('%multimedia%', $parent_post->post_name, $permalink);
-    return $permalink;
+		return $permalink;
+	    $parent		 = $post->post_parent;
+	    $parent_post	 = get_post($parent);
+	    $permalink	 = str_replace('%multimedia%', $parent_post->post_name, $permalink);
+	    return $permalink;
 }
 
 add_filter('post_type_link', 'my_permalinks', 10, 3);
 
-
-
 //hide admin bar for users except administrators
-
 add_action('after_setup_theme', 'remove_admin_bar');
 
 function remove_admin_bar() {
@@ -282,3 +277,9 @@ function remove_admin_bar() {
 	show_admin_bar(false);
     }
 }
+
+//Redireccionar usuarios al home despues del login
+function login_redirect( $redirect_to, $request, $user ){
+    return home_url();
+}
+add_filter( 'login_redirect', 'login_redirect', 10, 3 );

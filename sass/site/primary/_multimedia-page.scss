@@ -267,108 +267,75 @@ ul.accordion {
 }
 
 a.wpc-button {
-	width: 50px;
-	height: 50px;
+	width: 80px;
+	height: 80px;
 	@include borde(50%);
 	border: none;
-	position: fixed;
-	right: 10px;
-	bottom: 120px;
 	z-index: 99;
+	display: block;	
+	position: relative;
+	text-align: center;
+    white-space: nowrap;
+    clear: both;
+    
+	left: 50%;
+	margin-left: -40px; /*half the width of the div*/
+	margin-top: 40px;
+	margin-bottom: 40px;
 	
-	&:hover {
-		opacity: 1;
-	}
-	@media screen and (min-width: $break__small) {
-		width: 80px;
-		height: 80px;
-		right: 10px;
-	}
-	@media screen and (min-width: $break__hd) {
-		right: 40px;
-	}
+	font-size: .8em;
 	
 	&.wpc-complete {
-		background-image: url("img/check@2x.png")!important;
-		background-image: none, url("img/check.svg")!important;
-		background-repeat: no-repeat!important;
-		background-position: center center!important;
-		background-size: 26px 20px!important;
-		box-shadow: -4px 1px 2px rgba(0, 0, 0, 0.2);
+		@include vector-bg-with-fallback(check);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 26px 20px;
 	}
 	
 	&.wpc-completed {
-		background-image: url("img/check@2x.png")!important;
-		background-image: none, url("img/check.svg")!important;
-		background-repeat: no-repeat!important;
-		background-position: center center!important;
-		background-size: 26px 20px!important;
-		opacity: .5;
+		@include vector-bg-with-fallback(check);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 26px 20px;
+		opacity: .25;
 	}
-	
-	.wpc-active {
-		position: relative;
-		&:after {
-			content: "";
-			width: 50px;
-			height: 50px;
-			background-image: url("img/spinner.png");
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-size: 32px 32px;
-			//background-color: transparent;
-			padding: 0;
-			display:block;
-			position: absolute;
-			right: -55px;
-			top: -12.5px;
-			animation: spin 5s linear 0 infinite normal;
-			
-			@media screen and (min-width: $break__medium) {
-				background-size: 50px 50px;
-				top: -12px;
-				right: -70px;
-				
-			}
-		}
-		
-	}
+
 	
 	.wpc-inactive, .wpc-active {
-		padding: 6px;
-		width: auto;
-		white-space: nowrap;
-		background-color: inherit;
-		font-size: 14px;
-		line-height: 1.2;
-		position: absolute;
-		right: 55px;
-		top: calc(50% - 1em);
 		@include borde(4px);
-		
-		
-		@media screen and (min-width: $break__small) {
-			right: 85px;
-		}
-		
+		margin-left: -100%;
+		margin-right: -100%;
+		margin-bottom: 2em;
+		position: relative;
+		bottom: -70px;
+		color: $color__text-screen;
 	}
 	
-	.wpc-inactive, .wpc-active {
-		display: none;
-	}
-	
-	&:hover, &:active, &:focus {
+	&:hover {
 		border: none;
 	}
 	
-	
-	
-	&:hover {
-		.wpc-inactive {
-			display: inline-block;
-		}
+		
+
+	.wpc-active:before {
+			content: "";
+			width: 50px;
+			height: 50px;
+			@include vector-bg-with-fallback(spinner);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 32px 32px;
+			background-color: transparent;
+			padding: 0;
+			display:block;
+			position: absolute;
+			top: -70px;
+			left: calc(50% - 25px);
+			animation: spin 3s linear 0 infinite normal;
+
 		
 	}
+	
 } 
 
 

@@ -28,35 +28,36 @@
 
 	<div class="case__wrap">
 
-    	    <div class="gallery">
+    	<div class="gallery">
 
 		    <?php if ( has_post_thumbnail() ) {
 				the_post_thumbnail();
 		    } ?>
 		
-		<?php $url = get_field('enlace'); ?>    
-		<div class="enlace">
-			<?php if (!empty($url)): ?>
-			    <a href="<?php echo $url; ?>" title="Enlace a <?php the_title(); ?>" target="_blank"><?php echo "Mas información: " . preg_replace('#^https?://#', '', $url); ?></i></a>
-			    <?php endif; ?>
-		</div>
-		<div class="case-trends">
-			<?php 
-
-			$posts = get_field('galeria_relacionada');
+			<?php $url = get_field('enlace'); ?>    
 			
-			if( $posts ): ?>
-				<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-					<?php setup_postdata($post); ?>
-						<span>Estrategia de comercialización: <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
-				<?php endforeach; ?>
-				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-			<?php endif; ?>
+			<div class="enlace">
+				<?php if (!empty($url)): ?>
+				    <?php echo __('Mas información: ', 'flexieduca'); ?>
+				    <a href="<?php echo $url; ?>" title="Enlace a <?php the_title(); ?>" target="_blank"><?php echo preg_replace('#^https?://#', '', $url); ?></i></a>
+				    <?php endif; ?>
+			</div>
 			
-    	</div>
-
+			<div class="case-trends">
+				<?php 
+	
+				$posts = get_field('galeria_relacionada');
+				
+				if( $posts ): ?>
+					<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+						<?php setup_postdata($post); ?>
+							<span><?php echo __('Estrategia de comercialización: ', 'flexieduca'); ?> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
+					<?php endforeach; ?>
+					<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endif; ?>
+	    	</div>
 		
-    	    </div><!-- .case-gallery --> 
+	    </div><!-- .case-gallery --> 
 	    
 	    <div class="case-desc">
 		
