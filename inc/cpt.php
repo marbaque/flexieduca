@@ -5,6 +5,44 @@
 ** Mover a la carpeta de plugins
 */
 function my_custom_posttypes() {
+	
+	//Capítulos o módulos
+    $labelsM = array(
+        'name' => 'Módulo',
+        'singular_name' => 'Módulo',
+        'menu_name' => 'Módulo',
+        'name_admin_bar' => 'Módulo',
+        'add_new' => 'Agregar Módulo nuevo',
+        'add_new_item' => 'Agregar Módulo',
+        'new_item' => 'Nuevo Módulo',
+        'edit_item' => 'Editar Módulo',
+        'view_item' => 'Ver',
+        'all_items' => 'Todos los Módulos',
+        'search_items' => 'Buscar Módulo',
+        'parent_item_colon' => 'Módulo hijo de:',
+        'not_found' => 'No se encontraron Módulos.',
+        'not_found_in_trash' => 'No hay Módulos en el basurero.',
+    );
+
+    $argsM = array(
+        'labels' => $labelsM,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_icon' => 'dashicons-feedback',
+        'query_var' => true,
+        'rewrite' => array('slug' => 'modulo'),
+        'capability_type' => 'page',
+        'has_archive' => false,
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'supports' => array(
+            'title',
+            'thumbnail',
+        ),
+    );
+    register_post_type('modulo', $argsM);
 
     //Contenidos multimedia
     $labels = array(

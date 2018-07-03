@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="64px" viewBox="0 0 90 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icono4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="28.2962815" cy="19.2962815" r="19.2962815"></circle>
+    </defs>
+    <g id="interfaz-2.1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-home" transform="translate(-966.000000, -610.000000)">
+            <g id="modulo4-boton-copy-2" transform="translate(934.000000, 555.000000)">
+                <g id="icono4" transform="translate(33.000000, 57.000000)">
+                    <g id="lupa" transform="translate(16.000000, 0.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Oval-4" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" xlink:href="#path-1"></use>
+                        <rect id="Rectangle-10-Copy" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)" x="8" y="0" width="26.5439814" height="26.5439814"></rect>
+                        <path d="M7.4033699,33.5223572 L14.5125262,33.5223572 L14.5125262,59.4199981 C14.5125262,61.3831374 12.9210874,62.9745763 10.9579481,62.9745763 L10.9579481,62.9745763 C8.99480875,62.9745763 7.4033699,61.3831374 7.4033699,59.4199981 L7.4033699,33.5223572 Z" id="Rectangle-9" fill="#FFFFFF" transform="translate(10.957948, 48.248467) rotate(28.000000) translate(-10.957948, -48.248467) "></path>
+                    </g>
+                    <rect id="Rectangle-10" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="0" y="18" width="18" height="18"></rect>
+                    <rect id="Rectangle-10-Copy-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="70" y="18" width="18" height="18"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

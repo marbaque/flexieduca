@@ -32,4 +32,55 @@
 }
 
 
-//actividad
+//Exitómetro - Página
+
+.exitometro {
+	font-family: $font__headings;
+	font-weight: 300;
+	padding-bottom: 1em;
+	border-bottom: 2px solid #979797;
+	
+	.estudiante {
+		height: 64px;
+		@include flex-container;
+		justify-content: flex-start;
+		align-items: center;
+		.avatar {
+			@include borde(50%);
+			margin-right: 1em;
+
+		}
+		.name {
+			
+		}
+	}
+	.datos {
+		@include flex-container;
+		justify-content: flex-end;
+		align-items: center;
+		i {
+			
+		}
+		.graph {
+			float: right;
+			margin-left: 1em;
+			.wpc-numbers {
+				font-weight: 300;
+			}
+		}
+	}
+	
+	@media screen and (min-width: $break__small) {
+		@include flex-container;
+		justify-content: space-between;
+		align-items: center;
+		.estudiante {
+			width: 48%;
+		}
+		.datos {
+			width: 48%;
+			
+		}
+	}
+	
+}

@@ -50,8 +50,9 @@ if (!function_exists('flexieduca_setup')) :
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus(array(
-            'menu-1' => esc_html__('Men&uacute; principal', 'flexieduca'),
-            'menu-2' => esc_html__('Menú de página de inicio', 'flexieduca'),
+	        'menu-1' => esc_html__('Men&uacute; principal', 'flexieduca'),
+            'menu-1a' => esc_html__('Men&uacute; portada A', 'flexieduca'),
+            'menu-1b' => esc_html__('Men&uacute; portada B', 'flexieduca'),
             'menu-3' => esc_html__('Menú de pie de página', 'flexieduca'),
         ));
 
@@ -177,7 +178,7 @@ function flexieduca_content_image_sizes_attr($sizes, $size) {
         $sizes = '(min-width: 900px) 700px, 900px';
     }
 
-    if (is_active_sidebar('sidebar-1') || is_active_sidebar('sidebar-2') || is_active_sidebar('sidebar-3')) {
+    if (is_active_sidebar('sidebar-1') || is_active_sidebar('sidebar-2')) {
         $sizes = '(min-width: 900px) 600px, 900px';
     }
 
