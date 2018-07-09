@@ -13,8 +13,9 @@
  */
 get_header();
 ?>
+<?php $class = get_field('class'); ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area <?php echo $class; ?>" style="background-color:<?php the_field('color_modulo'); ?>">
     <main id="main" class="site-main" role="main">
         <?php
         while (have_posts()) : the_post();
@@ -28,26 +29,26 @@ get_header();
 					$audios = get_field('pagina_audios');
 					$videos = get_field('pagina_videos');
 					 ?>
-					 
-					<header class="entry-header">
-					<h1>Módulo <?php echo $numero; ?></h1>
+				<a class="home-link" href="<?php echo esc_url(home_url('/')); ?>">Ir al inicio</a>
+					<header class="entry-header m<?php echo $numero; ?>">
+					<h4>Módulo <?php echo $numero; ?></h4>
 					<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 					<?php if($subtitulo){ ?>
-						<h3><i><?php echo $subtitulo; ?></i></h3>
+						<h2><i><?php echo $subtitulo; ?></i></h2>
 					<?php
 					} ?>
 				    </header><!-- .entry-header -->
 				    
-				    <ul>
+					<ul class="links-modulo">
 					    <?php 
 						if ($lectura) {
-							echo '<li><a href="' . $lectura . '">Lectura</a></li>';   
+							echo '<li><a class="lectura" href="' . $lectura . '" title="Lectura">Lectura</a></li>';   
 					    }
 					    if ($audios) {
-							echo '<li><a href="' . $audios . '">Audio</a></li>';     
+							echo '<li><a class="audios" href="' . $audios . '" title="Escuchar audio">Audio</a></li>';     
 					    }
 						if ($videos) {
-							echo '<li><a href="' . $videos . '">Video</a></li>';  
+							echo '<li><a class="videos" href="' . $videos . '" title="Ver videos">Video</a></li>';  
 					    } 
 					    ?>					    
 				    </ul>

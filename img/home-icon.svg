@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="29px" viewBox="0 0 30 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>home-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="interfaz-2.1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-home-b" transform="translate(-36.000000, -29.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Arrow,-Backword,-Back,-Ui,-Left,-Interface" transform="translate(22.000000, 18.000000)">
+                <path d="M28.7070312,11.5 L14,24.8027045 L15.4179688,26.0817427 L16.7226562,24.9016357 L16.7226562,39.9179692 L26.734375,39.9179692 L26.734375,30.8693038 L30.734375,30.8693038 L30.734375,39.9179692 L40.722656,39.9179692 L40.722656,24.9263685 L42.292968,26.3467368 L42.707032,26.3467368 L42.707032,24.5377104 L43.125,24.5377104 L28.7070312,11.5 Z M28.7109376,14.0580766 L38.722656,23.117342 L38.722656,38.1089428 L32.734374,38.1089428 L32.734374,29.0602773 L24.734375,29.0602773 L24.734375,38.1089428 L18.7226562,38.1089428 L18.7226562,23.0926092 L28.7109376,14.0580766 Z" id="home-icon"></path>
+            </g>
+        </g>
+    </g>
+</svg>

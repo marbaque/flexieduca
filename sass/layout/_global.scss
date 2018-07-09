@@ -4,6 +4,7 @@
     position: relative;
     background: white;
     padding: 0;
+	
 }
 .site-content {
     margin: 0 auto;
@@ -188,6 +189,7 @@
     .site-content {
 	    padding-top: 0;
 	    padding-bottom: 0;
+		max-width: none;
     }
     .entry-title {
         
@@ -207,6 +209,7 @@
 		@media screen and (min-width: $break__hd) {
 			margin-left: calc(50% - 50vw);
 			margin-right: calc(50% - 50vw);
+			max-height: 480px;
 		}
 		
 		
@@ -215,6 +218,9 @@
 			margin: 0 auto;
 			width: auto;
 			max-width: 640px;
+			@media screen and (min-width: $break__hd) {
+				max-width: 720px;
+			}
 			.wp-caption {
 				margin: 0;
 			}
@@ -284,7 +290,8 @@
 						@include vector-bg-with-fallback(book);
 						background-position: center center;
 						-webkit-transition: all .5s; /* Safari */
-				    transition: all .5s;
+						transition: all .5s;
+						
 						@media screen and (min-width: $break__small) {
 							width: 200px; height: 200px;
 						}
@@ -553,41 +560,41 @@
 	}
     }
 
-    &.no-sidebar {
-	.site {
-	    .site-content {
-		max-width: $max__size;
-	    }
-	    .entry-meta {				
-		margin-top: 2em;
-		background: $color__sombreado;
-		padding: 1em;
-		font-size: .8em;
+    &.no-sidebar:not(.home) {
+		.site {
+			.site-content {
+				max-width: $max__size;
+			}
+			.entry-meta {				
+			margin-top: 2em;
+			background: $color__sombreado;
+			padding: 1em;
+			font-size: .8em;
 
-		.byline, .posted-on, .comments-link {
-		    display: block;
-		    margin: 0 0 .5em;
+			.byline, .posted-on, .comments-link {
+				display: block;
+				margin: 0 0 .5em;
+			}
+			}
+
+			@media screen and (min-width: $break__medium) {
+			.post__wrap {
+				display: flex;
+				justify-content: space-around;
+				align-items: flex-start;
+				flex-wrap: nowrap;
+				height: auto;			
+
+				.entry-content {
+				width: 80%;
+				padding: 0 2em;	
+				}
+				.entry-meta{
+				width: 20%;
+				}
+			}
+			}
 		}
-	    }
-
-	    @media screen and (min-width: $break__medium) {
-		.post__wrap {
-		    display: flex;
-		    justify-content: space-around;
-		    align-items: flex-start;
-		    flex-wrap: nowrap;
-		    height: auto;			
-
-		    .entry-content {
-			width: 80%;
-			padding: 0 2em;	
-		    }
-		    .entry-meta{
-			width: 20%;
-		    }
-		}
-	    }
-	}
     }
 
 }

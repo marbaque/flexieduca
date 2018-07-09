@@ -1,7 +1,7 @@
 <?php
 /*
  * * Template Name: Galería de casos
- * Template Post Type: post, multimedia
+ * * Template Post Type: post, multimedia
  */
 get_header();
 ?>
@@ -9,16 +9,10 @@ get_header();
 <?php get_template_part('template-parts/tools'); ?>
 
 <div id="primary" class="content-area">
-    <?php
-    if (function_exists('bcn_display')) {
-	echo '<div class="breadcrumbs">';
-	bcn_display();
-	echo '</div>';
-    }
-    ?>
-
-
-    <div class="case-index__wrap">
+	
+    <?php get_template_part('template-parts/back2modulo'); ?>
+	
+	<div class="case-index__wrap">
         <main id="main" class="site-main" role="main">
 	    <header class="entry-header">
 		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
@@ -51,24 +45,21 @@ get_header();
     	    <h2 class="gallery-title screen-reader-text">
 		    <?php echo esc_html__('Casos destacados', 'flexieduca'); ?>
     	    </h2>
-	    <?php
+			<?php
 
-	    global $post;
-	    $args = array( 
-		'posts_per_page' => -1, 
-		'post_type' => 'caso'
-	    );
+			global $post;
+			$args = array( 
+			'posts_per_page' => -1, 
+			'post_type' => 'caso'
+			);
 
-	    $myposts = get_posts( $args );
-	    foreach ( $myposts as $post ) : 
-		setup_postdata( $post ); ?>
-		<?php get_template_part('template-parts/content', 'case-item'); ?>
-	    <?php endforeach; 
-	    wp_reset_postdata();?>
-
-
-
-
+			$myposts = get_posts( $args );
+			foreach ( $myposts as $post ) : 
+			setup_postdata( $post ); ?>
+			<?php get_template_part('template-parts/content', 'case-item'); ?>
+			<?php endforeach; ?>
+			<?php wp_reset_postdata();?>
+			
     	</section><!-- .case-gallery -->
 
 	    <?php

@@ -8,15 +8,16 @@
  */
 ?>
 <?php get_template_part('template-parts/tools'); ?>
+<?php if ( $post->post_parent ): ?>
+	<a class="back2modulo" href="<?php echo get_permalink( $post->post_parent ); ?>" >
+		   <?php echo get_the_title( $post->post_parent ); ?>
+		</a>
+	<?php endif; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php
-    if (function_exists('bcn_display')) {
-	echo '<div class="breadcrumbs">';
-	bcn_display();
-	echo '</div>';
-    }
-    ?>
+    
+	
+	
     <header class="entry-header">
 	<?php
 	the_title('<h1 class="entry-title">', '</h1>');

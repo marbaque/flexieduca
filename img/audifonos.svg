@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="77px" viewBox="0 0 56 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>audifonos</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="interfaz-2.1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-home-b" transform="translate(-691.000000, -478.000000)">
+            <g id="Group" transform="translate(437.000000, 236.000000)">
+                <g id="audios-boton" transform="translate(233.000000, 219.000000)">
+                    <g id="audifonos" transform="translate(22.352941, 24.705882)">
+                        <path d="M47.1502649,10.7192328 L47.1502649,19.6010352 L44.2180775,19.6010352 L44.2180775,4.8922909 C44.2180775,3.38882703 45.3496179,2.14964857 46.8075334,1.97992078 C47.8624463,0.762741079 49.2643805,0 50.4742696,0 C52.768423,0 53.6336251,2.74240074 53.6336251,6.1253235 C53.6336251,9.50824626 52.768423,12.3999518 50.4742696,12.3999518 C49.391268,12.3999518 48.1543905,11.7555342 47.1502649,10.7192328 Z" id="Combined-Shape-Copy" stroke="#9B9B9B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(48.925851, 9.800518) scale(-1, 1) translate(-48.925851, -9.800518) "></path>
+                        <path d="M2.93218738,10.7192328 L2.93218738,19.6010352 L0,19.6010352 L0,4.8922909 C-1.84121222e-16,3.38882703 1.13154038,2.14964857 2.5894559,1.97992078 C3.6443688,0.762741079 5.04630304,0 6.25619212,0 C8.55034548,0 9.41554766,2.74240074 9.41554766,6.1253235 C9.41554766,9.50824626 8.55034548,12.3999518 6.25619212,12.3999518 C5.17319048,12.3999518 3.93631299,11.7555342 2.93218738,10.7192328 Z" id="Combined-Shape-Copy-2" stroke="#9B9B9B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M1.64992826,19.6875 C1.64992826,33.5758371 12.8781386,44.8345588 26.7288379,44.8345588 C40.5795372,44.8345588 51.8077475,33.5758371 51.8077475,19.6875" id="Oval" stroke="#9B9B9B" stroke-width="2" stroke-linejoin="round"></path>
+                        <path d="M26.3988522,45 L26.3988522,73.4635763" id="Line" stroke="#9B9B9B" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path>
+                        <ellipse id="Oval-7" fill="#9B9B9B" cx="46.1979914" cy="3.97058824" rx="1" ry="1.32352941"></ellipse>
+                        <ellipse id="Oval-7-Copy-3" fill="#9B9B9B" cx="7.25968436" cy="3.97058824" rx="1" ry="1.32352941"></ellipse>
+                        <ellipse id="Oval-7-Copy" fill="#9B9B9B" cx="47.517934" cy="6.61764706" rx="1" ry="1.32352941"></ellipse>
+                        <ellipse id="Oval-7-Copy-7" fill="#9B9B9B" cx="44.8780488" cy="6.61764706" rx="1" ry="1.32352941"></ellipse>
+                        <ellipse id="Oval-7-Copy-4" fill="#9B9B9B" cx="5.93974175" cy="6.61764706" rx="1" ry="1.32352941"></ellipse>
+                        <ellipse id="Oval-7-Copy-6" fill="#9B9B9B" cx="8.57962697" cy="6.61764706" rx="1" ry="1.32352941"></ellipse>
+                        <ellipse id="Oval-7-Copy-2" fill="#9B9B9B" cx="46.1979914" cy="8.60294118" rx="1" ry="1.32352941"></ellipse>
+                        <ellipse id="Oval-7-Copy-5" fill="#9B9B9B" cx="7.25968436" cy="8.60294118" rx="1" ry="1.32352941"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -37,7 +37,7 @@
                 </nav><!-- #site-navigation -->
 
                 <div class="site-branding">
-                    <?php
+					<?php
                     the_custom_logo();
                     if (is_front_page()) :
                         ?>

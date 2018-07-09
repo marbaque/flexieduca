@@ -9,13 +9,12 @@ get_header();
 <?php get_template_part('template-parts/tools'); ?>
 
 <div id="primary" class="content-area">
-    <?php
-    if (function_exists('bcn_display')) {
-	echo '<div class="breadcrumbs">';
-	bcn_display();
-	echo '</div>';
-    }
-    ?>
+    
+	<?php if ( $post->post_parent ): ?>
+	<a class="back2modulo" href="<?php echo get_permalink( $post->post_parent ); ?>" >
+		   <?php echo get_the_title( $post->post_parent ); ?>
+		</a>
+	<?php endif; ?>
 
 
     <div class="case-index__wrap">

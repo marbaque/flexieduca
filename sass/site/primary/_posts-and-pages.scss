@@ -138,3 +138,114 @@
 		}
 	}
 }
+
+
+
+//////////////// Estilos de módulos
+.modulo {
+	.content-area {
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 999;
+		justify-content: center;
+		align-items: center;
+		@include flex-container;
+		color: #fff;
+		a {
+			color: #fff;
+		}
+		
+		.site-main {
+			padding: 1em;
+		}
+		
+		.home-link {
+			border: 3px solid #FFFFFF;
+			@include borde(50%);
+			width: 50px; height: 50px;
+			display: block;
+			@extend %hide-text;
+			@include vector-bg-with-fallback(home-icon);
+			background-position: center center;
+			padding: 0;
+			position: absolute;
+			left: 1em;
+			top: 1em;
+
+		}
+		
+		.entry-header {
+			text-align: center;
+			h4 {
+				margin: 0;
+			}
+			h1:before {
+				content: "";
+				width: 100px; height: 100px;
+				display: block;
+				@include vector-bg-with-fallback(book);
+				background-position: center center;
+				margin: 0 auto;
+			}
+		}
+		
+		&.m1 {
+			h1:before {
+				@include vector-bg-with-fallback(icono1);
+
+			}
+		}
+		&.m2 {
+			h1:before {
+				@include vector-bg-with-fallback(icono2);
+
+			}
+		}
+		&.m3 {
+			h1:before {
+				@include vector-bg-with-fallback(icono3);
+
+			}
+		}
+		&.m4 {
+			h1:before {
+				@include vector-bg-with-fallback(icono4);
+
+			}
+		}
+		
+		ul.links-modulo {
+			margin: 2em 0 0;
+			padding: 0;
+			list-style: none;
+			@include flex-container;
+			justify-content: center;
+			
+			a, a:visited {
+				display: block;
+				width: 100px; height: 100px;
+				background: #FFFFFF;
+				border: 4px solid rgba(255,255,255,0.64);
+				@include borde(50%);
+				@extend %hide-text;
+				@include vector-bg-with-fallback(book);
+				background-position: center;
+				margin: .5em;
+				
+				&.lectura {
+					@include vector-bg-with-fallback(lectura);
+				}
+				&.audios {
+					@include vector-bg-with-fallback(audifonos);
+					background-position-y: bottom;
+				}
+				&.videos {
+					@include vector-bg-with-fallback(video);
+				}
+			}
+		}
+	}
+}

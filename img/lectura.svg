@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="27px" viewBox="0 0 68 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>lectura</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="interfaz-2.1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-home-b" transform="translate(-558.000000, -485.000000)" stroke="#9B9B9B" stroke-width="2">
+            <g id="Group" transform="translate(437.000000, 236.000000)">
+                <g id="lectura-boton" transform="translate(105.000000, 219.000000)">
+                    <g id="lectura" transform="translate(16.091954, 31.034483)">
+                        <ellipse id="Oval-6" stroke-linecap="round" stroke-linejoin="round" cx="15.9567275" cy="12.0689655" rx="11.9675456" ry="12.0689655"></ellipse>
+                        <ellipse id="Oval-6-Copy" stroke-linecap="round" stroke-linejoin="round" cx="51.8593644" cy="12.0689655" rx="11.9675456" ry="12.0689655"></ellipse>
+                        <path d="M27.9892012,11.39061 C30.2224466,8.50781749 32.2930034,7.06642122 34.2008717,7.06642122 C36.10874,7.06642122 37.9081138,8.50781749 39.5989931,11.39061" id="Path-2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <rect id="Rectangle-4" x="64.8269101" y="11.0574713" width="1.98918188" height="1"></rect>
+                        <rect id="Rectangle-4-Copy" x="1" y="11.0574713" width="1.98918188" height="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

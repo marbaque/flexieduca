@@ -10,7 +10,9 @@
 <?php get_template_part('template-parts/tools'); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+	
+	<?php get_template_part('template-parts/back2modulo'); ?>
+				
     <header class="entry-header">
 	<?php
 	if (is_singular()) :

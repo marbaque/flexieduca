@@ -34,12 +34,10 @@ function flexieduca_body_classes($classes) {
     } else {
 	$classes[] = 'has-no-page-sidebar';
     }
-    // Adds a class telling us if the sidebar is in use.
-    if (is_active_sidebar('sidebar-3') && is_front_page()) {
-	$classes[] = 'has-front-sidebar';
-    } else if (!is_active_sidebar('sidebar-3') && is_front_page()) {
-	$classes[] = 'has-no-front-sidebar';
-    }
+	
+	if (is_singular('modulo')) {
+		$classes[] = 'modulo';
+	}
 
     return $classes;
 }

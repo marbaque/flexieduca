@@ -9,20 +9,13 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Super_PEM
+ * @package flexieduca
  */
 get_header();
 ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        <?php
-        if (function_exists('bcn_display')) {
-            echo '<div class="breadcrumbs">';
-            bcn_display();
-            echo '</div>';
-        }
-        ?>
         <?php
         while (have_posts()) : the_post();
 			
