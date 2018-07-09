@@ -84,3 +84,57 @@
 	}
 	
 }
+
+.entry-content {
+	&.progreso {
+		.lista {
+			margin-bottom: 1em;
+			background: #f4f4f4;
+			padding: 1em;
+			line-height: 1.3;
+			font-family: $font__headings;
+		}
+		ul.wpc-list {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			
+			li {
+				margin: .5em 0;
+			}
+			
+			
+			a {
+				border: none;
+			}
+			
+			ul.children {
+				list-style: none;
+				margin-left: 0.5em;
+			}
+		}
+		
+		@media screen and (min-width: $break__small) {
+			
+			.listas-wpc {
+				@include flex-container;
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+			
+			.lista {
+				font-size: .9em;
+				display: block;
+				width: 48%;
+				float: left;
+				
+			}
+		}
+		@media screen and (min-width: $break__medium) {
+			.lista {
+				font-size: .8em;
+				width: 24%;
+			}
+		}
+	}
+}

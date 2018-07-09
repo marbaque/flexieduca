@@ -26,6 +26,7 @@
             <header id="masthead" class="site-header">
 
                 <nav id="site-navigation" class="main-navigation">
+                    
                     <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php esc_html_e('Contenidos', 'flexieduca'); ?></span></button>
                     <?php
                     wp_nav_menu(array(
@@ -41,6 +42,8 @@
                     if (is_front_page()) :
                         ?>
                         <h1 class="site-title"><?php bloginfo('name'); ?></h1>
+                    <?php elseif( is_page('Exitómetro') ): ?>
+                    	<p class="site-title"><?php the_title(); ?></p>
                     <?php else : ?>
                         <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
                     <?php endif; ?>
