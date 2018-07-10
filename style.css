@@ -2290,6 +2290,10 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	margin: 0 2px;
 }
 
+.exitometro-page {
+	background-color: #DBD6C6 !important;
+}
+
 .exitometro {
 	font-family: "Rubik", sans;
 	font-weight: 300;
@@ -2326,7 +2330,7 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 
 .exitometro .estudiante ul.user-manage {
 	list-style: none;
-	font-size: .6em;
+	font-size: .7em;
 	margin: 0;
 	padding: 0;
 }

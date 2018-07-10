@@ -33,7 +33,9 @@
 
 
 //Exitómetro - Página
-
+.exitometro-page {
+	background-color: $color__sombreado!important;
+}
 .exitometro {
 	font-family: $font__headings;
 	font-weight: 300;
@@ -55,7 +57,7 @@
 		}
 		ul.user-manage {
 			list-style: none;
-			font-size: .6em;
+			font-size: .7em;
 			margin: 0;
 			padding: 0;
 			li {

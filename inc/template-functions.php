@@ -22,7 +22,7 @@ function flexieduca_body_classes($classes) {
     }
 
     // Adds a class telling us if the sidebar is in use.
-    if (!is_singular('multimedia') && is_active_sidebar('sidebar-1')) {
+    if (is_single() && is_active_sidebar('sidebar-1')) {
 	$classes[] = 'has-sidebar';
     } else {
 	$classes[] = 'no-sidebar';
@@ -37,6 +37,10 @@ function flexieduca_body_classes($classes) {
 	
 	if (is_singular('modulo')) {
 		$classes[] = 'modulo';
+	}
+	
+	if (is_page('exitometro')) {
+		$classes[] = 'exitometro-page';
 	}
 
     return $classes;
@@ -287,6 +291,7 @@ add_filter( 'login_redirect', 'loginRedirect', 10, 3 );
 
 
 //Audio player - estilos
+
 add_action( 'wp_footer', 'flexieduca_footer_scripts' );
 
 function flexieduca_footer_scripts() {
@@ -322,3 +327,18 @@ function flexieduca_mejs_add_container_class() {
 	</script>
 	<?php
 }
+
+//Edit the Dashboard Footer
+function change_admin_footer(){
+	 echo '<span id="footer-note">Hecho por <a href="http://multimedia.uned.ac.cr/" target="_blank">Multimedia UNED</a>.</span>';
+	}
+add_filter('admin_footer_text', 'change_admin_footer');
+
+//limitar acceso al dashboard
+function remove_menus(){
+     if ( !is_admin() || !current_user_can( 'manage_options' ) ) {
+          remove_menu_page( 'index.php' );
+          remove_menu_page( 'wp-admin/admin.php/*' );
+     }
+}
+add_action( 'admin_menu', 'remove_menus' );
