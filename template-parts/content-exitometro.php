@@ -11,6 +11,7 @@
 <?php get_template_part('template-parts/tools'); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 		<div class="exitometro">	                 
 			<?php
 			if ( is_user_logged_in() ) {

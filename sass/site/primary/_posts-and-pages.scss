@@ -223,29 +223,47 @@
 			list-style: none;
 			@include flex-container;
 			justify-content: center;
+			li {
+				text-align: center;
+				margin: .5em;
+			}
 			
 			a, a:visited {
-				display: block;
-				width: 100px; height: 100px;
-				background: #FFFFFF;
-				border: 4px solid rgba(255,255,255,0.64);
-				@include borde(50%);
-				@extend %hide-text;
-				@include vector-bg-with-fallback(book);
-				background-position: center;
-				margin: .5em;
+				border: none;
 				
-				&.lectura {
+				&:hover {
+					color: currentColor;
+				}
+				
+				&:before {
+					content: "";
+					display: block;
+					width: 100px; height: 100px;
+					background-color: #fff;
+					border: 4px solid rgba(255,255,255,0.64);
+					@include borde(50%);
+					@include vector-bg-with-fallback(book);
+					background-position: center;
+					margin: 0 auto;				
+				}
+				
+				&.lectura:before {
 					@include vector-bg-with-fallback(lectura);
 				}
-				&.audios {
+				&.audios:before {
 					@include vector-bg-with-fallback(audifonos);
 					background-position-y: bottom;
 				}
-				&.videos {
+				&.videos:before {
 					@include vector-bg-with-fallback(video);
 				}
 			}
 		}
 	}
 }
+
+
+////////////////////////Audios///////////////////////////////////////
+
+
+////////////////////////Aqui termina Audios///////////////////////////////////////

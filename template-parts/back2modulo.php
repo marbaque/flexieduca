@@ -2,8 +2,10 @@
 
 $post_object = get_field('modulo_asignado');
 
-//print_r( $post_object  );
-//die;
+/*
+print_r( $post_object  );
+die;
+*/
 
 if( $post_object ): 
 	// override $post

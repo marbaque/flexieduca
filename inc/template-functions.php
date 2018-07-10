@@ -281,3 +281,41 @@ function login_redirect( $redirect_to, $request, $user ){
     return home_url();
 }
 add_filter( 'login_redirect', 'login_redirect', 10, 3 );
+
+
+//Audio player - estilos
+add_action( 'wp_footer', 'flexieduca_footer_scripts' );
+
+function flexieduca_footer_scripts() {
+	if ( wp_style_is( 'wp-mediaelement', 'enqueued' ) ) {
+		wp_enqueue_style( 'flexieduca-player', get_template_directory_uri() . '/inc/audio-player.css', array(
+			'wp-mediaelement',
+		), '1.0' );
+	}
+}
+
+/**
+ * Add an HTML class to MediaElement.js container elements to aid styling.
+ *
+ * Extends the core _wpmejsSettings object to add a new feature via the
+ * MediaElement.js plugin API.
+ */
+add_action( 'wp_print_footer_scripts', 'flexieduca_mejs_add_container_class' );
+
+function flexieduca_mejs_add_container_class() {
+	if ( ! wp_script_is( 'mediaelement', 'done' ) ) {
+		return;
+	}
+	?>
+	<script>
+	(function() {
+		var settings = window._wpmejsSettings || {};
+		settings.features = settings.features || mejs.MepDefaults.features;
+		settings.features.push( 'exampleclass' );
+		MediaElementPlayer.prototype.buildexampleclass = function( player ) {
+			player.container.addClass( 'flexieduca-mejs-container' );
+		};
+	})();
+	</script>
+	<?php
+}
