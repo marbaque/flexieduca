@@ -51,7 +51,19 @@
 
 		}
 		.name {
-			
+			margin: 0 0 .25em 0;
+		}
+		ul.user-manage {
+			list-style: none;
+			font-size: .6em;
+			margin: 0;
+			padding: 0;
+			li {
+				display: inline;
+			}
+			a {
+				margin-right: .5em;
+			}
 		}
 	}
 	.datos {
@@ -83,7 +95,10 @@
 		}
 	}
 	
+	
+	
 }
+
 
 .entry-content {
 	&.progreso {

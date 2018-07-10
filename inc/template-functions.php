@@ -277,10 +277,13 @@ function remove_admin_bar() {
 }
 
 //Redireccionar usuarios al home despues del login
-function login_redirect( $redirect_to, $request, $user ){
-    return home_url();
+function loginRedirect( $redirect_to, $request_redirect_to, $user ) {
+    if ( is_a( $user, 'WP_User' ) && $user->has_cap( 'edit_posts' ) === false ) {
+        return get_bloginfo( 'siteurl' );
+    }
+    return $redirect_to;
 }
-add_filter( 'login_redirect', 'login_redirect', 10, 3 );
+add_filter( 'login_redirect', 'loginRedirect', 10, 3 );
 
 
 //Audio player - estilos

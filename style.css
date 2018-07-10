@@ -1402,16 +1402,16 @@ li.flexieduca-search, .widget_search {
 	    -ms-flex-positive: 1;
 	        flex-grow: 1;
 	outline: 0;
-	border: 1px solid #C1B9A0;
+	border: 2px solid #A39C87;
 	border-radius: 4px;
 	padding-right: 3em;
 	padding-left: 1em;
 	-webkit-appearance: none;
-	background: white;
+	background: #DBD6C6;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 95%;
 	font-weight: 400;
-	color: #C1B9A0;
+	color: #A39C87;
 	transition: all .5s;
 }
 
@@ -1420,8 +1420,8 @@ li.flexieduca-search, .widget_search {
 	outline-color: #DDBE59;
 	font-style: normal;
 	border: 1px solid #C1B9A0;
-	background: #DDBE59;
-	color: #C1B9A0;
+	background: #fff;
+	color: #333;
 }
 
 .search-form .search-field::-webkit-input-placeholder {
@@ -1429,7 +1429,7 @@ li.flexieduca-search, .widget_search {
 	border: 0 none;
 	font-weight: normal;
 	font-style: italic;
-	color: #fff;
+	color: #A39C87;
 }
 
 .search-form .search-field:-moz-placeholder {
@@ -1437,7 +1437,7 @@ li.flexieduca-search, .widget_search {
 	border: 0 none;
 	font-weight: normal;
 	font-style: italic;
-	color: #fff;
+	color: #A39C87;
 }
 
 .search-form .search-field:-ms-input-placeholder {
@@ -1446,7 +1446,7 @@ li.flexieduca-search, .widget_search {
 	border: 0 none;
 	font-weight: normal;
 	font-style: italic;
-	color: #ccc;
+	color: #A39C87;
 }
 
 .search-form .search-submit {
@@ -2318,6 +2318,25 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 .exitometro .estudiante .avatar {
 	border-radius: 50%;
 	margin-right: 1em;
+}
+
+.exitometro .estudiante .name {
+	margin: 0 0 .25em 0;
+}
+
+.exitometro .estudiante ul.user-manage {
+	list-style: none;
+	font-size: .6em;
+	margin: 0;
+	padding: 0;
+}
+
+.exitometro .estudiante ul.user-manage li {
+	display: inline;
+}
+
+.exitometro .estudiante ul.user-manage a {
+	margin-right: .5em;
 }
 
 .exitometro .datos {

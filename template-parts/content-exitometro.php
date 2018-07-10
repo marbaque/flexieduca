@@ -24,9 +24,16 @@
 				*/
 				?>
 				<div class="estudiante">
-				<?php 
-					echo get_avatar( $current_user->user_email, 64 );
-				    echo '<p class="name">' . __('Hola, ', 'flexieduca') . '<span>' . $current_user->display_name . '</span></p>'; ?>
+					<?php echo get_avatar( $current_user->user_email, 64 ); ?>
+					<div>
+						<h3 class="name"><?php echo __('Hola, ', 'flexieduca'); ?><span><?php echo $current_user->display_name; ?></span></h3>
+						<ul class="user-manage">
+						    <li><a href="<?php echo esc_url( home_url( '/wp-admin/profile.php' ) ); ?>"><?php echo __('Editar perfil', 'flexieduca'); ?></a></li>
+						    <li><a href="<?php echo wp_logout_url( get_bloginfo( 'url' ) ); ?>"><?php echo __('Salir', 'flexieduca'); ?></a></li>
+					    </ul>
+					</div>
+					
+				    
 				</div>	
 				
 				<div class="datos">
@@ -49,7 +56,6 @@
 			}
 			?>
 	    </div><!-- exitometro -->
-
 	</header><!-- .entry-header -->
 	
 	

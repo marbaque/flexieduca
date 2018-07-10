@@ -252,16 +252,16 @@ li.flexieduca-search{
         border: 0 none;
         flex-grow: 1;
         outline: 0;
-        border: 1px solid #C1B9A0;
+        border: 2px solid #A39C87;
         @include borde(4px);
         padding-right: 3em;
         padding-left: 1em;
         -webkit-appearance: none;
-        background: white;
+        background: $color__sombreado;
         font-family: $font__main;
         font-size: 95%;
         font-weight: 400;
-        color: #C1B9A0;
+        color: #A39C87;
 
         -webkit-transition: all .5s;
         transition: all .5s;
@@ -271,22 +271,22 @@ li.flexieduca-search{
             outline-color: $color__skin;
             font-style: normal;
 			border: 1px solid #C1B9A0;
-            background: $color__skin;
-            color: #C1B9A0;
+            background: #fff;
+            color: #333;
         }
         &::-webkit-input-placeholder {
             outline: 0;
             border: 0 none;
             font-weight: normal;
             font-style: italic;
-            color: #fff;
+            color: #A39C87;
         }
         &:-moz-placeholder {
             outline: 0;
             border: 0 none;
             font-weight: normal;
             font-style: italic;
-            color: #fff;
+            color: #A39C87;
         }
         &:-ms-input-placeholder {
             color: $color__skin;
@@ -294,7 +294,7 @@ li.flexieduca-search{
             border: 0 none;
             font-weight: normal;
             font-style: italic;
-            color: #ccc;
+            color: #A39C87;
         } 
 
 
