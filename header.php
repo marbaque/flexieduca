@@ -42,8 +42,6 @@
                     if (is_front_page()) :
                         ?>
                         <h1 class="site-title"><?php bloginfo('name'); ?></h1>
-                    <?php elseif( is_page('Exitómetro') ): ?>
-                    	<p class="site-title"><?php the_title(); ?></p>
                     <?php else : ?>
                         <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
                     <?php endif; ?>
@@ -58,7 +56,7 @@
 		    wp_get_current_user();
 		    ?>
                     
-                    <form action="<?php echo get_dashboard_url(); ?>">
+                    <form action="<?php echo get_permalink( get_page_by_path( 'exitometro' ) ); ?>">
                         <button tabindex="0" role="button"><?php echo get_avatar( $current_user->user_email, 32 ); ?><span><?php echo $current_user->display_name; ?></span></button>
                     </form>
                     
