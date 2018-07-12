@@ -58,7 +58,7 @@
 	    }
 	    
 	    .enlace,.case-trends {
-		    @include recuadro-box;
+		    @extend %recuadro-box;
 		    font-size: .9em;
 		    &:hover {
 			    background: $color__grisillo;

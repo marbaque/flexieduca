@@ -22,17 +22,10 @@ function flexieduca_body_classes($classes) {
     }
 
     // Adds a class telling us if the sidebar is in use.
-    if (is_single() && is_active_sidebar('sidebar-1')) {
+    if (is_single() && is_active_sidebar('sidebar-1') || is_page() && is_active_sidebar('sidebar-2')) {
 	$classes[] = 'has-sidebar';
     } else {
 	$classes[] = 'no-sidebar';
-    }
-
-    // Adds a class telling us if the sidebar is in use.
-    if (is_page() && is_active_sidebar('sidebar-2')) {
-	$classes[] = 'has-page-sidebar';
-    } else {
-	$classes[] = 'has-no-page-sidebar';
     }
 	
 	if (is_singular('modulo')) {

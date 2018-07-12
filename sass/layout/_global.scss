@@ -218,9 +218,6 @@
 			margin: 0 auto;
 			width: auto;
 			max-width: 640px;
-			@media screen and (min-width: $break__hd) {
-				max-width: 720px;
-			}
 			.wp-caption {
 				margin: 0;
 			}
@@ -545,8 +542,6 @@
 		.post__wrap {
 		    display: flex;
 		    justify-content: space-between;	
-
-
 
 		    .entry-content {
 			width: $size__ratio-large;
