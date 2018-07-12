@@ -1619,7 +1619,8 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 }
 
 .site-header .menu-toggle,
-.site-header .user-info-area button {
+.site-header .user-info-area button,
+.site-header .user-info-area a {
 	display: block;
 	width: 100%;
 	height: 100% !important;
@@ -1632,8 +1633,17 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 }
 
 .site-header .menu-toggle span,
-.site-header .user-info-area button span {
+.site-header .user-info-area button span,
+.site-header .user-info-area a span {
 	display: none;
+}
+
+@media screen and (min-width: 900px) {
+	.site-header .menu-toggle span,
+	.site-header .user-info-area button span,
+	.site-header .user-info-area a span {
+		display: block;
+	}
 }
 
 .site-header .toggled-on .menu-toggle {
@@ -1704,10 +1714,18 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
 	text-rendering: geometricPrecision;
+	overflow: hidden;
 }
 
 .site-header .user-info-area .avatar {
 	border-radius: 50%;
+	margin-top: .5em;
+}
+
+@media screen and (min-width: 600px) {
+	.site-header .user-info-area .avatar {
+		margin-top: 1em;
+	}
 }
 
 @media screen and (min-width: 600px) {
@@ -2321,6 +2339,10 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 
 .exitometro-page {
 	background-color: #DBD6C6 !important;
+}
+
+.exitometro-page .site-content {
+	padding-bottom: 0;
 }
 
 .exitometro {

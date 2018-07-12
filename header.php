@@ -56,9 +56,9 @@
 		    wp_get_current_user();
 		    ?>
                     
-                    <form action="<?php echo get_permalink( get_page_by_path( 'exitometro' ) ); ?>">
-                        <button tabindex="0" role="button"><?php echo get_avatar( $current_user->user_email, 32 ); ?><span><?php echo $current_user->display_name; ?></span></button>
-                    </form>
+                    <a href="<?php echo get_permalink( get_page_by_path( 'exitometro' ) ); ?>" title="<?php esc_html_e('Ir a página de Exitómetro', 'flexieduca'); ?>">
+                        <?php echo get_avatar( $current_user->user_email, 32 ); ?><span><?php echo $current_user->display_name; ?></span>
+                    </a>
                     
                     <?php } else { ?>
 						

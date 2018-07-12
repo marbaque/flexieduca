@@ -35,6 +35,10 @@
 //Exitómetro - Página
 .exitometro-page {
 	background-color: $color__sombreado!important;
+	
+	.site-content {
+		padding-bottom: 0;
+	}
 }
 .exitometro {
 	font-family: $font__headings;
