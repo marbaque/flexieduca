@@ -34,7 +34,7 @@ $title = isset( $post->post_title ) ? $post->post_title : '';
 
         <?php if ($obj): ?>
             <li class="objetivos">
-                <button class="accordion-control objetivos"><i class="far fa-dot-circle"></i> Objetivos</button>
+                <button class="accordion-control objetivos">Objetivos</button>
                 <div class="accordion-panel">
                     <?php echo $obj; ?>
                 </div>
@@ -43,7 +43,7 @@ $title = isset( $post->post_title ) ? $post->post_title : '';
         
         <?php if ($resumen): ?>
             <li class="resumen">
-                <button class="accordion-control"><i class="far fa-edit"></i> Resumen</button>
+                <button class="accordion-control">Resumen</button>
                 <div id="resumen" class="accordion-panel resumen">
                     <?php echo $resumen; ?>
                 </div>
@@ -52,7 +52,7 @@ $title = isset( $post->post_title ) ? $post->post_title : '';
 	   
 	<?php if ( $posts && !is_singular( 'caso' ) ) : ?>
 		<li class="relacionado">
-			<button class="accordion-control"><i class="far fa-edit"></i> Contenido relacionado</button>
+			<button class="accordion-control">Contenido relacionado</button>
 			<div class="accordion-panel">
 				<ul>
 		<?php foreach ($posts as $post): // variable must be called $post (IMPORTANT)  ?>

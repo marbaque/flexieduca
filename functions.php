@@ -234,7 +234,8 @@ function flexieduca_scripts() {
 
     wp_enqueue_style('flexieduca-style', get_stylesheet_uri());   
     
-    wp_enqueue_style('flexieduca-font-awesome', 'https://use.fontawesome.com/releases/v5.0.10/css/all.css');
+   //wp_enqueue_style('flexieduca-font-awesome', 'https://use.fontawesome.com/releases/v5.0.10/css/all.css');
+   //es mejor instalar plugin Better Font Awesome
 
     wp_enqueue_script('flexieduca-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20161215', true);
     
