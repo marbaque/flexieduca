@@ -1902,16 +1902,15 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	list-style: none;
 	text-align: center;
 	display: inline-block;
-	width: 250px;
-	line-height: 1.2;
+	max-width: 270px;
+	line-height: 1.4;
 }
 
 .home .front-content_wrap ul#front-menu-b li a {
 	border: none;
-	margin: 1em;
+	margin: 10px;
 	text-align: center;
-	font-size: .8em;
-	line-height: 1;
+	font-size: .9em;
 	color: #333;
 	display: block;
 }
