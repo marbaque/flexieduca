@@ -46,13 +46,13 @@ $resumen = get_field('resumen', $term);
 	    <?php if ($audioURL): ?>
 	    
 	    <li class="audio">
-		<button class="accordion-control audio-btn"><i class="fas fa-headphones"></i> Audio</button>
+		<button class="accordion-control audio-btn"><i class="fa fa-headphones"></i> Audio</button>
 		<div class="accordion-panel audio">
 		    <audio controls>
 			<source src="<?php echo $audioURL; ?>" type="audio/mpeg">
 			Your browser does not support the audio element.
 		    </audio>
-		   <a class="descargar-audio button" href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fas fa-download"></i> Descargar</a>
+		   <a class="descargar-audio button" href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fa fa-download"></i> Descargar</a>
 		</div>
 	    </li>
 	    <?php endif; ?>	

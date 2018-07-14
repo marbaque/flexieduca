@@ -14,13 +14,13 @@ $title = isset( $post->post_title ) ? $post->post_title : '';
         <ul class="accordion">
         <?php if ($audioURL): ?>
             <li class="audio">
-                <button class="accordion-control audio-btn"><i class="fas fa-headphones"></i> Audio</button>
+                <button class="accordion-control audio-btn"><i class="fa fa-headphones"></i> Audio</button>
                 <div class="accordion-panel audio">
                     <audio controls>
                         <source src="<?php echo $audioURL; ?>" type="audio/mpeg">
                         <?php echo __( 'Su navegador no admite el elemento de audio.', 'flexieduca' ); ?>
                     </audio>
-                   <p class="descargar-audio button"><a href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fas fa-download"></i> Descargar</a></p>		   
+                   <p class="descargar-audio button"><a href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fa fa-download"></i> Descargar</a></p>		   
 		   
 		   <?php if ($meta): ?>
 			   <p class="meta"><?php echo $meta; ?></p>
