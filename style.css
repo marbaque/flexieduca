@@ -2489,9 +2489,9 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 		/* NEW - Chrome */
 		display: flex;
 		/* NEW, Spec - Opera 12.1, Firefox 20+ */
-		-webkit-box-pack: justify;
-		    -ms-flex-pack: justify;
-		        justify-content: space-between;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
@@ -2500,6 +2500,7 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 		display: block;
 		width: 48%;
 		float: left;
+		margin: .5em 1%;
 	}
 }
 
@@ -2507,6 +2508,7 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	.entry-content.progreso .lista {
 		font-size: .8em;
 		width: 24%;
+		margin: .5em 0.5%;
 	}
 }
 
