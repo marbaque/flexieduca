@@ -29,10 +29,17 @@
                     
                     <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php esc_html_e('Contenidos', 'flexieduca'); ?></span></button>
                     <?php
-                    wp_nav_menu(array(
-                        'theme_location' => 'menu-1',
-                        'menu_id' => 'primary-menu',
-                    ));
+					// submenú de contenidos 
+					if (is_singular( 'multimedia' )):
+						//submenu
+						
+					else:
+						wp_nav_menu(array(
+							'theme_location' => 'menu-1',
+							'menu_id' => 'primary-menu',
+						));
+					endif;
+                    
                     ?>
                 </nav><!-- #site-navigation -->
 
