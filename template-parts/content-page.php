@@ -11,6 +11,7 @@
 <?php get_template_part('template-parts/tools'); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<?php get_template_part('template-parts/back2modulo'); ?>
 		<?php 
 		flexieduca_the_category_list(); 
 		
