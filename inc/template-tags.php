@@ -167,9 +167,9 @@ function flexieduca_post_navigation() {
 
 	the_post_navigation(array(
 		'prev_text'	 => '<span class="screen-reader-text">' . __('Anterior', 'flexieduca') . '</span> ' .
-		'<span class="arrow"><i class="fas fa-angle-left"></i></span><span class="post-title">%title</span>',
+		'<span class="arrow"><i class="fa fa-chevron-circle-left"></i></span><span class="post-title">%title</span>',
 		'next_text'	 => '<span class="screen-reader-text">' . __('Siguiente', 'flexieduca') . '</span> ' .
-		'<span class="arrow"><i class="fas fa-angle-right"></i></span><span class="post-title">%title </span>',
+		'<span class="arrow"><i class="fa fa-chevron-circle-right"></i></span><span class="post-title">%title </span>',
 	));
 }
 

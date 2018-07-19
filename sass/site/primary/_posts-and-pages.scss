@@ -35,6 +35,10 @@
 //Exitómetro - Página
 .exitometro-page {
 	background-color: $color__sombreado!important;
+	
+	.site-content {
+		padding-bottom: 0;
+	}
 }
 .exitometro {
 	font-family: $font__headings;
@@ -135,7 +139,7 @@
 			
 			.listas-wpc {
 				@include flex-container;
-				justify-content: space-between;
+				justify-content: flex-start;
 				flex-wrap: wrap;
 			}
 			
@@ -144,6 +148,7 @@
 				display: block;
 				width: 48%;
 				float: left;
+				margin: .5em 1%;
 				
 			}
 		}
@@ -151,6 +156,7 @@
 			.lista {
 				font-size: .8em;
 				width: 24%;
+				margin: .5em 0.5%;
 			}
 		}
 	}
@@ -244,7 +250,9 @@
 				text-align: center;
 				margin: .5em;
 			}
-			
+			a {
+				display: block;
+			}
 			a, a:visited {
 				border: none;
 				

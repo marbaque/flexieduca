@@ -221,6 +221,9 @@ li.flexieduca-search{
     width: 100%;
     flex: 0 1 auto;
 }
+.widget_search {
+	border: none;
+}
 .search-form{
 
     position: relative;
@@ -313,7 +316,6 @@ aside.menu-social {
     max-height: 500px;
     margin-left: -1em;
 	margin-right: -1em;
-	margin-bottom: -1em;
 	padding: 2em 1em;
 	font-family: $font__headings;
 	

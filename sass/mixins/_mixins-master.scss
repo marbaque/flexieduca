@@ -70,13 +70,16 @@ $public_path: "./";
   background-repeat: no-repeat;
 }
 
-@mixin recuadro-box {
-	border: 3px solid $color__borde-recuadro; 
-    background-color: white;
-    @include borde(4px);
+%recuadro-box {
+    background-color: $color__sombreado;
     height: auto;
     padding: 1em;
     margin: .5em 0;
+    
+    @media screen and (min-width: $break__medium) {
+    	border: 2px solid #A39C87;
+    	@include borde(4px);
+    }
 }
 
 %hide-text {

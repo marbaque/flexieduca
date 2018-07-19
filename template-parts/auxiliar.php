@@ -14,13 +14,13 @@ $title = isset( $post->post_title ) ? $post->post_title : '';
         <ul class="accordion">
         <?php if ($audioURL): ?>
             <li class="audio">
-                <button class="accordion-control audio-btn"><i class="fas fa-headphones"></i> Audio</button>
+                <button class="accordion-control audio-btn"><i class="fa fa-headphones"></i> Audio</button>
                 <div class="accordion-panel audio">
                     <audio controls>
                         <source src="<?php echo $audioURL; ?>" type="audio/mpeg">
                         <?php echo __( 'Su navegador no admite el elemento de audio.', 'flexieduca' ); ?>
                     </audio>
-                   <p class="descargar-audio button"><a href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fas fa-download"></i> Descargar</a></p>		   
+                   <p class="descargar-audio button"><a href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fa fa-download"></i> Descargar</a></p>		   
 		   
 		   <?php if ($meta): ?>
 			   <p class="meta"><?php echo $meta; ?></p>
@@ -34,7 +34,7 @@ $title = isset( $post->post_title ) ? $post->post_title : '';
 
         <?php if ($obj): ?>
             <li class="objetivos">
-                <button class="accordion-control objetivos"><i class="far fa-dot-circle"></i> Objetivos</button>
+                <button class="accordion-control objetivos">Objetivos</button>
                 <div class="accordion-panel">
                     <?php echo $obj; ?>
                 </div>
@@ -43,7 +43,7 @@ $title = isset( $post->post_title ) ? $post->post_title : '';
         
         <?php if ($resumen): ?>
             <li class="resumen">
-                <button class="accordion-control"><i class="far fa-edit"></i> Resumen</button>
+                <button class="accordion-control">Resumen</button>
                 <div id="resumen" class="accordion-panel resumen">
                     <?php echo $resumen; ?>
                 </div>
@@ -52,7 +52,7 @@ $title = isset( $post->post_title ) ? $post->post_title : '';
 	   
 	<?php if ( $posts && !is_singular( 'caso' ) ) : ?>
 		<li class="relacionado">
-			<button class="accordion-control"><i class="far fa-edit"></i> Contenido relacionado</button>
+			<button class="accordion-control">Contenido relacionado</button>
 			<div class="accordion-panel">
 				<ul>
 		<?php foreach ($posts as $post): // variable must be called $post (IMPORTANT)  ?>

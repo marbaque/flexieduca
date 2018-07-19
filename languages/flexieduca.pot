@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-12 16:40+0000\n"
+"POT-Creation-Date: 2018-07-12 23:00+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,51 +19,71 @@ msgid "Men&uacute; principal"
 msgstr ""
 
 #: functions.php:54
-msgid "Menú de página de inicio"
+msgid "Men&uacute; portada A"
 msgstr ""
 
 #: functions.php:55
+msgid "Men&uacute; portada B"
+msgstr ""
+
+#: functions.php:56
 msgid "Menú de pie de página"
 msgstr ""
 
 #. If there are characters in your language that are not
 #. supported by Libre Franklin, translate this to 'off'. Do not translate
 #. into your own language.
-#: functions.php:109
+#: functions.php:110
 msgctxt "Rubik font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:196
+#: functions.php:197
 msgid "Barra lateral"
 msgstr ""
 
-#: functions.php:198
+#: functions.php:199
 msgid "Agregar widgets aquí."
 msgstr ""
 
-#: functions.php:205
+#: functions.php:206
 msgid "Barra lateral de páginas"
 msgstr ""
 
-#: functions.php:207
+#: functions.php:208
 msgid "Agregar widgets a la Barra lateral de páginas."
 msgstr ""
 
-#: functions.php:214
+#: functions.php:215
 msgid "Barra lateral de la página de inicio"
 msgstr ""
 
-#: functions.php:216
+#: functions.php:217
 msgid "Agregar widgets a la Barra lateral de la página de inicio."
 msgstr ""
 
-#: functions.php:250
+#: functions.php:247
 msgid "Expandir menú hijo"
 msgstr ""
 
-#: functions.php:251
+#: functions.php:248
 msgid "Encoger menú hijo"
+msgstr ""
+
+#: single-modulo.php:34
+msgid "Módulo "
+msgstr ""
+
+#: single-modulo.php:45
+msgid "Lectura"
+msgstr ""
+
+#: single-modulo.php:48
+msgid "Audio"
+msgstr ""
+
+#: single-modulo.php:51
+msgid "Video"
 msgstr ""
 
 #: 404.php:17
@@ -132,19 +152,19 @@ msgstr ""
 msgid "Plantilla para categoría 'Estrategias'"
 msgstr ""
 
-#: page-casos-estrategia.php:44 page-casos.php:44
-#: template-parts/content-multimedia.php:53
-#: template-parts/content-single.php:60 template-parts/content-page.php:60
-#: template-parts/content-front.php:32
+#: page-casos-estrategia.php:43 page-casos.php:38
+#: template-parts/content-multimedia.php:55
+#: template-parts/content-single.php:60 template-parts/content-page.php:53
+#: template-parts/content-exitometro.php:88
 msgid "Páginas:"
 msgstr ""
 
-#: page-casos-estrategia.php:52 page-casos.php:52
+#: page-casos-estrategia.php:51 page-casos.php:46
 msgid "Casos destacados"
 msgstr ""
 
 #. %s: Name of current post.
-#: page-casos-estrategia.php:97
+#: page-casos-estrategia.php:96
 #, php-format
 msgid "Abrir... %s"
 msgstr ""
@@ -164,6 +184,10 @@ msgid "Antiguos"
 msgstr ""
 
 #. Name of the template
+msgid "Exitometro"
+msgstr ""
+
+#. Name of the template
 msgid "Galería de casos"
 msgstr ""
 
@@ -171,11 +195,15 @@ msgstr ""
 msgid "Omitir e ir al contenido"
 msgstr ""
 
-#: header.php:29
+#: header.php:30
 msgid "Contenidos"
 msgstr ""
 
-#: header.php:64
+#: header.php:59
+msgid "Ir a página de Exitómetro"
+msgstr ""
+
+#: header.php:65
 msgid "Acceder"
 msgstr ""
 
@@ -270,18 +298,19 @@ msgstr ""
 msgid "Discusión"
 msgstr ""
 
-#: inc/template-functions.php:246
+#: inc/template-functions.php:239
 msgid "Sin contenido principal"
 msgstr ""
 
 #. %s: Name of current post. Only visible to screen readers
-#: template-parts/content-multimedia.php:44
+#: template-parts/content-multimedia.php:46
 #, php-format
 msgid "Continuar leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #. %s: Name of current post. Only visible to screen readers
-#: template-parts/content-single.php:49 template-parts/content-page.php:49
+#: template-parts/content-single.php:49 template-parts/content-page.php:42
+#: template-parts/content-exitometro.php:77
 #, php-format
 msgid "Abrir<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
@@ -320,27 +349,39 @@ msgstr ""
 msgid "Tama&ntilde;o de texto"
 msgstr ""
 
-#: template-parts/content-front.php:50
+#: template-parts/content-case.php:42
+msgid "Mas información: "
+msgstr ""
+
+#: template-parts/content-case.php:55
+msgid "Estrategia de comercialización: "
+msgstr ""
+
+#: template-parts/content-exitometro.php:29
 msgid "Hola, "
 msgstr ""
 
-#: template-parts/content-front.php:54
-msgid "Exit&oacute;metro"
+#: template-parts/content-exitometro.php:31
+msgid "Editar perfil"
 msgstr ""
 
-#: template-parts/content-front.php:56
+#: template-parts/content-exitometro.php:32
+msgid "Salir"
+msgstr ""
+
+#: template-parts/content-exitometro.php:40
 msgid "Progreso "
 msgstr ""
 
-#: template-parts/content-front.php:66
+#: template-parts/content-exitometro.php:48
 msgid "¡Hola!"
 msgstr ""
 
-#: template-parts/content-front.php:69
+#: template-parts/content-exitometro.php:51
 msgid "Acceda al multimedia"
 msgstr ""
 
-#: template-parts/content-front.php:69
+#: template-parts/content-exitometro.php:51
 msgid "para guardar su progreso"
 msgstr ""
 

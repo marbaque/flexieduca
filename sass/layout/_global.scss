@@ -29,7 +29,8 @@
         height: 100%;
     }
     .menu-toggle,
-    .user-info-area button {
+    .user-info-area button,
+    .user-info-area a {
         display: block;
         width: 100%;
         height: 100%!important;
@@ -41,6 +42,10 @@
         text-align: center;
         span {
             display: none;
+            
+            @media screen and (min-width: $break__medium) {
+            	display: block;
+            }
             
         }
     }
@@ -105,8 +110,14 @@
         border-left: 1px solid #ccc;
         flex-shrink: 0;
 		text-rendering: geometricPrecision;
+		overflow: hidden;
 		.avatar {
 			@include borde(50%);
+			margin-top: .5em;
+			
+			@media screen and (min-width: $break__small) {
+				margin-top: 1em;
+			}
 		}
     }
 
@@ -218,9 +229,6 @@
 			margin: 0 auto;
 			width: auto;
 			max-width: 640px;
-			@media screen and (min-width: $break__hd) {
-				max-width: 720px;
-			}
 			.wp-caption {
 				margin: 0;
 			}
@@ -234,10 +242,7 @@
         ul#front-menu-a { //menú de presentación y exitómetro
 	        margin: 2em 0;
 	        padding: 0;
-	        @include flex-container;
-	        justify-content: center;
-	        align-items: center;
-	        align-content: center;
+	        
 	        li {
 		        list-style: none;
 		        margin: 0 1em;
@@ -249,8 +254,16 @@
 					border: 2px solid #C3A43C;
 					font-weight: 300;
 					letter-spacing: 1px;
-
+					display: block;
+					margin-bottom: .5em;
 		        }
+	        }
+	        
+	        @media screen and (min-width: $break__small) {
+	        	@include flex-container;
+		        justify-content: center;
+		        align-items: baseline;
+		        align-content: center;
 	        }
         }
         ul#front-menu-b { //menu de módulos
@@ -265,17 +278,16 @@
 		        list-style: none;
 		        text-align: center;
 		        display: inline-block;
-		        width: 250px;
-		        line-height: 1.2;
+		        max-width: 270px;
+		        line-height: 1.4;
 		        
 		        a {
 			       	border: none;
-					margin: 1em;
+					margin: 10px;
 					text-align: center;
-					font-size: .8em;
-					line-height: 1;
+					font-size: .9em;
 					color: $color__text-screen;
-					
+					display: block;
 					
 					&:before {
 						content: "";
@@ -545,8 +557,6 @@
 		.post__wrap {
 		    display: flex;
 		    justify-content: space-between;	
-
-
 
 		    .entry-content {
 			width: $size__ratio-large;
