@@ -2700,17 +2700,11 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	}
 }
 
-a.back2modulo {
+.back2modulo {
 	font-family: "Rubik", sans;
 	font-size: .8em;
 	border: none;
 	color: #999;
-}
-
-a.back2modulo:before {
-	content: "\f060";
-	font-family: 'Fontawesome';
-	margin-right: .5em;
 }
 
 /*----------------------  ACCORDION -----------------------*/

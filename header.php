@@ -10,6 +10,8 @@
  */
 ?>
 <!doctype html>
+
+
 <html <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
@@ -30,9 +32,83 @@
                     <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php esc_html_e('Contenidos', 'flexieduca'); ?></span></button>
                     <?php
 					// submenú de contenidos 
-					if (is_singular( 'multimedia' )):
-						//submenu
+					if (is_singular( 'multimedia' )): ?>
 						
+						
+						<?php
+						$myvals = get_post_meta($post_id);
+
+						foreach($myvals as $key=>$val)
+						{
+							echo $key . ' : ' . $val[0] . '<br/>';
+						}
+						
+						$post_object = get_field('modulo_asignado');
+
+						if( $post_object ): 
+
+							// override $post
+							$post = $post_object;
+							setup_postdata( $post );
+							$myID = $post->ID;
+							$parent = get_the_title($post->ID);
+							$num = get_field('numero_modulo');
+							$color = get_field('color_modulo');
+							wp_reset_postdata();
+							//echo $myID; //test
+						
+
+							// The Query
+							$args = array(
+								'post_type' => 'multimedia',
+								'posts_per_page' => -1,
+								'orderby' => 'menu_order',
+								'order' => 'ASC',
+								'meta_query'		=> array(
+								array(
+									'key' => 'modulo_asignado',
+									'value' => $myID,
+									'compare' => 'LIKE'
+									)
+								)
+							);
+							$the_query = new WP_Query( $args );
+							// The Loop
+							if ( $the_query->have_posts() ) :
+								echo '<div class="menu-menu-principal-container">';
+								echo '<ul id="primary-menu" class="menu">';
+								echo '<li><a class="home" title="' . __('Ir al inicio', 'flexieduca') .'" href="' . site_url() . '" title="Inicio del curso">' . __('Inicio', 'flexieudca') .'</a></li>';
+								echo '<li><a  style="background-color:' . $color . ';color:white;" href="' . get_permalink($myID) . '" title="Inicio del curso">' . __('Módulo ', 'flexieduca') . $num . '. ' . $parent . '</a></li>';
+								while ( $the_query->have_posts() ) : $the_query->the_post();
+									// Do Stuff
+									$queried_object = get_the_ID();
+
+									if( $queried_object == $current) {
+										echo '<li class="current-item"><a href="' . get_permalink() . '" rel="bookmark">' . get_the_title() . '</a></li>';
+									} else {
+										echo '<li><a href="' . get_permalink() . '" rel="bookmark">' . get_the_title() . '</a></li>';
+									}
+
+								endwhile;
+								echo '</ul>';
+								echo '</div>';
+							endif;
+							// Reset Post Data
+							wp_reset_postdata();
+							
+						endif; ?>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+							
+					<?php 
+					
 					else:
 						wp_nav_menu(array(
 							'theme_location' => 'menu-1',
