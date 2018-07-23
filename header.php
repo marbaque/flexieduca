@@ -29,13 +29,12 @@
 
                 <nav id="site-navigation" class="main-navigation">
                     
-                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php esc_html_e('Contenidos', 'flexieduca'); ?></span></button>
+					<?php if (is_singular( 'multimedia' )): ?>
+                    
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php esc_html_e('Contenidos', 'flexieduca'); ?></span></button>
                     <?php
 					// submenú de contenidos 
-					if (is_singular( 'multimedia' )): ?>
 						
-						
-						<?php
 						$myvals = get_post_meta($post_id);
 
 						foreach($myvals as $key=>$val)
@@ -109,11 +108,6 @@
 							
 					<?php 
 					
-					else:
-						wp_nav_menu(array(
-							'theme_location' => 'menu-1',
-							'menu_id' => 'primary-menu',
-						));
 					endif;
                     
                     ?>

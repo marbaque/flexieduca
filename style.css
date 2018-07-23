@@ -1673,7 +1673,6 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 .site-header .main-navigation {
 	width: 60px;
 	display: block;
-	border-right: 1px solid #ccc;
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
 }
@@ -1710,7 +1709,6 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	width: 60px;
 	max-width: 60px;
 	height: 100%;
-	border-left: 1px solid #ccc;
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
 	text-rendering: geometricPrecision;
