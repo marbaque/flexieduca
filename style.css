@@ -93,7 +93,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-.modulo .content-area .home-link {
+.main-navigation a.home:before, .modulo .content-area .home-link {
 	text-indent: -9999px;
 	overflow: hidden;
 }
@@ -685,7 +685,7 @@ a:hover, a:active {
 	width: 90vw;
 	max-width: 320px;
 	height: 100vh;
-	padding: 1em 0 80px;
+	padding: 0 0 80px;
 	overflow-y: scroll;
 	border-right: 1px solid #ccc;
 	box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.32);
@@ -753,6 +753,11 @@ a:hover, a:active {
 	display: block;
 }
 
+.main-navigation li.current-item a {
+	background: #f4f4f4;
+	font-weight: 500;
+}
+
 .main-navigation a {
 	display: block;
 	text-decoration: none;
@@ -783,6 +788,23 @@ a:hover, a:active {
 .main-navigation .menu-item-has-children > a,
 .main-navigation .page_item_has_children > a {
 	padding-right: 2.5em;
+}
+
+.main-navigation a.home:before {
+	content: "";
+	border: 3px solid #FFFFFF;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background-image: url("./img/home-icon.png");
+	background-image: none, url("./img/home-icon.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #DDBE59;
+	padding: 0;
+	display: inline-block;
+	margin-right: .5em;
+	margin-bottom: -1em;
 }
 
 .main-navigation .modulo1 {
