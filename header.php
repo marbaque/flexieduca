@@ -34,13 +34,18 @@
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php esc_html_e('Contenidos', 'flexieduca'); ?></span></button>
                     <?php
 					// submenú de contenidos 
-						
+						$current = $post->ID;
+						global $post_id;
 						$myvals = get_post_meta($post_id);
-
-						foreach($myvals as $key=>$val)
+						
+						if (is_array($myvals) || is_object($myvals))
 						{
-							echo $key . ' : ' . $val[0] . '<br/>';
+							foreach($myvals as $key=>$val)
+							{
+								echo $key . ' : ' . $val[0] . '<br/>';
+							}
 						}
+						
 						
 						$post_object = get_field('modulo_asignado');
 
@@ -49,7 +54,7 @@
 							// override $post
 							$post = $post_object;
 							setup_postdata( $post );
-							$myID = $post->ID;
+							$myID = get_the_ID( $post );
 							$parent = get_the_title($post->ID);
 							$num = get_field('numero_modulo');
 							$color = get_field('color_modulo');
@@ -63,7 +68,7 @@
 								'posts_per_page' => -1,
 								'orderby' => 'menu_order',
 								'order' => 'ASC',
-								'meta_query'		=> array(
+								'meta_query' => array(
 								array(
 									'key' => 'modulo_asignado',
 									'value' => $myID,
@@ -91,6 +96,8 @@
 								endwhile;
 								echo '</ul>';
 								echo '</div>';
+								// Reset Post Data
+								wp_reset_postdata();
 							endif;
 							// Reset Post Data
 							wp_reset_postdata();
