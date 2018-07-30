@@ -28,6 +28,7 @@ get_header();
 					$lectura = get_field('pagina_lectura');
 					$audios = get_field('pagina_audios');
 					$videos = get_field('pagina_videos');
+					$actividades = get_field('pagina_actividades');
 					 ?>
 				<a class="home-link" href="<?php echo esc_url(home_url('/')); ?>">Ir al inicio</a>
 					<header class="entry-header m<?php echo $numero; ?>">
@@ -42,13 +43,22 @@ get_header();
 					<ul class="links-modulo">
 					    <?php 
 						if ($lectura) {
-							echo '<li><a class="lectura" href="' . $lectura . '" title="' . esc_html__('Lectura', 'flexieduca') . '">' . esc_html__('Lectura', 'flexieduca') . '</a></li>';   
+							echo '<li><a class="lectura" href="' . $lectura . '" title="' 
+									. esc_html__('Lectura', 'flexieduca') . '">' 
+									. esc_html__('Lectura', 'flexieduca') . '</a></li>';   
 					    }
 					    if ($audios) {
 							echo '<li><a class="audios" href="' . $audios . '" title="' . esc_html__('Audio', 'flexieduca') . '">' . esc_html__('Audio', 'flexieduca') . '</a></li>';     
 					    }
 						if ($videos) {
-							echo '<li><a class="videos" href="' . $videos . '" title="' . esc_html__('Video', 'flexieduca') . '">' . esc_html__('Video', 'flexieduca') . '</a></li>';  
+							echo '<li><a class="videos" href="' . $videos . '" title="' 
+									. esc_html__('Video', 'flexieduca') . '">' 
+									. esc_html__('Video', 'flexieduca') . '</a></li>';  
+					    } 
+						if ($actividades) {
+							echo '<li><a class="actividades" href="' . $actividades . '" title="' 
+									. esc_html__('Actividades', 'flexieduca') . '">' 
+									. esc_html__('Actividades', 'flexieduca') . '</a></li>';  
 					    } 
 					    ?>					    
 				    </ul>

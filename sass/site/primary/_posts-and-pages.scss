@@ -176,10 +176,6 @@
 		justify-content: center;
 		align-items: center;
 		@include flex-container;
-		color: #fff;
-		a {
-			color: #fff;
-		}
 		
 		.site-main {
 			padding: 1em;
@@ -193,6 +189,7 @@
 			@extend %hide-text;
 			@include vector-bg-with-fallback(home-icon);
 			background-position: center center;
+			background-size: 60%;
 			padding: 0;
 			position: absolute;
 			left: 1em;
@@ -207,7 +204,7 @@
 			}
 			h1:before {
 				content: "";
-				width: 100px; height: 100px;
+				width: 130px; height: 130px;
 				display: block;
 				@include vector-bg-with-fallback(book);
 				background-position: center center;
@@ -265,7 +262,7 @@
 					display: block;
 					width: 100px; height: 100px;
 					background-color: #fff;
-					border: 4px solid rgba(255,255,255,0.64);
+					//border: 3px solid $color__text-screen;
 					@include borde(50%);
 					@include vector-bg-with-fallback(book);
 					background-position: center;
@@ -281,6 +278,10 @@
 				}
 				&.videos:before {
 					@include vector-bg-with-fallback(video);
+				}
+				&.actividades:before {
+					@include vector-bg-with-fallback(manolapiz);
+					background-position-y: 15px;
 				}
 			}
 		}

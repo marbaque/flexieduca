@@ -774,7 +774,7 @@ a:hover, a:active {
 }
 
 .main-navigation a:hover {
-	color: #333;
+	color: #4a4a4a;
 	opacity: .6;
 }
 
@@ -794,17 +794,18 @@ a:hover, a:active {
 	content: "";
 	border: 3px solid #FFFFFF;
 	border-radius: 50%;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	background-image: url("./img/home-icon.png");
 	background-image: none, url("./img/home-icon.svg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-color: #DDBE59;
+	background-size: 60%;
 	padding: 0;
 	display: inline-block;
-	margin-right: .5em;
-	margin-bottom: -1em;
+	margin-right: .25em;
+	margin-bottom: -.8em;
 }
 
 .main-navigation .modulo1 {
@@ -838,7 +839,7 @@ button.dropdown-toggle {
 	padding: 0;
 	background: inherit;
 	border: none;
-	color: #333;
+	color: #4a4a4a;
 	text-align: center;
 	border-radius: 50%;
 	font-weight: 700;
@@ -1124,7 +1125,7 @@ ul#footer-menu li a {
 	clip: auto !important;
 	-webkit-clip-path: none;
 	        clip-path: none;
-	color: #333;
+	color: #4a4a4a;
 	display: block;
 	font-size: 15.75px;
 	font-size: 0.98438rem;
@@ -1203,14 +1204,14 @@ ul#footer-menu li a {
 .widget {
 	margin: 0 0 2em;
 	padding: 0;
-	border: 3px solid #333;
+	border: 3px solid #4a4a4a;
 	border-radius: 0.5em;
 	/* Make sure select elements fit in widgets. */
 }
 
 .widget .widget-title {
 	padding: .5em 1em;
-	border-bottom: 3px solid #333;
+	border-bottom: 3px solid #4a4a4a;
 	margin: 0;
 	font-size: 1.2em;
 }
@@ -1931,7 +1932,7 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	margin: 10px;
 	text-align: center;
 	font-size: .9em;
-	color: #333;
+	color: #4a4a4a;
 	display: block;
 }
 
@@ -2553,11 +2554,6 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	/* NEW - Chrome */
 	display: flex;
 	/* NEW, Spec - Opera 12.1, Firefox 20+ */
-	color: #fff;
-}
-
-.modulo .content-area a {
-	color: #fff;
 }
 
 .modulo .content-area .site-main {
@@ -2574,6 +2570,7 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	background-image: none, url("./img/home-icon.svg");
 	background-repeat: no-repeat;
 	background-position: center center;
+	background-size: 60%;
 	padding: 0;
 	position: absolute;
 	left: 1em;
@@ -2590,8 +2587,8 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 
 .modulo .content-area .entry-header h1:before {
 	content: "";
-	width: 100px;
-	height: 100px;
+	width: 130px;
+	height: 130px;
 	display: block;
 	background-image: url("./img/book.png");
 	background-image: none, url("./img/book.svg");
@@ -2664,7 +2661,6 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	width: 100px;
 	height: 100px;
 	background-color: #fff;
-	border: 4px solid rgba(255, 255, 255, 0.64);
 	border-radius: 50%;
 	background-image: url("./img/book.png");
 	background-image: none, url("./img/book.svg");
@@ -2690,6 +2686,13 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	background-image: url("./img/video.png");
 	background-image: none, url("./img/video.svg");
 	background-repeat: no-repeat;
+}
+
+.modulo .content-area ul.links-modulo a.actividades:before, .modulo .content-area ul.links-modulo a:visited.actividades:before {
+	background-image: url("./img/manolapiz.png");
+	background-image: none, url("./img/manolapiz.svg");
+	background-repeat: no-repeat;
+	background-position-y: 15px;
 }
 
 /*--------------------------------------------------------------
@@ -2981,7 +2984,7 @@ ul.accordion button:focus {
 @media screen and (min-width: 900px) {
 	.comentario-inicial, .comentario-h5p {
 		padding: 1em 2em 1.2em 140px;
-		border-color: #333;
+		border-color: #4a4a4a;
 	}
 }
 
@@ -3067,7 +3070,7 @@ a.wpc-button .wpc-inactive, a.wpc-button .wpc-active {
 	margin-bottom: 2em;
 	position: relative;
 	bottom: -70px;
-	color: #333;
+	color: #4a4a4a;
 }
 
 a.wpc-button:hover {

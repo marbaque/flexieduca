@@ -152,15 +152,16 @@
         content: "";
         border: 3px solid #FFFFFF;
 		@include borde(50%);
-		width: 50px; height: 50px;
+		width: 40px; height: 40px;
 		@extend %hide-text;
 		@include vector-bg-with-fallback(home-icon);
 		background-position: center center;
 		background-color: $color__skin;
+		background-size: 60%;
 		padding: 0;
 		display: inline-block;
-		margin-right: .5em;
-		margin-bottom: -1em;
+		margin-right: .25em;
+		margin-bottom: -.8em;
 
         
     }

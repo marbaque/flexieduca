@@ -67,11 +67,11 @@ add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
  * Callback function to filter the MCE settings
  */
 
-function my_mce_before_init_insert_formats($init_array) {
+function my_mce_format($init_array) {
 
 // Define the style_formats array
 
-    $style_formats			 = array(
+    $style_formats = array(
 	/*
 	 * Each array child is a format with it's own settings
 	 * Notice that each array has title, block, classes, and wrapper arguments
@@ -167,7 +167,7 @@ function my_mce_before_init_insert_formats($init_array) {
 }
 
 // Attach callback to 'tiny_mce_before_init' 
-add_filter('tiny_mce_before_init', 'my_mce_before_init_insert_formats');
+add_filter('tiny_mce_before_init', 'my_mce_format');
 
 /* * ********************************************************************* */
 
