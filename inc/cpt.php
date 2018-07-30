@@ -81,8 +81,7 @@ function my_custom_posttypes() {
             'editor',
             'thumbnail',
             'revisions',
-            'page-attributes',
-            'comments'
+            'page-attributes'
         ),
     );
     register_post_type('multimedia', $args);

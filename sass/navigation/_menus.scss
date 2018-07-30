@@ -15,7 +15,7 @@
         width: 90vw;
         max-width: 320px;
         height: 100vh;
-        padding: 1em 0 80px;
+        padding: 0 0 80px;
         overflow-y: scroll;
         border-right: 1px solid #ccc;
         box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.32);
@@ -105,6 +105,13 @@
         &:hover > a,
             &.focus > a {
         }
+        
+        &.current-item {
+	        a {
+		        background: #f4f4f4;
+		        font-weight: 500;
+	        }
+        }
     }
 
     a {
@@ -124,6 +131,8 @@
             color: $color__text-screen;
 			opacity: .6;
         }
+        
+        
     }
 	.current_page_item > a,
     .current-menu-item > a,
@@ -139,6 +148,22 @@
 	.page_item_has_children > a {
 		padding-right: 2.5em;
 	}
+	a.home:before {
+        content: "";
+        border: 3px solid #FFFFFF;
+		@include borde(50%);
+		width: 50px; height: 50px;
+		@extend %hide-text;
+		@include vector-bg-with-fallback(home-icon);
+		background-position: center center;
+		background-color: $color__skin;
+		padding: 0;
+		display: inline-block;
+		margin-right: .5em;
+		margin-bottom: -1em;
+
+        
+    }
 	.modulo1 {
 		border-left: 6px solid $color__skin;
 	}
