@@ -29,7 +29,8 @@
 
                 <nav id="site-navigation" class="main-navigation">
                     
-					<?php if (is_singular( 'multimedia' )): ?>
+					
+					<?php if (is_singular( 'multimedia' )): //check if it is multimedia ?>
                     
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php esc_html_e('Contenidos', 'flexieduca'); ?></span></button>
                     <?php
