@@ -40,28 +40,29 @@ get_header();
 		));
 		?>
     	</main><!-- #main -->
-    	<section class="case-gallery">
-
-    	    <h2 class="gallery-title screen-reader-text">
-		    <?php echo esc_html__('Casos destacados', 'flexieduca'); ?>
-    	    </h2>
-			<?php
-
-			global $post;
-			$args = array( 
-			'posts_per_page' => -1, 
-			'post_type' => 'caso'
-			);
-
-			$myposts = get_posts( $args );
-			foreach ( $myposts as $post ) : 
-			setup_postdata( $post ); ?>
-			<?php get_template_part('template-parts/content', 'case-item'); ?>
-			<?php endforeach; ?>
-			<?php wp_reset_postdata();?>
-			
-    	</section><!-- .case-gallery -->
-
+    	<div class="gallery-wrap">
+	    	<section class="case-gallery">
+	
+	    	    <h2 class="gallery-title screen-reader-text">
+			    <?php echo esc_html__('Casos destacados', 'flexieduca'); ?>
+	    	    </h2>
+				<?php
+	
+				global $post;
+				$args = array( 
+				'posts_per_page' => -1, 
+				'post_type' => 'caso'
+				);
+	
+				$myposts = get_posts( $args );
+				foreach ( $myposts as $post ) : 
+				setup_postdata( $post ); ?>
+				<?php get_template_part('template-parts/content', 'case-item'); ?>
+				<?php endforeach; ?>
+				<?php wp_reset_postdata();?>
+				
+	    	</section><!-- .case-gallery -->
+    	</div>
 	    <?php
 	    wp_reset_postdata();
 	endwhile; // End of the loop.

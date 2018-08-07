@@ -12,6 +12,7 @@ blockquote {
     line-height: 1.55;
     background: $color__sombreado;
     color: $color__borde-recuadro;
+    hanging-punctuation: first;
     p{
 	    margin: .25em 0;
     }
@@ -22,7 +23,7 @@ blockquote {
     @media screen and (min-width:$break__medium) {
 		width: 40%;
 		float: left;
-		margin: .5em 2em 1em -3em;
+		margin: .5em 2em 1em -2em;
     }
 }
 
@@ -70,4 +71,17 @@ big {
 
 .entry-title {
     font-weight: 300;
+}
+
+p + p {
+	text-indent: 1.6em;
+}
+p {
+	margin: 0 auto;
+}
+
+ul {
+	padding: 0;
+	margin: 0 0 1em;
+	list-style-position: outside;
 }

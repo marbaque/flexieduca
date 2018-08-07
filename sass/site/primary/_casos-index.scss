@@ -5,14 +5,37 @@
         max-width: $max__column-size;
         margin: 2em auto 0;
     }
-
+	
+	.gallery-wrap {
+		background: $color__interactive;
+		margin: 2em 0;
+		position: relative;
+		width: 100%; //fallback
+		width: 100vw;
+		max-width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+		
+		padding: 1em 0;
+	}
     .case-gallery {
         width: 100%;
+        max-width: 100%;
+        margin: 0;
         display: flex;
         align-items: stretch;
         justify-content: space-around;
         align-content: flex-start;
         flex-wrap: wrap;
+        
+        @media screen and (min-width: $break__medium) {
+        	max-width: 900px;
+        	margin: 0 auto;
+        }
+
 
         .gallery-title {
             display: block;
@@ -22,10 +45,12 @@
         }
 
         .case-item {
-            width: 100%;
+            width: 90%;
+            max-width: 320px;
+            
             background: white;
             background-size: cover;
-            border: 2px solid $color__borde-recuadro;
+            border: 2px solid $color__interactive;
             @include borde(4px);
             margin: 10px 0;
             padding: 0;
@@ -33,17 +58,17 @@
             box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.28);
 			
 			&:hover{
-				border-color: $color__interactive;
+				border-color: $color__skin;
 			}
 
             @media screen and (min-width: $break__small) {
-                width: 31%;
-                margin: 10px 1%;
-            }
-            @media screen and (min-width: $break__hd) {
                 width: 40%;
                 margin: 10px 1%;
             }
+            @media screen and (min-width: $break__medium) {
+            	width: 30%;
+            }
+            
             a, a:hover {
                 border: none;
             }
@@ -98,37 +123,6 @@
                 }
             }
         }
-    }
-    @media screen and(min-width: $break__medium) {
-        .site-content {
-            width: 100%;
-            max-width: $break__hd;
-
-        }
-        .case-index__wrap {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            align-items: flex-start;
-
-            .site-main {
-                width: 48%;
-                margin: 0;	
-            }			
-            .case-gallery {
-                width: 48%;
-
-                .case-item {
-                    width: 48%;
-                }
-            }
-        }
-        .ebook-nav{
-		    max-width: 48%;
-		    margin-right: auto;
-		    margin-left: 0;
-	    }
-
     }
     
     

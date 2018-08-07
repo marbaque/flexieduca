@@ -10,7 +10,7 @@ textarea {
 	line-height: $font__line-height-body;
 	
 	@media screen and (min-width: $break__small) {
-		@include font-size(1);
+		@include font-size(1.09);
 	}
 }
 
