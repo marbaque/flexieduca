@@ -226,6 +226,12 @@ ul.accordion {
     @include vector-bg-with-fallback(resumen);
 }
 
+.formato-ejercicio ul {
+	list-style: none;
+	list-style-position: outside;
+	margin: 0 0 1em;
+}
+
 .comentario-inicial {
     @include vector-bg-with-fallback(avatar_comentario);  
     background-color: white;

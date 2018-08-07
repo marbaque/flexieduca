@@ -424,18 +424,8 @@ big {
 	font-weight: 300;
 }
 
-p + p {
-	text-indent: 1.6em;
-}
-
 p {
-	margin: 0 auto;
-}
-
-ul {
-	padding: 0;
-	margin: 0 0 1em;
-	list-style-position: outside;
+	margin: 1em 0;
 }
 
 /*--------------------------------------------------------------
@@ -465,7 +455,9 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 1em;
+	padding: 0;
+	margin: 0 0 1em;
+	list-style-position: outside;
 }
 
 ul {
@@ -2990,6 +2982,12 @@ ul.accordion button:focus {
 	background-image: url("./img/resumen.png");
 	background-image: none, url("./img/resumen.svg");
 	background-repeat: no-repeat;
+}
+
+.formato-ejercicio ul {
+	list-style: none;
+	list-style-position: outside;
+	margin: 0 0 1em;
 }
 
 .comentario-inicial, .comentario-h5p {
