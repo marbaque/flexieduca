@@ -236,12 +236,20 @@ ul#footer-menu{
 	padding: 0;
 	font-size: .8em;
 	font-weight: 300;
-	letter-spacing: 1px;
+	letter-spacing: .2px;
 	li {
 		display: inline-block;
 		margin: 0 .25em;
 		a {
 			border: none;
+			
+		}
+
+	}
+	li:not(:last-child) {
+		&:after {
+			content: "|";
+			margin-left: 0.75em;
 		}
 	}	
 }

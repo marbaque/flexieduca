@@ -875,7 +875,7 @@ ul#footer-menu {
 	padding: 0;
 	font-size: .8em;
 	font-weight: 300;
-	letter-spacing: 1px;
+	letter-spacing: .2px;
 }
 
 ul#footer-menu li {
@@ -885,6 +885,11 @@ ul#footer-menu li {
 
 ul#footer-menu li a {
 	border: none;
+}
+
+ul#footer-menu li:not(:last-child):after {
+	content: "|";
+	margin-left: 0.75em;
 }
 
 /*--------------------------------------------------------------

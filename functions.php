@@ -263,6 +263,11 @@ function flexieduca_scripts() {
         wp_enqueue_script('flexieduca-fitvids');
         wp_enqueue_script('flexieduca-my-fitvids');
     }
+    
+    //lightbox
+    wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
+    wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
+    wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' );
 
 }
 

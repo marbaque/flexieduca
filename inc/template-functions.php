@@ -225,45 +225,6 @@ function remove_logo() {
     $wp_admin_bar->remove_menu('wp-logo');
 }
 
-//Las siguientes funciones son para agregar un metabox de parent-post
-//o sea, para escoger el contenido al que pertenecen los casos
-//Updating the “Parent” meta box
-function my_add_meta_boxes() {
-    add_meta_box('caso-parent', 'Contenido Padre', 'lesson_attributes_meta_box', 'caso', 'side', 'high');
-}
-
-add_action('add_meta_boxes', 'my_add_meta_boxes');
-
-function lesson_attributes_meta_box($post) {
-    $post_type_object	 = get_post_type_object($post->post_type);
-    $pages			 = wp_dropdown_pages(array('post_type' => 'multimedia', 'selected' => $post->post_parent, 'name' => 'parent_id', 'show_option_none' => __('Sin contenido principal', 'flexieduca'), 'sort_column' => 'menu_order, post_title', 'echo' => 0));
-    if (!empty($pages)) {
-	echo $pages;
-    }
-}
-
-//Setting the exactly URL structure
-function my_add_rewrite_rules() {
-    add_rewrite_tag('%caso%', '([^/]+)', 'caso=');
-    add_permastruct('caso', '/caso/%multimedia%/%caso%', false);
-    add_rewrite_rule('^caso/([^/]+)/([^/]+)/?', 'index.php?caso=$matches[2]', 'top');
-}
-
-add_action('init', 'my_add_rewrite_rules');
-
-//Updating the permalink for our custom post type
-function my_permalinks($permalink, $post, $leavename) {
-    $post_id	 = $post->ID;
-    if ($post->post_type != 'caso' || empty($permalink) || in_array($post->post_status, array('draft', 'pending', 'auto-draft')))
-		return $permalink;
-	    $parent		 = $post->post_parent;
-	    $parent_post	 = get_post($parent);
-	    $permalink	 = str_replace('%multimedia%', $parent_post->post_name, $permalink);
-	    return $permalink;
-}
-
-add_filter('post_type_link', 'my_permalinks', 10, 3);
-
 //hide admin bar for users except administrators
 add_action('after_setup_theme', 'remove_admin_bar');
 
