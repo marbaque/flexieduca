@@ -46,7 +46,7 @@
 					if( $posts ): ?>
 						<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 							<?php setup_postdata($post); ?>
-								<span><?php echo __('Estrategia de comercialización: ', 'flexieduca'); ?> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
+								<span><?php echo __('Estrategia de comercialización: ', 'flexieduca'); ?> <a target="_top" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
 						<?php endforeach; ?>
 						<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 					<?php endif; ?>
@@ -88,7 +88,7 @@
 				    <ul>
 					<?php foreach( $contenidos as $contenido ): ?>
 					<li>
-					    <a href="<?php echo get_permalink( $contenido->ID ); ?>">
+					    <a target="_top" href="<?php echo get_permalink( $contenido->ID ); ?>" title="<?php echo __('Enlace a actividad ', 'flexieduca') . get_the_title( $contenido->ID ); ?>">
 						<?php echo get_the_title( $contenido->ID ); ?>
 					    </a>
 					</li>

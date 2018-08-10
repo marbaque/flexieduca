@@ -82,13 +82,13 @@ get_header();
 	
 					<?php if ( has_post_thumbnail( $caso->ID ) ) : ?>
 					<?php $url = get_the_post_thumbnail_url($caso->ID, 'flexieduca-case-thumb'); ?>
-					<a href="<?php the_permalink( $caso->ID ); ?>" title="<?php the_title_attribute( $caso->ID ); ?>">
+					<a class="fancyboxPage" href="<?php the_permalink( $caso->ID ); ?>" title="<?php the_title_attribute( $caso->ID ); ?>">
 						<img src="<?php echo $url ?>">
 					</a>
 					<?php endif; ?>	
 	
 					<div class="item-text">
-						<h2><a href="<?php the_permalink( $caso->ID ); ?>"> <?php echo get_the_title( $caso->ID ); ?></a></h2>
+						<h2><a class="fancyboxPage" href="<?php the_permalink( $caso->ID ); ?>"> <?php echo get_the_title( $caso->ID ); ?></a></h2>
 						<div class="excerpt"><?php the_excerpt( $caso->ID ); ?></div>
 					</div>
 	
@@ -99,7 +99,7 @@ get_header();
 						wp_kses(__('Abrir... %s', 'flexieduca'), array('span' => array('class' => array()))), the_title('<span class="screen-reader-text">"', '"</span>', false)
 					);
 					?>
-						<a href="<?php echo esc_url(get_permalink( $caso->ID )) ?>" rel="bookmark">
+						<a class="fancyboxPage" href="<?php echo esc_url(get_permalink( $caso->ID )) ?>" rel="bookmark">
 						<?php echo $read_more_link; ?>
 						</a>
 					</div><!-- .continue-reading -->
