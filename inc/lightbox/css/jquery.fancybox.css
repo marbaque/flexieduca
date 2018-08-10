@@ -185,7 +185,7 @@
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	background: url(../images/images/fancybox_overlay.png);
+/* 	background: url(../images/images/fancybox_overlay.png); */
 }
 
 .fancybox-overlay-fixed {
@@ -256,6 +256,11 @@
 	padding: 10px;
 	background: #000;
 	background: rgba(0, 0, 0, .8);
+}
+
+.fancybox-item, .fancybox-close,
+.fancybox-close:hover {
+	border: none;
 }
 
 /*Retina graphics!*/

@@ -895,8 +895,14 @@ ul#footer-menu li:not(:last-child):after {
 /*--------------------------------------------------------------
 ## Paginación
 --------------------------------------------------------------*/
+@media screen and (min-width: 900px) {
+	.single-caso .ebook-nav {
+		margin: 1em 0;
+	}
+}
+
 .ebook-nav {
-	height: auto;
+	height: 50px;
 	margin: 2em auto;
 	bottom: 0;
 	left: 0;
@@ -904,10 +910,12 @@ ul#footer-menu li:not(:last-child):after {
 	font-size: .8em;
 	border: 2px solid #393A38;
 	font-family: 'Rubik', Helvetica, Arial, sans-serif;
+	overflow: hidden;
 }
 
 @media screen and (min-width: 900px) {
 	.ebook-nav {
+		height: 60px;
 		min-width: 100%;
 		margin-left: -3em;
 		margin-right: -3em;
@@ -3174,16 +3182,19 @@ a.wpc-button .wpc-active:before {
 }
 
 .single-caso .site-content {
-	width: 100%;
+	width: 90%;
 	max-width: 1400px;
 }
 
 .single-caso .entry-title {
-	margin: 1em 0 .25em;
+	margin: .5em 0;
 }
 
 .single-caso .case-content .case__wrap {
 	margin: 0;
+	height: auto;
+	overflow: auto;
+	padding: .25em;
 }
 
 @media screen and (min-width: 900px) {
@@ -3195,22 +3206,9 @@ a.wpc-button .wpc-active:before {
 		-webkit-box-pack: justify;
 		    -ms-flex-pack: justify;
 		        justify-content: space-between;
-		-webkit-box-align: start;
-		    -ms-flex-align: start;
-		        align-items: flex-start;
-		padding: 1em 0;
+		padding: 2em 1em;
 		border-top: 3px solid #D96C70;
 		border-bottom: 3px solid #D96C70;
-	}
-	.single-caso .case-content .case__wrap .case-gallery {
-		-webkit-box-ordinal-group: 3;
-		    -ms-flex-order: 2;
-		        order: 2;
-	}
-	.single-caso .case-content .case__wrap .case-desc {
-		-webkit-box-ordinal-group: 2;
-		    -ms-flex-order: 1;
-		        order: 1;
 	}
 }
 
@@ -3223,7 +3221,6 @@ a.wpc-button .wpc-active:before {
 	.single-caso .case-content .case__wrap .case-desc {
 		padding: 0 1em;
 		width: 49%;
-		height: 100%;
 	}
 }
 
@@ -3281,8 +3278,8 @@ a.wpc-button .wpc-active:before {
 
 .single-caso .gallery {
 	width: auto;
-	max-width: 100vw;
-	margin: 0 -1em 2em;
+	max-width: 100%;
+	margin: 0 0 2em;
 	padding: 0 0 1em;
 	border-radius: 0 0 1em 1em;
 }

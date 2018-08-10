@@ -40,9 +40,9 @@ get_header();
 		));
 		?>
     	</main><!-- #main -->
+    	
     	<div class="gallery-wrap">
 	    	<section class="case-gallery">
-	
 	    	    <h2 class="gallery-title screen-reader-text">
 			    <?php echo esc_html__('Casos destacados', 'flexieduca'); ?>
 	    	    </h2>

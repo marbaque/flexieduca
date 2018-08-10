@@ -3,13 +3,13 @@
 
     <?php if ( has_post_thumbnail() ) : ?>
 	<?php $url = get_the_post_thumbnail_url($post->ID, 'flexieduca-case-thumb'); ?>
-	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+	<a class="fancyboxPage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 	    <img src="<?php echo $url ?>">
 	</a>
     <?php endif; ?>	
 
     <div class="item-text">
-        <h2><a href="<?php the_permalink(); ?>"> <?php echo get_the_title(); ?></a></h2>
+        <h2><a class="fancyboxPage" href="<?php the_permalink(); ?>"> <?php echo get_the_title(); ?></a></h2>
 
         <div class="excerpt"><?php the_excerpt(); ?></div>
     </div>
@@ -22,7 +22,7 @@
 	);
 	?>
 
-        <a href="<?php echo esc_url(get_permalink()) ?>" rel="bookmark">
+        <a class="fancyboxPage" href="<?php echo esc_url(get_permalink()) ?>" rel="bookmark">
 	    <?php echo $read_more_link; ?>
         </a>
     </div><!-- .continue-reading -->

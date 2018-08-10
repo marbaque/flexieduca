@@ -2,6 +2,36 @@
  
     // Initialize the Lightbox for any links with the 'fancybox' class
     $(".fancybox").fancybox();
+    
+    $(".fancyboxPage").fancybox({
+	    type			: "iframe",
+	    autosize		: "true",
+	    width			: "1400",
+	    overlay      	: 'true',
+	    smallBtn 		: true,
+	    arrows			: false,
+	    openEffect: "elastic",
+	    
+	    helpers : {
+	        overlay : {
+	            css : {
+	                'background' : 'rgba(0, 0, 0, 0.9)'
+	            }
+	        }
+	    },
+	    
+	    iframe: {
+		    // Iframe template
+	        tpl:
+	            '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe caso" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen allowtransparency="true" src=""></iframe>',
+
+	    },
+	    
+    });
+    
+    $('fancybox.iframe').fancybox({
+        wrapCSS : 'caso' 
+    });
  
     // Initialize the Lightbox automatically for any links to images with extensions .jpg, .jpeg, .png or .gif
     $("a[href$='.jpg'], a[href$='.png'], a[href$='.jpeg'], a[href$='.gif']").fancybox();
