@@ -15,7 +15,7 @@
 	    helpers : {
 	        overlay : {
 	            css : {
-	                'background' : 'rgba(0, 0, 0, 0.9)'
+	                'background' : 'rgba(0, 0, 0, 0.5)'
 	            }
 	        }
 	    },

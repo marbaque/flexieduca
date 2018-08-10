@@ -245,8 +245,8 @@ function flexieduca_scripts() {
     
     
     wp_localize_script('flexieduca-navigation', 'flexieducaScreenReaderText', array(
-        'expand' => __('Expandir menú hijo', 'flexieduca'),
-        'collapse' => __('Encoger menú hijo', 'flexieduca'),
+        'expand' => __('Expandir submenú', 'flexieduca'),
+        'collapse' => __('Encoger submenú', 'flexieduca'),
     ));
 
     wp_enqueue_script('flexieduca-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);

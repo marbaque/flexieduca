@@ -102,9 +102,6 @@
 	    </div><!-- case__wrap -->
 
 	</div><!-- .entry-content .case-content -->
-	<div class="ebook-nav">
-	    <?php flexieduca_post_navigation(); ?>
-	</div>
 </div>
 
 

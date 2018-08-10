@@ -25,6 +25,7 @@
     height: 50px;
     border-bottom: 1px solid #ccc;
     z-index: 998;
+    
     form {
         height: 100%;
     }
@@ -50,16 +51,19 @@
         }
     }
     .toggled-on .menu-toggle {
-	    @include vector-bg-with-fallback(close);
+	    @include vector-bg-with-fallback(back);
+	    background-size: 22px;
     }
     .menu-toggle {
-		@include vector-bg-with-fallback(bars);
+		@include vector-bg-with-fallback(lectura);
 		background-position: center center;
-		background-size: 24px 24px;
+		background-size: 44px;
+		
+		font-size: 11px;
 		
 		@media screen and (min-width: $break__small) {
 			background-position: center 20px;
-			background-size: 32px 20px;
+			//background-size: 32px 20px;
 			span {
 				padding-top: 30px;
 			}

@@ -83,7 +83,7 @@
 								echo '<div class="menu-menu-principal-container">';
 								echo '<ul id="primary-menu" class="menu">';
 								echo '<li><a class="home" title="' . __('Ir al inicio', 'flexieduca') .'" href="' . site_url() . '" title="Inicio del curso">' . __('Inicio', 'flexieudca') .'</a></li>';
-								echo '<li><a  style="background-color:' . $color . ';color:white;" href="' . get_permalink($myID) . '" title="Inicio del curso">' . __('Módulo ', 'flexieduca') . $num . '. ' . $parent . '</a></li>';
+								echo '<li><a class="modulo-item"  style="background-color:' . $color . ';color:white;" href="' . get_permalink($myID) . '" title="Inicio del curso">' . __('Módulo ', 'flexieduca') . $num . '. ' . $parent . '</a></li>';
 								while ( $the_query->have_posts() ) : $the_query->the_post();
 									// Do Stuff
 									$queried_object = get_the_ID();

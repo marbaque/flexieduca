@@ -3,11 +3,12 @@
     display: block;
     width: 100%;
     position: relative;
-    font-size: .9em;
-    z-index: 99;
+    z-index: 999;
+    
+    
 
     ul.menu {
-        //position: absolute;
+        //position: fixed;
         //top: 80px;
         font-family: $font__headings;
         margin-top: 1px;
@@ -19,6 +20,7 @@
         overflow-y: scroll;
         border-right: 1px solid #ccc;
         box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.32);
+        font-size: .75em;
 		
 		@media screen and (min-width: $break__small) {
 			width: 400px;
@@ -34,7 +36,7 @@
 		}
 		 
 		&::-webkit-scrollbar-thumb {
-		  background-color: $color__interactive;
+		  background-color: $color__text-screen;
 		  outline: 0;
 		}
         
@@ -67,11 +69,6 @@
 			li {
 				padding-left: 1.25em;
 				position: relative;
-				font-size: 13px;
-				
-				@media screen and (min-width: $break__small) {
-					font-size: 14px;
-				}
 			 
 				&:hover > ul,
 				&.focus > ul {
@@ -150,13 +147,12 @@
 	}
 	a.home:before {
         content: "";
-        border: 3px solid #FFFFFF;
 		@include borde(50%);
 		width: 40px; height: 40px;
 		@extend %hide-text;
-		@include vector-bg-with-fallback(home-icon);
+		@include vector-bg-with-fallback(home-icon-dark);
 		background-position: center center;
-		background-color: $color__skin;
+		background-color: $color__grisillo;
 		background-size: 60%;
 		padding: 0;
 		display: inline-block;
@@ -234,7 +230,7 @@ ul#footer-menu{
 	list-style: none;
 	margin: 2em 0;
 	padding: 0;
-	font-size: .8em;
+	font-size: .75em;
 	font-weight: 300;
 	letter-spacing: .2px;
 	li {
