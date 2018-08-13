@@ -1660,7 +1660,8 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 
 .site-header .menu-toggle,
 .site-header .user-info-area button,
-.site-header .user-info-area a {
+.site-header .user-info-area a,
+.site-header .home-button {
 	display: block;
 	width: 100%;
 	height: 100% !important;
@@ -1674,14 +1675,16 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 
 .site-header .menu-toggle span,
 .site-header .user-info-area button span,
-.site-header .user-info-area a span {
+.site-header .user-info-area a span,
+.site-header .home-button span {
 	display: none;
 }
 
 @media screen and (min-width: 900px) {
 	.site-header .menu-toggle span,
 	.site-header .user-info-area button span,
-	.site-header .user-info-area a span {
+	.site-header .user-info-area a span,
+	.site-header .home-button span {
 		display: block;
 	}
 }
@@ -1692,7 +1695,7 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	background-repeat: no-repeat;
 }
 
-.site-header .menu-toggle {
+.site-header .menu-toggle, .site-header .home-button {
 	background-image: url("./img/bars.png");
 	background-image: none, url("./img/bars.svg");
 	background-repeat: no-repeat;
@@ -1702,12 +1705,22 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 }
 
 @media screen and (min-width: 600px) {
-	.site-header .menu-toggle {
+	.site-header .menu-toggle, .site-header .home-button {
 		background-position: center 24px;
 	}
-	.site-header .menu-toggle span {
+	.site-header .menu-toggle span, .site-header .home-button span {
 		padding-top: 30px;
 	}
+}
+
+.site-header .home-button {
+	background-image: url("./img/home-icon-dark.png");
+	background-image: none, url("./img/home-icon-dark.svg");
+	background-repeat: no-repeat;
+}
+
+.site-header .home-button span {
+	padding-top: 40px;
 }
 
 .site-header .main-navigation {

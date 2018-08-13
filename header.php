@@ -32,7 +32,7 @@
 					
 					<?php if (is_singular( 'multimedia' )): //check if it is multimedia ?>
                     
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php esc_html_e('Contenidos', 'flexieduca'); ?></span></button>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php echo esc_html_e('Módulo ', 'flexieduca'); ?></span></button>
                     <?php
 					// submenú de contenidos 
 						$current = $post->ID;
@@ -105,7 +105,10 @@
 							
 						endif; ?>		
 					
-							
+						<?php elseif( !is_singular('multimedia') && !is_front_page() ): ?>
+
+					<a class="home-button" href="<?php echo home_url(); ?>"><span><?php esc_html_e('Inicio', 'flexieduca'); ?></span></a>
+					
 							
 					<?php endif; ?>
                 </nav><!-- #site-navigation -->
