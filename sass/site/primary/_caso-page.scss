@@ -1,35 +1,27 @@
-.back {
-    font-size: 80%;
-    position: relative;
-    line-height: 1;
-    margin-left: 1.2em;
-    &:before {
-		font-family: 'FontAwesome';
-		content: "\f060";
-		margin-right: .25em;
-		position: absolute;
-		left: -1.2em;
-		top: .1em;
-    }
-}
-
 .single-caso {
-					
+				
     .site-content {
 		width: auto;
 		max-width: $break__hd;
     }
 	.entry-header {
-		padding: 0 1em;
+		padding: 1em;
+		position: -webkit-sticky;
+		position: sticky;
+		top: -1px;
+		background: white;
+		border-bottom: 3px solid $color__interactive;
+		z-index: 10;
 	}
     .entry-title {
-		margin: .5em 0;
+		margin: 0;
+		padding: 0;
     }
     .case-content {
 	    
 	    .formato-ejercicio {
 		    max-width: 100%;
-		    
+		    font-size: .9em;
 		    line-height: 1.2;
 		    
 		    a {
@@ -39,23 +31,14 @@
 	    
 		.case__wrap {
 		    margin: 0;
-		    
-		    height: auto;
-			overflow: auto;
 			
 			padding: 0;
 	
 		    @media screen and (min-width: $break__medium) {
 				margin: 0;
 				display: flex;
-				justify-content: space-between;
+				justify-content: space-between;				
 				
-				height: 80%;
-				overflow: hidden;
-
-				padding: 2em 1em;
-				
-				border-top: 3px solid $color__interactive;
 
 		    }
 	
@@ -64,10 +47,9 @@
 				margin: 0 auto;
 				
 				@media screen and (min-width: $break__medium) {
-				    padding: 0 1em;
+				    padding: 0 1em 2em;
 				    width: 48%;
-				    
-				    overflow-y: scroll;
+					
 				}
 		    }
 		    
@@ -76,7 +58,6 @@
 				max-width: 100%;
 				margin: 0 0 2em;
 				padding: 0 0 1em;
-				//background-color: $color__sombreado;
 				@include borde(0 0 1em 1em);
 			
 				@media screen and (min-width: $break__medium) {

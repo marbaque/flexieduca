@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="20px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+<svg width="26px" height="16px" viewBox="0 0 26 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
     <title>bars</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="metafora" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-HD-Copy" transform="translate(-16.000000, -161.000000)" fill="#333333">
-            <g id="bars" transform="translate(12.000000, 161.000000)">
-                <rect id="Rectangle" x="4" y="0" width="24" height="4"></rect>
-                <rect id="Rectangle-Copy" x="4" y="16" width="24" height="4"></rect>
-                <rect id="Rectangle-Copy-2" x="4" y="8" width="24" height="4"></rect>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="top-bar-mobile-user" transform="translate(-13.000000, -17.000000)" fill-rule="nonzero" stroke="#4A4A4A" stroke-width="2">
+            <g id="boton-contenidos">
+                <g id="bars" transform="translate(10.000000, 15.000000)">
+                    <path d="M4,3.25 L28,3.25" id="Line"></path>
+                    <path d="M4,10 L28,10" id="Line-Copy"></path>
+                    <path d="M4,17 L28,17" id="Line-Copy-2"></path>
+                </g>
             </g>
         </g>
     </g>

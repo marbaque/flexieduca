@@ -31,26 +31,28 @@
 			
 				<?php $url = get_field('enlace'); ?>    
 				
-				<div class="enlace">
-					<?php if (!empty($url)): ?>
+				
+				<?php if (!empty($url)): ?>
+					<div class="enlace">
 					    <?php echo __('Mas información: ', 'flexieduca'); ?>
 					    <a href="<?php echo $url; ?>" title="Enlace a <?php the_title(); ?>" target="_blank"><?php echo preg_replace('#^https?://#', '', $url); ?></i></a>
-					    <?php endif; ?>
-				</div>
+					</div>
+				<?php endif; ?>
 				
-				<div class="case-trends">
-					<?php 
-		
-					$posts = get_field('galeria_relacionada');
+				
+				
+				<?php $posts = get_field('galeria_relacionada'); ?>
 					
-					if( $posts ): ?>
+				<?php if( $posts ): ?>
+					<div class="case-trends">
 						<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 							<?php setup_postdata($post); ?>
 								<span><?php echo __('Estrategia de comercialización: ', 'flexieduca'); ?> <a target="_top" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
 						<?php endforeach; ?>
 						<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-					<?php endif; ?>
-		    	</div>
+					</div>
+				<?php endif; ?>
+		    	
 			
 		    </div><!-- .case-gallery --> 
 		    

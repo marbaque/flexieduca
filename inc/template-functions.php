@@ -229,7 +229,7 @@ function remove_logo() {
 add_action('after_setup_theme', 'remove_admin_bar');
 
 function remove_admin_bar() {
-    if (!current_user_can('administrator') && !is_admin()) {
+    if (!current_user_can('administrator') && !is_admin() || is_singular('caso')) {
 	show_admin_bar(false);
     }
 }
@@ -284,7 +284,7 @@ function flexieduca_mejs_add_container_class() {
 
 //Edit the Dashboard Footer
 function change_admin_footer(){
-	 echo '<span id="footer-note">Hecho por <a href="http://multimedia.uned.ac.cr/" target="_blank">Multimedia UNED</a>.</span>';
+	 echo '<span id="footer-note">Desarrollado por <a href="http://multimedia.uned.ac.cr/" target="_blank">Multimedia UNED</a>.</span>';
 	}
 add_filter('admin_footer_text', 'change_admin_footer');
 
@@ -296,5 +296,3 @@ function remove_menus(){
      }
 }
 add_action( 'admin_menu', 'remove_menus' );
-
-

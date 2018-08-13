@@ -103,22 +103,11 @@
 							// Reset Post Data
 							wp_reset_postdata();
 							
-						endif; ?>
-						
-						
-						
-						
-						
-						
-						
-						
-						
-							
-					<?php 
+						endif; ?>		
 					
-					endif;
-                    
-                    ?>
+							
+							
+					<?php endif; ?>
                 </nav><!-- #site-navigation -->
 
                 <div class="site-branding">
