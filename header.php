@@ -32,7 +32,7 @@
 					
 					<?php if (is_singular( 'multimedia' )): //check if it is multimedia ?>
                     
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php echo esc_html_e('Módulo ', 'flexieduca'); ?></span></button>
+					
                     <?php
 					// submenú de contenidos 
 						$current = $post->ID;
@@ -61,6 +61,12 @@
 							$color = get_field('color_modulo');
 							wp_reset_postdata();
 							//echo $myID; //test
+							
+							?>
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button"><span><?php echo esc_html_e('Módulo ', 'flexieduca') . $num; ?></span></button>
+							<?php
+							
+							
 						
 
 							// The Query
