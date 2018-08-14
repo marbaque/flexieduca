@@ -545,6 +545,107 @@ audio {
 	z-index: -1;
 }
 
+a.wpc-button {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: none;
+	z-index: 99;
+	display: block;
+	position: relative;
+	white-space: nowrap;
+	clear: both;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-size: .8em;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+a.wpc-button.wpc-complete {
+	background-image: url("./img/check.png");
+	background-image: none, url("./img/check.svg");
+	background-repeat: no-repeat;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 26px 20px;
+}
+
+a.wpc-button.wpc-completed {
+	background-image: url("./img/check.png");
+	background-image: none, url("./img/check.svg");
+	background-repeat: no-repeat;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 26px 20px;
+	opacity: .25;
+}
+
+a.wpc-button .wpc-inactive, a.wpc-button .wpc-active {
+	margin-left: 100%;
+	margin-bottom: 2em;
+	position: absolute;
+	color: #4a4a4a;
+}
+
+a.wpc-button:hover {
+	border: none;
+}
+
+a.wpc-button .wpc-active:before {
+	content: "";
+	width: 50px;
+	height: 50px;
+	background-image: url("./img/spinner.png");
+	background-image: none, url("./img/spinner.svg");
+	background-repeat: no-repeat;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 32px 32px;
+	background-color: transparent;
+	padding: 0;
+	display: block;
+	position: absolute;
+	top: -12.5px;
+	left: calc(-100% + 12.5px);
+	-webkit-animation: spin 3s linear 0 infinite normal;
+	        animation: spin 3s linear 0 infinite normal;
+}
+
+@-webkit-keyframes spin {
+	from {
+		/* IE 9 */
+		-webkit-transform: rotate(0deg);
+		/* Safari */
+		transform: rotate(0deg);
+	}
+	to {
+		/* IE 9 */
+		-webkit-transform: rotate(360deg);
+		/* Safari */
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		/* IE 9 */
+		-webkit-transform: rotate(0deg);
+		/* Safari */
+		transform: rotate(0deg);
+	}
+	to {
+		/* IE 9 */
+		-webkit-transform: rotate(360deg);
+		/* Safari */
+		transform: rotate(360deg);
+	}
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -3076,108 +3177,6 @@ ul.accordion button:focus {
 		text-indent: -.5in;
 		margin-top: 1em;
 		margin-bottom: 1em;
-	}
-}
-
-a.wpc-button {
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	border: none;
-	z-index: 99;
-	display: block;
-	position: relative;
-	text-align: center;
-	white-space: nowrap;
-	clear: both;
-	left: 50%;
-	margin-left: -40px;
-	/*half the width of the div*/
-	margin-top: 40px;
-	margin-bottom: 40px;
-	font-size: .8em;
-}
-
-a.wpc-button.wpc-complete {
-	background-image: url("./img/check.png");
-	background-image: none, url("./img/check.svg");
-	background-repeat: no-repeat;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: 26px 20px;
-}
-
-a.wpc-button.wpc-completed {
-	background-image: url("./img/check.png");
-	background-image: none, url("./img/check.svg");
-	background-repeat: no-repeat;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: 26px 20px;
-	opacity: .25;
-}
-
-a.wpc-button .wpc-inactive, a.wpc-button .wpc-active {
-	border-radius: 4px;
-	margin-left: -100%;
-	margin-right: -100%;
-	margin-bottom: 2em;
-	position: relative;
-	bottom: -70px;
-	color: #4a4a4a;
-}
-
-a.wpc-button:hover {
-	border: none;
-}
-
-a.wpc-button .wpc-active:before {
-	content: "";
-	width: 50px;
-	height: 50px;
-	background-image: url("./img/spinner.png");
-	background-image: none, url("./img/spinner.svg");
-	background-repeat: no-repeat;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: 32px 32px;
-	background-color: transparent;
-	padding: 0;
-	display: block;
-	position: absolute;
-	top: -70px;
-	left: calc(50% - 25px);
-	-webkit-animation: spin 3s linear 0 infinite normal;
-	        animation: spin 3s linear 0 infinite normal;
-}
-
-@-webkit-keyframes spin {
-	from {
-		/* IE 9 */
-		-webkit-transform: rotate(0deg);
-		/* Safari */
-		transform: rotate(0deg);
-	}
-	to {
-		/* IE 9 */
-		-webkit-transform: rotate(360deg);
-		/* Safari */
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes spin {
-	from {
-		/* IE 9 */
-		-webkit-transform: rotate(0deg);
-		/* Safari */
-		transform: rotate(0deg);
-	}
-	to {
-		/* IE 9 */
-		-webkit-transform: rotate(360deg);
-		/* Safari */
-		transform: rotate(360deg);
 	}
 }
 

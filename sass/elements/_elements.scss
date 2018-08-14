@@ -42,3 +42,89 @@ figure {
 audio {
     z-index: -1;
 }
+
+
+
+//wp-complete
+a.wpc-button {
+	width: 80px;
+	height: 80px;
+	@include borde(50%);
+	border: none;
+	z-index: 99;
+	display: block;	
+	position: relative;
+    white-space: nowrap;
+    clear: both;
+
+	margin-top: 40px;
+	margin-bottom: 40px;
+	
+	font-size: .8em;
+	
+	display: flex;
+	align-items: center;
+	
+	&.wpc-complete {
+		@include vector-bg-with-fallback(check);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 26px 20px;
+	}
+	
+	&.wpc-completed {
+		@include vector-bg-with-fallback(check);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 26px 20px;
+		opacity: .25;
+	}
+
+	
+	.wpc-inactive, .wpc-active {
+		margin-left: 100%;
+		margin-bottom: 2em;
+		position: absolute;
+		color: $color__text-screen;
+	}
+	
+	&:hover {
+		border: none;
+	}
+	
+		
+
+	.wpc-active:before {
+			content: "";
+			width: 50px;
+			height: 50px;
+			@include vector-bg-with-fallback(spinner);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 32px 32px;
+			background-color: transparent;
+			padding: 0;
+			display:block;
+			position: absolute;
+			top: -12.5px;
+			left: calc(-100% + 12.5px);
+			animation: spin 3s linear 0 infinite normal;
+
+		
+	}
+	
+} 
+
+
+@keyframes spin {
+    from {
+	    -ms-transform: rotate(0deg); /* IE 9 */
+	    -webkit-transform: rotate(0deg); /* Safari */
+	    transform: rotate(0deg);
+    }
+    to {
+	    -ms-transform: rotate(360deg); /* IE 9 */
+	    -webkit-transform: rotate(360deg); /* Safari */
+	    transform: rotate(360deg);
+    }
+}
