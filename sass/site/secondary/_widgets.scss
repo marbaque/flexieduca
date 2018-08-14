@@ -5,13 +5,13 @@
 .widget {
     margin: 0 0 2em;
     padding: 0;
-    border: 3px solid $color__text-screen;
+    border: 3px solid $color__borde-recuadro;
     @include borde(.5em);
     .widget-title {
-	padding: .5em 1em;
-	border-bottom: 3px solid $color__text-screen;
-	margin: 0;
-	font-size: 1.2em;
+		padding: .5em 1em;
+		border-bottom: 3px solid $color__text-screen;
+		margin: 0;
+		font-size: 1.2em;
     }
     >div {
 	padding: 1em;
@@ -24,7 +24,7 @@
 
         li {
             display: block;
-            line-height: 2em;
+            line-height: 1.5em;
 
             ul,
             ol {
@@ -39,9 +39,10 @@
     }
 
     a {
-        font-weight: 600;
+        font-weight: 300;
         text-decoration: none;
-
+        border: none;
+		
         &:hover,
             &:focus {
             border-bottom: 3px solid $color__interactive;
@@ -101,7 +102,7 @@
         &:hover,
             &:focus {
             text-decoration: none;
-            border-bottom: 1px dashed hsl(0, 0%, 50%);
+            border-bottom: 1px dashed $color__interactive;
         }
     }
 
