@@ -24,6 +24,8 @@ if (document.getElementById('masthead')) {
 	var menu = document.getElementById('primary-menu');
 	var head = document.getElementById('site-navigation');
 	
+	
+	
 	var menuPosition = head.getBoundingClientRect();
 	
 	var placeholder = document.createElement('div');
@@ -32,6 +34,13 @@ if (document.getElementById('masthead')) {
 	var isAdded = false;
 	
 	window.addEventListener('scroll', function () {
+		
+		// Return early if menuToggle is missing.
+		if ( ! menu ) {
+			return;
+		}
+		
+		
 	    if (window.pageYOffset >= menuPosition.bottom && !isAdded) {
 		menu.classList.add('fixed');
 		menu.parentNode.insertBefore(placeholder, menu);

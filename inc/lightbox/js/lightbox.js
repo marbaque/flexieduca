@@ -9,7 +9,7 @@
 	    width			: "1400",
 	    overlay      	: 'true',
 	    smallBtn 		: true,
-	    arrows			: false,
+	    arrows			: true,
 	    openEffect: "elastic",
 	    
 	    helpers : {

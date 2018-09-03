@@ -29,13 +29,6 @@
     }
 }
 
-.back2modulo {
-	font-family: $font__headings;
-	font-size: .8em;
-	border: none;
-	color: #999;
-}
-
 /*----------------------  ACCORDION -----------------------*/
 ul.accordion {
     margin: 1em 0;
@@ -179,13 +172,13 @@ ul.accordion {
 .formato-busqueda,
 .comentario-inicial{
 	@extend %recuadro-box;
-    padding: 120px 2em 1.2em;
-    margin: .5em -1em 2em;
+    padding: 120px 0.7em 1.2em;
+    margin: .5em -0.7em 2em;
     height: auto;
     min-height: 140px;
     background-position: center 20px;
     background-size: 80px;
-    font-size: .89em;
+    font-size: .85em;
     position: relative;
 
     @media screen and (min-width: $break__medium) {
@@ -272,91 +265,5 @@ ul.accordion {
 	text-indent:  -.5in;
 	margin-top: 1em;
 	margin-bottom: 1em;
-    }
-}
-
-a.wpc-button {
-	width: 80px;
-	height: 80px;
-	@include borde(50%);
-	border: none;
-	z-index: 99;
-	display: block;	
-	position: relative;
-	text-align: center;
-    white-space: nowrap;
-    clear: both;
-    
-	left: 50%;
-	margin-left: -40px; /*half the width of the div*/
-	margin-top: 40px;
-	margin-bottom: 40px;
-	
-	font-size: .8em;
-	
-	&.wpc-complete {
-		@include vector-bg-with-fallback(check);
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: 26px 20px;
-	}
-	
-	&.wpc-completed {
-		@include vector-bg-with-fallback(check);
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: 26px 20px;
-		opacity: .25;
-	}
-
-	
-	.wpc-inactive, .wpc-active {
-		@include borde(4px);
-		margin-left: -100%;
-		margin-right: -100%;
-		margin-bottom: 2em;
-		position: relative;
-		bottom: -70px;
-		color: $color__text-screen;
-	}
-	
-	&:hover {
-		border: none;
-	}
-	
-		
-
-	.wpc-active:before {
-			content: "";
-			width: 50px;
-			height: 50px;
-			@include vector-bg-with-fallback(spinner);
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-size: 32px 32px;
-			background-color: transparent;
-			padding: 0;
-			display:block;
-			position: absolute;
-			top: -70px;
-			left: calc(50% - 25px);
-			animation: spin 3s linear 0 infinite normal;
-
-		
-	}
-	
-} 
-
-
-@keyframes spin {
-    from {
-	    -ms-transform: rotate(0deg); /* IE 9 */
-	    -webkit-transform: rotate(0deg); /* Safari */
-	    transform: rotate(0deg);
-    }
-    to {
-	    -ms-transform: rotate(360deg); /* IE 9 */
-	    -webkit-transform: rotate(360deg); /* Safari */
-	    transform: rotate(360deg);
     }
 }

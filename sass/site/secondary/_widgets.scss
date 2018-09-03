@@ -5,13 +5,13 @@
 .widget {
     margin: 0 0 2em;
     padding: 0;
-    border: 3px solid $color__text-screen;
+    border: 3px solid $color__borde-recuadro;
     @include borde(.5em);
     .widget-title {
-	padding: .5em 1em;
-	border-bottom: 3px solid $color__text-screen;
-	margin: 0;
-	font-size: 1.2em;
+		padding: .5em 1em;
+		border-bottom: 3px solid $color__text-screen;
+		margin: 0;
+		font-size: 1.2em;
     }
     >div {
 	padding: 1em;
@@ -24,7 +24,7 @@
 
         li {
             display: block;
-            line-height: 2em;
+            line-height: 1.5em;
 
             ul,
             ol {
@@ -39,9 +39,10 @@
     }
 
     a {
-        font-weight: 600;
+        font-weight: 300;
         text-decoration: none;
-
+        border: none;
+		
         &:hover,
             &:focus {
             border-bottom: 3px solid $color__interactive;
@@ -101,7 +102,7 @@
         &:hover,
             &:focus {
             text-decoration: none;
-            border-bottom: 1px dashed hsl(0, 0%, 50%);
+            border-bottom: 1px dashed $color__interactive;
         }
     }
 
@@ -318,9 +319,11 @@ aside.menu-social {
 	margin-right: -1em;
 	padding: 2em 1em;
 	font-family: $font__headings;
+	font-size: .9em;
+	line-height: 1.2;
 	
 
-	@media screen and (min-width: $break__hd) {
+	@media screen and (min-width: $break__hd) { //hacer esta seccion 100% de la ventana
 		padding: 3em 2em;
 		margin-left: calc(50% - 50vw);
 		margin-right: calc(50% - 50vw);
@@ -329,26 +332,39 @@ aside.menu-social {
 	.aside-in {
 		max-width: $max__size;
 		@include center-block;
+		
 		.widget {
 			padding: 0;
 			border: 0;
 			>div {
 				padding: 0;
 			}
+			.widget-title {
+				padding: .25em 0;
+				margin: 0;
+				font-size: 1.2em;
+			}
+			
 			ul {
 				padding: 0;
+				margin: 0;
+				list-style-position: outside;
 				li {
-					margin-bottom: .5em;
+					line-height: 1.5;
+					margin: .5em 0;
+					.post-date {
+						font-size: 80%;
+						color: #8e8574;
+						font-style: italic;
+						&:before {
+							content: "-";
+						}
+					}
 				}
 				a {
-					background: $color__skin;
-			        color: white;
-			        padding: .5em .75em;
-			        @include borde(4px);
-					border: 2px solid #C3A43C;
+					border: none;
 					font-weight: 300;
-					letter-spacing: 1px;
-					line-height: 1.2;
+					
 				}
 				li.facebook a {
 					background: #4A90E2;
@@ -356,7 +372,9 @@ aside.menu-social {
 					@include borde(4px);
 					@include vector-bg-with-fallback(Facebook);
 					background-position: .5em center;
-					padding-left: 2.5em;
+					padding: .5em .75em .5em 2.5em;
+					color: white;
+					letter-spacing: 1px;
 				}
 			}
 		}

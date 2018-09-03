@@ -116,7 +116,7 @@
 	height: 100%;
 	cursor: pointer;
 	text-decoration: none;
-	background: transparent url(../images/images/blank.gif); /* helps IE */
+	background: transparent url(../images/blank.gif); /* helps IE */
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	z-index: 8040;
 }
@@ -185,7 +185,7 @@
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-/* 	background: url(../images/images/fancybox_overlay.png); */
+/* 	background: url(../images/fancybox_overlay.png); */
 }
 
 .fancybox-overlay-fixed {
@@ -269,7 +269,7 @@
 	   only screen and (min-device-pixel-ratio: 1.5){
 
 	#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-		background-image: url(../images/images/fancybox_sprite@2x.png);
+		background-image: url(../images/fancybox_sprite@2x.png);
 		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
 	}
 

@@ -296,3 +296,12 @@ function remove_menus(){
      }
 }
 add_action( 'admin_menu', 'remove_menus' );
+
+
+//badge os fix navigation
+add_action( 'wp_head', function() {
+    if( is_singular( 'multimedia' ) || is_singular('caso') || is_singular('actividad') ) {
+        remove_filter('previous_post_link', 'badgeos_hide_previous_hidden_achievement_link');
+        remove_filter('next_post_link', 'badgeos_hide_next_hidden_achievement_link');
+    }
+});
