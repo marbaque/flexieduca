@@ -43,13 +43,17 @@
 			</div>
 			<hr>
 			<div class="register-block">
-			    <p><?php echo esc_html_e('Si es primera vez:', 'flexieduca'); ?></p>
-			    <a class="button-register" href="<?php echo wp_registration_url(); ?>"><?php esc_html_e('Regístrese aquí', 'flexieduca'); ?></a>
+				<p>
+					<?php echo __('Si no tiene cuenta de estudiante, solicite una al adminstrador.', 'flexieduca'); ?><br>
+				</p>
+				<a href="<?php echo get_permalink( get_page_by_title( 'contacto' ) ); ?>" class="button-login" title="<?php echo __('Enlace a formulario de contacto', 'flexieduca'); ?>">
+					<?php echo __('Solicitar cuenta', 'flexieduca'); ?>
+				</a>
+				
 			</div>
 		
 		    </div><!-- #user-options -->
 		<?php endif; ?>
-		
 		</div><!-- #page -->
 		
 		<?php wp_footer(); ?>
