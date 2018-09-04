@@ -39,12 +39,18 @@
 	.site-content {
 		padding-bottom: 0;
 	}
+	.entry-header {
+		@include vector-bg-with-fallback(rana-mirando);
+		background-position: center bottom;
+		background-size: 400px;
+		padding-bottom: 100px;
+		border-bottom: 2px solid #979797;
+	}
 }
 .exitometro {
 	font-family: $font__headings;
 	font-weight: 300;
-	padding-bottom: 1em;
-	border-bottom: 2px solid #979797;
+	
 	
 	.estudiante {
 		height: 64px;

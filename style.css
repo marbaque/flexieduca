@@ -1985,17 +1985,21 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 }
 
 .home .portada {
+	background-color: #DDBE59;
 	max-width: 100vw;
 	max-height: 480px;
 	margin-left: -1em;
 	margin-right: -1em;
-	padding: 0;
+	padding: 10px 0;
 }
 
 @media screen and (min-width: 600px) {
 	.home .portada {
-		background: #DDBE59;
-		padding: 10px 0;
+		min-height: 380px;
+		background-image: url("./img/fondo-globos.png");
+		background-image: none, url("./img/fondo-globos.svg");
+		background-repeat: no-repeat;
+		background-repeat: repeat;
 	}
 }
 
@@ -2229,6 +2233,7 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 .modal a.button-register {
 	padding: 7px 10px 9px 10px;
 	letter-spacing: 0.1em;
+	line-height: 1.2;
 	text-transform: uppercase;
 	border: none;
 	background-color: #D96C70;
@@ -2541,11 +2546,19 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	padding-bottom: 0;
 }
 
+.exitometro-page .entry-header {
+	background-image: url("./img/rana-mirando.png");
+	background-image: none, url("./img/rana-mirando.svg");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 400px;
+	padding-bottom: 100px;
+	border-bottom: 2px solid #979797;
+}
+
 .exitometro {
 	font-family: "Rubik", sans;
 	font-weight: 300;
-	padding-bottom: 1em;
-	border-bottom: 2px solid #979797;
 }
 
 .exitometro .estudiante {

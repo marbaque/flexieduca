@@ -186,16 +186,6 @@ function my_login_logo() {
 			background-repeat: no-repeat;
 			padding-bottom: 0;
         }
-        .login #nav a,
-        .login #nav a:visited {
-			text-decoration: none;
-			color: #fff!important;
-			background: #D96C70;
-			padding: 4px;
-			-webkit-border-radius: 4px;
-			-moz-border-radius: 4px;
-			border-radius: 4px;
-        }
     </style>
     <?php
 }
