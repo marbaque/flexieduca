@@ -145,34 +145,19 @@
 	.page_item_has_children > a {
 		padding-right: 2.5em;
 	}
-	a.home:before {
-        content: "";
-		@include borde(50%);
-		width: 40px; height: 40px;
-		@extend %hide-text;
-		@include vector-bg-with-fallback(home-icon-dark);
-		background-position: center center;
-		background-color: $color__grisillo;
-		background-size: 60%;
-		padding: 0;
-		display: inline-block;
-		margin-right: .25em;
-		margin-bottom: -.8em;
+	a.home {
+        @include vector-bg-with-fallback(home-icon-dark);
+		background-position: 1em center;
+		padding-left: 3em;
+		background-size: 1.25em;
 
         
     }
-	.modulo1 {
-		border-left: 6px solid $color__skin;
-	}
-	.modulo4 {
-		border-left: 6px solid $color__interactive;
-	}
-	.modulo2 {
-		border-left: 6px solid #B4CF7E;
-	}
-	.modulo3 {
-		border-left: 6px solid #7A6FB9;
-	}
+    .modulo-item {
+		@include vector-bg-with-fallback(flecha);
+		background-position: 1em center;
+		padding-left: 3em;
+    }
 }
 
 

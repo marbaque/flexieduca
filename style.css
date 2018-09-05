@@ -93,7 +93,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	}
 }
 
-.main-navigation a.home:before, .modulo .content-area .home-link {
+.modulo .content-area .home-link {
 	text-indent: -9999px;
 	overflow: hidden;
 }
@@ -910,37 +910,21 @@ a:hover, a:active {
 	padding-right: 2.5em;
 }
 
-.main-navigation a.home:before {
-	content: "";
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
+.main-navigation a.home {
 	background-image: url("./img/home-icon-dark.png");
 	background-image: none, url("./img/home-icon-dark.svg");
 	background-repeat: no-repeat;
-	background-position: center center;
-	background-color: #f4f4f4;
-	background-size: 60%;
-	padding: 0;
-	display: inline-block;
-	margin-right: .25em;
-	margin-bottom: -.8em;
+	background-position: 1em center;
+	padding-left: 3em;
+	background-size: 1.25em;
 }
 
-.main-navigation .modulo1 {
-	border-left: 6px solid #DDBE59;
-}
-
-.main-navigation .modulo4 {
-	border-left: 6px solid #D96C70;
-}
-
-.main-navigation .modulo2 {
-	border-left: 6px solid #B4CF7E;
-}
-
-.main-navigation .modulo3 {
-	border-left: 6px solid #7A6FB9;
+.main-navigation .modulo-item {
+	background-image: url("./img/flecha.png");
+	background-image: none, url("./img/flecha.svg");
+	background-repeat: no-repeat;
+	background-position: 1em center;
+	padding-left: 3em;
 }
 
 /* Small menu. */
@@ -1175,6 +1159,15 @@ ul#footer-menu li:not(:last-child):after {
 .post-navigation .nav-next .meta-nav {
 	display: block;
 	font-size: .7em;
+}
+
+.comment-navigation .nav-previous a,
+.comment-navigation .nav-next a,
+.posts-navigation .nav-previous a,
+.posts-navigation .nav-next a,
+.post-navigation .nav-previous a,
+.post-navigation .nav-next a {
+	border: none;
 }
 
 .comment-navigation .nav-previous,
