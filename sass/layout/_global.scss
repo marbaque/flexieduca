@@ -228,6 +228,7 @@
 			min-height: 380px;
 			@include vector-bg-with-fallback(fondo-globos);
 			background-repeat: repeat;
+			background-attachment: fixed;
 		}
 		@media screen and (min-width: $break__hd) {
 			margin-left: calc(50% - 50vw);

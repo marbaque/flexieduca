@@ -2000,6 +2000,7 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 		background-image: none, url("./img/fondo-globos.svg");
 		background-repeat: no-repeat;
 		background-repeat: repeat;
+		background-attachment: fixed;
 	}
 }
 
@@ -2547,18 +2548,23 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 }
 
 .exitometro-page .entry-header {
-	background-image: url("./img/rana-mirando.png");
-	background-image: none, url("./img/rana-mirando.svg");
+	background-image: url("./img/fondo-globos-2.png");
+	background-image: none, url("./img/fondo-globos-2.svg");
 	background-repeat: no-repeat;
-	background-position: center bottom;
-	background-size: 400px;
-	padding-bottom: 100px;
+	background-repeat: repeat;
+	background-attachment: fixed;
 	border-bottom: 2px solid #979797;
 }
 
 .exitometro {
 	font-family: "Rubik", sans;
 	font-weight: 300;
+	background-image: url("./img/rana-mirando.png");
+	background-image: none, url("./img/rana-mirando.svg");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 400px;
+	padding-bottom: 60px;
 }
 
 .exitometro .estudiante {
