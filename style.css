@@ -1754,7 +1754,6 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	width: 100%;
 	margin: 0;
 	position: relative;
-	background: white;
 	padding: 0;
 }
 
@@ -2533,7 +2532,11 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 }
 
 .exitometro-page {
-	background-color: #DBD6C6 !important;
+	background-image: url("./img/fondo-globos-2.png");
+	background-image: none, url("./img/fondo-globos-2.svg");
+	background-repeat: no-repeat;
+	background-repeat: repeat;
+	background-attachment: scroll;
 }
 
 .exitometro-page .site-content {
@@ -2541,11 +2544,6 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 }
 
 .exitometro-page .entry-header {
-	background-image: url("./img/fondo-globos-2.png");
-	background-image: none, url("./img/fondo-globos-2.svg");
-	background-repeat: no-repeat;
-	background-repeat: repeat;
-	background-attachment: fixed;
 	border-bottom: 2px solid #979797;
 }
 

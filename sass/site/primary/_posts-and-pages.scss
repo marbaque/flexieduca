@@ -34,15 +34,15 @@
 
 //Exitómetro - Página
 .exitometro-page {
-	background-color: $color__sombreado!important;
+	@include vector-bg-with-fallback(fondo-globos-2);
+	background-repeat: repeat;
+	background-attachment: scroll;
+	
 	
 	.site-content {
 		padding-bottom: 0;
 	}
 	.entry-header {
-		@include vector-bg-with-fallback(fondo-globos-2);
-		background-repeat: repeat;
-		background-attachment: fixed;
 		border-bottom: 2px solid #979797;
 	}
 }
