@@ -1709,6 +1709,7 @@ aside.menu-social .aside-in .widget ul li .post-date:before {
 aside.menu-social .aside-in .widget ul a {
 	border: none;
 	font-weight: 300;
+	padding: 0;
 }
 
 aside.menu-social .aside-in .widget ul li.facebook a {
