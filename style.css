@@ -325,7 +325,7 @@ textarea {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16.2px;
 	font-size: 1.0125rem;
-	line-height: 1.6;
+	line-height: 1.5;
 }
 
 @media screen and (min-width: 600px) {
@@ -1646,12 +1646,11 @@ li.flexieduca-search, .widget_search {
 aside.menu-social {
 	background-color: #DBD6C6;
 	max-width: 100vw;
-	max-height: 500px;
 	margin-left: -1em;
 	margin-right: -1em;
 	padding: 2em 1em;
 	font-family: "Rubik", sans;
-	font-size: .9em;
+	font-size: .88em;
 	line-height: 1.2;
 }
 
@@ -2023,6 +2022,7 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 .home .front-content_wrap ul#front-menu-a {
 	margin: 2em 0;
 	padding: 0;
+	line-height: 1.2;
 }
 
 .home .front-content_wrap ul#front-menu-a li {
@@ -2090,7 +2090,7 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	text-align: center;
 	display: inline-block;
 	max-width: 270px;
-	line-height: 1.4;
+	line-height: 1.3;
 }
 
 .home .front-content_wrap ul#front-menu-b li a {
@@ -3519,6 +3519,11 @@ ul.accordion button:focus {
 	}
 }
 
+.comments-area blockquote {
+	width: 100%;
+	margin: 0 0 1em;
+}
+
 .single-caso .comments-area {
 	border: none;
 }
@@ -3531,7 +3536,7 @@ ul.accordion button:focus {
 
 .comments-title {
 	margin-bottom: 2em;
-	font-size: 1.5em;
+	font-size: 1em;
 	font-weight: 900;
 }
 
@@ -3647,7 +3652,7 @@ ul.accordion button:focus {
 }
 
 .comment-author {
-	font-size: 1.4em;
+	font-size: 1.2em;
 	line-height: 1.3em;
 }
 
@@ -3675,6 +3680,14 @@ ul.accordion button:focus {
 	color: #fff;
 	background: #D96C70;
 	border-color: #D96C70;
+}
+
+.comment-content {
+	font-size: .9em;
+}
+
+.comment-content p {
+	margin-bottom: 1em;
 }
 
 .comment-content ol {

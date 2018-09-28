@@ -16,6 +16,11 @@
 		padding: 1em 2em;
 		
 	}
+	
+	blockquote {
+		width: 100%;
+		margin: 0 0 1em;
+	}
 }
 .single-caso {
 	.comments-area {
@@ -29,7 +34,7 @@
 
 .comments-title {
 	margin-bottom: 2em;
-	font-size: 1.5em;
+	font-size: 1em;
 	font-weight: 900;
 
 }
@@ -164,7 +169,7 @@
 }
 
 .comment-author {
-	font-size: 1.4em;
+	font-size: 1.2em;
 	line-height: 1.3em;
 }
 
@@ -197,7 +202,10 @@
 
 
 .comment-content {
-
+	font-size: .9em;
+	p {
+		margin-bottom: 1em;
+	}
 	ol {
 		list-style-type: decimal;
 	}
@@ -260,7 +268,7 @@
 		display: block;
 		font-style: italic;
 		padding-bottom: .4em;
-                font-size: .8em;
+		font-size: .8em;
 	}
 	
 	.required {
