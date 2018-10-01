@@ -90,6 +90,24 @@
 			) );
 		?>
 		
+		<div class="estudiantes-block">
+			<hr>
+			<h3><?php echo __('Compañeros del curso', 'flexieduca'); ?></h3>
+			<?php
+			$args1		 = array(
+				'role'		 => 'subscriber',
+				'orderby'	 => 'user_nicename',
+				'order'		 => 'ASC'
+			);
+			$subscribers = get_users($args1);
+			echo '<ul>';
+			foreach ($subscribers as $user) {
+				echo '<li>' . get_avatar( $user->user_email, 32 ) . $user->display_name . ' <i>' . $user->user_nicename . '</i></li>';
+			}
+			echo '</ul>';
+			?>
+		</div>
+		
 		
 	</div><!-- .entry-content -->
 		

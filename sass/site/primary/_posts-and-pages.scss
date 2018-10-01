@@ -107,12 +107,44 @@
 			width: 48%;
 			
 		}
-	}
-	
-	
+	}	
 	
 }
-
+//lista de estudiantes	
+.estudiantes-block {
+	padding: 1em 0;
+	margin: 1em 0;
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			list-style: none;
+			font-size: .8em;
+			line-height: 1;
+			margin-bottom: 1em;
+			background-color: $color__grisillo;
+			padding: 1em;
+			img {
+				@include borde(50%);
+				margin-right: 1em;
+				margin-bottom: -0.5em;
+			}
+			i {
+				font-size: 90%;
+				color: $color__skin;
+			}
+		}
+		
+		@media screen and (min-width: $break__small) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			li {
+				width: 48%;
+			}
+		}
+	}
+}
 
 .entry-content {
 	&.progreso {

@@ -2652,6 +2652,52 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	}
 }
 
+.estudiantes-block {
+	padding: 1em 0;
+	margin: 1em 0;
+}
+
+.estudiantes-block ul {
+	padding: 0;
+	margin: 0;
+}
+
+.estudiantes-block ul li {
+	list-style: none;
+	font-size: .8em;
+	line-height: 1;
+	margin-bottom: 1em;
+	background-color: #f4f4f4;
+	padding: 1em;
+}
+
+.estudiantes-block ul li img {
+	border-radius: 50%;
+	margin-right: 1em;
+	margin-bottom: -0.5em;
+}
+
+.estudiantes-block ul li i {
+	font-size: 90%;
+	color: #DDBE59;
+}
+
+@media screen and (min-width: 600px) {
+	.estudiantes-block ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+	.estudiantes-block ul li {
+		width: 48%;
+	}
+}
+
 .entry-content.progreso .lista {
 	margin-bottom: 1em;
 	background: #f4f4f4;

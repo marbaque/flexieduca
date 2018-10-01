@@ -91,3 +91,11 @@ if (document.getElementById('masthead')) {
 	$('.modal').wrap( '<div class="overlay"/>' );
     });
 })( jQuery );
+
+
+//(function($) { 
+//	$(document).on('wpc-course-completed', function(e) {
+//		// Trigger confetti falling or something else awesome!
+//		console.log( 'course completed' );
+//	});
+//})( jQuery );
