@@ -27,11 +27,11 @@ function flexieduca_body_classes($classes) {
     } else {
 	$classes[] = 'no-sidebar';
     }
-	
+
 	if (is_singular('modulo')) {
 		$classes[] = 'modulo';
 	}
-	
+
 	if (is_page('exitometro')) {
 		$classes[] = 'exitometro-page';
 	}
@@ -158,7 +158,7 @@ function my_mce_format($init_array) {
 	    'classes'	=> 'fuente-apa',
 	    'wrapper'	=> false,
 	),
-	
+
     );
     // Insert the array, JSON ENCODED, into 'style_formats'
     $init_array['style_formats'] = json_encode($style_formats);
@@ -166,7 +166,7 @@ function my_mce_format($init_array) {
     return $init_array;
 }
 
-// Attach callback to 'tiny_mce_before_init' 
+// Attach callback to 'tiny_mce_before_init'
 add_filter('tiny_mce_before_init', 'my_mce_format');
 
 /* * ********************************************************************* */

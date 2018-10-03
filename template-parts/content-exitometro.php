@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-		<div class="exitometro">	                 
+		<div class="exitometro">
 			<?php
 			if ( is_user_logged_in() ) {
 				global $current_user;
@@ -32,35 +32,35 @@
 						    <li><a href="<?php echo wp_logout_url( get_bloginfo( 'url' ) ); ?>"><?php echo __('Cerrar sesión', 'flexieduca'); ?></a></li>
 					    </ul>
 					</div>
-					
-				    
-				</div>	
-				
+
+
+				</div>
+
 				<div class="datos">
 		                <i><?php echo esc_html__('Progreso ', 'flexieduca') . do_shortcode('[wpc_progress_in_ratio course=all]'); ?></i>
 		            <div class="graph"><?php echo do_shortcode('[wpc_progress_graph course=all]'); ?></div>
 		        </div><!-- .datos -->
 			<?php
-			
+
 			} else {
-				
+
 				?>
 			    <h3><?php echo __('¡Hola!', 'flexieduca'); ?></h3>
-			    
+
 			    <p>
 				    <a id="user" href="<?php echo wp_login_url(get_permalink()); ?>"><?php echo __('Acceda al multimedia', 'flexieduca'); ?></a> <?php echo __('para guardar su progreso', 'flexieduca'); ?>
-				    				    
+
 			    </p>
-			    <?php 
-			    
+			    <?php
+
 			}
 			?>
 	    </div><!-- exitometro -->
 	</header><!-- .entry-header -->
-	
-	
 
-		
+
+
+
 	<div class="entry-content progreso">
 		<?php
         if ( has_post_thumbnail() ) { ?>
@@ -89,28 +89,31 @@
 				'after'  => '</div>',
 			) );
 		?>
-		
+
 		<div class="estudiantes-block">
 			<hr>
 			<h3><?php echo __('Compañeros del curso', 'flexieduca'); ?></h3>
 			<?php
 			$args1		 = array(
 				'role'		 => 'subscriber',
-				'orderby'	 => 'user_nicename',
+				'orderby'	 => 'display_name',
 				'order'		 => 'ASC'
 			);
 			$subscribers = get_users($args1);
 			echo '<ul>';
 			foreach ($subscribers as $user) {
-				echo '<li>' . get_avatar( $user->user_email, 32 ) . $user->display_name . ' <i>' . $user->user_nicename . '</i></li>';
+				global $wpdb;
+
+				$count = $wpdb->get_var('SELECT COUNT(comment_ID) FROM ' . $wpdb->comments. ' WHERE comment_author_email = "' . $user->user_email . '"');
+
+				echo '<li>' . get_avatar( $user->user_email, 32 ) . $user->display_name . ' (<i>' . $user->user_nicename . '</i>)<span class="count">' . $count  . '</span></li>';
 			}
 			echo '</ul>';
 			?>
 		</div>
-		
-		
+
 	</div><!-- .entry-content -->
-		
-	
-	
+
+
+
 </article><!-- #post-<?php the_ID(); ?> -->
