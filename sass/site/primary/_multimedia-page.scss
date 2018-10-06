@@ -68,6 +68,9 @@ ul.accordion {
     border-top: 1px solid white;
     padding: 1em 1.5em;
     font-size: .9em;
+    ul, ol {
+        padding-left: 1.5em;
+    }
     p, li {
 		margin: .25em 0;
     }
@@ -78,8 +81,8 @@ ul.accordion {
     p:last-child {
 		margin-bottom: 0;
     }
-	
-    &.resumen {	    
+
+    &.resumen {
 		@include vector-bg-with-fallback(resumen);
 		background-position: 2em 1em;
 		background-size: 60px;
@@ -100,13 +103,13 @@ ul.accordion {
 		}
 		p.meta {
 		    margin: 1em auto;
-		    
+
 		}
 		p.descargar-audio {
 		    a {
 			border: none;
 		    }
-		    
+
 		    margin: 1em auto;
 		}
 	}
@@ -194,7 +197,7 @@ ul.accordion {
 	padding: 1em 2em 1.2em;
 }
 .formato-actividad{
-    @include vector-bg-with-fallback(actividad_virtual);  
+    @include vector-bg-with-fallback(actividad_virtual);
 }
 .formato-mirada{
     @include vector-bg-with-fallback(mirada);
@@ -226,7 +229,7 @@ ul.accordion {
 }
 
 .comentario-inicial {
-    @include vector-bg-with-fallback(avatar_comentario);  
+    @include vector-bg-with-fallback(avatar_comentario);
     background-color: white;
     background-size: 100px;
     padding: 130px 2em 1.2em;
@@ -265,5 +268,24 @@ ul.accordion {
 	text-indent:  -.5in;
 	margin-top: 1em;
 	margin-bottom: 1em;
+    }
+}
+
+//actividades - contenido contenido_relacionado
+.relacionado {
+    background-color: $color__sombreado;
+    @include borde(1em);
+    padding: 1em;
+    h6 {
+        margin: .5em 0;
+    }
+    a {
+        border: none;
+    }
+    li {
+        list-style-image: url(img/flecha-dark.svg);
+        font-size: .8em;
+        font-style: italic;
+
     }
 }

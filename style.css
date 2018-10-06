@@ -426,6 +426,10 @@ big {
 	font-size: 125%;
 }
 
+.entry-content ul {
+	padding-left: 1em;
+}
+
 .entry-content ul li {
 	margin-bottom: .5em;
 }
@@ -1703,6 +1707,10 @@ aside.menu-social .aside-in .widget ul li .post-date {
 
 aside.menu-social .aside-in .widget ul li .post-date:before {
 	content: "-";
+}
+
+aside.menu-social .aside-in .widget ul li a {
+	padding: 0;
 }
 
 aside.menu-social .aside-in .widget ul a {
@@ -3021,6 +3029,10 @@ ul.accordion button:focus {
 	font-size: .9em;
 }
 
+.accordion-panel ul, .accordion-panel ol {
+	padding-left: 1.5em;
+}
+
 .accordion-panel p, .accordion-panel li {
 	margin: .25em 0;
 }
@@ -3281,6 +3293,26 @@ ul.accordion button:focus {
 		margin-top: 1em;
 		margin-bottom: 1em;
 	}
+}
+
+.relacionado {
+	background-color: #DBD6C6;
+	border-radius: 1em;
+	padding: 1em;
+}
+
+.relacionado h6 {
+	margin: .5em 0;
+}
+
+.relacionado a {
+	border: none;
+}
+
+.relacionado li {
+	list-style-image: url(img/flecha-dark.svg);
+	font-size: .8em;
+	font-style: italic;
 }
 
 /*--------------------------------------------------------------

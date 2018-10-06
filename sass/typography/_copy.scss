@@ -64,8 +64,11 @@ big {
 }
 
 .entry-content {
-    ul li {
-	margin-bottom: .5em;
+    ul  {
+        padding-left: 1em;
+        li {
+            margin-bottom: .5em;
+        }
     }
 }
 

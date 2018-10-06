@@ -3,8 +3,8 @@
 $audioURL = get_field('audio_contenido');
 $resumen = get_field('resumen');
 $obj = get_field('objetivos');
-$posts = get_field('contenido_relacionado');
-$meta = get_field('metadatos_audio'); 
+
+$meta = get_field('metadatos_audio');
 $post = get_post( $post );
 $title = isset( $post->post_title ) ? $post->post_title : '';
 ?>
@@ -20,14 +20,14 @@ $title = isset( $post->post_title ) ? $post->post_title : '';
                         <source src="<?php echo $audioURL; ?>" type="audio/mpeg">
                         <?php echo __( 'Su navegador no admite el elemento de audio.', 'flexieduca' ); ?>
                     </audio>
-                   <p class="descargar-audio button"><a href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fa fa-download"></i> Descargar</a></p>		   
-		   
+                   <p class="descargar-audio button"><a href="<?php echo $audioURL; ?>" title="Descargar audio"><i class="fa fa-download"></i> Descargar</a></p>
+
 		   <?php if ($meta): ?>
 			   <p class="meta"><?php echo $meta; ?></p>
 		   <?php else: ?>
 		   	<p class="meta">© Universidad Estatal a Distancia, 2018. <i><?php echo $title; ?></i>. Mercadeo digital para la nueva economía [Audio en podcast].</p>
 		   <?php endif; ?>
-		   
+
                 </div>
             </li>
         <?php endif; ?>
@@ -40,7 +40,7 @@ $title = isset( $post->post_title ) ? $post->post_title : '';
                 </div>
             </li>
         <?php endif; ?>
-        
+
         <?php if ($resumen): ?>
             <li class="resumen">
                 <button class="accordion-control">Resumen</button>
@@ -49,22 +49,9 @@ $title = isset( $post->post_title ) ? $post->post_title : '';
                 </div>
             </li>
         <?php endif; ?>
-	   
-	<?php if ( $posts && !is_singular( 'caso' ) ) : ?>
-		<li class="relacionado">
-			<button class="accordion-control">Contenido relacionado</button>
-			<div class="accordion-panel">
-				<ul>
-		<?php foreach ($posts as $post): // variable must be called $post (IMPORTANT)  ?>
-		<?php setup_postdata($post); ?>
-			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-		<?php endforeach; ?>
-		</ul>
-			</div>
-		</li>
-	    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly  ?>
-	<?php endif; ?>
         </ul>
+
+
 
 
 <?php endif; ?>

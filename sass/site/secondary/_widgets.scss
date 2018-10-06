@@ -42,7 +42,7 @@
         font-weight: 300;
         text-decoration: none;
         border: none;
-		
+
         &:hover,
             &:focus {
             border-bottom: 3px solid $color__interactive;
@@ -299,7 +299,7 @@ li.flexieduca-search{
             font-weight: normal;
             font-style: italic;
             color: #A39C87;
-        } 
+        }
 
 
     }
@@ -321,18 +321,18 @@ aside.menu-social {
 	font-family: $font__headings;
 	font-size: .88em;
 	line-height: 1.2;
-	
+
 
 	@media screen and (min-width: $break__hd) { //hacer esta seccion 100% de la ventana
 		padding: 3em 2em;
 		margin-left: calc(50% - 50vw);
 		margin-right: calc(50% - 50vw);
-		
+
 	}
 	.aside-in {
 		max-width: $max__size;
 		@include center-block;
-		
+
 		.widget {
 			padding: 0;
 			border: 0;
@@ -344,7 +344,7 @@ aside.menu-social {
 				margin: 0;
 				font-size: 1.2em;
 			}
-			
+
 			ul {
 				padding: 0;
 				margin: 0;
@@ -360,6 +360,9 @@ aside.menu-social {
 							content: "-";
 						}
 					}
+                    a {
+                        padding: 0;
+                    }
 				}
 				a {
 					border: none;
@@ -378,19 +381,19 @@ aside.menu-social {
 				}
 			}
 		}
-		
+
 		@media screen and (min-width: $break__small) {
 			@include flex-container;
 			justify-content: space-between;
-			
+
 			.widget {
 				width: 30%;
 				margin-bottom: 0;
-				
+
 			}
 		}
-		
-		
-		
+
+
+
 	}
 }
