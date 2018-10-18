@@ -90,9 +90,11 @@
 			) );
 		?>
 
+		<?php if( is_user_logged_in() ): ?>
+
 		<div class="estudiantes-block">
 			<hr>
-			<h3><?php echo __('Compañeros del curso', 'flexieduca'); ?></h3>
+			<h3><?php echo __('También en el curso...', 'flexieduca'); ?></h3>
 			<?php
 			$args1		 = array(
 				'role'		 => 'subscriber',
@@ -110,7 +112,9 @@
 			}
 			echo '</ul>';
 			?>
-		</div>
+		</div><!-- .estudiantes-block -->
+
+		<?php endif; ?>
 
 	</div><!-- .entry-content -->
 
