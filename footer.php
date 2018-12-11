@@ -38,16 +38,16 @@
 		<?php if ( !is_user_logged_in() ): ?>
 		    <div id="user-options">
 			<div class="login-block">
-			    <p><?php echo esc_html_e('Si ya tiene una cuenta:', 'flexieduca'); ?></p>
+			    <p><?php echo esc_html_e('Si ya tiene una cuenta', 'flexieduca'); ?></p>
 			    <a class="button-login" href="<?php echo wp_login_url(); ?>" title="Login"><?php esc_html_e('Acceda aquí', 'flexieduca'); ?></a>
 			</div>
 			<hr>
 			<div class="register-block">
 				<p>
-					<?php echo __('Si no tiene cuenta de estudiante, solicite una al adminstrador.', 'flexieduca'); ?><br>
+					<?php echo __('Si no tiene cuenta de estudiante', 'flexieduca'); ?><br>
 				</p>
 				<a href="<?php echo get_permalink( get_page_by_title( 'contacto' ) ); ?>" class="button-login" title="<?php echo __('Enlace a formulario de contacto', 'flexieduca'); ?>">
-					<?php echo __('Solicitar cuenta', 'flexieduca'); ?>
+					<?php echo __('Solicite una cuenta aquí', 'flexieduca'); ?>
 				</a>
 				
 			</div>
