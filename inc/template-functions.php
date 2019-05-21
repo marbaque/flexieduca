@@ -215,13 +215,19 @@ function remove_logo() {
     $wp_admin_bar->remove_menu('wp-logo');
 }
 
-//hide admin bar for users except administrators
-add_action('after_setup_theme', 'remove_admin_bar');
 
-function remove_admin_bar() {
-    if (!current_user_can('administrator') && !is_admin() || is_singular('caso')) {
-	show_admin_bar(false);
-    }
+// Mostrar barra de admin sólo a admins, autores y editores
+add_action( 'init', 'remove_admin_bar_user', 10001 );
+function remove_admin_bar_user() {
+
+	if ( current_user_can( 'administrator' ) || current_user_can( 'editor' ) || current_user_can( 'author' ) ) {
+		
+		show_admin_bar( true );
+	
+	} else {
+		
+		show_admin_bar( false );
+	}
 }
 
 //Redireccionar usuarios al home despues del login
