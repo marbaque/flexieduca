@@ -14,18 +14,18 @@
 function flexieduca_body_classes($classes) {
     // Adds a class of hfeed to non-singular pages.
     if (!is_singular() && !is_tax('tendencia')) {
-	$classes[]	 = 'hfeed';
-	$classes[]	 = 'archive-view';
+		$classes[]	 = 'hfeed';
+		$classes[]	 = 'archive-view';
     }
     if ( is_page_template('page-casos.php') || is_page_template('page-casos-estrategia.php') ) {
-	$classes[] = 'casos-index';
+		$classes[] = 'casos-index';
     }
 
     // Adds a class telling us if the sidebar is in use.
     if (is_single() && is_active_sidebar('sidebar-1') || is_page() && is_active_sidebar('sidebar-2')) {
-	$classes[] = 'has-sidebar';
+		$classes[] = 'has-sidebar';
     } else {
-	$classes[] = 'no-sidebar';
+		$classes[] = 'no-sidebar';
     }
 
 	if (is_singular('modulo')) {
@@ -295,9 +295,9 @@ add_action( 'admin_menu', 'remove_menus' );
 
 
 //badge os fix navigation
-add_action( 'wp_head', function() {
-    if( is_singular( 'multimedia' ) || is_singular('caso') || is_singular('actividad') ) {
-        remove_filter('previous_post_link', 'badgeos_hide_previous_hidden_achievement_link');
-        remove_filter('next_post_link', 'badgeos_hide_next_hidden_achievement_link');
-    }
-});
+// add_action( 'wp_head', function() {
+//     if( is_singular( 'multimedia' ) || is_singular('caso') || is_singular('actividad') ) {
+//         remove_filter('previous_post_link', 'badgeos_hide_previous_hidden_achievement_link');
+//         remove_filter('next_post_link', 'badgeos_hide_next_hidden_achievement_link');
+//     }
+// });

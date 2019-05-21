@@ -13,8 +13,9 @@
 	
 	
     <header class="entry-header">
+	<a class="back2modulo" href="javascript:history.back()">Regresar</a>
 	<?php
-	the_title('<h1 class="entry-title">', '</h1>');
+	the_title('<h1 class="entry-title">Caso: ', '</h1>');
 	?>
 
     </header><!-- .entry-header -->

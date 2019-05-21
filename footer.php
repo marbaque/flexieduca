@@ -35,6 +35,7 @@
 			?>
 		    </div><!-- .site-info -->
 		</footer><!-- #colophon -->
+		
 		<?php if ( !is_user_logged_in() ): ?>
 		    <div id="user-options">
 			<div class="login-block">
@@ -54,7 +55,8 @@
 		
 		    </div><!-- #user-options -->
 		<?php endif; ?>
-		</div><!-- #page -->
+		
+	</div><!-- #page -->
 		
 		<?php wp_footer(); ?>
 	

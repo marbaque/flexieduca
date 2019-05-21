@@ -6,8 +6,7 @@
  *
  * @package Humescores
  */
-//get_header();
-wp_head();
+get_header();
 ?>
 <div class="single-caso">
 	<div id="primary" class="content-area">
@@ -26,5 +25,4 @@ wp_head();
 </div>
 
 <?php
-wp_footer();
-//get_footer();
+get_footer();

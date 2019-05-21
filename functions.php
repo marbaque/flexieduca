@@ -265,18 +265,16 @@ function flexieduca_scripts() {
     wp_register_script('flexieduca-fitvids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'),'', true);
     wp_register_script('flexieduca-my-fitvids', get_template_directory_uri() . '/js/my-fitvids.js', array('flexieduca-fitvids'),'', true);
 
-    if(! is_admin() ) {    
+    if( !is_admin() ) {    
         wp_enqueue_script('flexieduca-fitvids');
         wp_enqueue_script('flexieduca-my-fitvids');
     }
     
-    if(!is_singular('caso')) {
-	    wp_enqueue_script('flexieduca-modal-window', get_template_directory_uri() . '/js/modal-window.js', array('jquery'), '20180419', true);
-		//lightbox
-	    wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
-	    wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
-	    wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' );   
-    }
+    wp_enqueue_script('flexieduca-modal-window', get_template_directory_uri() . '/js/modal-window.js', array('jquery'), '20180419', true);
+    //lightbox
+    wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
+    wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
+    wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' );   
 
 }
 

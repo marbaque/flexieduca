@@ -5,7 +5,7 @@ Theme URI: https://multimedia.uned.ac.cr
 Author: Mario Badilla, Multimedia UNED
 Author URI: http://multimedia.uned.ac.cr
 Description: Tema para contenido educativo, enfocado en el aprendizaje flexibe y auto-guiado.
-Version: 1.0.0
+Version: 2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: flexieduca
@@ -3242,7 +3242,9 @@ ul.accordion button:focus {
 	margin: 0 0 1em;
 }
 
-.comentario-inicial, .comentario-h5p {
+
+.comentario-inicial,
+.comentario-h5p {
 	background-image: url("./img/avatar_comentario.png");
 	background-image: none, url("./img/avatar_comentario.svg");
 	background-repeat: no-repeat;
@@ -3252,7 +3254,9 @@ ul.accordion button:focus {
 }
 
 @media screen and (min-width: 900px) {
-	.comentario-inicial, .comentario-h5p {
+	
+	.comentario-inicial,
+	.comentario-h5p {
 		padding: 1em 2em 1.2em 140px;
 		border-color: #4a4a4a;
 	}
@@ -3466,7 +3470,7 @@ ul.accordion button:focus {
 	right: 50%;
 	margin-left: -50vw;
 	margin-right: -50vw;
-	padding: 1em 0;
+	padding: 1em;
 }
 
 .casos-index .case-gallery,
@@ -3501,6 +3505,7 @@ ul.accordion button:focus {
 	width: 100%;
 	font-family: "Rubik", sans;
 	margin: 1em 0;
+	text-align: center;
 }
 
 .casos-index .case-gallery .case-item,
