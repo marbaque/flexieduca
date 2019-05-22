@@ -76,7 +76,7 @@
 			    ?>
 			    <?php if( $contenidos ): ?>
 			    <div class="formato-ejercicio">
-				<h2>Actividades de autoevaluación</h2>
+				<h3><?php echo __( 'Ejercicios de autoevaluación', 'flexieduca' ); ?></h3>
 				<ul>
 				    <?php foreach( $contenidos as $contenido ): ?>
 				    <li>

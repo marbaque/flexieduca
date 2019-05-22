@@ -131,20 +131,20 @@ function my_custom_posttypes() {
 	
 //Actividades
     $labelsA = array(
-        'name' => 'Actividad de autoevaluación',
-        'singular_name' => 'Actividad',
-        'menu_name' => 'Actividad',
-        'name_admin_bar' => 'Actividad',
-        'add_new' => 'Agregar actividad nueva',
-        'add_new_item' => 'Agregar actividad',
-        'new_item' => 'Nueva actividad',
-        'edit_item' => 'Editar',
-        'view_item' => 'Ver',
-        'all_items' => 'Todas las actividades',
-        'search_items' => 'Buscar actividad',
-        'parent_item_colon' => 'Actividad:',
-        'not_found' => 'No se encontraron actividades.',
-        'not_found_in_trash' => 'No hay actividades en la papelera.',
+        'name' => 'Ejercicios de autoevaluación',
+        'singular_name' => 'Ejercicio',
+        'menu_name' => 'Ejercicio',
+        'name_admin_bar' => 'Ejercicio',
+        'add_new' => 'Agregar ejercicio nuevo',
+        'add_new_item' => 'Agregar ejercicio',
+        'new_item' => 'Nuevo ejercicio',
+        'edit_item' => 'Editar ejercicio',
+        'view_item' => 'Ver ejercicio',
+        'all_items' => 'Todos los ejercicios',
+        'search_items' => 'Buscar ejercicio',
+        'parent_item_colon' => 'Ejercicio:',
+        'not_found' => 'No se encontraron ejercicios.',
+        'not_found_in_trash' => 'No hay ejercicios en la papelera.',
     );
 
     $argsA = array(
