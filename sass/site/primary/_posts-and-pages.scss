@@ -46,6 +46,14 @@
 		border-bottom: 2px solid #979797;
 	}
 }
+
+.exitometro .avatar,
+.author-photo img {
+	border-radius: 50%;
+	margin-right: 1em;
+
+}
+
 .exitometro {
 	font-family: $font__headings;
 	font-weight: 300;
@@ -59,11 +67,7 @@
 		@include flex-container;
 		justify-content: flex-start;
 		align-items: center;
-		.avatar {
-			@include borde(50%);
-			margin-right: 1em;
-
-		}
+		
 		.name {
 			margin: 0 0 .25em 0;
 		}
@@ -80,21 +84,8 @@
 			}
 		}
 	}
-	.datos {
-		@include flex-container;
-		justify-content: flex-end;
-		align-items: center;
-		i {
-
-		}
-		.graph {
-			float: right;
-			margin-left: 1em;
-			.wpc-numbers {
-				font-weight: 300;
-			}
-		}
-	}
+	
+	
 
 	@media screen and (min-width: $break__small) {
 		@include flex-container;
@@ -109,6 +100,20 @@
 		}
 	}
 
+}
+
+.datos {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	
+	.graph {
+		float: right;
+		margin-left: 1em;
+		.wpc-numbers {
+			font-weight: 300;
+		}
+	}
 }
 //lista de estudiantes
 .estudiantes-block {
@@ -220,6 +225,43 @@
 				width: 24%;
 				margin: .5em 0.5%;
 			}
+		}
+	}
+}
+
+// Página de autor
+.author-profile-card {
+
+	.author-header {
+		margin: 1em 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.author-info {
+		background: white;
+		padding: 1em;
+	}
+}
+.mis-comentarios {
+	margin-top: 2em;
+
+	.comentario {
+		background: white;
+		padding: 1em;
+		margin: 1em 0 0;
+	}
+
+	.comentario-title {
+		font-size: .8em;
+		font-style: italic;
+		margin-left: 1em;
+		display: block;
+		margin: .5em 0 2em;
+
+		a {
+			border: none;
 		}
 	}
 }

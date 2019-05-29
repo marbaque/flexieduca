@@ -1,0 +1,81 @@
+{
+    "key": "group_5ceebd50b4821",
+    "title": "Redes sociales",
+    "fields": [
+        {
+            "key": "field_5ceebd58eeedc",
+            "label": "Perfil de Facebook",
+            "name": "facebook",
+            "type": "text",
+            "instructions": "Añada aquí el nombre de su perfil de Facebook.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "@",
+            "append": "",
+            "maxlength": 20
+        },
+        {
+            "key": "field_5ceec5a9a98f3",
+            "label": "Cuenta de Twitter",
+            "name": "twitter",
+            "type": "text",
+            "instructions": "Añada aquí el nombre de la cuenta de Twitter.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "@",
+            "append": "",
+            "maxlength": 30
+        },
+        {
+            "key": "field_5ceec639b2d80",
+            "label": "Cuenta de Instagram",
+            "name": "instagram",
+            "type": "text",
+            "instructions": "Añada aquí el nombre de la cuenta de Instagram.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "@",
+            "append": "",
+            "maxlength": 30
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "user_role",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1559153253
+}

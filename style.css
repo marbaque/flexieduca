@@ -2556,6 +2556,12 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	border-bottom: 2px solid #979797;
 }
 
+.exitometro .avatar,
+.author-photo img {
+	border-radius: 50%;
+	margin-right: 1em;
+}
+
 .exitometro {
 	font-family: "Rubik", sans;
 	font-weight: 300;
@@ -2585,11 +2591,6 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	        align-items: center;
 }
 
-.exitometro .estudiante .avatar {
-	border-radius: 50%;
-	margin-right: 1em;
-}
-
 .exitometro .estudiante .name {
 	margin: 0 0 .25em 0;
 }
@@ -2607,32 +2608,6 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 
 .exitometro .estudiante ul.user-manage a {
 	margin-right: .5em;
-}
-
-.exitometro .datos {
-	display: -webkit-box;
-	/* OLD - iOS 6-, Safari 3.1-6 */
-	/* OLD - Firefox 19- (buggy but mostly works) */
-	display: -ms-flexbox;
-	/* TWEENER - IE 10 */
-	/* NEW - Chrome */
-	display: flex;
-	/* NEW, Spec - Opera 12.1, Firefox 20+ */
-	-webkit-box-pack: end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-}
-
-.exitometro .datos .graph {
-	float: right;
-	margin-left: 1em;
-}
-
-.exitometro .datos .graph .wpc-numbers {
-	font-weight: 300;
 }
 
 @media screen and (min-width: 600px) {
@@ -2658,6 +2633,27 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 	.exitometro .datos {
 		width: 48%;
 	}
+}
+
+.datos {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.datos .graph {
+	float: right;
+	margin-left: 1em;
+}
+
+.datos .graph .wpc-numbers {
+	font-weight: 300;
 }
 
 .estudiantes-block {
@@ -2788,6 +2784,46 @@ aside.menu-social .aside-in .widget ul li.facebook a {
 		width: 24%;
 		margin: .5em 0.5%;
 	}
+}
+
+.author-profile-card .author-header {
+	margin: 1em 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.author-profile-card .author-info {
+	background: white;
+	padding: 1em;
+}
+
+.mis-comentarios {
+	margin-top: 2em;
+}
+
+.mis-comentarios .comentario {
+	background: white;
+	padding: 1em;
+	margin: 1em 0 0;
+}
+
+.mis-comentarios .comentario-title {
+	font-size: .8em;
+	font-style: italic;
+	margin-left: 1em;
+	display: block;
+	margin: .5em 0 2em;
+}
+
+.mis-comentarios .comentario-title a {
+	border: none;
 }
 
 .modulo .content-area {

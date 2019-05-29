@@ -7,15 +7,59 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
  ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			
+			<a class="back2modulo" href="javascript:history.back()">Regresar</a>
 			
 			<div class="author-profile-card">
 			    <h2><?php echo __('Acerca de:', 'flexieduca') . " " . $curauth->user_firstname . " " . $curauth->user_lastname . " \"<i>" . $curauth->nickname . "</i>\""; ?></h2>
-			    <div class="author-photo">
-			    <?php echo get_avatar( $curauth->user_email , '90 '); ?>
-			    </div>
-			    <p><strong><?php echo __('Sitio web:', 'flexieduca') . " "; ?></strong><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a><br />
-			    <strong><?php echo __('Bio:', 'flexieduca') . " "; ?></strong><?php echo $curauth->user_description; ?>
+			    <div class="author-header">
+					<div class="author-photo">
+						<?php echo get_avatar( $curauth->user_email , '90 '); ?>
+					</div><!-- .author-photo -->
+					<div class="datos">
+						<i><?php echo esc_html__('Progreso ', 'flexieduca') . do_shortcode('[wpc_progress_in_ratio course=all]'); ?></i>
+						<div class="graph"><?php echo do_shortcode('[wpc_progress_graph course=all]'); ?></div>
+					</div><!-- .datos -->
+				</div><!-- .author-header -->
+				<h3>Redes sociales</h3>
+				<p class="author-info">
+					<strong><?php echo __('Sitio web:', 'flexieduca') . " "; ?></strong><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a><br>
+					
+					<?php 
+					$userID = $curauth->ID;
+					$face = get_field('facebook', 'user_' . $userID );
+					$twitter = get_field('twitter', 'user_' . $userID);
+					$instagram = get_field('instagram', 'user_' . $userID);
+					?>
+
+					<strong>Facebook: </strong>
+					
+					<?php if( $face ): ?>
+					
+						<a href="https://www.facebook.com/<?php echo $face; ?>" target="_blank"><?php echo $face; ?></a>
+						
+					<?php endif; ?>
+
+					<br>
+					<strong>Twittter: </strong>
+
+					<?php if( $twitter ): ?>
+					
+						<a href="https://www.twitter.com/<?php echo $twitter; ?>" target="_blank"><?php echo $twitter; ?></a>
+						
+					<?php endif; ?>
+
+					<br>
+					<strong>Instagram: </strong>
+
+					<?php if( $instagram ): ?>
+										
+					<a href="https://www.instagram.com/<?php echo $instagram; ?>" target="_blank"><?php echo $instagram; ?></a>
+
+					<?php endif; ?>
+					</p>
+				
+				<p class="author-info"><strong><?php echo __('Bio:', 'flexieduca'); ?></strong><?php echo ' ' . $curauth->user_description; ?></p>
+				
 			</div>
 
 			<?php
@@ -49,10 +93,42 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 	
 			else :
 	
-				get_template_part( 'template-parts/content', 'none' );
+				//get_template_part( 'template-parts/content', 'none' );
 	
 			endif; ?>
 
+			<hr>
+
+			<div class="mis-comentarios">
+				<h3><?php echo __('Mi actividad:', 'flexieduca') ?></h3>
+			<?php
+
+			// get author info
+			$args = array(
+				'user_id' => $curauth->ID, // use user_id
+				'status' => 'approve',
+				'post_status' => 'publish',
+			);
+
+			// The Query
+			$comments_query = new WP_Comment_Query;
+			$comments = $comments_query->query( $args );
+
+			// Comment Loop
+			if ( $comments ) {
+				foreach ( $comments as $comment ) {
+					echo '<p class="comentario">"' . $comment->comment_content . '"';
+					echo '<div class="comentario-title"><i class="fa fa-comment" aria-hidden="true"></i>' . __('Discusión en:', 'flexieduca') . '<a href="' . get_comment_link( $comment, $args ) . '">' . ' ' . get_the_title($comment->comment_post_ID) .  '</a>' . '</div>';
+					echo '</p>';
+					
+				}
+			} else {
+				echo 'Aún no tiene discuciones.';
+			}
+
+
+			?>
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

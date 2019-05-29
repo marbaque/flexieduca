@@ -1,0 +1,118 @@
+{
+    "key": "group_5c45cca3371bf",
+    "title": "Contenido complementario",
+    "fields": [
+        {
+            "key": "field_5a031f8330040",
+            "label": "Audio de contenido",
+            "name": "audio_contenido",
+            "type": "file",
+            "instructions": "Agregar un audio al contenido multimedia",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "library": "all",
+            "return_format": "url",
+            "min_size": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_5afc8666a96ab",
+            "label": "Metadatos del audio",
+            "name": "metadatos_audio",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Datos de creación del archivo de audio",
+            "maxlength": "",
+            "rows": 5,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5a0341b8c04ba",
+            "label": "Resumen",
+            "name": "resumen",
+            "type": "wysiwyg",
+            "instructions": "Agregar resumen de la sección",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "tabs": "all",
+            "delay": 0
+        },
+        {
+            "key": "field_5a053669b9fb8",
+            "label": "Objetivos",
+            "name": "objetivos",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "toolbar": "full",
+            "media_upload": 0,
+            "tabs": "all",
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "multimedia"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "caso"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "excerpt",
+        "discussion",
+        "revisions"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1559154912
+}

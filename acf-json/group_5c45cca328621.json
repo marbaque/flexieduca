@@ -1,0 +1,54 @@
+{
+    "key": "group_5c45cca328621",
+    "title": "Contenido relacionado con la actividad",
+    "fields": [
+        {
+            "key": "field_5a96e2e977de1",
+            "label": "Contenido relacionado",
+            "name": "contenido_relacionado",
+            "type": "relationship",
+            "instructions": "Seleccione el contenido en donde aparece esta actividad. Puede seleccionar varios.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "post_type": [
+                "multimedia",
+                "caso",
+                "actividad"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "max": 5,
+            "min": 0,
+            "elements": [
+                "post_type"
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "actividad"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1559154845
+}

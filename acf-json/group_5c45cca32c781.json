@@ -1,0 +1,185 @@
+{
+    "key": "group_5c45cca32c781",
+    "title": "Módulos",
+    "fields": [
+        {
+            "key": "field_5b3000aa639f0",
+            "label": "Número de módulo",
+            "name": "numero_modulo",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "prepend": "#",
+            "append": "Módulo",
+            "min": 1,
+            "max": "",
+            "step": 1
+        },
+        {
+            "key": "field_5b3002a5fba06",
+            "label": "Subtítulo",
+            "name": "subtitulo_modulo",
+            "type": "text",
+            "instructions": "En algunos casos, además del título se puede poner un subtítulo. No es obligatorio.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "html",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b3000f2639f1",
+            "label": "Color de Módulo",
+            "name": "color_modulo",
+            "type": "color_picker",
+            "instructions": "Seleccione un color para para diferenciar este módulo.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#DDBE59"
+        },
+        {
+            "key": "field_5b30001fbaa97",
+            "label": "Página de lectura",
+            "name": "pagina_lectura",
+            "type": "page_link",
+            "instructions": "Seleccione la página de lectura de este módulo",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "multimedia"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "taxonomy": [],
+            "allow_archives": 1
+        },
+        {
+            "key": "field_5b2fffc9baa96",
+            "label": "Página de audios",
+            "name": "pagina_audios",
+            "type": "page_link",
+            "instructions": "Seleccione la página de audios de este módulo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "multimedia"
+            ],
+            "allow_null": 1,
+            "multiple": 0,
+            "taxonomy": [],
+            "allow_archives": 1
+        },
+        {
+            "key": "field_5b5f2a58083fa",
+            "label": "Página de autoevaluación",
+            "name": "pagina_actividades",
+            "type": "page_link",
+            "instructions": "Seleccione la página de actividades de autoevaluación y colaboración",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page",
+                "multimedia"
+            ],
+            "allow_null": 1,
+            "multiple": 0,
+            "taxonomy": [],
+            "allow_archives": 1
+        },
+        {
+            "key": "field_5b300043baa98",
+            "label": "Página de videos",
+            "name": "pagina_videos",
+            "type": "page_link",
+            "instructions": "Seleccione la página de videos de este módulo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "multimedia"
+            ],
+            "allow_null": 1,
+            "multiple": 0,
+            "taxonomy": [],
+            "allow_archives": 1
+        },
+        {
+            "key": "field_5b43a0feac8c6",
+            "label": "class",
+            "name": "class",
+            "type": "text",
+            "instructions": "Agregue una clase css personalizada a este módulo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "modulo1",
+            "prepend": ".",
+            "append": "",
+            "formatting": "none",
+            "maxlength": 12
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "modulo"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1559154889
+}

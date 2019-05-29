@@ -1,0 +1,53 @@
+{
+    "key": "group_5c45cca32a5b7",
+    "title": "Módulo asignado",
+    "fields": [
+        {
+            "key": "field_5b3001bae4798",
+            "label": "Módulo asignado",
+            "name": "modulo_asignado",
+            "type": "post_object",
+            "instructions": "Seleccione el módulo al que pertenece este contenido",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "modulo"
+            ],
+            "taxonomy": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "multimedia"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1559154929
+}

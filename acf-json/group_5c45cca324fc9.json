@@ -1,0 +1,73 @@
+{
+    "key": "group_5c45cca324fc9",
+    "title": "Campos del caso",
+    "fields": [
+        {
+            "key": "field_5a61239c60d4a",
+            "label": "Enlace",
+            "name": "enlace",
+            "type": "text",
+            "instructions": "Si este caso tiene sitio web o página de Facebook, agregue aquí el enlace correspondiente.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/",
+            "prepend": "Más información:",
+            "append": "",
+            "formatting": "none",
+            "maxlength": 80
+        },
+        {
+            "key": "field_5b0f036035ed0",
+            "label": "Contenido relacionado",
+            "name": "galeria_relacionada",
+            "type": "relationship",
+            "instructions": "Seleccionar el contenido que se relaciona con este caso. En este caso, sólo aparecen las que tienen la etiqueta de categoría.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "post_type": [
+                "multimedia"
+            ],
+            "taxonomy": [
+                "category:211"
+            ],
+            "filters": [
+                "post_type"
+            ],
+            "max": 1,
+            "min": 0,
+            "elements": [
+                "post_type"
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "caso"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1559154950
+}

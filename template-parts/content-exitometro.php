@@ -37,7 +37,7 @@
 				</div>
 
 				<div class="datos">
-		                <i><?php echo esc_html__('Progreso ', 'flexieduca') . do_shortcode('[wpc_progress_in_ratio course=all]'); ?></i>
+					<i><?php echo esc_html__('Progreso ', 'flexieduca') . do_shortcode('[wpc_progress_in_ratio course=all]'); ?></i>
 		            <div class="graph"><?php echo do_shortcode('[wpc_progress_graph course=all]'); ?></div>
 		        </div><!-- .datos -->
 			<?php
@@ -108,7 +108,7 @@
 
 				$count = $wpdb->get_var('SELECT COUNT(comment_ID) FROM ' . $wpdb->comments. ' WHERE comment_author_email = "' . $user->user_email . '"');
 
-				echo '<li>' . get_avatar( $user->user_email, 32 ) . $user->display_name . ' (<i>' . $user->user_nicename . '</i>)<span class="count">' . $count  . '</span></li>';
+				echo '<li>' . get_avatar( $user->user_email, 32 ) . '<a href="'. get_bloginfo('url'). '/?author=' . $user->ID . '">'. esc_attr( $user->display_name ) . '</a>' . '<span class="count">' . $count  . '</span></li>';
 			}
 			echo '</ul>';
 			?>
