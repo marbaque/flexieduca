@@ -129,7 +129,7 @@ function my_custom_posttypes() {
     );
     register_post_type('caso', $argsC);
 	
-//Actividades
+//Actividades / Ejercicios
     $labelsA = array(
         'name' => 'Ejercicios de autoevaluación',
         'singular_name' => 'Ejercicio',
