@@ -4,24 +4,32 @@ get_header(); ?>
 <?php 
 // Set the Current Author Variable $curauth
 $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+$curruser = wp_get_current_user();
+
  ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<a class="back2modulo" href="javascript:history.back()">Regresar</a>
 			
 			<div class="author-profile-card">
-			    <h2><?php echo __('Acerca de:', 'flexieduca') . " " . $curauth->user_firstname . " " . $curauth->user_lastname . " \"<i>" . $curauth->nickname . "</i>\""; ?></h2>
+			    <h2><?php echo $curauth->user_firstname . " " . $curauth->user_lastname . " \"<i>" . $curauth->nickname . "</i>\""; ?></h2>
 			    <div class="author-header">
 					<div class="author-photo">
 						<?php echo get_avatar( $curauth->user_email , '90 '); ?>
+						
+						<?php if ( is_user_logged_in() && $curauth == $curruser ): ?>
+
+							<a class="small" href="<?php echo get_edit_user_link(); ?>">Editar perfil</a>
+						<?php endif; ?>
+					
 					</div><!-- .author-photo -->
-					<div class="datos">
+					<div class="datos card">
 						<i><?php echo esc_html__('Progreso ', 'flexieduca') . do_shortcode('[wpc_progress_in_ratio course=all]'); ?></i>
 						<div class="graph"><?php echo do_shortcode('[wpc_progress_graph course=all]'); ?></div>
 					</div><!-- .datos -->
 				</div><!-- .author-header -->
-				<h3>Redes sociales</h3>
-				<p class="author-info">
+				<h3 class="hidden">Redes sociales</h3>
+				<p class="author-info card">
 					<strong><?php echo __('Sitio web:', 'flexieduca') . " "; ?></strong><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a><br>
 					
 					<?php 
@@ -35,7 +43,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 					
 					<?php if( $face ): ?>
 					
-						<a href="https://www.facebook.com/<?php echo $face; ?>" target="_blank"><?php echo $face; ?></a>
+						<a href="https://www.facebook.com/<?php echo $face; ?>" target="_blank"><?php echo $face; ?></a>				
 						
 					<?php endif; ?>
 
@@ -58,7 +66,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 					<?php endif; ?>
 					</p>
 				
-				<p class="author-info"><strong><?php echo __('Bio:', 'flexieduca'); ?></strong><?php echo ' ' . $curauth->user_description; ?></p>
+				<p class="author-info card"><strong><?php echo __('Bio:', 'flexieduca'); ?></strong><?php echo ' ' . $curauth->user_description; ?></p>
 				
 			</div>
 
@@ -98,9 +106,9 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 			endif; ?>
 
 			<hr>
-
+			<h3><?php echo __('Actividad:', 'flexieduca') ?></h3>
 			<div class="mis-comentarios">
-				<h3><?php echo __('Mi actividad:', 'flexieduca') ?></h3>
+				
 			<?php
 
 			// get author info
@@ -117,9 +125,11 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 			// Comment Loop
 			if ( $comments ) {
 				foreach ( $comments as $comment ) {
-					echo '<p class="comentario">"' . $comment->comment_content . '"';
-					echo '<div class="comentario-title"><i class="fa fa-comment" aria-hidden="true"></i>' . __('Discusión en:', 'flexieduca') . '<a href="' . get_comment_link( $comment, $args ) . '">' . ' ' . get_the_title($comment->comment_post_ID) .  '</a>' . '</div>';
+					echo '<div class="card">';
+					echo '<p class="comentario">"' . substr($comment->comment_content, 0, 200) . '..."';
+					echo '<div class="comentario-title small">' . __('Discusión en:', 'flexieduca') . '<a href="' . get_comment_link( $comment, $args ) . '">' . ' ' . get_the_title($comment->comment_post_ID) .  '</a>' . '</div>';
 					echo '</p>';
+					echo '</div>';
 					
 				}
 			} else {
