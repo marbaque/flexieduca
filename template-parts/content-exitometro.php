@@ -26,8 +26,10 @@
 				<div class="estudiante">
 					<?php echo get_avatar( $current_user->user_email, 64 ); ?>
 					<div>
-						<h3 class="name"><?php echo __('Hola, ', 'flexieduca'); ?>
-						<?php echo $current_user->display_name; ?></h3>
+						<h3 class="name">
+							<?php echo '<a href="' . home_url() . '/author/' . get_the_author_meta( 'user_login', wp_get_current_user()->ID ) . '">' . $current_user->display_name . '</a>'; ?>
+						</h3>
+						
 						<ul class="user-manage">
 						    <li><a href="<?php echo esc_url( home_url( '/wp-admin/profile.php' ) ); ?>"><?php echo __('Editar perfil', 'flexieduca'); ?></a></li>
 						    <li><a href="<?php echo wp_logout_url( get_bloginfo( 'url' ) ); ?>"><?php echo __('Cerrar sesión', 'flexieduca'); ?></a></li>
