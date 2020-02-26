@@ -111,7 +111,7 @@
 
 				$count = $wpdb->get_var('SELECT COUNT(comment_ID) FROM ' . $wpdb->comments. ' WHERE comment_author_email = "' . $user->user_email . '"');
 
-				echo '<li>' . get_avatar( $user->user_email, 32 ) . '<a href="'. get_bloginfo('url'). '/?author=' . $user->ID . '">'. esc_attr( $user->display_name ) . '</a>' . '<span class="count">' . $count  . '</span></li>';
+				echo '<li>' . get_avatar( $user->user_email, 32 ) . '<a href="'. get_bloginfo('url'). '/author/' . $user->user_nicename . '">'. esc_attr( $user->display_name ) . '</a>' . '<span class="count">' . $count  . '</span></li>';
 			}
 			echo '</ul>';
 			?>
