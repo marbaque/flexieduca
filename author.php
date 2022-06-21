@@ -133,7 +133,7 @@ $curruser = wp_get_current_user();
 					
 				}
 			} else {
-				echo 'Aún no tiene discuciones.';
+				echo 'Aún no tiene discusiones.';
 			}
 
 
